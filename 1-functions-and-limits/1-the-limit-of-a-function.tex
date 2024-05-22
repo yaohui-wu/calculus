@@ -1,6 +1,8 @@
 \subsection{The Limit of a Function}
-A function \(f:X\mapsto Y\) is a rule that assigns each element in set \(X\) to exactly
-one element \(y=f(x)\) in set \(Y\).
+
+\subsubsection{Functions}
+A function \(f:X\mapsto Y\) is a rule that assigns each element in set \(X\)
+to exactly one element \(y=f(x)\) in set \(Y\).
 \begin{definition}
     A \textbf{function} \(f\) is a binary relation \(R\) with domain \(X\) and
     codomain \(Y\) that satisfies:
@@ -14,3 +16,28 @@ one element \(y=f(x)\) in set \(Y\).
         \[(x,y)\in R \wedge (x,z)\in R \implies y=z\]
     \end{itemize}
 \end{definition}
+
+\subsubsection{Intuitive Definition of a Limit}
+Suppose a function \(f(x)\) is defined on some open interval that contains
+\(a\), except possibly at \(a\) itself.
+\begin{definition}
+    The \textbf{limit} of \(f(x)\) as \(x\) approaches \(a\) equals \(L\) if
+    we can make \(f(x)\) arbitrarily close to \(L\) by taking \(x\)
+    sufficiently close to \(a\) but not equal to \(a\) from left and right.
+    \[\lim_{x\to a}f(x)=L\]
+\end{definition}
+\begin{definition}
+    The limit of \(f(x)\) as \(x\) approaches \(a\) from the left equals \(L\)
+    if we can make \(f(x)\) arbitrarily close to \(L\) by taking \(x\)
+    sufficiently close to \(a\) where \(x<a\).
+    \[\lim_{x\to a^-}f(x)=L\]
+\end{definition}
+\begin{definition}
+    The limit of \(f(x)\) as \(x\) approaches \(a\) from the right equals
+    \(L\) if we can make \(f(x)\) arbitrarily close to \(L\) by taking \(x\)
+    sufficiently close to \(a\) where \(x>a\).
+    \[\lim_{x\to a^+}f(x)=L\]
+\end{definition}
+The limit \textbf{exists} if the limit of \(f(x)\) as \(x\) approaches \(a\)
+equals \(L\), otherwise the limit \textbf{does not exist}.
+\[\lim_{x\to a}f(x)=L\ \text{if} \lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L\]
