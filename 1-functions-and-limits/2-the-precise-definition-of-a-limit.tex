@@ -4,27 +4,57 @@
 \textbf{Augustin-Louis Cauchy} (1789--1857) and \textbf{Karl Weierstrass}
 (1815--1897) developed a rigorous definition of a limit.
 \begin{definition}
-    \[\lim_{x\to a}f(x)=L\] if for every number \(\varepsilon>0\), there is a
-    number \(\delta>0\) such that \[0<|x-a|<\delta\implies|f(x)-L|<\varepsilon\]
+    \[\lim_{x\to a}f(x)=L\] if for every number \(\epsilon>0\), there is a
+    number \(\delta>0\) such that \[0<|x-a|<\delta\implies|f(x)-L|<\epsilon\]
 \end{definition}
 \begin{definition}
-    \[\lim_{x\to a^-}f(x)=L\] if for every number \(\varepsilon>0\), there is a
-    number \(\delta>0\) such that \[a-\delta<x<a\implies|f(x)-L|<\varepsilon\]
+    \[\lim_{x\to a^-}f(x)=L\] if for every number \(\epsilon>0\), there is a
+    number \(\delta>0\) such that \[a-\delta<x<a\implies|f(x)-L|<\epsilon\]
 \end{definition}
 \begin{definition}
-    \[\lim_{x\to a^+}f(x)=L\] if for every number \(\varepsilon>0\), there is a
-    number \(\delta>0\) such that \[a<x<a+\delta\implies|f(x)-L|<\varepsilon\]
+    \[\lim_{x\to a^+}f(x)=L\] if for every number \(\epsilon>0\), there is a
+    number \(\delta>0\) such that \[a<x<a+\delta\implies|f(x)-L|<\epsilon\]
 \end{definition}
 \begin{problem}
     Prove that \[\lim_{x\to 3}(4x-5)=7\]
 \end{problem}
 \begin{solution}
-    Let \(\varepsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that \[0<|x-3|<\delta \implies |(4x-5)-7|<\varepsilon\]
+    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
+    that \[0<|x-3|<\delta \implies |(4x-5)-7|<\epsilon\]
     We simplify to get \(|(4x-5)-7|=|4x-12|=4|x-3|\) so we have
-    \[4|x-3|<\varepsilon \iff |x-3|<\frac{\varepsilon}{4}\]
-    Let \(\delta=\varepsilon/4\), we have
-    \[0<|x-3|<\delta=\frac{\varepsilon}{4} \iff 0<4|x-3|<\varepsilon \iff
-    0<|(4x-5)-7|<\varepsilon\]
+    \[4|x-3|<\epsilon \iff |x-3|<\frac{\epsilon}{4}\]
+    Let \(\delta=\epsilon/4\), we have
+    \[0<|x-3|<\frac{\epsilon}{4} \implies 4|x-3|<\epsilon \implies
+    |(4x-5)-7|<\epsilon\]
     Therefore, by the definition of a limit, \[\lim_{x\to 3}(4x-5)=7\]
+\end{solution}
+\begin{problem}
+    Prove that \[\lim_{x\to 3}x^2=9\]
+\end{problem}
+\begin{solution}
+    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
+    that \[0<|x-3|<\delta \implies |x^2-9|<\epsilon\]
+    We simplify to get \[|x^2-9|=|x+3|\,|x-3|<\epsilon\]
+    Let \(C\) be a positive constant such that
+    \[|x+3|\,|x-3|<C\,|x-3|<\epsilon \iff |x-3|<\frac{\epsilon}{C}\]
+    Since we are interested only in values of \(x\) that are close to 3, it is
+    reasonable to assume that \(|x-3|<1\) such that \(|x+3|<7\) so \(C=7\).
+    Let \(\delta=\min\{1,\epsilon/7\}\), we have
+    \begin{align*}
+        &0<|x-3|<1 \iff |x+3|<7 \\ &0<|x-3|<\frac{\epsilon}{7} \iff
+        7\,|x-3|<\epsilon \\ &|x+3|\,|x-3|<7\,|x-3|<\epsilon \implies
+        |x^2-9|<\epsilon
+    \end{align*}
+    Therefore, it is proved that \[\lim_{x\to 3}x^2=9\]
+\end{solution}
+\begin{problem}
+    Prove that \[\lim_{x\to 0^+}\sqrt{x}=0\]
+\end{problem}
+\begin{solution}
+    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
+    that \[0<x<\delta \implies |\sqrt{x}-0|<\epsilon\]
+    We simplify to get \(\sqrt{x}<\epsilon\iff x<\epsilon^2\).
+    Let \(\delta=\epsilon^2\), so we have
+    \[0<x<\epsilon^2\implies|\sqrt{x}-0|<\epsilon\]
+    Therefore, it is proved that \[\lim_{x\to 0^+}\sqrt{x}=0\]
 \end{solution}
