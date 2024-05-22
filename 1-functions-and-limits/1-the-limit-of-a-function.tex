@@ -1,17 +1,18 @@
 \subsection{The Limit of a Function}
 
 \subsubsection{Functions}
-A function \(f:X\mapsto Y\) is a rule that assigns each element in set \(X\)
-to exactly one element \(y=f(x)\) in set \(Y\).
+A function \(f:X\mapsto Y\) is a rule that assigns each element \(x\) in set
+\(X\) to exactly one element \(y\) in set \(Y\).
+We have the following formal definition of a function.
 \begin{definition}
-    A \textbf{function} \(f\) is a binary relation \(R\) with domain \(X\) and
-    codomain \(Y\) that satisfies:
+    A \textbf{function} \(f\) is a binary relation \(R\) between domain \(X\)
+    and codomain \(Y\) that satisfies:
     \begin{itemize}
         \item \(R\) is a subset of the Cartesian product of \(X\) and \(Y\).
         \[R\subset\{(x,y)\mid x\in X,y\in Y\}\]
-        \item For every \(x\) in \(X\), there exists a \(y=f(x)\) in \(Y\)
-        such that \((x,y)\) is in \(R\).
-        \[\forall x\in X,\exists y=f(x)\in Y,(x,y)\in R\]
+        \item For every \(x\) in \(X\), there exists a \(y\) in \(Y\) such
+        that \((x,y)\) is in \(R\).
+        \[\forall x\in X,\exists y\in Y,(x,y)\in R\]
         \item If \((x,y)\) and \((x,z)\) are in \(R\), then \(y=z\).
         \[(x,y)\in R \wedge (x,z)\in R \implies y=z\]
     \end{itemize}
@@ -20,6 +21,7 @@ to exactly one element \(y=f(x)\) in set \(Y\).
 \subsubsection{Intuitive Definition of a Limit}
 Let \(f(x)\) be a function defined on some open interval that contains \(a\),
 possibly not at \(a\) itself.
+Newton introduced the following working definition of a limit.
 \begin{definition}
     The \textbf{limit} of \(f(x)\) as \(x\) approaches \(a\) equals \(L\) if
     we can make \(f(x)\) arbitrarily close to \(L\) by taking \(x\)
@@ -27,17 +29,18 @@ possibly not at \(a\) itself.
     \[\lim_{x\to a}f(x)=L\]
 \end{definition}
 \begin{definition}
-    The limit of \(f(x)\) as \(x\) approaches \(a\) from the left equals \(L\)
-    if we can make \(f(x)\) arbitrarily close to \(L\) by taking \(x\)
-    sufficiently close to \(a\) where \(x<a\).
+    The \textbf{left-hand limit} of \(f(x)\) as \(x\) approaches \(a\) from
+    the left equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\)
+    by taking \(x\) sufficiently close to \(a\) where \(x<a\).
     \[\lim_{x\to a^-}f(x)=L\]
 \end{definition}
 \begin{definition}
-    The limit of \(f(x)\) as \(x\) approaches \(a\) from the right equals
-    \(L\) if we can make \(f(x)\) arbitrarily close to \(L\) by taking \(x\)
-    sufficiently close to \(a\) where \(x>a\).
+    The \textbf{right-hand limit} of \(f(x)\) as \(x\) approaches \(a\) from
+    the right equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\)
+    by taking \(x\) sufficiently close to \(a\) where \(x>a\).
     \[\lim_{x\to a^+}f(x)=L\]
 \end{definition}
-The limit \textbf{exists} if the limit of \(f(x)\) as \(x\) approaches \(a\)
-equals \(L\), otherwise the limit \textbf{does not exist}.
-\[\lim_{x\to a}f(x)=L\ \text{if} \lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L\]
+The limit \textbf{exists} if the left-hand limit and the right-hand limit of
+\(f(x)\) as \(x\) approaches \(a\) equal \(L\), otherwise the limit
+\textbf{does not exist}.
+\[\lim_{x\to a}f(x)=L\iff \lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L\]
