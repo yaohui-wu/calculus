@@ -1,1 +1,16 @@
 \subsection{The Limit of a Function}
+A function \(f:X\mapsto Y\) is a rule that assigns each element in set \(X\) to exactly
+one element \(y=f(x)\) in set \(Y\).
+\begin{definition}
+    A \textbf{function} \(f\) is a binary relation \(R\) with domain \(X\) and
+    codomain \(Y\) that satisfies:
+    \begin{itemize}
+        \item \(R\) is a subset of the Cartesian product of \(X\) and \(Y\).
+        \[R\subset\{(x,y)\mid x\in X,y\in Y\}\]
+        \item For every \(x\) in \(X\), there exists a \(y=f(x)\) such that
+        \((x,y)\) is in \(R\).
+        \[\forall x\in X,\exists y=f(x)\in Y,(x,y)\in R\]
+        \item If \((x,y)\) and \((x,z)\) are in \(R\), then \(y=z\).
+        \[(x,y)\in R \wedge (x,z)\in R \implies y=z\]
+    \end{itemize}
+\end{definition}
