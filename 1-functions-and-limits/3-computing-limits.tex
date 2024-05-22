@@ -29,21 +29,32 @@ compute limits.
 \begin{theorem}[Constant Multiple Law]
     The limit of a constant times a function is the constant times the limit
     of the function.
-    \[\lim_{x\to a}[c\,f(x)]=c\lim_{x\to a}f(x)\]
+    \[\lim_{x\to a}[c\,f(x)]=c\lim_{x\to a}f(x)=cL\]
 \end{theorem}
+\begin{proof}
+    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
+    that \[0<|x-a|<\delta \implies |f(x)-c\lim_{x\to a}f(x)|<\epsilon\]
+\end{proof}
 \begin{theorem}[Sum and Difference Law]
     The limit of a sum or difference is the sum or difference of the limits.
-    \[\lim_{x\to a}[f(x)\pm g(x)]=L\pm M\]
+    \[\lim_{x\to a}[f(x)\pm g(x)]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)=L\pm M\]
 \end{theorem}
+\begin{proof}
+    First we prove the sum law.
+    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
+    that \[0<|x-a|<\delta \implies |f(x)+g(x)-(L+M)|<\epsilon\]
+    By the \textbf{triangle inequality} we get
+    \[|f(x)+g(x)-(L+M)| = |f(x)-L+g(x)-M| \leq |f(x)-L|+|g(x)-M|\]
+\end{proof}
 \begin{theorem}[Product Law]
     The limit of a product is the product of the limits.
-    \[\lim_{x\to a}[f(x)g(x)]=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)\]
+    \[\lim_{x\to a}[f(x)g(x)]=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)=L\cdot M\]
 \end{theorem}
 \begin{theorem}[Quotient Law]
     The limit of a quotient is the quotient of the limits (provided that the
     limit of the denominator is not 0).
     \[\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)}
-    \iff \lim_{x\to a}g(x)\neq0\]
+    =\frac{L}{M} \iff \lim_{x\to a}g(x)=M\neq0\]
 \end{theorem}
 \begin{theorem}[Power Law]
     \[\lim_{x\to a}[f(x)]^n = [\lim_{x\to a}f(x)]^n\]
