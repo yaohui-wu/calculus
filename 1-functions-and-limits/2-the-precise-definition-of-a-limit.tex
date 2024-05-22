@@ -20,5 +20,11 @@
 \end{problem}
 \begin{solution}
     Let \(\varepsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that \[0<|x-3|<\delta\implies|(4x-5)-7|<\varepsilon\]
+    that \[0<|x-3|<\delta \implies |(4x-5)-7|<\varepsilon\]
+    We simplify to get \(|(4x-5)-7|=|4x-12|=4|x-3|\) so we have
+    \[4|x-3|<\varepsilon \iff |x-3|<\frac{\varepsilon}{4}\]
+    Let \(\delta=\varepsilon/4\), we have
+    \[0<|x-3|<\delta=\frac{\varepsilon}{4} \iff 0<4|x-3|<\varepsilon \iff
+    0<|(4x-5)-7|<\varepsilon\]
+    Therefore, by the definition of a limit, \[\lim_{x\to 3}(4x-5)=7\]
 \end{solution}
