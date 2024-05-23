@@ -2,9 +2,9 @@
 
 \subsubsection{Limit Laws}
 Suppose that \(c\) is a constant and the limits
-\begin{gather*}
-    \lim_{x\to a}f(x)=L,\,\lim_{x\to a}g(x)=M
-\end{gather*}
+\begin{align*}
+    \lim_{x\to a}f(x)&=L&\lim_{x\to a}g(x)&=M
+\end{align*}
 exist.
 We have the following properties of limits called the \textbf{limit laws} to
 compute limits.
@@ -26,39 +26,101 @@ compute limits.
     Let \(\delta=\epsilon\) so we have
     \[0<|x-a|<\delta=\epsilon\implies|x-a|<\epsilon\]
 \end{proof}
-\begin{theorem}[Sum and Difference Law]
-    The limit of a sum or difference is the sum or difference of the limits.
-    \[\lim_{x\to a}[f(x)\pm g(x)]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)=L\pm M\]
-\end{theorem}
-\begin{proof}
-    First we prove the sum law.
-    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that \[0<|x-a|<\delta\implies|f(x)+g(x)-(L+M)|<\epsilon\]
-    By the \textbf{triangle inequality} \(|a+b|\leq|a|+|b|\) we get
-    \[|f(x)+g(x)-(L+M)|=|f(x)-L+g(x)-M|\leq|f(x)-L|+|g(x)-M|\]
-\end{proof}
 \begin{theorem}[Constant Multiple Law]
     The limit of a constant times a function is the constant times the limit
     of the function.
     \[\lim_{x\to a}[c\,f(x)]=c\lim_{x\to a}f(x)=cL\]
 \end{theorem}
 \begin{proof}
+    Note that if \(c=0\), then \(cf(x)=0\) and we have
+    \[\lim_{x\to a}[0\cdot f(x)]=\lim_{x\to a}0=0=0\cdot\lim_{x\to a}f(x)\]
+    Let \(\epsilon>0\) and \(c\neq0\) be given, we want to find a number
+    \(\delta>0\) such that
+    \[0<|x-a|<\delta\implies|cf(x)-c\lim_{x\to a}f(x)|<\epsilon\]
+    We simplify to get \[|f(x)-L|<\frac{\epsilon}{|c|}\]
+    By the definition of the limit, there is a number \(\delta_1>0\) such that
+    \[0<|x-a|<\delta_1\implies|f(x)-L|<\frac{\epsilon}{|c|}\]
+    Let \(\delta=\delta_1\), we have \[0<|x-a|<\delta\implies|cf(x)-c\lim_{x\to a}f(x)|<\epsilon\]
+\end{proof}
+\begin{theorem}[\textbf{Sum and Difference Law}]
+    The limit of a sum or difference is the sum or difference of the limits.
+    \[\lim_{x\to a}[f(x)\pm g(x)]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)=L\pm M\]
+\end{theorem}
+\begin{proof}
+    We prove the sum law first.
     Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that \[0<|x-a|<\delta\implies|f(x)-c\lim_{x\to a}f(x)|<\epsilon\]
+    that \[0<|x-a|<\delta\implies|f(x)+g(x)-(L+M)|<\epsilon\]
+    By the \textbf{triangle inequality} \(|a+b|\leq|a|+|b|\), we have
+    \[|f(x)+g(x)-(L+M)|=|f(x)-L+g(x)-M|\leq|f(x)-L|+|g(x)-M|\]
+    Since \(\lim_{x\to a}f(x)=L\), there is a number \(\delta_1\) such that
+    \[0<|x-a|<\delta_1\implies|f(x)-L|<\frac{\epsilon}{2}\]
+    Similary, there is a number \(\delta_2\) such that
+    \[0<|x-a|<\delta_2\implies|g(x)-M|<\frac{\epsilon}{2}\]
+    Let \(\delta=\min\{\delta_1,\delta_2\}\) such that
+    \[0<|x-a|<\delta\implies0<|x-a|<\delta_1,\delta_2\]
+    \[|f(x)-L|+|g(x)-M|<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon\]
+    Then we have \[0<|x-a|<\delta\implies|f(x)+g(x)-(L+M)|<\epsilon\]
+    Therefore, by the definition of the limit, it is proved that
+    \[\lim_{x\to a}[f(x)+g(x)]=\lim_{x\to a}f(x)+\lim_{x\to a}g(x)=L+M\]
+    We prove the difference law using the sum law and the constant multiple
+    law with \(c=-1\).
+    \begin{align*}
+        \lim_{x\to a}[f(x)-g(x)]&=\lim_{x\to a}[f(x)+(-1)g(x)]
+        =\lim_{x\to a}f(x)+\lim_{x\to a}(-1)g(x) \\
+        &=\lim_{x\to a}f(x)+(-1)\lim_{x\to a}g(x) \\
+        &=\lim_{x\to a}f(x)-\lim_{x\to a}g(x) = L-M
+    \end{align*}
 \end{proof}
 \begin{theorem}[Product Law]
     The limit of a product is the product of the limits.
     \[\lim_{x\to a}[f(x)g(x)]=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)=L\cdot M\]
 \end{theorem}
+\begin{proof}
+    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
+    that \[0<|x-a|<\delta\implies|f(x)g(x)-LM|<\epsilon\]
+    By the triangle inequality, we have
+    \begin{align*}
+        |f(x)g(x)-LM|&=|f(x)g(x)-Lg(x)+Lg(x)-LM| \\ &=|[f(x)-L]g(x)+L[g(x)-M]|
+        \\ &\leq |[f(x)-L]g(x)|+|L[g(x)-M]| \\ &=|[f(x)-L]|\,|g(x)|+|L|\,|[g(x)-M]|
+    \end{align*}
+    Since \(\lim_{x\to a}g(x)=M\), there is a number \(\delta_1>0\) such that
+    \[0<|x-a|<\delta_1\implies|g(x)-M|<\frac{\epsilon}{2(1+|L|)}\]
+    Also, there is a number \(\delta_2>0\) such that
+    \[0<|x-a|<\delta_2\implies|g(x)-M|<1\] and therefore
+    \[|g(x)|=|g(x)-M+M|\leq|g(x)-M|+|M|<1+|M|\]
+    Since \(\lim_{x\to a}f(x)=L\), there is a number \(\delta_3>0\) such that
+    \[0<|x-a|<\delta_3\implies|f(x)-L|<\frac{\epsilon}{2(1+|M|)}\]
+    Let \(\delta=\min\{\delta_1,\delta_2,\delta_3\}\) such that
+    \[0<|x-a|<\delta\implies0<|x-a|<\delta_1,\delta_2,\delta_3\]
+    so we can combine the inequalities to get
+    \begin{align*}
+        |f(x)g(x)-LM|&\leq|[f(x)-L]|\,|g(x)|+|L|\,|[g(x)-M]| \\
+        &<\frac{\epsilon}{2(1+|M|)}(1+|M|)+|L|\frac{\epsilon}{2(1+|L|)} \\
+        &<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon
+    \end{align*}
+    It is proved that
+    \[\lim_{x\to a}[f(x)g(x)]=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)=L\cdot M\]
+\end{proof}
 \begin{theorem}[Quotient Law]
-    The limit of a quotient is the quotient of the limits (provided that the
+    The limit of a quotient is the quotient of the limits (if that the
     limit of the denominator is not 0).
     \[\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)}
     =\frac{L}{M}\iff\lim_{x\to a}g(x)=M\neq0\]
 \end{theorem}
 \begin{theorem}[Power Law]
-    \[\lim_{x\to a}[f(x)]^n = [\lim_{x\to a}f(x)]^n\]
+    \[\lim_{x\to a}[f(x)]^n=[\lim_{x\to a}f(x)]^n,n\in\R\]
 \end{theorem}
 \begin{theorem}[Root Law]
-    \[\lim_{x\to a}\sqrt[n]{f(x)} = \sqrt[n]{\lim_{x\to a}f(x)}\]
+    \[\lim_{x\to a}\sqrt[n]{f(x)}=\sqrt[n]{\lim_{x\to a}f(x)},n\in\R\]
+\end{theorem}
+If \(f(x)=g(x)\) when \(x\neq a\), then \(\lim_{x\to a}f(x)=\lim_{x\to a}g(x)\)
+if the limits exist.
+\begin{theorem}
+    If \(f(x)\leq g(x)\) when \(x\) is near \(a\) (except possibly at \(a\))
+    and the limits of \(f\) and \(g\) exist, then
+    \[\lim_{x\to a}f(x)\leq\lim_{x\to a}g(x)\]
+\end{theorem}
+\begin{theorem}[Squeeze Theorem]
+    If \(f(x)\leq g(x)\leq h(x)\) when \(x\) is near \(a\) (except possibly at
+    \(a\)) and \[\lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L\] then \[\lim_{x\to a}g(x)=L\]
 \end{theorem}

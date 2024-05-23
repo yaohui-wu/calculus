@@ -8,7 +8,14 @@
 \renewcommand*{\qedsymbol}{\(\blacksquare\)}
 \renewcommand*{\epsilon}{\varepsilon}
 
-\theoremstyle{definition}
+\newtheoremstyle{theorem}%
+    {}{}%
+    {}{}%
+    {\bfseries}{.}%
+    { }%
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}
+
+\theoremstyle{theorem}
 \newtheorem{theorem}{Theorem}[section]
 
 \theoremstyle{definition}
