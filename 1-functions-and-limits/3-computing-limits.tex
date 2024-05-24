@@ -17,7 +17,7 @@ compute limits.
     We have \(|c-c|=0<\epsilon\) so the trivial inequality is always true for
     any number \(\delta>0\).
     Therefore, by the definition of the limit, it is proved that
-    \[\lim_{x\to a}c=c\]
+    \[\lim_{x\to a}c=c\qedhere\]
 \end{proof}
 \begin{theorem}
     \[\lim_{x\to a}x=a\]
@@ -28,7 +28,7 @@ compute limits.
     Let \(\delta=\epsilon\), we have
     \[0<|x-a|<\delta=\epsilon\implies|x-a|<\epsilon\]
     Therefore, by the definition of the limit, it is proved that
-    \[\lim_{x\to a}x=a\]
+    \[\lim_{x\to a}x=a\qedhere\]
 \end{proof}
 \begin{theorem}[Constant Multiple Law]
     The limit of a constant times a function is the constant times the limit
@@ -47,7 +47,7 @@ compute limits.
     Let \(\delta=\delta_1\), we have
     \[0<|x-a|<\delta\implies|cf(x)-c\lim_{x\to a}f(x)|<\epsilon\]
     Therefore, by the definition of the limit, it is proved that
-    \[\lim_{x\to a}[c\,f(x)]=c\lim_{x\to a}f(x)=cL\]
+    \[\lim_{x\to a}[c\,f(x)]=c\lim_{x\to a}f(x)=cL\qedhere\]
 \end{proof}
 \begin{theorem}[\textbf{Sum and Difference Law}]
     The limit of a sum or difference is the sum or difference of the limits.
@@ -61,7 +61,8 @@ compute limits.
     \[|f(x)+g(x)-(L+M)|=|f(x)-L+g(x)-M|\leq|f(x)-L|+|g(x)-M|\]
     Since \(\lim_{x\to a}f(x)=L\), there is a number \(\delta_1\) such that
     \[0<|x-a|<\delta_1\implies|f(x)-L|<\frac{\epsilon}{2}\]
-    Similary, there is a number \(\delta_2\) such that
+    Similarly, there exists \(delta_2>0\), there is a number \(\delta_2\) such that such that
+    \[0<|x-a|<\delta_2\implies|h(x)-L|<\epsilon\implies L\]
     \[0<|x-a|<\delta_2\implies|g(x)-M|<\frac{\epsilon}{2}\]
     Let \(\delta=\min\{\delta_1,\delta_2\}\) such that
     \[0<|x-a|<\delta\implies0<|x-a|<\delta_1,\delta_2\]
@@ -77,8 +78,9 @@ compute limits.
         &=\lim_{x\to a}f(x)+(-1)\lim_{x\to a}g(x) \\
         &=\lim_{x\to a}f(x)-\lim_{x\to a}g(x) = L-M
     \end{align*}
-    Therefore, it is proved
-    \[\lim_{x\to a}[f(x)\pm g(x)]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)=L\pm M\]
+    Therefore, it is proved that
+    \[\lim_{x\to a}[f(x)\pm g(x)]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)=L
+    \pm M\qedhere\]
 \end{proof}
 \begin{theorem}[Product Law]
     The limit of a product is the product of the limits.
@@ -108,8 +110,9 @@ compute limits.
         &<\frac{\epsilon}{2(1+|M|)}(1+|M|)+(1+|L|)\frac{\epsilon}{2(1+|L|)} \\
         &<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon
     \end{align*}
-    It is proved that
-    \[\lim_{x\to a}[f(x)g(x)]=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)=L\cdot M\]
+    Therefore, it is proved that
+    \[\lim_{x\to a}[f(x)g(x)]=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)
+    =L\cdot M\qedhere\]
 \end{proof}
 \begin{theorem}[Quotient Law]
     The limit of a quotient is the quotient of the limits (if that the
@@ -140,7 +143,8 @@ compute limits.
     which is what we want to show.
     We apply the product law to prove the quotient law
     \[\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}f(x)\left(\frac{1}{g(x)}\right)
-    =\lim_{x\to a}f(x)\lim_{x\to a}\frac{1}{g(x)}=L\cdot\frac{1}{M}=\frac{L}{M}\]
+    =\lim_{x\to a}f(x)\lim_{x\to a}\frac{1}{g(x)}=L\cdot\frac{1}{M}
+    =\frac{L}{M}\qedhere\]
 \end{proof}
 \begin{theorem}[Power Law]
     \[\lim_{x\to a}[f(x)]^n=[\lim_{x\to a}f(x)]^n,n\in\R\]
@@ -167,7 +171,7 @@ if the limits exist.
     \[\lim_{x\to 0^+}|x|=\lim_{x\to 0^+}x=0\]
     For \(x<0\) we have \(|x|=-x\) so
     \[\lim_{x\to 0^-}|x|=\lim_{x\to 0^-}(-x)=0\]
-    Therefore, it is shown that \[\lim_{x\to 0}|x|=0\]
+    Therefore, it is shown that \[\lim_{x\to 0}|x|=0\qedhere\]
 \end{solution}
 \begin{theorem}
     If \(f(x)\leq g(x)\) for all \(x\) in an open interval that contains \(a\),
@@ -193,13 +197,24 @@ if the limits exist.
     but this is a contradiction since given \(f(x)\leq g(x)\).
     Then the inequality \(L>M\) must be false so \(L\leq M\) must be true.
     Therefore, it is proved that
-    \[\lim_{x\to a}f(x)\leq\lim_{x\to a}g(x)\]
+    \[\lim_{x\to a}f(x)\leq\lim_{x\to a}g(x)\qedhere\]
 \end{proof}
 \begin{theorem}[Squeeze Theorem]
     If \(f(x)\leq g(x)\leq h(x)\) for all \(x\) in an open interval that
     contains \(a\), except possibly at \(a\), and
     \[\lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L\] then \[\lim_{x\to a}g(x)=L\]
 \end{theorem}
+\begin{proof}
+    Let \(\epsilon>0\) be given. Since \(\lim_{x\to a}f(x)=L\), there exists
+    \(\delta_1>0\) such that
+    \[0<|x-a|<\delta_1\implies|f(x)-L|<\epsilon\implies L-\epsilon<f(x)<L+\epsilon\]
+    Since \(\lim_{x\to a}h(x)=L\), there exists \(\delta_2>0\) such that
+    \[0<|x-a|<\delta_2\implies|h(x)-L|<\epsilon\implies L-\epsilon<h(x)<L+\epsilon\]
+    Let \(\delta=\min\{\delta_1,\delta_2\}\). If \(0<|x-a|<\delta\), then we have
+    \[L-\epsilon<f(x)\leq g(x)\leq h(x)<L+\epsilon\implies L-\epsilon<g(x)<L+\epsilon
+    \implies|g(x)-L|<\epsilon\] which is what we want to prove.
+    Therefore, it is proved that \[\lim_{x\to a}g(x)=L\qedhere\]
+\end{proof}
 By \textbf{algebra}, \textbf{geometry}, and \textbf{trigonometry}, we can get
 the following result by the \textbf{Pythagorean theorem} \(a^2+b^2=c^2\).
 If \(0<\theta<\pi/2\), then
@@ -232,5 +247,5 @@ Therefore, we have the following limit by the squeeze theorem.
     \left(\lim_{\theta\to 0}\frac{-\sin\theta}{\cos\theta+1}\right)
     =0\left(\frac{-1\cdot0}{1+1}\right)=0\]
     Therefore, it is shown that
-    \[\lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}=0\]
+    \[\lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}=0\qedhere\]
 \end{solution}

@@ -1,1 +1,46 @@
 \subsection{Continuity}
+Let \(f(x)\) be a function and the number \(a\) is in the domain of \(f\) so
+\(f(a)\) is defined.
+If the limit exists, then we have the following definition.
+\begin{definition}
+    A function \(f\) is \textbf{continuous} at the number \(a\) if
+    \[\lim_{x\to a}f(x)=f(a)\]
+    A function \(f\) is continuous from the left at \(a\) if the left-hand limit
+    equals \(f(a)\) and it is continuous from the right at \(a\) if the right-hand
+    limit equals \(f(a)\).
+    A function \(f\) is continuous on an interval if it is continuous
+    at every number in the interval.
+    If \(f\) is not continuous at \(a\), then it is a discontinuous function at \(a\).
+\end{definition}
+\begin{theorem}
+    If \(f\) and \(g\) are continuous functions at \(a\) and \(c\) is a constant,
+    then the following functions are also continuous at \(a\). \\
+    \begin{itemize*}
+        \item \(f+g\) \item \(f-g\) \item \(cf\) \item \(f\cdot g\)
+        \item \(\dfrac{f}{g}\iff g(x)\neq 0\)
+    \end{itemize*}
+\end{theorem}
+\begin{theorem}
+    Let \(P(x)\) be any polynomial, then \(P(x)\) is continuous on
+    \(\R=(-\infty,\infty)\).
+\end{theorem}
+\begin{proof}
+    A polynomial \(P(x)\) is a function of the form
+    \[a_nx^n+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_1x+a_0\]
+    where the coefficients \(a_i\) are constants.
+    \(P(x)\) is the sum of power functions with a constant multiple and
+    therefore it is continuous.
+\end{proof}
+\begin{theorem}
+    Let \(f\) be any rational function, then \(f\) is continuous on its domain.
+\end{theorem}
+\begin{proof}
+    A rational function \(f\) is a function of the form
+    \[f(x)=\frac{P(x)}{Q(x)}\] where \(P\) and \(Q\) are polynomials.
+    We know that polynomials are continuous so a rational function is
+    continuous on its domain.
+\end{proof}
+\begin{theorem}
+    Polynomials, rational functions, root functions, and trigonometric
+    functions are continuous on their domain.
+\end{theorem}
