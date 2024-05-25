@@ -14,11 +14,10 @@ If the limit exists, then we have the following definition.
 \end{definition}
 \begin{theorem}
     If \(f\) and \(g\) are continuous functions at \(a\) and \(c\) is a constant,
-    then the following functions are also continuous at \(a\). \\
-    \begin{itemize*}
-        \item \(f+g\) \item \(f-g\) \item \(cf\) \item \(f\cdot g\)
-        \item \(\dfrac{f}{g}\iff g(x)\neq 0\)
-    \end{itemize*}
+    then the following functions are also continuous at \(a\).
+    \begin{align*}
+        &f+g&&f-g&&cf&f\cdot g&&\dfrac{f}{g}\iff g(x)\neq 0
+    \end{align*}
 \end{theorem}
 \begin{theorem}
     Let \(P(x)\) be any polynomial, then \(P(x)\) is continuous on
@@ -76,11 +75,11 @@ If the limit exists, then we have the following definition.
     Therefore, \(f(g(x))\) is continuous at \(a\).
 \end{proof}
 An important property of continuous functions is formulated by the following
-theorem proved by \textbf{Bernard Bolzano} (1781-1848).
+theorem proved by \textbf{Bernard Bolzano} (1781--1848).
 \begin{theorem}[Intermediate Value Theorem]
     Suppose that \(f\) is continuous on the closed interval \([a,b]\) and let
-    \(n\) be any number between \(f(a)\) and \(f(b)\) where \(f(a)\neq f(b)\)
-    such that \[\min\{f(a),f(b)\}<n<\max\{f(a),f(b)\}\]
+    \(N\) be any number between \(f(a)\) and \(f(b)\) where \(f(a)\neq f(b)\)
+    such that \[\min\{f(a),f(b)\}<N<\max\{f(a),f(b)\}\]
     Then there exists a number \(c\) in the open interval \((a,b)\) such that
-    \(f(c)=n\).
+    \(f(c)=N\).
 \end{theorem}
