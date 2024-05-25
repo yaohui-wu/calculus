@@ -41,6 +41,46 @@ If the limit exists, then we have the following definition.
     continuous on its domain.
 \end{proof}
 \begin{theorem}
-    Polynomials, rational functions, root functions, and trigonometric
-    functions are continuous on their domain.
+    Polynomials, rational functions, root functions, trigonometric
+    functions, inverse trigonometric functions, logarithmic functions, and
+    exponential functions are continuous on their domain.
+\end{theorem}
+\begin{theorem}
+    If \(f\) is a one-to-one continuous function defined on an interval
+    \([a,b]\), then its inverse function \(f^{-1}\) is also continuous.
+\end{theorem}
+\begin{theorem}
+    If \(f\) is continuous at \(b\) and \(\lim_{x\to a}g(x)=b\), then
+    the limit of the composite function \(f\circ g\) is
+    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\]
+\end{theorem}
+\begin{proof}
+    Let \(\epsilon>0\) be given, we want to find \(\delta>0\) such that
+    \[0<|x-a|<\delta\implies|f(g(x))-f(b)|<\epsilon\]
+    Since \(f\) is continuous at \(b\), then we have \(\lim_{y\to b}f(y)=f(b)\).
+    There exists \(\delta_1>0\) such that
+    \[0<|y-b|<\delta_1\implies|f(y)-f(b)|<\epsilon\]
+    Since \(\lim_{x\to a}g(x)=b\), there exists \(\delta>0\) such that
+    \[0<|x-a|<\delta\implies|g(x)-b|<\delta_1\implies|f(g(x))-f(b)|<\epsilon\]
+    Therefore, it is proved that
+    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\qedhere\]
+\end{proof}
+\begin{theorem}
+    If \(g\) is continuous at \(a\) and \(f\) is continuous at \(g(a)\), then
+    \(f\circ g\) is continuous at \(a\).
+\end{theorem}
+\begin{proof}
+    Since \(g\) is continuous at \(a\), we have \(\lim_{x\to a}g(x)=g(a)\).
+    Since \(f\) is continuous at \(g(a)\), we have
+    \[\lim_{x\to a}f(g(x))=f(g(a))\]
+    Therefore, \(f(g(x))\) is continuous at \(a\).
+\end{proof}
+An important property of continuous functions is formulated by the following
+theorem proved by \textbf{Bernard Bolzano} (1781-1848).
+\begin{theorem}[Intermediate Value Theorem]
+    Suppose that \(f\) is continuous on the closed interval \([a,b]\) and let
+    \(n\) be any number between \(f(a)\) and \(f(b)\) where \(f(a)\neq f(b)\)
+    such that \[\min\{f(a),f(b)\}<n<\max\{f(a),f(b)\}\]
+    Then there exists a number \(c\) in the open interval \((a,b)\) such that
+    \(f(c)=n\).
 \end{theorem}
