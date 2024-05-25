@@ -4,21 +4,19 @@ Let \(f(x)\) be a function and the number \(a\) is in the domain of \(f\) so
 If the limit exists, then we have the following definition.
 \begin{definition}
     A function \(f\) is \textbf{continuous} at the number \(a\) if
-    \[\lim_{x\to a}f(x)=f(a)\]
-    A function \(f\) is continuous from the left at \(a\) if the left-hand limit
-    equals \(f(a)\) and it is continuous from the right at \(a\) if the right-hand
-    limit equals \(f(a)\).
-    A function \(f\) is continuous on an interval if it is continuous
-    at every number in the interval.
-    If \(f\) is not continuous at \(a\), then it is a discontinuous function at \(a\).
+    \[\lim_{x\to a}f(x)=f(a)\qedhere\]
 \end{definition}
-\begin{theorem}
-    If \(f\) and \(g\) are continuous functions at \(a\) and \(c\) is a constant,
-    then the following functions are also continuous at \(a\).
+A function \(f\) is continuous from the left at \(a\) if the left-hand limit
+equals \(f(a)\) and it is continuous from the right at \(a\) if the right-hand
+limit equals \(f(a)\).
+A function \(f\) is continuous on an interval if it is continuous
+at every number in the interval.
+If \(f\) is not continuous at \(a\), then it is a discontinuous function at \(a\).
+If \(f\) and \(g\) are continuous functions at \(a\) and \(c\) is a constant,
+then the following functions are also continuous at \(a\).
     \begin{align*}
-        &f+g&f-g&&cf&&f\cdot g&&\dfrac{f}{g}\iff g(x)\neq 0
+        &f+g&f-g&&cf&&f\cdot g&&\dfrac{f}{g}\iff g(x)\neq 0&\qedhere
     \end{align*}
-\end{theorem}
 \begin{theorem}
     Let \(P(x)\) be any polynomial, then \(P(x)\) is continuous on
     \(\R=(-\infty,\infty)\).
@@ -39,11 +37,9 @@ If the limit exists, then we have the following definition.
     We know that polynomials are continuous so a rational function is
     continuous on its domain.
 \end{proof}
-\begin{theorem}
-    Polynomials, rational functions, root functions, trigonometric
-    functions, inverse trigonometric functions, logarithmic functions, and
-    exponential functions are continuous on their domain.
-\end{theorem}
+Polynomials, rational functions, root functions, trigonometric
+functions, inverse trigonometric functions, logarithmic functions, and
+exponential functions are continuous on their domain.
 \begin{theorem}
     If \(f\) is a one-to-one continuous function defined on an interval
     \([a,b]\), then its inverse function \(f^{-1}\) is also continuous.
@@ -51,7 +47,7 @@ If the limit exists, then we have the following definition.
 \begin{theorem}
     If \(f\) is continuous at \(b\) and \(\lim_{x\to a}g(x)=b\), then
     the limit of the composite function \(f\circ g\) is
-    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\]
+    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\qedhere\]
 \end{theorem}
 \begin{proof}
     Let \(\epsilon>0\) be given, we want to find \(\delta>0\) such that

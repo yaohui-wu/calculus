@@ -16,10 +16,16 @@
     {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% Specify theorem head.
 
 \theoremstyle{theorem}
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{thm}{Theorem}[section]
+\newenvironment*{theorem}
+    {\renewcommand*{\qedsymbol}{\(\square\)}\pushQED{\qed}\begin{thm}}
+    {\popQED\end{thm}}
 
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\theoremstyle{theorem}
+\newtheorem{defn}{Definition}[section]
+\newenvironment*{definition}
+    {\renewcommand*{\qedsymbol}{\(\square\)}\pushQED{\qed}\begin{defn}}
+    {\popQED\end{defn}}
 
 \theoremstyle{theorem}
 \newtheorem{problem}{Problem}[section]
