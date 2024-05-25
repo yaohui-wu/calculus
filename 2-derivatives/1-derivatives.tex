@@ -1,1 +1,80 @@
 \subsection{Derivatives}
+\begin{definition}
+    The \textbf{tangent line} of the curve \(y=f(x)\) at the point \(P(a, f(a))\)
+    is the line through \(P\) with slope
+    \[m=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}\]
+    where \(h=x-a\), if this limit exists.
+\end{definition}
+\begin{definition}
+    The \textbf{velocity} at time \(t=a\) of a \textbf{position function}
+    \(s=f(t)\) is \[v(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}\qedhere\]
+\end{definition}
+
+\subsubsection{Derivatives and Rates of Change}
+\begin{definition}
+    The \textbf{derivative} of a function \(f\) at a number \(a\) is
+    \[f'(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}\] if this limit exists.
+\end{definition}
+The slope of the tangent line to \(y=f(x)\) at the point \((a,f(a))\) is
+\(f'(a)\), the derivative of \(f\) at \(a\).
+The equation of the tangent line is \[y-f(a)=f'(a)(x-a)\]
+The \textbf{instantaneous rate of change} of \(y=f(x)\) with respect to \(x\)
+at \(x=x_0\) in the interval \([x_0,x_1]\) is
+\[\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}
+=\lim_{x_1 \to x_0}\frac{f(x_1)-f(x_0)}{x_1-x_0}\]
+The derivative \(f'(a)\) is the instantaneous rate of change of \(y=f(x)\)
+with respect to \(x\) when \(x=a\).
+If \(s=f(t)\) is a position function of an object, then the velocity of the
+object at time \(t=a\) is \(v(a)=f'(a)\) and the \textbf{speed} of the
+object is \(|f'(a)|\), the \textbf{magnitude} of the velocity.
+
+\subsubsection{The Derivative as a Function}
+\begin{definition}
+    The derivative of a function \(f(x)\) is the function
+    \[f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\qedhere\]
+\end{definition}
+The following notations of the derivative of \(y=f(x)\) with respect to \(x\) are
+equivalent.
+\[f'(x)=y'=\frac{dy}{dx}=\frac{d}{dx}f(x)=D_x f(x)\]
+where \(f'(x)\) is Newton's notation and \(dy/dx\) is Leibniz's notation.
+The notation \(d/dx\) is the \textbf{differential operator} that indicates the
+operation of \textbf{differentiation}.
+The notations of the derivative of \(f(x)\) at \(a\) are
+\[f'(a)=\left.\frac{dy}{dx}\right|_{x=a}=\left[\frac{dy}{dx}\right]_{x=a}\]
+
+\subsubsection{Differentiable Functions}
+\begin{definition}
+    A function \(f\) is \textbf{differentiable} at \(a\) if \(f'(a)\) exists.
+    \(f\) is differentiable on an open interval if it is differentiable at
+    every number in the interval.
+\end{definition}
+\begin{theorem}
+    If \(f\) is differentiable at \(a\), then \(f\) is continuous at \(a\).
+\end{theorem}
+Note that there are functions that are continuous but not differentiable.
+The function \(y=|x|\) is continuous at 0 but not differentiable at 0 since
+\[f'(0)=\lim_{h\to 0}\frac{|0+h|-|0|}{h}\] if the limit exists but
+\begin{align*}
+    \lim_{h\to 0^-}\frac{|0+h|-|0|}{h}&=\lim_{h\to 0^-}\frac{|h|}{h}
+    =\lim_{h\to 0^-}\frac{-h}{h}=-1 \\
+    \lim_{h\to 0^+}\frac{|0+h|-|0|}{h}&=\lim_{h\to 0^+}\frac{|h|}{h}
+    =\lim_{h\to 0^+}\frac{h}{h}=1
+\end{align*}
+thus the limit does not exist so \(f'(0)\) does not exist.
+If a function is differentiable, then it is \textbf{smooth}, continuous, and
+it has no vertical tangent lines.
+
+\subsubsection{Higher Order Derivatives}
+ If \(f(x)\) is a differentiable function and its derivative \(f'(x)\) is differentiable,
+then the \textbf{second derivative} of \(f\) is
+\[f''(x)=\frac{d^2y}{dx^2}\]
+We can interpret \(f''(x)\) as the slope of the curve \(y=f'(x)\) at the point
+\((x,f'(x))\), which is the rate of change of the slope of the original curve \(y=f(x)\).
+Let \(s=s(t)\) be a position function of an object with respect to time \(t\).
+The velocity function \(v(t)\) of the object is \[v(t)=s'(t)=\frac{ds}{dt}\]
+The instantaneous rate of change of velocity is the \textbf{acceleration}.
+Thus the acceleration function \(a(t)\) is the derivative of the velocity function and
+is therefore the second derivative of the position function.
+\[a(t)=v'(t)=\frac{dv}{dt}=s''(t)=\frac{d^2s}{dt^2}\]
+In general, the \(n\)th derivative of \(y=f(x)\) is
+\[f^{(n)}(x)=\frac{d^ny}{dx^n}\]
