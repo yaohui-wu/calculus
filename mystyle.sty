@@ -4,17 +4,16 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage[inline]{enumitem}
 
 \renewcommand*{\qedsymbol}{\(\blacksquare\)}
 \renewcommand*{\epsilon}{\varepsilon}
 
-\newtheoremstyle{theorem}%
-    {}{}%
-    {}{}%
-    {\bfseries}{.}%
-    { }%
-    {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}
+\newtheoremstyle{theorem}% Name.
+    {}{}% Space above and below.
+    {}{}% Body font and indentation amount.
+    {\bfseries}{.}% Theorem head font and punctuation after theorem head.
+    { }% Space after theorem head (normal).
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% Specify theorem head.
 
 \theoremstyle{theorem}
 \newtheorem{theorem}{Theorem}[section]
@@ -22,7 +21,7 @@
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 
-\theoremstyle{definition}
+\theoremstyle{theorem}
 \newtheorem{problem}{Problem}[section]
 
 \newenvironment*{solution}{\begin{proof}[Solution]}{\end{proof}}

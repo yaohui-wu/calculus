@@ -61,7 +61,7 @@ compute limits.
     \[|f(x)+g(x)-(L+M)|=|f(x)-L+g(x)-M|\leq|f(x)-L|+|g(x)-M|\]
     Since \(\lim_{x\to a}f(x)=L\), there is a number \(\delta_1\) such that
     \[0<|x-a|<\delta_1\implies|f(x)-L|<\frac{\epsilon}{2}\]
-    Similarly, there exists \(delta_2>0\), there is a number \(\delta_2\) such that such that
+    Similarly, there is a number \(\delta_2\) such that
     \[0<|x-a|<\delta_2\implies|h(x)-L|<\epsilon\implies L\]
     \[0<|x-a|<\delta_2\implies|g(x)-M|<\frac{\epsilon}{2}\]
     Let \(\delta=\min\{\delta_1,\delta_2\}\) such that
@@ -185,10 +185,10 @@ if the limits exist.
     We use the method of proof by contradiction.
     Suppose  that \(L>M\), then we have
     \[\lim_{x\to a}[g(x)-f(x)]=M-L\]
-    Therefore, for any number \(\epsilon>0\), there exists \(\delta>0\) such that
+    Therefore, for any number \(\epsilon>0\), there is a \(\delta>0\) such that
     \[0<|x-a|<\delta\implies|g(x)-f(x)-(M-L)|<\epsilon\]
     Note that \(L-M>0\) by the hypothesis.
-    Let \(\epsilon=L-M\), there exists \(\delta>0\) such that
+    Let \(\epsilon=L-M\), there exists a \(\delta>0\) such that
     \[0<|x-a|<\delta\implies|g(x)-f(x)-(M-L)|<L-M\]
     Since \(a\leq|a|\) for any number \(a\), we have
     \[0<|x-a|<\delta\implies g(x)-f(x)-(M-L)<L-M\]
@@ -205,10 +205,10 @@ if the limits exist.
     \[\lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L\] then \[\lim_{x\to a}g(x)=L\]
 \end{theorem}
 \begin{proof}
-    Let \(\epsilon>0\) be given. Since \(\lim_{x\to a}f(x)=L\), there exists
+    Let \(\epsilon>0\) be given. Since \(\lim_{x\to a}f(x)=L\), there exists a
     \(\delta_1>0\) such that
     \[0<|x-a|<\delta_1\implies|f(x)-L|<\epsilon\implies L-\epsilon<f(x)<L+\epsilon\]
-    Since \(\lim_{x\to a}h(x)=L\), there exists \(\delta_2>0\) such that
+    Since \(\lim_{x\to a}h(x)=L\), there exists a \(\delta_2>0\) such that
     \[0<|x-a|<\delta_2\implies|h(x)-L|<\epsilon\implies L-\epsilon<h(x)<L+\epsilon\]
     Let \(\delta=\min\{\delta_1,\delta_2\}\). If \(0<|x-a|<\delta\), then we have
     \[L-\epsilon<f(x)\leq g(x)\leq h(x)<L+\epsilon\implies L-\epsilon<g(x)<L+\epsilon
@@ -245,7 +245,7 @@ Therefore, we have the following limit by the squeeze theorem.
     \left(\frac{-\sin\theta}{\cos\theta+1}\right)\right]
     =\left(\lim_{\theta\to 0}\frac{\sin\theta}{\theta}\right)
     \left(\lim_{\theta\to 0}\frac{-\sin\theta}{\cos\theta+1}\right)
-    =0\left(\frac{-1\cdot0}{1+1}\right)=0\]
+    =1\left(\frac{(-1)(0)}{1+1}\right)=0\]
     Therefore, it is shown that
     \[\lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}=0\qedhere\]
 \end{solution}

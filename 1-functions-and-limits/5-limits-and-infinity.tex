@@ -28,7 +28,7 @@ Similar definitions can be given for one-sided infinite limits.
     The limit of \(f(x)\) as \(x\) approaches infinity is \(L\) if the values
     of \(f(x)\) can be made as close to \(L\) as we like by taking \(x\)
     sufficiently large.
-    \[\lim_{x\to \infty}f(x)=L\]
+    \[\lim_{x\to\infty}f(x)=L\]
 \end{definition}
 \begin{definition}
     Let \(f\) be a function defined on some interval \((-\infty,a)\).
@@ -37,6 +37,13 @@ Similar definitions can be given for one-sided infinite limits.
     sufficiently small.
     \[\lim_{x\to -\infty}f(x)=L\]
 \end{definition}
+\begin{problem}
+    Evaluate \(\lim_{x\to\infty}\sin x\) and \(\lim_{x\to\infty}\cos x\).
+\end{problem}
+\begin{solution}
+    The values of \(\sin x\) and \(\cos x\) oscillate between \(-1\) and 1 as
+    \(x\to\infty\) so the limits do not exist.
+\end{solution}
 \begin{definition}
     The \textbf{horizontal asymptote} of the curve \(y=f(x)\) is the line \(y=L\)
     if one of the limits at infinity is \(L\).
@@ -44,13 +51,13 @@ Similar definitions can be given for one-sided infinite limits.
 
 \subsubsection{Infinite Limits at Infinity}
 \begin{definition}
-    The values of \(f(x)\) become large as \(x\) becomes large.
-    \[\lim_{x\to \infty}f(x)=\infty\]
+    The values of \(f(x)\) become arbitrarily large for sufficiently large \(x\).
+    \[\lim_{x\to\infty}f(x)=\infty\]
 \end{definition}
 Similar definitions can be given for other infinite limits at infinity or
 negative infinity.
 \begin{align*}
-    &\lim_{x\to \infty}f(x)=-\infty&&\lim_{x\to -\infty}f(x)=\infty&
+    &\lim_{x\to\infty}f(x)=-\infty&&\lim_{x\to -\infty}f(x)=\infty&
     &\lim_{x\to -\infty}f(x)=-\infty&
 \end{align*}
 
@@ -58,20 +65,42 @@ negative infinity.
 Let \(f\) be a function defined on some open interval that contains the number
 \(a\), except possibly at \(a\) itself.
 \begin{definition}
-    \[\lim_{x\to a}f(x)=\infty\] if for every \(M>0\), there is
+    \[\lim_{x\to a}f(x)=\infty\] if for every \(M>0\), there is a
     \(\delta>0\) such that \[0<|x-a|<\delta\implies f(x)>M\]
 \end{definition}
 \begin{problem}
     Prove that \[\lim_{x\to a}\frac{1}{x^2}=\infty\]
 \end{problem}
+\begin{solution}
+    Let \(M>0\) be given, we want to find a \(\delta>0\) such that
+    \[0<|x|<\delta\implies\frac{1}{x^2}>M\]
+    We have
+    \[\frac{1}{x^2}>M\iff x^2<\frac{1}{M}\iff|x|<\frac{1}{\sqrt{M}}\]
+    Let \(\delta=1/\sqrt{M}\), then we have
+    \[0<|x|<\delta=\frac{1}{\sqrt{M}}\implies\frac{1}{x^2}>\frac{1}{\delta^2}=M\]
+    Therefore, by definition, it is proved that
+    \[\lim_{x\to a}\frac{1}{x^2}=\infty\qedhere\]
+\end{solution}
 Let \(f\) be a function defined on some interval \((a,\infty)\).
 \begin{definition}
     \[\lim_{x\to \infty}f(x)=L\] if for every \(\epsilon>0\), there is an \(N\)
-    such that \[x>N\implies|f(x)-L<\epsilon|\]
+    such that \[x>N\implies|f(x)-L|<\epsilon\]
 \end{definition}
 \begin{problem}
     Prove that \[\lim_{x\to \infty}\frac{1}{x}=0\]
 \end{problem}
+\begin{proof}
+    Given \(\epsilon>0\), we want to find an \(N\) such that
+    \[x>N\implies\left|\frac{1}{x}-0\right|<\epsilon\]
+    Since \(x\to \infty\), it is reasonable to assume that \(x>0\) in
+    computing the limit.
+    Then we have \(1/x<\epsilon\iff x>1/\epsilon\).
+    Let \(N=1/\epsilon\), then we have
+    \[x>N=\frac{1}{\epsilon}\implies\left|\frac{1}{x}-0\right|=\frac{1}{x}
+    <\epsilon\]
+    Therefore, by definition, it is proved that
+    \[\lim_{x\to \infty}\frac{1}{x}=0\qedhere\]
+\end{proof}
 \begin{definition}
     \[\lim_{x\to \infty}f(x)=\infty\] if for every \(M>0\), there is an \(N>0\)
     such that \[x>N\implies f(x)>M\]
