@@ -1,1 +1,28 @@
-\subsection{L'Hôpital's Rule}
+\subsection{Indeterminate Forms and L'Hôpital's Rule}
+\subsubsection{L'Hôpital's Rule}
+Consider the limit of the form \[\lim_{x\to a}\frac{f(x)}{g(x)}\]
+If \(f(x)\to 0\) and \(g(x)\to 0\), then the limit is an
+\textbf{indeterminate form} of type \(0/0\).
+If \(f(x)\to\infty\) or \(-\infty\) and \(g(x)\to\infty\) or \(-\infty\),
+then the limit is an indeterminate form of type \(\infty/\infty\).
+We have the \textbf{L'Hôpital's Rule} discoverd by
+\textbf{Johann Bernoulli} (1667--1748) and named after
+\textbf{Guillaume de l'Hôpital} (1661--1704) to evaluate limits of indeterminate
+forms of type \(0/0\) and \(\infty/\infty\).
+\begin{theorem}[L'Hôpital's Rule]
+    Suppose that \(f\) and \(g\) are differentiable and \(g'(x)\neq 0\) near \(a\),
+    except possibly at \(a\).
+    If
+    \begin{align*}
+        &\lim_{x\to a}f(x)=0&\lim_{x\to a}g(x)=0
+    \end{align*}
+    or
+    \begin{align*}
+        &\lim_{x\to a}f(x)=\pm\infty&\lim_{x\to a}g(x)=\pm\infty
+    \end{align*}
+    Then
+    \[\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}\]
+    if the limit on the right side exists, is \(\infty\), or is \(-\infty\).
+\end{theorem}
+L'Hôpital's rule is also valid for one-sided limits and for limits at infinity
+or negative infinity.
