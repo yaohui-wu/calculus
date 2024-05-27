@@ -1,0 +1,53 @@
+\subsection{Differentiation}
+\subsubsection{Differentiation Formulas}
+Let \(f(x)\) and \(g(x)\) be differentiable functions, then we have the
+following differentiation formulas.
+\begin{theorem}
+    Let \(f(x)=c\) where \(c\) is a constant, then \[\frac{d}{dx}(c)=0\qedhere\]
+\end{theorem}
+\begin{proof}
+    \[f'(x)=\lim_{h\to 0}\frac{c-c}{h}=\lim_{h\to 0}0=0\qedhere\]
+\end{proof}
+\begin{theorem}[Power Rule]
+    \[\frac{d}{dx}(x^n)=nx^{n-1},n\in\R\qedhere\]
+\end{theorem}
+Note the special case when \(n=1\), then we have \[\frac{d}{dx}(x)=1\]
+\begin{theorem}[Constant Multiple Rule]
+    If \(c\) is a constant, then \[\frac{d}{dx}[cf(x)]=c\,\frac{d}{dx}f(x)\qedhere\]
+\end{theorem}
+\begin{theorem}[Sum and Difference Rule]
+    \[\frac{d}{dx}[f(x)\pm g(x)]=\frac{d}{dx}f(x)\pm \frac{d}{dx}g(x)\qedhere\]
+\end{theorem}
+
+\subsubsection{Product and Quotient Rules}
+Let \(f(x)\) and \(g(x)\) be differentiable functions, then we have the
+product rule by Leibniz and the quotient rule.
+\begin{theorem}[Product Rule]
+    \[\frac{d}{dx}[f(x)g(x)]=f(x)\left[\frac{d}{dx}g(x)\right]
+    +\left[\frac{d}{dx}f(x)\right]g(x)\qedhere\]
+\end{theorem}
+\begin{theorem}[Quotient Rule]
+    \[\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]=\frac{\left[\cfrac{d}{dx}f(x)\right]g(x)
+    -f(x)\left[\cfrac{d}{dx}g(x)\right]}{[g(x)]^2}\qedhere\]
+\end{theorem}
+
+\subsubsection{Trigonometric Functions}
+\begin{theorem}
+    \[\frac{d}{dx}\sin x=\cos x\qedhere\]
+\end{theorem}
+\begin{theorem}
+    \[\frac{d}{dx}\cos x=-\sin x\qedhere\]
+\end{theorem}
+\begin{theorem}
+    \[\frac{d}{dx}\tan x=\sec^2 x\qedhere\]
+\end{theorem}
+
+\subsubsection{Chain Rule}
+We have the chain rule by \textbf{James Gregory} (1638--1675) to find the
+derivative of a composite function.
+\begin{theorem}[Chain Rule]
+    If \(f\) and \(g\) are differentiable functions and \(F=f(g(x))\),
+    then \(F\) is differentiable and \(F'\) is
+    \[F'(x)=f'(g(x))\cdot g'(x)\]
+    If \(y=f(u)\) and \(u=g(x)\), then \[\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\qedhere\]
+\end{theorem}

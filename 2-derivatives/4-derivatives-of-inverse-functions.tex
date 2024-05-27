@@ -1,1 +1,46 @@
 \subsection{Derivatives of Inverse Functions}
+\begin{theorem}
+    If \(f\) is a one-to-one continuous function defined on an interval,
+    then its inverse function \(f^{-1}\) is also continuous.
+\end{theorem}
+\begin{theorem}
+    If is a one-to-one differentiable function with inverse function \(f^{-1}\)
+    and \(f'(f^{-1}(a))\neq 0\), then the inverse function is differentiable at \(a\) and
+    \[(f^{-1})'(x)=\frac{1}{f'(f^{-1}(x))}\iff\frac{dy}{dx}
+    =\frac{1}{\cfrac{dx}{dy}}\qedhere\]
+\end{theorem}
+
+\subsubsection{Logarithmic and Exponential Functions}
+The \textbf{Euler's number} \(e\) named after \textbf{Leonhard Euler} (1707--1783)
+is the base of the natural exponential function \(y=e^x\).
+\begin{definition}[Euler's Number]
+    The Euler's number \(e\) is \[e=\lim_{x\to 0}(1+x)^{1/x}\qedhere\]
+\end{definition}
+Note that the approximate value of \(e\) is \(e\approx2.71828\).
+\begin{theorem}
+    The exponential function \(f(x)=\log_a x\) is differentiable and
+    \[\frac{d}{dx}\log_a x=\frac{1}{x}\log_a e=\frac{1}{x\ln a}\qedhere\]
+\end{theorem}
+\begin{theorem}
+    The derivative of the natural logarithmic function \(f(x)=\ln x\) is
+    \[\frac{d}{dx}\ln x=\frac{1}{x}\qedhere\]
+\end{theorem}
+\begin{theorem}
+    The exponential function \(f(x)=a^x,a>0\) is differentiable and
+    \[\frac{d}{dx}a^x=a^x\ln a\qedhere\]
+\end{theorem}
+\begin{theorem}
+    The derivative of the natural exponential function \(f(x)=e^x\) is
+    \[\frac{d}{dx}e^x=e^x\qedhere\]
+\end{theorem}
+
+\subsubsection{Inverse Trigonometric Functions}
+\begin{theorem}
+    \[\frac{d}{dx}\arcsin x=\frac{1}{\sqrt{1-x^2}},-1<x<1\qedhere\]
+\end{theorem}
+\begin{theorem}
+    \[\frac{d}{dx}\arccos x=-\frac{1}{\sqrt{1-x^2}},-1<x<1\qedhere\]
+\end{theorem}
+\begin{theorem}
+    \[\frac{d}{dx}\arctan x=\frac{1}{1+x^2}\qedhere\]
+\end{theorem}
