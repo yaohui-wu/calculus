@@ -1,4 +1,5 @@
 \subsection{Derivatives of Inverse Functions}
+\subsubsection{Differentiation and Inverse Functions}
 \begin{theorem}
     If \(f\) is a one-to-one continuous function defined on an interval,
     then its inverse function \(f^{-1}\) is also continuous.
@@ -25,6 +26,17 @@ Note that the approximate value of \(e\) is \(e\approx2.71828\).
     The derivative of the natural logarithmic function \(f(x)=\ln x\) is
     \[\frac{d}{dx}\ln x=\frac{1}{x}\qedhere\]
 \end{theorem}
+\begin{problem}
+    Prove the power rule \[\frac{d}{dx}x^n=nx^{n-1}\] for \(n\in\R\).
+\end{problem}
+\begin{solution}
+    Let \(y=x^n\), we use implicit and logarithmic differentiation then we have
+    \begin{align*}
+        \ln y&=\ln x^n\\\ln y&=n\ln x\\\frac{d}{dx}\ln y&=\frac{d}{dx}(n\ln x)
+        \\\frac{1}{y}\frac{dy}{dx}&=\frac{n}{x}\\\frac{dy}{dx}&=nx^{-1}y\\
+        \frac{dy}{dx}&=nx^{-1}x^n\\\frac{dy}{dx}&=nx^{n-1}\qedhere
+    \end{align*}
+\end{solution}
 \begin{theorem}
     The exponential function \(f(x)=a^x,a>0\) is differentiable and
     \[\frac{d}{dx}a^x=a^x\ln a\qedhere\]
