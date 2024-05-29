@@ -1,5 +1,5 @@
 \subsection{Separable Equations}
-\subsubsection{Saparation of Variables}
+\subsubsection{Separation of Variables}
 A \textbf{separable equation} is a first order differential equation that can
 be written in the form \[\frac{dy}{dx}=f(x)g(y)\]
 We can separate the variables if \(g(y)\neq0\), let \(h(y)=1/g(y)\) then we
@@ -11,7 +11,8 @@ Then we integrate both sides of the equation with respect to the variable of
 the function.
 \[\int h(y)\,dy=\int f(x)\,dx\]
 Now we have an implicit solution and in some cases we can solve for an
-explicit solution then we have
+explicit solution.
+We use the chain rule then we have
 \begin{align*}
     \frac{d}{dx}\int h(y)\,dy&=\frac{d}{dx}\int f(x)\,dx\\
     \frac{d}{dy}\int h(y)\,dy\frac{dy}{dx}&=f(x)\\h(y)\frac{dy}{dx}&=f(x)
@@ -19,6 +20,41 @@ explicit solution then we have
 Therefore, we solved the differential equation by
 \textbf{separation of variables}.
 \begin{problem}
-    Solve the differential equation \[\frac{dy}{dx}=\frac{x^2}{y^2}\] with the
-    initial condition \(y(0)=2\).
+    Solve the differential equation \(\dfrac{dy}{dx}=-xy\).
+\end{problem}
+\begin{solution}
+    Notice that \(y=0\) is a trivial solution then we solve the differential
+    equation assuming that \(y\neq 0\).
+    We use separation of variables then we have
+    \begin{align*}
+        \dfrac{dy}{dx}&=-xy\\\frac{dy}{y}&=-x\,dx\\\int\frac{dy}{y}
+        &=-\int x\,dx\\\ln |y|+C_1&=-\frac{x^2}{2}+C_2
+    \end{align*}
+    Let \(C=C_2-C_1\), then we have
+    \begin{align*}
+        \ln |y|&=-\frac{x^2}{2}+C\\e^{\ln |y|}&=e^{-(x^2/2)+C}\\
+        |y|&=e^Ce^{-x^2/2}\\y&=Ae^{-x^2/2}
+    \end{align*}
+    where \(A=\pm e^C\) is an arbitrary constant.
+\end{solution}
+\begin{problem}
+    Solve the differential equation \(\dfrac{dy}{dx}=\dfrac{x^2}{y^2}\) with
+    the initial condition \(y(0)=2\).
+\end{problem}
+\begin{solution}
+    We use separation of variables to find the general solution then we have
+    \begin{align*}
+        \dfrac{dy}{dx}&=\dfrac{x^2}{y^2}\\y^2\,dy&=x^2\,dx\\\int y^2\,dy
+        =\frac{y^3}{3}+C_1&=\frac{x^3}{3}+C_2=\int x^2\,dx\\\frac{y^3}{3}
+        =\frac{x^3}{3}+C&,\quad C=C_2-C_1\\y^3&=x^3+3C\\y&=\sqrt[3]{x^3+3C}
+    \end{align*}
+    We consider the initial condition to find the actual solution then we have
+    \[y(0)=2=\sqrt[3]{(0)^3+3C}\implies 2=\sqrt[3]{3C}\implies 3C=8\]
+    Thus, the solution to the differential equation is \(y=\sqrt[3]{x^3+24}\).
+\end{solution}
+\begin{problem}
+    Solve the differential equation \(\dfrac{dy}{dx}=\dfrac{6x^2}{2y+\cos y}\).
+\end{problem}
+\begin{problem}
+    Solve the differential equation \(y'=x^2y\).
 \end{problem}
