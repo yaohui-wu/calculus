@@ -1,2 +1,24 @@
 \subsection{Separable Equations}
 \subsubsection{Saparation of Variables}
+A \textbf{separable equation} is a first order differential equation that can
+be written in the form \[\frac{dy}{dx}=f(x)g(y)\]
+We can separate the variables if \(g(y)\neq0\), let \(h(y)=1/g(y)\) then we
+have \[\frac{dy}{dx}=\frac{f(x)}{h(y)}\]
+We write the equation in the differential form \[h(y)\,dy=f(x)\,dx\] so that
+there is a function of \(y\) on one side of the equation and a function of
+\(x\) on the other side.
+Then we integrate both sides of the equation with respect to the variable of
+the function.
+\[\int h(y)\,dy=\int f(x)\,dx\]
+Now we have an implicit solution and in some cases we can solve for an
+explicit solution then we have
+\begin{align*}
+    \frac{d}{dx}\int h(y)\,dy&=\frac{d}{dx}\int f(x)\,dx\\
+    \frac{d}{dy}\int h(y)\,dy\frac{dy}{dx}&=f(x)\\h(y)\frac{dy}{dx}&=f(x)
+\end{align*}
+Therefore, we solved the differential equation by
+\textbf{separation of variables}.
+\begin{problem}
+    Solve the differential equation \[\frac{dy}{dx}=\frac{x^2}{y^2}\] with the
+    initial condition \(y(0)=2\).
+\end{problem}
