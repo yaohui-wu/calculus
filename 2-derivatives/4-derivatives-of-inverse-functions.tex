@@ -26,17 +26,6 @@ Note that the approximate value of \(e\) is \(e\approx2.71828\).
     The derivative of the natural logarithmic function \(f(x)=\ln x\) is
     \[\frac{d}{dx}\ln x=\frac{1}{x}\qedhere\]
 \end{theorem}
-\begin{problem}
-    Prove the power rule \[\frac{d}{dx}x^n=nx^{n-1}\] for \(n\in\R\).
-\end{problem}
-\begin{solution}
-    Let \(y=x^n\), we use implicit and logarithmic differentiation then we have
-    \begin{align*}
-        \ln y&=\ln x^n\\\ln y&=n\ln x\\\frac{d}{dx}\ln y&=\frac{d}{dx}(n\ln x)
-        \\\frac{1}{y}\frac{dy}{dx}&=\frac{n}{x}\\\frac{dy}{dx}&=nx^{-1}y\\
-        \frac{dy}{dx}&=nx^{-1}x^n\\\frac{dy}{dx}&=nx^{n-1}\qedhere
-    \end{align*}
-\end{solution}
 \begin{theorem}
     The exponential function \(f(x)=a^x,a>0\) is differentiable and
     \[\frac{d}{dx}a^x=a^x\ln a\qedhere\]
@@ -45,14 +34,71 @@ Note that the approximate value of \(e\) is \(e\approx2.71828\).
     The derivative of the natural exponential function \(f(x)=e^x\) is
     \[\frac{d}{dx}e^x=e^x\qedhere\]
 \end{theorem}
+\begin{problem}
+    Prove the power rule \(\dfrac{d}{dx}x^n=nx^{n-1}\) for \(n\in\R\).
+\end{problem}
+\begin{solution}
+    The rule is true when \(x=0\) which is trivial so it remains to prove the
+    cases for \(x\neq 0\).
+    Let \(y=x^n\) and \(y>0\), we use implicit differentiation and logarithmic
+    differentiation then we have
+    \begin{align*}
+        \ln y &= \ln x^n \\ \ln y &= n\ln x \\
+        \frac{d}{dx}\ln y &= \frac{d}{dx}n\ln x \\
+        \frac{1}{y}\frac{dy}{dx} &= \frac{n}{x} \\
+        \frac{dy}{dx} &= nx^{-1}y \\ \frac{dy}{dx} &= nx^{-1}x^n \\
+        \frac{dy}{dx} &= nx^{n-1}
+    \end{align*}
+    Similarly, we can prove that the rule is true for \(x^n<0\).
+\end{solution}
 
 \subsubsection{Inverse Trigonometric Functions}
 \begin{theorem}
-    \[\frac{d}{dx}\arcsin x=\frac{1}{\sqrt{1-x^2}},-1<x<1\qedhere\]
+    \[\frac{d}{dx}\arcsin x=\frac{1}{\sqrt{1-x^2}},\quad -1<x<1 \qedhere\]
 \end{theorem}
+\begin{proof}
+    Let \(y=\arcsin x \iff \sin y=x\) and \(-\pi/2\leq y\leq\pi/2\) such that
+    \(-1\leq x\leq 1\).
+    Note the approximate value of \(\pi\) is \(\pi\approx 3.14159\).
+    Then we have
+    \begin{align*}
+        \frac{d}{dx}\sin y &= \frac{d}{dx}x \\ \cos y\frac{dy}{dx} &= 1 \\
+        \frac{dy}{dx} &= \frac{1}{\cos y}
+    \end{align*}
+    Since \(-\pi/2\leq y\leq\pi/2\) so \(\cos y\geq0\) thus
+    \(\cos y=\sqrt{1-\sin^2 y}\).
+    Therefore, \(\dfrac{dy}{dx}=\dfrac{1}{\sqrt{1-x^2}}\).
+\end{proof}
 \begin{theorem}
-    \[\frac{d}{dx}\arccos x=-\frac{1}{\sqrt{1-x^2}},-1<x<1\qedhere\]
+    \[\frac{d}{dx}\arccos x=-\frac{1}{\sqrt{1-x^2}},\quad -1<x<1 \qedhere\]
 \end{theorem}
+\begin{proof}
+    Let \(y=\arccos x \iff \cos y=x\) and \(0\leq y\leq\pi\) such that
+    \(-1\leq x\leq 1\).
+    Then we have
+    \begin{align*}
+        \frac{d}{dx}\cos y &= \frac{d}{dx}x \\ -\sin y\frac{dy}{dx} &= 1 \\
+        \frac{dy}{dx} &= -\frac{1}{\sin y}
+    \end{align*}
+    Since \(0\leq y\leq\pi\) so \(\sin y\geq0\) thus
+    \(\sin y=\sqrt{1-\cos^2 y}\).
+    Therefore, \(\dfrac{dy}{dx}=-\dfrac{1}{\sqrt{1-x^2}}\).
+\end{proof}
 \begin{theorem}
-    \[\frac{d}{dx}\arctan x=\frac{1}{1+x^2}\qedhere\]
+    \[\frac{d}{dx}\arctan x=\frac{1}{1+x^2} \qedhere\]
 \end{theorem}
+\begin{proof}
+    Let \(y=\arctan x \iff \tan y=x\).
+    Then we have
+    \begin{align*}
+        \frac{d}{dx}\tan y &= \frac{d}{dx}x \\ \sec^2 y\frac{dy}{dx} &= 1 \\
+        \frac{dy}{dx} &= \cos^2 y
+    \end{align*}
+    Then we can show that
+    \begin{align*}
+        \tan y &= x \\ 1+\frac{\sin^2 y}{\cos^2 y} &= 1+x^2\\
+        1+\frac{1-\cos^2 y}{\cos^2 y} &= 1+x^2 \\ \sec^2 y &= 1+x^2 \\
+        \cos^2y &= \frac{1}{1+x^2}
+    \end{align*}
+    Therefore, \(\dfrac{dy}{dx}=\dfrac{1}{1+x^2}\).
+\end{proof}
