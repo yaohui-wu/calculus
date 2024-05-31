@@ -40,16 +40,21 @@ Note that the approximate value of \(e\) is \(e\approx2.71828\).
 \begin{solution}
     The rule is true when \(x=0\) which is trivial so it remains to prove the
     cases for \(x\neq 0\).
-    Let \(y=x^n\) and \(y>0\), we use implicit differentiation and logarithmic
-    differentiation then we have
+    Let \(y=x^n\) such that \(y>0\), we use implicit differentiation and
+    logarithmic differentiation then we have
     \begin{align*}
-        \ln y &= \ln x^n \\ \ln y &= n\ln x \\
-        \frac{d}{dx}\ln y &= \frac{d}{dx}n\ln x \\
+        \ln y &= \ln x^n=n\ln x \\ \frac{d}{dx}\ln y &= \frac{d}{dx}n\ln x \\
         \frac{1}{y}\frac{dy}{dx} &= \frac{n}{x} \\
-        \frac{dy}{dx} &= nx^{-1}y \\ \frac{dy}{dx} &= nx^{-1}x^n \\
-        \frac{dy}{dx} &= nx^{n-1}
+        \frac{dy}{dx} &= nx^{-1}y= nx^{-1}x^n \\ \frac{dy}{dx} &= nx^{n-1}
     \end{align*}
-    Similarly, we can prove that the rule is true for \(x^n<0\).
+    Similarly, let \(y=x^n\) such that \(y<0\) then we have
+    \begin{align*}
+        \ln|y| &= \ln(-x^n)=\ln[((-1)^{1/n}x)^n] \\
+        \frac{d}{dx}\ln|y| &= \frac{d}{dx}[n\ln((-1)^{1/n}x)] \\
+        \frac{1}{y}\frac{dy}{dx} &= n\frac{1}{(-1)^{1/n}x}(-1)^{1/n}
+        =\frac{n}{x} \\ \frac{dy}{dx} &= nx^{-1}y= nx^{-1}x^n \\
+        \frac{dy}{dx} &= nx^{n-1} \qedhere
+    \end{align*}
 \end{solution}
 
 \subsubsection{Inverse Trigonometric Functions}

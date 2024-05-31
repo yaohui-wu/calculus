@@ -3,13 +3,14 @@
 Let \(f(x)\) and \(g(x)\) be differentiable functions, then we have the
 following differentiation formulas.
 \begin{theorem}
-    Let \(f(x)=c\) where \(c\) is a constant, then \[\frac{d}{dx}(c)=0\qedhere\]
+    Let \(f(x)=c\) where \(c\) is a constant, then
+    \[\frac{d}{dx}(c)=0 \qedhere\]
 \end{theorem}
 \begin{proof}
-    \[f'(x)=\lim_{h\to 0}\frac{c-c}{h}=\lim_{h\to 0}0=0\qedhere\]
+    \[f'(x)=\lim_{h\to 0}\frac{c-c}{h}=\lim_{h\to 0}0=0 \qedhere\]
 \end{proof}
 \begin{theorem}[Power Rule]
-    \[\frac{d}{dx}(x^n)=nx^{n-1},n\in\R\qedhere\]
+    \[\frac{d}{dx}(x^n)=nx^{n-1},\quad n\in\R \qedhere\]
 \end{theorem}
 \begin{proof}
     We prove the power rule for \(n\in\N\).
@@ -17,8 +18,8 @@ following differentiation formulas.
     We use the binomial theorem to expand \((x+h)^n\) then we have
     \begin{align*}
         \frac{d}{dx}(x^n)
-        &=\lim_{h\to 0}\frac{x^n+nx^{n-1}h+\dots+nxh^{n-1}+h^n-x^n}{h}\\
-        &=\lim_{h\to 0}(nx^{n-1}+\dots+nxh^{n-2}+h^{n-1})=nx^{x-1}
+        &= \lim_{h\to 0}\frac{x^n+nx^{n-1}h+\dots+nxh^{n-1}+h^n-x^n}{h} \\
+        &= \lim_{h\to 0}(nx^{n-1}+\dots+nxh^{n-2}+h^{n-1})=nx^{x-1}
     \end{align*}
     because every term has a factor of \(h\) except \(nx^{n-1}\).
 \end{proof}
@@ -28,37 +29,43 @@ Note the special case when \(n=1\), then we have \[\frac{d}{dx}(x)=1\]
 \end{problem}
 \begin{solution}
     \[\frac{d}{dx}\left(\frac{1}{x}\right)=\frac{d}{dx}x^{-1}=(-1)x^{-1-1}
-    =-x^{-2}=-\frac{1}{x^2}\qedhere\]
+    =-x^{-2}=-\frac{1}{x^2} \qedhere\]
 \end{solution}
 \begin{theorem}[Constant Multiple Rule]
-    If \(c\) is a constant, then \[\frac{d}{dx}[cf(x)]=c\,\frac{d}{dx}f(x)\qedhere\]
+    If \(c\) is a constant, then
+    \[\frac{d}{dx}[cf(x)]=c\,\frac{d}{dx}f(x) \qedhere\]
 \end{theorem}
 \begin{proof}
     \begin{align*}
-        \frac{d}{dx}[cf(x)]&=\lim_{h\to 0}\frac{cf(x+h)-cf(x)}{h}
-        =\lim_{h\to 0}\left[c\left(\frac{f(x+h)-f(x)}{h}\right)\right]\\
-        &=c\left(\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\right)
-        =c\,\frac{d}{dx}f(x)\qedhere
+        \frac{d}{dx}[cf(x)]&= \lim_{h\to 0}\frac{cf(x+h)-cf(x)}{h}
+        =\lim_{h\to 0}\left[c\left(\frac{f(x+h)-f(x)}{h}\right)\right] \\
+        &= c\left(\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\right)
+        =c\,\frac{d}{dx}f(x) \qedhere
     \end{align*}
 \end{proof}
 \begin{theorem}[Sum and Difference Rule]
-    \[\frac{d}{dx}[f(x)\pm g(x)]=\frac{d}{dx}f(x)\pm \frac{d}{dx}g(x)\qedhere\]
+    \[\frac{d}{dx}[f(x)\pm g(x)]
+    =\frac{d}{dx}f(x)\pm \frac{d}{dx}g(x) \qedhere\]
 \end{theorem}
 \begin{proof}
     We prove the sum rule.
     \begin{align*}
-        \frac{d}{dx}[f(x)+g(x)]&=\lim_{h\to 0}\frac{f(x+h)+g(x+h)-[f(x)+g(x)]}{h}\\
-        &=\lim_{h\to 0}\frac{f(x+h)-f(x)+g(x+h)-g(x)}{h}\\
-        &=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}+\lim_{h\to 0}\frac{g(x+h)-g(x)}{h}\\
-        &=\frac{d}{dx}f(x)+\frac{d}{dx}g(x)
+        \frac{d}{dx}[f(x)+g(x)]
+        &= \lim_{h\to 0}\frac{f(x+h)+g(x+h)-[f(x)+g(x)]}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)-f(x)+g(x+h)-g(x)}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
+        +\lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \\
+        &= \frac{d}{dx}f(x)+\frac{d}{dx}g(x)
     \end{align*}
     Then we prove the difference rule.
     \begin{align*}
-        \frac{d}{dx}[f(x)-g(x)]&=\lim_{h\to 0}\frac{f(x+h)-g(x+h)-[f(x)-g(x)]}{h}\\
-        &=\lim_{h\to 0}\frac{f(x+h)-f(x)-g(x+h)+g(x)}{h}\\
-        &=\lim_{h\to 0}\frac{f(x+h)-f(x)-[g(x+h)-g(x)]}{h}\\
-        &=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}-\lim_{h\to 0}\frac{g(x+h)-g(x)}{h}\\
-        &=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)\qedhere
+        \frac{d}{dx}[f(x)-g(x)]
+        &= \lim_{h\to 0}\frac{f(x+h)-g(x+h)-[f(x)-g(x)]}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)-f(x)-g(x+h)+g(x)}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)-f(x)-[g(x+h)-g(x)]}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
+        -\lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \\
+        &= \frac{d}{dx}f(x)-\frac{d}{dx}g(x) \qedhere
     \end{align*}
 \end{proof}
 
@@ -66,69 +73,123 @@ Note the special case when \(n=1\), then we have \[\frac{d}{dx}(x)=1\]
 Let \(f(x)\) and \(g(x)\) be differentiable functions, then we have the
 product rule by Leibniz and the quotient rule.
 \begin{theorem}[Product Rule]
-    \[\frac{d}{dx}[f(x)g(x)]=f(x)\left[\frac{d}{dx}g(x)\right]
-    +\left[\frac{d}{dx}f(x)\right]g(x)\qedhere\]
+    \[\frac{d}{dx}[f(x)g(x)]=\left[\frac{d}{dx}f(x)\right]g(x)
+    +f(x)\left[\frac{d}{dx}g(x)\right] \qedhere\]
 \end{theorem}
+\begin{proof}
+    \begin{align*}
+        \frac{d}{dx}[f(x)g(x)]
+        &= \lim_{h\to 0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)g(x+h)-f(x)g(x)+f(x+h)g(x)-f(x+h)g(x)}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)g(x)-f(x)g(x)+f(x+h)g(x+h)-f(x+h)g(x)}{h} \\
+        &= \lim_{h\to 0}\left[\frac{f(x+h)-f(x)}{h}g(x)\right]
+        +\lim_{h\to 0}\left[f(x+h)\frac{g(x+h)-g(x)}{h}\right] \\
+        &= \left[\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\right]g(x)
+        +\lim_{h\to 0}f(x+h)\cdot\lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \\
+        &= \left[\frac{d}{dx}f(x)\right]g(x)
+        +f(x)\left[\frac{d}{dx}g(x)\right] \qedhere
+    \end{align*}
+\end{proof}
 \begin{theorem}[Quotient Rule]
-    \[\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]=\frac{\left[\cfrac{d}{dx}f(x)\right]g(x)
-    -f(x)\left[\cfrac{d}{dx}g(x)\right]}{[g(x)]^2}\qedhere\]
+    \[\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]
+    =\frac{\left[\cfrac{d}{dx}f(x)\right]g(x)
+    -f(x)\left[\cfrac{d}{dx}g(x)\right]}{[g(x)]^2} \qedhere\]
 \end{theorem}
+\begin{proof}
+    \begin{align*}
+        \frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]
+        &= \lim_{h\to 0}\frac{\cfrac{f(x+h)}{g(x+h)}-\cfrac{f(x)}{g(x)}}{h}
+        =\lim_{h\to 0}\frac{f(x+h)g(x)-f(x)g(x+h)}{h\cdot g(x+h)g(x)} \\
+        &= \lim_{h\to 0}\frac{f(x+h)g(x)-f(x)g(x)-[f(x)g(x+h)-f(x)g(x)]}{h}
+        \cdot\lim_{h\to 0}\frac{1}{g(x+h)g(x)} \\
+        &= \left(\lim_{h\to 0}\left[\frac{f(x+h)-f(x)}{h}g(x)\right]
+        -\lim_{h\to 0}\left[f(x)\frac{g(x+h)-g(x)}{h}\right]\right)
+        \frac{1}{[g(x)]^2} \\
+        &= \left[\left(\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\right)g(x)
+        -f(x)\left(\lim_{h\to 0}\frac{g(x+h)-g(x)}{h}\right)\right]
+        \frac{1}{[g(x)]^2} \\
+        &= \frac{\left[\cfrac{d}{dx}f(x)\right]g(x)
+        -f(x)\left[\cfrac{d}{dx}g(x)\right]}{[g(x)]^2} \qedhere
+    \end{align*}
+\end{proof}
 
 \subsubsection{Trigonometric Functions}
 \begin{theorem}
-    \[\frac{d}{dx}\sin x=\cos x\qedhere\]
+    \[\frac{d}{dx}\sin x=\cos x \qedhere\]
 \end{theorem}
 \begin{proof}
     We use the \textbf{angle sum identity} of the sine function
-    \[\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta\] then we have
+    \[\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta\]
+    then we have
     \[\frac{d}{dx}\sin x=\lim_{h\to 0}\frac{\sin(x+h)-\sin x}{h}
     =\lim_{h\to 0}\frac{\sin x\cos h+\cos x\sin h-\sin x}{h}\]
     Note that we are taking the limit with respect to \(h\) so \(\sin x\) and
     \(\cos x\) are constants then we have
     \begin{align*}
         \frac{d}{dx}\sin x
-        &=\lim_{h\to 0}\left[\frac{\sin x(\cos h-1)}{h}+\frac{\cos x\sin h}{h}\right]
-        =\lim_{h\to 0}\frac{\sin x(\cos h-1)}{h}+\lim_{h\to 0}\frac{\cos x\sin h}{h} \\
-        &=\left(\lim_{h\to 0}\sin x\right)\left(\lim_{h\to 0}\frac{\cos h-1}{h}\right)
-        +\left(\lim_{h\to 0}\cos x\right)\left(\lim_{h\to 0}\frac{\sin h}{h}\right) \\
-        &=(\sin x)(0)+(\cos x)(1) =\cos x\qedhere
+        &= \lim_{h\to 0}\left[\frac{\sin x(\cos h-1)}{h}
+        +\frac{\cos x\sin h}{h}\right]
+        =\lim_{h\to 0}\frac{\sin x(\cos h-1)}{h}
+        +\lim_{h\to 0}\frac{\cos x\sin h}{h}  \\
+        &= \left(\lim_{h\to 0}\sin x\right)
+        \left(\lim_{h\to 0}\frac{\cos h-1}{h}\right)
+        +\left(\lim_{h\to 0}\cos x\right)
+        \left(\lim_{h\to 0}\frac{\sin h}{h}\right)  \\
+        &= (\sin x)(0)+(\cos x)(1) =\cos x \qedhere
     \end{align*}
 \end{proof}
 \begin{theorem}
-    \[\frac{d}{dx}\cos x=-\sin x\qedhere\]
+    \[\frac{d}{dx}\cos x=-\sin x \qedhere\]
 \end{theorem}
 \begin{proof}
     We use the angle sum identity of the cosine function
-    \[\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta\] then we have
+    \[\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta\]
+    then we have
     \begin{align*}
-        \frac{d}{dx}\cos x&=\lim_{h\to 0}\frac{\cos(x+h)-\cos x}{h}
-        =\lim_{h\to 0}\frac{\cos x\cos h-\sin x\sin h-\cos x}{h} \\
-        &=\lim_{h\to 0}\left(\frac{\cos x(\cos h-1)}{h}-\frac{\sin x\sin h}{h}\right) \\
-        &=\left(\lim_{h\to 0}\cos x\right)\left(\lim_{h\to 0}\frac{\cos h-1}{h}\right)
-        -\left(\lim_{h\to 0}\sin x\right)\left(\lim_{h\to 0}\frac{\sin h}{h}\right) \\
-        &=(\cos x)(0)-(\sin x)(1)=-\sin x\qedhere
+        \frac{d}{dx}\cos x
+        &= \lim_{h\to 0}\frac{\cos(x+h)-\cos x}{h}
+        =\lim_{h\to 0}\frac{\cos x\cos h-\sin x\sin h-\cos x}{h}  \\
+        &= \lim_{h\to 0}\left(\frac{\cos x(\cos h-1)}{h}
+        -\frac{\sin x\sin h}{h}\right)  \\
+        &= \left(\lim_{h\to 0}\cos x\right)
+        \left(\lim_{h\to 0}\frac{\cos h-1}{h}\right)
+        -\left(\lim_{h\to 0}\sin x\right)
+        \left(\lim_{h\to 0}\frac{\sin h}{h}\right)  \\
+        &= (\cos x)(0)-(\sin x)(1)=-\sin x \qedhere
     \end{align*}
 \end{proof}
 \begin{theorem}
-    \[\frac{d}{dx}\tan x=\sec^2 x\qedhere\]
+    \[\frac{d}{dx}\tan x=\sec^2 x \qedhere\]
 \end{theorem}
 \begin{proof}
     We have
     \begin{align*}
-        \frac{d}{dx}\tan x&=\frac{d}{dx}\left(\frac{\sin x}{\cos x}\right)
+        \frac{d}{dx}\tan x&= \frac{d}{dx}\left(\frac{\sin x}{\cos x}\right)
         =\frac{\cfrac{d}{dx}\left(\sin x\right)\cos x
         -\sin x\cfrac{d}{dx}\left(\cos x\right)}{\cos^2 x}
-        =\frac{\cos x\cos x-\sin x(-\sin x)}{\cos^2 x} \\
-        &=\frac{\sin^2 x+\cos^2 x}{\cos^2 x}=\frac{1}{\cos^2 x}=\sec^2 x\qedhere
+        =\frac{\cos x\cos x-\sin x(-\sin x)}{\cos^2 x}  \\
+        &= \frac{\sin^2 x+\cos^2 x}{\cos^2 x}=\frac{1}{\cos^2 x}
+        =\sec^2 x \qedhere
     \end{align*}
 \end{proof}
 
 \subsubsection{Chain Rule}
-We have the \textbf{chain rule} formulated by \textbf{James Gregory} (1638--1675) to find the
-derivative of a composite function.
+We have the \textbf{chain rule} formulated by \textbf{James Gregory}
+(1638--1675) to find the derivative of a composite function.
 \begin{theorem}[Chain Rule]
     If \(f\) and \(g\) are differentiable functions and \(F=f(g(x))\),
     then \(F\) is differentiable and \(F'\) is
     \[F'(x)=f'(g(x))\cdot g'(x)\]
-    If \(y=f(u)\) and \(u=g(x)\), then \[\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\qedhere\]
+    If \(y=f(u)\) and \(u=g(x)\), then
+    \[\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx} \qedhere\]
 \end{theorem}
+\begin{proof}
+    We know that by definition \(\Delta y=f(a+\Delta x)-f(a)\) and
+    \[\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}=f'(a)\]
+    Let \(\epsilon\) be the difference between the difference quotient and the
+    derivative, then we have
+    \begin{align*}
+        \lim_{\Delta x\to 0}\epsilon
+        &= \lim_{\Delta x\to 0}\left(\frac{\Delta y}{\Delta x}-f'(a)\right)
+    \end{align*}
+\end{proof}

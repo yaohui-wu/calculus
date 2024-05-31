@@ -1,14 +1,15 @@
 \subsection{Derivatives}
 \subsubsection{Derivatives and Rates of Change}
 \begin{definition}
-    The \textbf{tangent line} of the curve \(y=f(x)\) at the point \(P(a, f(a))\)
-    is the line through \(P\) with slope
-    \[m=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}\]
+    The \textbf{tangent line} of the curve \(y=f(x)\) at the point
+    \(P(a, f(a))\) is the line through \(P\) with slope
+    \[m=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}
+    =\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}\]
     where \(h=x-a\), if this limit exists.
 \end{definition}
 \begin{definition}
     The \textbf{velocity} at time \(t=a\) of a \textbf{position function}
-    \(s=f(t)\) is \[v(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}\qedhere\]
+    \(s=f(t)\) is \[v(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h} \qedhere\]
 \end{definition}
 \begin{definition}
     The \textbf{derivative} of a function \(f\) at a number \(a\) is
@@ -30,10 +31,10 @@ object is \(|f'(a)|\), the \textbf{magnitude} of the velocity.
 \subsubsection{The Derivative as a Function}
 \begin{definition}
     The derivative of a function \(f(x)\) is the function
-    \[f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\qedhere\]
+    \[f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h} \qedhere\]
 \end{definition}
-The following notations of the derivative of \(y=f(x)\) with respect to \(x\) are
-equivalent.
+The following notations of the derivative of \(y=f(x)\) with respect to \(x\)
+are equivalent.
 \[y'=f'(x)=\frac{dy}{dx}=\frac{d}{dx}f(x)=D_x f(x)\]
 where \(f'(x)\) is Newton's notation and \(dy/dx\) is Leibniz's notation.
 The notation \(d/dx\) is the \textbf{differential operator} that indicates the
@@ -44,16 +45,14 @@ The notations of the derivative of \(f(x)\) at \(a\) are
     Find the derivative of \(f(x)=\sqrt{x}\).
 \end{problem}
 \begin{solution}
-    We have
     \begin{align*}
-        f'(x)&=\lim_{h\to 0}\frac{\sqrt{x+h}-\sqrt{x}}{h}=\lim_{h\to 0}
+        f'(x) &= \lim_{h\to 0}\frac{\sqrt{x+h}-\sqrt{x}}{h}=\lim_{h\to 0}
         \left(\frac{\sqrt{x+h}-\sqrt{x}}{h}\cdot
         \frac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}}\right) \\
-        &=\lim_{h\to 0}\frac{x+h-x}{h(\sqrt{x+h}+\sqrt{x})}
-        =\lim_{h\to 0}\frac{1}{\sqrt{x+h}+\sqrt{x}}=\frac{1}{\sqrt{x}+\sqrt{x}}
-        =\frac{1}{2\sqrt{x}}
+        &= \lim_{h\to 0}\frac{x+h-x}{h(\sqrt{x+h}+\sqrt{x})}
+        =\lim_{h\to 0}\frac{1}{\sqrt{x+h}+\sqrt{x}}
+        =\frac{1}{\sqrt{x}+\sqrt{x}}=\frac{1}{2\sqrt{x}} \qedhere
     \end{align*}
-    The derivative of \(f(x)=\sqrt{x}\) is \[f'(x)=\frac{1}{2\sqrt{x}}\qedhere\]
 \end{solution}
 
 \subsubsection{Differentiable Functions}
@@ -71,7 +70,8 @@ The notations of the derivative of \(f(x)\) at \(a\) are
     Since \(f'(a)\) exists, we have
     \[f'(a)=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}\]
     Then we have
-    \[\lim_{x\to a}[f(x)-f(a)]=\lim_{x\to a}\left(\frac{f(x)-f(a)}{x-a}(x-a)\right)
+    \[\lim_{x\to a}[f(x)-f(a)]
+    =\lim_{x\to a}\left(\frac{f(x)-f(a)}{x-a}(x-a)\right)
     =\lim_{x\to a}\left(\frac{f(x)-f(a)}{x-a}\right)\lim_{x\to a}(x-a)
     =f'(a)\cdot 0=0\]
     Then we have
@@ -83,9 +83,9 @@ Note that there are functions that are continuous but not differentiable.
 The function \(y=|x|\) is continuous at 0 but not differentiable at 0 since
 \[f'(0)=\lim_{h\to 0}\frac{|0+h|-|0|}{h}\] if the limit exists but
 \begin{align*}
-    \lim_{h\to 0^-}\frac{|0+h|-|0|}{h}&=\lim_{h\to 0^-}\frac{|h|}{h}
+    \lim_{h\to 0^-}\frac{|0+h|-|0|}{h} &= \lim_{h\to 0^-}\frac{|h|}{h}
     =\lim_{h\to 0^-}\frac{-h}{h}=-1 \\
-    \lim_{h\to 0^+}\frac{|0+h|-|0|}{h}&=\lim_{h\to 0^+}\frac{|h|}{h}
+    \lim_{h\to 0^+}\frac{|0+h|-|0|}{h} &= \lim_{h\to 0^+}\frac{|h|}{h}
     =\lim_{h\to 0^+}\frac{h}{h}=1
 \end{align*}
 thus the limit does not exist so \(f'(0)\) does not exist.
@@ -93,16 +93,17 @@ If a function is differentiable, then it is \textbf{smooth}, continuous, and
 it has no vertical tangent lines.
 
 \subsubsection{Higher Order Derivatives}
- If \(y=f(x)\) is a differentiable function and its derivative \(f'(x)\) is differentiable,
-then the \textbf{second derivative} of \(f\) is
+ If \(y=f(x)\) is a differentiable function and its derivative \(f'(x)\) is
+ differentiable, then the \textbf{second derivative} of \(f\) is
 \[y''=f''(x)=\frac{d^2y}{dx^2}\]
 We can interpret \(f''(x)\) as the slope of the curve \(y=f'(x)\) at the point
-\((x,f'(x))\), which is the rate of change of the slope of the original curve \(y=f(x)\).
+\((x,f'(x))\), which is the rate of change of the slope of the original curve
+\(y=f(x)\).
 Let \(s=s(t)\) be a position function of an object with respect to time \(t\).
 The velocity function \(v(t)\) of the object is \[v(t)=s'(t)=\frac{ds}{dt}\]
 The instantaneous rate of change of velocity is the \textbf{acceleration}.
-Thus the acceleration function \(a(t)\) is the derivative of the velocity function and
-is therefore the second derivative of the position function.
+Thus the acceleration function \(a(t)\) is the derivative of the velocity
+function and is therefore the second derivative of the position function.
 \[a(t)=v'(t)=\frac{dv}{dt}=s''(t)=\frac{d^2s}{dt^2}\]
 In general, the \(n\)th derivative of \(y=f(x)\) is
 \[f^{(n)}(x)=\frac{d^ny}{dx^n}\]
@@ -114,18 +115,16 @@ In general, the \(n\)th derivative of \(y=f(x)\) is
     \[(x+y)^n=\sum_{k=0}^n \binom{n}{k}x^{n-k}y^k\]
     For the first derivative we have
     \begin{align*}
-        f'(x)&=\lim_{h\to 0}\frac{(x+h)^3-x^3}{h}=\lim_{h\to 0}
-        \frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}=\lim_{h\to 0}\frac{3x^2h+3xh^2+h^3}{h} \\
-        &=\lim_{h\to 0}(3x^2+3xh+h^2)=3x^2
+        f'(x) &= \lim_{h\to 0}\frac{(x+h)^3-x^3}{h}=\lim_{h\to 0}
+        \frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}
+        =\lim_{h\to 0}\frac{3x^2h+3xh^2+h^3}{h} \\
+        &= \lim_{h\to 0}(3x^2+3xh+h^2)=3x^2
     \end{align*}
     For the second derivative we have
     \begin{align*}
-        f''(x)&=\lim_{h\to 0}\frac{3(x+h)^2-3x^2}{h}
-        =\lim_{h\to 0}\frac{3(x^2+2hx+h^2-x^2)}{h}=\lim_{h\to 0}\frac{6hx+3h^2}{h} \\
-        &=\lim_{h\to 0}(6x+3h)=6x
-    \end{align*}
-    Therefore, the first and the second derivatives of \(f(x)=x^3\) are
-    \begin{align*}
-        &f'(x)=3x^2&f''(x)=6x&\qedhere
+        f''(x) &= \lim_{h\to 0}\frac{3(x+h)^2-3x^2}{h}
+        =\lim_{h\to 0}\frac{3(x^2+2hx+h^2-x^2)}{h}
+        =\lim_{h\to 0}\frac{6hx+3h^2}{h} \\
+        &= \lim_{h\to 0}(6x+3h)=6x \qedhere
     \end{align*}
 \end{solution}

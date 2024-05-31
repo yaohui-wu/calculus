@@ -4,19 +4,19 @@
 \textbf{Augustin-Louis Cauchy} (1789--1857) and \textbf{Karl Weierstrass}
 (1815--1897) formalized a rigorous definition of a limit.
 \begin{definition}
-    \[\lim_{x\to a}f(x)=L\] if for every number \(\epsilon>0\), there is a
+    \[\lim_{x\to a}f(x)=L\] if for every number \(\epsilon>0\), there exists a
     number \(\delta>0\) such that
-    \[0<|x-a|<\delta \implies |f(x)-L|<\epsilon\qedhere\]
+    \[0<|x-a|<\delta \implies |f(x)-L|<\epsilon \qedhere\]
 \end{definition}
 \begin{definition}
-    \[\lim_{x\to a^-}f(x)=L\] if for every number \(\epsilon>0\), there is a
-    number \(\delta>0\) such that
-    \[a-\delta<x<a \implies |f(x)-L|<\epsilon\qedhere\]
+    \[\lim_{x\to a^-}f(x)=L\] if for every number \(\epsilon>0\), there exists
+    a number \(\delta>0\) such that
+    \[a-\delta<x<a \implies |f(x)-L|<\epsilon \qedhere\]
 \end{definition}
 \begin{definition}
-    \[\lim_{x\to a^+}f(x)=L\] if for every number \(\epsilon>0\), there is a
-    number \(\delta>0\) such that
-    \[a<x<a+\delta \implies |f(x)-L|<\epsilon\qedhere\]
+    \[\lim_{x\to a^+}f(x)=L\] if for every number \(\epsilon>0\), there exists
+    a number \(\delta>0\) such that
+    \[a<x<a+\delta \implies |f(x)-L|<\epsilon \qedhere\]
 \end{definition}
 \begin{problem}
     Prove that \(\displaystyle{\lim_{x\to 3}(4x-5)=7}\).
@@ -60,5 +60,5 @@
     We simplify to get \(\sqrt{x}<\epsilon\iff x<\epsilon^2\).
     Let \(\delta=\epsilon^2\), we have
     \[0<x<\epsilon^2\implies|\sqrt{x}-0|<\epsilon\]
-    Therefore, it is proved that \(\displaystyle{\lim_{x\to 0^+}\sqrt{x}=0}\).
+    It is proved that \(\displaystyle{\lim_{x\to 0^+}\sqrt{x}=0}\).
 \end{solution}
