@@ -162,7 +162,6 @@ product rule by Leibniz and the quotient rule.
     \[\frac{d}{dx}\tan x=\sec^2 x \qedhere\]
 \end{theorem}
 \begin{proof}
-    We have
     \begin{align*}
         \frac{d}{dx}\tan x&= \frac{d}{dx}\left(\frac{\sin x}{\cos x}\right)
         =\frac{\cfrac{d}{dx}\left(\sin x\right)\cos x
@@ -184,12 +183,35 @@ We have the \textbf{chain rule} formulated by \textbf{James Gregory}
     \[\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx} \qedhere\]
 \end{theorem}
 \begin{proof}
-    We know that by definition \(\Delta y=f(a+\Delta x)-f(a)\) and
+    We know that by definition if \(y=f(x)\),
+    then \(\Delta y=f(a+\Delta x)-f(a)\) and
     \[\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}=f'(a)\]
     Let \(\epsilon\) be the difference between the difference quotient and the
     derivative, then we have
+    \[\lim_{\Delta x\to 0}\epsilon
+    =\lim_{\Delta x\to 0}\left(\frac{\Delta y}{\Delta x}-f'(a)\right)
+    =f'(a)-f'(a)=0\]
+    Thus for a differentiable function \(f\), if we define \(\epsilon=0\)
+    when \(\Delta x=0\), then \[\Delta y=f'(a)\Delta x+\epsilon\Delta x\]
+    where \(\epsilon\to 0\) as \(\Delta x\to 0\) and \(\epsilon\) is a
+    continuous function of \(\Delta x\).
+    Suppose that \(u=g(x)\) is differentiable at \(a\) and \(y=f(u)\) is
+    differentiable at \(b=g(a)\).
+    Then we have
+    \[\Delta u=g'(a)\Delta x+\epsilon_1\Delta x=[g'(a)+\epsilon_1]\Delta x\]
+    where \(\epsilon_1\to 0\) as \(\Delta x\to 0\).
+    Similarly, \[\Delta y=f'(b)\Delta u+\epsilon_2\Delta u=[f'(b)+\epsilon_2]\Delta u\]
+    where \(\epsilon_2\to 0\) as \(\Delta u\to 0\).
+    We substitute the expression for \(\Delta u\) then we have
     \begin{align*}
-        \lim_{\Delta x\to 0}\epsilon
-        &= \lim_{\Delta x\to 0}\left(\frac{\Delta y}{\Delta x}-f'(a)\right)
+        \Delta y &= [f'(b)+\epsilon_2][g'(a)+\epsilon_1]\Delta x \\
+        \frac{\Delta y}{\Delta x} &= [f'(b)+\epsilon_2][g'(a)+\epsilon_1]
     \end{align*}
+    Since \(\Delta u\to 0\) as \(\Delta x\to 0\), then \(\epsilon_1\to 0\) and
+    \(\epsilon_2 \to 0\) as \(\Delta x\to 0\).
+    Therefore,
+    \[\frac{dy}{dx}=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}
+    =\lim_{\Delta x\to 0}[f'(b)+\epsilon_2][g'(a)+\epsilon_1]
+    =f'(b)g'(a)=f'(g(a))g'(a)\]
+    thus the chain rule is proved.
 \end{proof}

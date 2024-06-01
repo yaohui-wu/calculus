@@ -11,49 +11,93 @@
     =\frac{1}{\cfrac{dx}{dy}}\qedhere\]
 \end{theorem}
 
-\subsubsection{Logarithmic and Exponential Functions}
+\subsubsection{Derivatives of Logarithmic Functions}
 The \textbf{Euler's number} \(e\) named after \textbf{Leonhard Euler} (1707--1783)
-is the base of the natural exponential function \(y=e^x\).
+is the base of the natural exponential function \(y=e^x\) and the natural
+logarithmic function \(y=\ln x\).
 \begin{definition}[Euler's Number]
-    The Euler's number \(e\) is \[e=\lim_{x\to 0}(1+x)^{1/x}\qedhere\]
+    The Euler's number \(e\) is defined as
+    \[e=\lim_{x\to 0}(1+x)^{1/x}\qedhere\]
 \end{definition}
 Note that the approximate value of \(e\) is \(e\approx2.71828\).
 \begin{theorem}
     The exponential function \(f(x)=\log_a x\) is differentiable and
     \[\frac{d}{dx}\log_a x=\frac{1}{x}\log_a e=\frac{1}{x\ln a}\qedhere\]
 \end{theorem}
+\begin{proof}
+    First we have
+    \begin{align*}
+        \frac{d}{dx}\log_a x &= \lim_{h\to 0}\frac{\log_a(x+h)-\log_a x}{h}
+        =\lim_{h\to 0}\frac{\log_a\left(\dfrac{x+h}{x}\right)}{h}
+        =\lim_{h\to 0}\left[\frac{1}{x}\frac{x}{h}
+        \log_a\left(1+\frac{h}{x}\right)\right] \\
+        &= \frac{1}{x}\left[
+            \lim_{h\to 0}\log_a\left(1+\frac{h}{x}\right)^{x/h}\right]
+        =\frac{1}{x}\left[
+            \lim_{h\to 0}\log_a\left(1+\frac{h}{x}\right)^{1/(h/x)}\right]
+        =\frac{1}{x}\log_a e
+    \end{align*}
+    We know from the change of base formula that
+    \[\log_b x=\frac{\log_a x}{\log_a b}\]
+    Therefore,
+    \[\frac{d}{dx}\log_a x=\frac{1}{x}\log_a e=\frac{1}{x\ln a}\qedhere\]
+\end{proof}
 \begin{theorem}
     The derivative of the natural logarithmic function \(f(x)=\ln x\) is
     \[\frac{d}{dx}\ln x=\frac{1}{x}\qedhere\]
 \end{theorem}
+\begin{proof}
+    \[\frac{d}{dx}\ln x=\frac{d}{dx}\log_e x=\frac{1}{x\ln e}
+    =\frac{1}{x}\qedhere\]
+\end{proof}
+\begin{problem}
+    Find \(f'(x)\) if \(f(x)=\ln|x|\).
+\end{problem}
+\begin{solution}
+    Since \(f(x)=\ln x\) for \(x>0\) and \(f(x)=\ln(-x)\) for \(x<0\),
+    it follows that
+    \begin{align*}
+        f'(x) &= \frac{d}{dx}\ln x=\frac{1}{x},\quad x>0 \\
+        f'(x) &= \frac{d}{dx}\ln(-x)=\frac{1}{-x}(-1)=\frac{1}{x},\quad x<0
+    \end{align*}
+    Therefore, \(\dfrac{d}{dx}\ln|x|=\dfrac{1}{x}\) for all \(x\neq 0\).
+\end{solution}
+
+\subsubsection{Derivatives of Exponential Functions}
 \begin{theorem}
     The exponential function \(f(x)=a^x,a>0\) is differentiable and
     \[\frac{d}{dx}a^x=a^x\ln a\qedhere\]
 \end{theorem}
+\begin{proof}
+    Let \(y=a^x\iff \log_a y=x\) then by implicit differentiation we have
+    \begin{align*}
+        \log_a y &= x \\ \frac{1}{y\ln a}\frac{dy}{dx} &= 1 \\
+        \frac{dy}{dx} &= y\ln a=a^x\ln a \qedhere
+    \end{align*}
+\end{proof}
 \begin{theorem}
     The derivative of the natural exponential function \(f(x)=e^x\) is
     \[\frac{d}{dx}e^x=e^x\qedhere\]
 \end{theorem}
+\begin{proof}
+    \[\frac{d}{dx}e^x=e^x\ln e=e^x\qedhere\]
+\end{proof}
 \begin{problem}
     Prove the power rule \(\dfrac{d}{dx}x^n=nx^{n-1}\) for \(n\in\R\).
 \end{problem}
 \begin{solution}
     The rule is true when \(x=0\) which is trivial so it remains to prove the
     cases for \(x\neq 0\).
-    Let \(y=x^n\) such that \(y>0\), we use implicit differentiation and
-    logarithmic differentiation then we have
+    Let \(y=x^n\) such that \(y>0\), by implicit differentiation we have
     \begin{align*}
-        \ln y &= \ln x^n=n\ln x \\ \frac{d}{dx}\ln y &= \frac{d}{dx}n\ln x \\
-        \frac{1}{y}\frac{dy}{dx} &= \frac{n}{x} \\
-        \frac{dy}{dx} &= nx^{-1}y= nx^{-1}x^n \\ \frac{dy}{dx} &= nx^{n-1}
+        \ln y &= \ln x^n=n\ln x \\ \frac{1}{y}\frac{dy}{dx} &= \frac{n}{x} \\
+        \frac{dy}{dx} &= nx^{-1}y=nx^{-1}x^n=nx^{n-1}
     \end{align*}
     Similarly, let \(y=x^n\) such that \(y<0\) then we have
     \begin{align*}
-        \ln|y| &= \ln(-x^n)=\ln[((-1)^{1/n}x)^n] \\
-        \frac{d}{dx}\ln|y| &= \frac{d}{dx}[n\ln((-1)^{1/n}x)] \\
+        \ln|y| &= \ln(-x^n)=\ln[((-1)^{1/n}x)^n]=n\ln[(-1)^{1/n}x] \\
         \frac{1}{y}\frac{dy}{dx} &= n\frac{1}{(-1)^{1/n}x}(-1)^{1/n}
-        =\frac{n}{x} \\ \frac{dy}{dx} &= nx^{-1}y= nx^{-1}x^n \\
-        \frac{dy}{dx} &= nx^{n-1} \qedhere
+        =\frac{n}{x} \\ \frac{dy}{dx} &= nx^{-1}y=nx^{-1}x^n=nx^{n-1} \qedhere
     \end{align*}
 \end{solution}
 

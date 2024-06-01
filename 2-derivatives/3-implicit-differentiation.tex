@@ -37,3 +37,32 @@ of \(y\) in an implicit function.
         \\(y^2-2x)\frac{dy}{dx}&=2y-x^2\\\frac{dy}{dx}&=\frac{2y-x^2}{y^2-2x}\qedhere
     \end{align*}
 \end{solution}
+\begin{problem}
+    Find \(y'\) if \(\sin(x+y)=y^2\cos x\).
+\end{problem}
+\begin{solution}
+    \begin{align*}
+        \sin(x+y) &= y^2\cos x \\
+        \cos(x+y)(1+\frac{dy}{dx}) &= 2y\frac{dy}{dx}\cos x-y^2\sin x \\
+        [2y\cos x-\cos(x+y)]\frac{dy}{dx} &= \cos(x+y)+y^2\sin x \\
+        \frac{dy}{dx}
+        &= \frac{\cos(x+y)+y^2\sin x}{2y\cos x-\cos(x+y)} \qedhere
+    \end{align*}
+\end{solution}
+\begin{problem}
+    Find \(y''\) if \(x^4+y^4=16\).
+\end{problem}
+\begin{solution}
+    First we find \(y'\) then we have
+    \begin{align*}
+        x^4+y^4 &= 16 \\ 4x^3+4y^3\frac{dy}{dx} &= 0 \\
+        \frac{dy}{dx} &= -\frac{x^3}{y^3}
+    \end{align*}
+    Then we find \(y''\) and we have
+    \begin{align*}
+        \frac{d^2y}{dx^2} &= \frac{d}{dx}\left(-\frac{x^3}{y^3}\right)
+        =-3x^2y^{-3}+(-x^3)(-3y^{-4})\frac{dy}{dx}
+        =3x^3y^{-4}(-x^3y^{-3})-3x^2y^{-3} \\ &=-3x^6y^{-7}-3x^2y^{-3}
+        =-3x^2y^{-7}(x^4+y^4)=-48\frac{x^2}{y^7} \qedhere
+    \end{align*}
+\end{solution}
