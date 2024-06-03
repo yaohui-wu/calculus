@@ -1,1 +1,41 @@
 \subsection{Integration by Parts}
+\begin{theorem}[Integration by Parts Formula]
+    If \(f\) and \(g\) are differentiable functions, then
+    \[\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx\]
+    If \(u=f(x)\) and \(v=g(x)\), then \[\int u\,dv=uv-\int v\,du\] and
+    \[\int_a^b u\,dv=[uv]_a^b-\int_a^b v\,du\qedhere\]
+\end{theorem}
+\begin{problem}
+    Evaluate \(\displaystyle{\int\ln x\,dx}\).
+\end{problem}
+\begin{solution}
+    Let \(u=\ln x\iff du=\dfrac{1}{x}\,dx\) and \(dv=dx\iff v=x\),
+    then we have \[\int\ln x\,dx=x\ln x-\int dx=x\ln x-x+C\qedhere\]
+\end{solution}
+\begin{problem}
+    Evaluate \(\displaystyle{\int\arctan x\,dx}\).
+\end{problem}
+\begin{solution}
+    Let \(u=\arctan x\iff du=\dfrac{dx}{1+x^2}\) and \(dv=dx\iff v=x\), then
+    \[\int\arctan x\,dx=x\arctan x-\int\frac{x}{1+x^2}\,dx\]
+    Let \(u=1+x^2\iff du=2x\,dx\) so \(x\,dx=\dfrac{1}{2}\,du\), then
+    \[\int\frac{x}{1+x^2}\,dx=\frac{1}{2}\int\frac{du}{u}=\frac{1}{2}\ln|u|+C
+    =\frac{1}{2}\ln(1+x^2)+C\]
+    Therefore,
+    \[\int\arctan x\,dx=x\arctan x-\frac{1}{2}\ln(1+x^2)+C\qedhere\]
+\end{solution}
+\begin{problem}
+    Evaluate \(\displaystyle{\int e^x\sin x\,dx}\).
+\end{problem}
+\begin{solution}
+    Let \(u=\sin x\iff du=\cos x\,dx\) and \(dv=e^x\,dx\iff v=e^x\),
+    then we have \[\int e^x\sin x\,dx=e^x\sin x-\int e^x\cos x\,dx\]
+    Let \(u=\cos x\iff du=-\sin x\,dx\) and \(dv=e^x\,dx\iff v=e^x\),
+    then we have
+    \[\int e^x\cos x\,dx=e^x\cos x+\int e^x\sin x\,dx\]
+    Therefore,
+    \begin{align*}
+        \int e^x\sin x\,dx &= e^x\sin x-e^x\cos x-\int e^x\sin x\,dx \\
+        \int e^x\sin x\,dx &= \frac{1}{2}e^x(\sin x-\cos x) \qedhere
+    \end{align*}
+\end{solution}

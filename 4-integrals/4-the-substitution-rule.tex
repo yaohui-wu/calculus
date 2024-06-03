@@ -1,11 +1,21 @@
 \subsection{The Substitution Rule}
 \subsubsection{The Substitution Rule}
 \begin{theorem}[The Substitution Rule]
-    If \(u=g(x)\) is a is a differentiable function whose range is an interval
-    \(I\), then \[\int f(g(x))g'(x)\,dx=\int f(u)\,du\]
+    If \(u=g(x)\) is a differentiable function whose range is an interval
+    \(I\) and \(f\) is continuous on \(I\),
+    then \[\int f(g(x))g'(x)\,dx=\int f(u)\,du\]
     If \(g'\) is continuous on \([a,b]\) and \(f\) is continuous on \(I\),
-    then \[\int_a^b f(g(x))g'(x)\,dx=\int_g(a)^g(b) f(u)\,du\qedhere\]
+    then \[\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)} f(u)\,du\qedhere\]
 \end{theorem}
+\begin{problem}
+    Evaluate \(\displaystyle{\int\frac{x}{\sqrt{1-4x^2}}\,dx}\).
+\end{problem}
+\begin{solution}
+    Let \(u=1-4x^2\iff du=-8x\,dx\) so \(xdx=-\dfrac{1}{8}\,du\).
+    Therefore,
+    \[\int\frac{x}{\sqrt{1-4x^2}}\,dx=-\int\frac{1}{8}u^{-(1/2)}\,du
+    =-\frac{1}{8}(2\sqrt{u})+C=-\frac{1}{4}\sqrt{1-4x^2}+C\qedhere\]
+\end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\int\tan x\,dx}\).
 \end{problem}
@@ -14,6 +24,14 @@
     let \(u=\cos x \iff du=-\sin\,dx\) then we have
     \[\int\tan x\,dx=-\int\frac{du}{u}=-\ln|u|+C=-\ln|\cos x|+C
     =\ln\frac{1}{|\sec x|}+C=\ln|\sec x|+C\qedhere\]
+\end{solution}
+\begin{problem}
+    Calculate \(\displaystyle{\int_1^e \frac{\ln x}{x}\,dx}\).
+\end{problem}
+\begin{solution}
+    Let \(u=\ln x\iff du=\dfrac{1}{x}\,dx\), then we have
+    \[\int_1^e \frac{\ln x}{x}\,dx=\int_0^1 u\,du
+    =\left[\frac{u^2}{2}\right]_0^1=\frac{1}{2}\qedhere\]
 \end{solution}
 
 \subsubsection{Symmetry}

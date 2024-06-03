@@ -1,1 +1,19 @@
 \subsection{Antiderivatives}
+\begin{definition}
+    A function \(F\) is an \textbf{antiderivative} of \(f\) on an interval
+    \(I\) if \(F'(x)=f(x)\) for all \(x\) in \(I\).
+\end{definition}
+\begin{theorem}
+    If \(F\) is an antiderivative of \(f\) on interval \(I\), then the general
+    antiderivative of \(f\) on \(I\) is \(F(x)+C\) where \(C\) is an arbitrary
+    constant.
+\end{theorem}
+\begin{problem}
+    Find the general antiderivative of \(f(x)=1/x\).
+\end{problem}
+\begin{solution}
+    We know that \[\frac{d}{dx}\ln |x|=\frac{1}{x}\] for all \(x\neq 0\).
+    Then the antiderivative of \(f\) is \(F(x)=\ln x+C_1\) if \(x>0\)
+    or \(F(x)=\ln(-x)+C_2\) if \(x<0\).
+    Therefore, the general antiderivative of \(f\) is \(F(x)=\ln |x|+C\).
+\end{solution}

@@ -1,18 +1,57 @@
 \subsection{Integrals}
 \subsubsection{Definite Integrals}
 A \textbf{Riemann sum} named after \textbf{Bernhard Riemann} (1826--1866)
-associated with a partition \(P\) and a function \(f\) is
+associated with a partition \(P\) of interval \([a,b]\) and a function \(f\)
+at the sample points \(x_i^*\) in the subinterval \([x_{i-1},x_i]\) is
 \[\sum_{i=1}^n f(x_i^*)\Delta x_i=f(x_1^*)\Delta x_1+f(x_2^*)\Delta x_2
 +\dots+f(x_n^*)\Delta x_n\]
 \begin{definition}
-    If \(f\) is a function defined on \([a,b]\), the \textbf{definite integral}
-    of \(f\) from \(a\) to \(b\) is the number
+    If \(f\) is a function defined on \([a,b]\),
+    the \textbf{definite integral} of \(f\) from \(a\) to \(b\) is the number
     \[\int_a^b f(x)\,dx=\lim_{\max\Delta x_i\to 0}
-    \sum_{i=1}^n f(x_i^*)\Delta x_i\qedhere\]
+    \sum_{i=1}^n f(x_i^*)\Delta x_i\]
+    if the limit exists such that \(f\) is integrable on \([a,b]\).
 \end{definition}
+\begin{definition}
+    \[\int_a^b f(x)\,dx=I\]
+    if for every \(\epsilon>0\), there is a number \(\delta>0\) such that
+    \[\left\lvert I-\sum_{i=1}^n f(x_i^*)\Delta x_i\right\rvert<\epsilon\]
+    for all partitions \(P\) of \([a,b]\) with \(\max\Delta x_i<\delta\) and
+    for all \(x_i^*\) in \([x_{i-1},x_i]\).
+\end{definition}
+\begin{theorem}
+    If \(f\) is continuous on \([a,b]\), then \(f\) is integrable on \([a,b]\)
+    and the definite integral \(\displaystyle{\int_a^b f(x)\,dx}\) eixsts.
+\end{theorem}
+\begin{theorem}
+    If \(f\) is integrable on \([a,b]\), then
+    \[\int_a^b f(x)\,dx=\lim_{n\to\infty}\sum_{i=1}^nf(x_i)\Delta x\]
+    where \(\Delta x=\dfrac{b-a}{n}\) and \(x_i=a+i\Delta x\).
+\end{theorem}
+
+\subsubsection{Properties of Definite Integrals}
+We have the following properties of indefinite integrals.
+Suppose all of the following integrals exist, and \(c\) is any constant.
+\begin{itemize}
+    \item If \(a>b\), then
+    \(\displaystyle{\int_a^b f(x)\,dx=-\int_b^a f(x)\,dx}\).
+    \item If \(a=b\), then
+    \(\displaystyle{\int_a^a f(x)\,dx=0}\).
+    \item \(\displaystyle{\int_a^b c\,dx=c(b-a)}\)
+    \item \(\displaystyle{\int_a^b[f(x)\pm g(x)]\,dx
+    =\int_a^b f(x)\,dx\pm \int_a^b g(x)\,dx}\)
+    \item \(\displaystyle{\int_a^c f(x)\,dx+\int_c^b f(x)\,dx
+    =\int_a^b f(x)\,dx}\)
+    \item If \(f(x)\geq 0\) for \(a\leq x\leq b\),
+    then \(\displaystyle{\int_a^b f(x)\,dx\geq 0}\).
+    \item If \(f(x)\geq g(x)\) for \(a\leq x\leq b\),
+    then \(\displaystyle{\int_a^b f(x)\,dx\geq \int_a^b g(x)\,dx}\).
+    \item If \(m\leq f(x)\leq M\),
+    then \(\displaystyle{m(b-a)\leq\int_a^b f(x)\,dx\leq M(b-a)}\).
+\end{itemize}
 
 \subsubsection{Indefinite Integrals}
 \begin{definition}
-    The \textbf{indefinite integral} \[\int f(x)\,dx\] is the
-    antiderivative of \(f\).
+    The \textbf{indefinite integral} \[\int f(x)\,dx=F(x)+C\]
+    is the general antiderivative of \(f\).
 \end{definition}

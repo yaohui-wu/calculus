@@ -1,13 +1,19 @@
 \subsection{The Fundamental Theorem of Calculus}
 \begin{theorem}[The Fundamental Theorem of Calculus (Newton-Leibniz Theorem)]
     Suppose \(f\) is continuous on \([a,b]\).
-    If the function \(F\) is defined by \[F(x)=\int_a^xf(t)\,dt,a\leq x\leq b\]
-    then \(F\) is an antiderivative of \(f\) and \[F'(x)=f(x),a<x<b\]
+    If the function \(F\) is defined by
+    \[F(x)=\int_a^xf(t)\,dt,\quad a\leq x\leq b\]
+    then \(F\) is an antiderivative of \(f\) and \[F'(x)=f(x),\quad a<x<b\]
     and therefore\[\frac{d}{dx}\int_a^x f(t)\,dt=f(x)\]
     If \(F\) is an antiderivative of \(f\) such that \(F'=f\), then
     \[\int_a^b f(x)\,dx=F(b)-F(a)\qedhere\]
 \end{theorem}
-The \textbf{Fresnel integrals} named after \textbf{Augustin-Jean Fresnel} (1788--1827) are
+The Fresnel integrals named after \textbf{Augustin-Jean Fresnel} (1788--1827)
+are
 \begin{align*}
-    &S(x)=\int_0^x\sin(t^2)\,dt&C(x)=\int_0^x\cos(t^2)\,dt
+    S(x) &= \int_0^x\sin(t^2)\,dt & C(x) &= \int_0^x\cos(t^2)\,dt
+\end{align*}
+and by the fundamental theorem of calculus the derivatives are
+\begin{align*}
+    S'(x) &= \sin(x^2) & C'(x) &= \cos(x^2)
 \end{align*}
