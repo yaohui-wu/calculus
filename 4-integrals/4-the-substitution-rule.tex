@@ -2,11 +2,16 @@
 \subsubsection{The Substitution Rule}
 \begin{theorem}[The Substitution Rule]
     If \(u=g(x)\) is a differentiable function whose range is an interval
-    \(I\) and \(f\) is continuous on \(I\),
-    then \[\int f(g(x))g'(x)\,dx=\int f(u)\,du\]
+    \(I\) and \(f\) is continuous on \(I\), then
+    \[\int f(g(x))g'(x)\,dx=\int f(u)\,du\]
     If \(g'\) is continuous on \([a,b]\) and \(f\) is continuous on \(I\),
-    then \[\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)} f(u)\,du\qedhere\]
+    then
+    \[\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)} f(u)\,du\qedhere\]
 \end{theorem}
+\begin{proof}
+    Let \(F'=f\), then by the chain rule we have
+    \[\int f(g(x))g'(x)\,dx=F(g(x))+C=F(u)+C=\int f(u)\,du\qedhere\]
+\end{proof}
 \begin{problem}
     Evaluate \(\displaystyle{\int\frac{x}{\sqrt{1-4x^2}}\,dx}\).
 \end{problem}
@@ -21,7 +26,7 @@
 \end{problem}
 \begin{solution}
     We have \(\displaystyle{\int\tan x\,dx=\int\frac{\sin x}{\cos x}}\,dx\),
-    let \(u=\cos x \iff du=-\sin\,dx\) then we have
+    let \(u=\cos x \iff du=-\sin\,dx\) then
     \[\int\tan x\,dx=-\int\frac{du}{u}=-\ln|u|+C=-\ln|\cos x|+C
     =\ln\frac{1}{|\sec x|}+C=\ln|\sec x|+C\qedhere\]
 \end{solution}
@@ -29,7 +34,7 @@
     Calculate \(\displaystyle{\int_1^e \frac{\ln x}{x}\,dx}\).
 \end{problem}
 \begin{solution}
-    Let \(u=\ln x\iff du=\dfrac{1}{x}\,dx\), then we have
+    Let \(u=\ln x\iff du=\dfrac{1}{x}\,dx\), then
     \[\int_1^e \frac{\ln x}{x}\,dx=\int_0^1 u\,du
     =\left[\frac{u^2}{2}\right]_0^1=\frac{1}{2}\qedhere\]
 \end{solution}

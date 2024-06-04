@@ -1,16 +1,26 @@
 \subsection{Integration by Parts}
+\subsubsection{Integration by Parts}
 \begin{theorem}[Integration by Parts Formula]
     If \(f\) and \(g\) are differentiable functions, then
     \[\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx\]
-    If \(u=f(x)\) and \(v=g(x)\), then \[\int u\,dv=uv-\int v\,du\] and
+    If \(u=f(x)\) and \(v=g(x)\), then
+    \[\int u\,dv=uv-\int v\,du\]
+    and
     \[\int_a^b u\,dv=[uv]_a^b-\int_a^b v\,du\qedhere\]
 \end{theorem}
+\begin{proof}
+    We know from the product rule that
+    \[f(x)g(x)=\int f'(x)g(x)\,dx+\int f(x)g'(x)\,dx\]
+    and therefore
+    \[\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx\qedhere\]
+\end{proof}
 \begin{problem}
     Evaluate \(\displaystyle{\int\ln x\,dx}\).
 \end{problem}
 \begin{solution}
     Let \(u=\ln x\iff du=\dfrac{1}{x}\,dx\) and \(dv=dx\iff v=x\),
-    then we have \[\int\ln x\,dx=x\ln x-\int dx=x\ln x-x+C\qedhere\]
+    then
+    \[\int\ln x\,dx=x\ln x-\int dx=x\ln x-x+C\qedhere\]
 \end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\int\arctan x\,dx}\).
@@ -29,13 +39,36 @@
 \end{problem}
 \begin{solution}
     Let \(u=\sin x\iff du=\cos x\,dx\) and \(dv=e^x\,dx\iff v=e^x\),
-    then we have \[\int e^x\sin x\,dx=e^x\sin x-\int e^x\cos x\,dx\]
+    then
+    \[\int e^x\sin x\,dx=e^x\sin x-\int e^x\cos x\,dx\]
     Let \(u=\cos x\iff du=-\sin x\,dx\) and \(dv=e^x\,dx\iff v=e^x\),
-    then we have
+    then
     \[\int e^x\cos x\,dx=e^x\cos x+\int e^x\sin x\,dx\]
     Therefore,
     \begin{align*}
         \int e^x\sin x\,dx &= e^x\sin x-e^x\cos x-\int e^x\sin x\,dx \\
         \int e^x\sin x\,dx &= \frac{1}{2}e^x(\sin x-\cos x) \qedhere
+    \end{align*}
+\end{solution}
+\begin{problem}
+    Prove the reduction formula
+    \[\int\sin^n x\,dx
+    =-\frac{1}{n}\sin^{n-1}x\cos x+\frac{n-1}{n}\int\sin^{n-2}x\,dx\]
+    where \(n\in\N\) and \(n\geq 2\).
+\end{problem}
+\begin{solution}
+    Let \(u=\sin^{n-1}x\iff du=(n-1)\sin^{n-2}x\cos x\,dx\) and
+    \(dv=\sin x\,dx\iff v=-\cos x\) then
+    \begin{align*}
+    \int\sin^n x\,dx
+    &= -\sin^{n-1}x\cos x+(n-1)\int \sin^{n-2}x\cos^2 x\,dx \\
+    &= -\sin^{n-1}x\cos x+(n-1)\int \sin^{n-2}x(1-\sin^2 x)\,dx \\
+    &= -\sin^{n-1}x\cos x+(n-1)\int \sin^{n-2}x\,dx-(n-1)\int\sin^n x\,dx
+    \end{align*}
+    Therefore,
+    \begin{align*}
+    (n-1+1)\int\sin^n x\,dx &= -\sin^{n-1}x\cos x+(n-1)\int \sin^{n-2}x\,dx \\
+    \int\sin^n x\,dx
+    &= -\frac{1}{n}\sin^{n-1}x\cos x+\frac{n-1}{n}\int\sin^{n-2}x\,dx \qedhere
     \end{align*}
 \end{solution}
