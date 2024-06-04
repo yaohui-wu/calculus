@@ -4,13 +4,13 @@ Let \(f(x)\) and \(g(x)\) be differentiable functions, then we have the
 following differentiation formulas.
 \begin{theorem}
     Let \(f(x)=c\) where \(c\) is a constant, then
-    \[\frac{d}{dx}(c)=0 \qedhere\]
+    \[\frac{d}{dx}(c)=0\qedhere\]
 \end{theorem}
 \begin{proof}
-    \[f'(x)=\lim_{h\to 0}\frac{c-c}{h}=\lim_{h\to 0}0=0 \qedhere\]
+    \[f'(x)=\lim_{h\to 0}\frac{c-c}{h}=\lim_{h\to 0}0=0\qedhere\]
 \end{proof}
 \begin{theorem}[Power Rule]
-    \[\frac{d}{dx}(x^n)=nx^{n-1},\quad n\in\R \qedhere\]
+    \[\frac{d}{dx}(x^n)=nx^{n-1},\quad n\in\R\qedhere\]
 \end{theorem}
 \begin{proof}
     We prove the power rule for \(n\in\N\).
@@ -29,23 +29,23 @@ Note the special case when \(n=1\), then we have \[\frac{d}{dx}(x)=1\]
 \end{problem}
 \begin{solution}
     \[\frac{d}{dx}\left(\frac{1}{x}\right)=\frac{d}{dx}x^{-1}=(-1)x^{-1-1}
-    =-x^{-2}=-\frac{1}{x^2} \qedhere\]
+    =-x^{-2}=-\frac{1}{x^2}\qedhere\]
 \end{solution}
 \begin{theorem}[Constant Multiple Rule]
     If \(c\) is a constant, then
-    \[\frac{d}{dx}[cf(x)]=c\,\frac{d}{dx}f(x) \qedhere\]
+    \[\frac{d}{dx}[cf(x)]=c\,\frac{d}{dx}f(x)\qedhere\]
 \end{theorem}
 \begin{proof}
     \begin{align*}
         \frac{d}{dx}[cf(x)]&= \lim_{h\to 0}\frac{cf(x+h)-cf(x)}{h}
         =\lim_{h\to 0}\left[c\left(\frac{f(x+h)-f(x)}{h}\right)\right] \\
         &= c\left(\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\right)
-        =c\,\frac{d}{dx}f(x) \qedhere
+        =c\,\frac{d}{dx}f(x)\qedhere
     \end{align*}
 \end{proof}
 \begin{theorem}[Sum and Difference Rule]
     \[\frac{d}{dx}[f(x)\pm g(x)]
-    =\frac{d}{dx}f(x)\pm \frac{d}{dx}g(x) \qedhere\]
+    =\frac{d}{dx}f(x)\pm \frac{d}{dx}g(x)\qedhere\]
 \end{theorem}
 \begin{proof}
     We prove the sum rule.
@@ -65,7 +65,7 @@ Note the special case when \(n=1\), then we have \[\frac{d}{dx}(x)=1\]
         &= \lim_{h\to 0}\frac{f(x+h)-f(x)-[g(x+h)-g(x)]}{h} \\
         &= \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
         -\lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \\
-        &= \frac{d}{dx}f(x)-\frac{d}{dx}g(x) \qedhere
+        &= \frac{d}{dx}f(x)-\frac{d}{dx}g(x)\qedhere
     \end{align*}
 \end{proof}
 
@@ -74,7 +74,7 @@ Let \(f(x)\) and \(g(x)\) be differentiable functions, then we have the
 product rule by Leibniz and the quotient rule.
 \begin{theorem}[Product Rule]
     \[\frac{d}{dx}[f(x)g(x)]=\left[\frac{d}{dx}f(x)\right]g(x)
-    +f(x)\left[\frac{d}{dx}g(x)\right] \qedhere\]
+    +f(x)\left[\frac{d}{dx}g(x)\right]\qedhere\]
 \end{theorem}
 \begin{proof}
     \begin{align*}
@@ -87,13 +87,13 @@ product rule by Leibniz and the quotient rule.
         &= \left[\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\right]g(x)
         +\lim_{h\to 0}f(x+h)\cdot\lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \\
         &= \left[\frac{d}{dx}f(x)\right]g(x)
-        +f(x)\left[\frac{d}{dx}g(x)\right] \qedhere
+        +f(x)\left[\frac{d}{dx}g(x)\right]\qedhere
     \end{align*}
 \end{proof}
 \begin{theorem}[Quotient Rule]
     \[\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]
     =\frac{\left[\cfrac{d}{dx}f(x)\right]g(x)
-    -f(x)\left[\cfrac{d}{dx}g(x)\right]}{[g(x)]^2} \qedhere\]
+    -f(x)\left[\cfrac{d}{dx}g(x)\right]}{[g(x)]^2}\qedhere\]
 \end{theorem}
 \begin{proof}
     \begin{align*}
@@ -109,13 +109,13 @@ product rule by Leibniz and the quotient rule.
         -f(x)\left(\lim_{h\to 0}\frac{g(x+h)-g(x)}{h}\right)\right]
         \frac{1}{[g(x)]^2} \\
         &= \frac{\left[\cfrac{d}{dx}f(x)\right]g(x)
-        -f(x)\left[\cfrac{d}{dx}g(x)\right]}{[g(x)]^2} \qedhere
+        -f(x)\left[\cfrac{d}{dx}g(x)\right]}{[g(x)]^2}\qedhere
     \end{align*}
 \end{proof}
 
 \subsubsection{Trigonometric Functions}
 \begin{theorem}
-    \[\frac{d}{dx}\sin x=\cos x \qedhere\]
+    \[\frac{d}{dx}\sin x=\cos x\qedhere\]
 \end{theorem}
 \begin{proof}
     We use the \textbf{angle sum identity} of the sine function
@@ -135,11 +135,11 @@ product rule by Leibniz and the quotient rule.
         \left(\lim_{h\to 0}\frac{\cos h-1}{h}\right)
         +\left(\lim_{h\to 0}\cos x\right)
         \left(\lim_{h\to 0}\frac{\sin h}{h}\right)  \\
-        &= (\sin x)(0)+(\cos x)(1) =\cos x \qedhere
+        &= (\sin x)(0)+(\cos x)(1) =\cos x\qedhere
     \end{align*}
 \end{proof}
 \begin{theorem}
-    \[\frac{d}{dx}\cos x=-\sin x \qedhere\]
+    \[\frac{d}{dx}\cos x=-\sin x\qedhere\]
 \end{theorem}
 \begin{proof}
     We use the angle sum identity of the cosine function
@@ -155,11 +155,11 @@ product rule by Leibniz and the quotient rule.
         \left(\lim_{h\to 0}\frac{\cos h-1}{h}\right)
         -\left(\lim_{h\to 0}\sin x\right)
         \left(\lim_{h\to 0}\frac{\sin h}{h}\right)  \\
-        &= (\cos x)(0)-(\sin x)(1)=-\sin x \qedhere
+        &= (\cos x)(0)-(\sin x)(1)=-\sin x\qedhere
     \end{align*}
 \end{proof}
 \begin{theorem}
-    \[\frac{d}{dx}\tan x=\sec^2 x \qedhere\]
+    \[\frac{d}{dx}\tan x=\sec^2 x\qedhere\]
 \end{theorem}
 \begin{proof}
     \begin{align*}
@@ -168,7 +168,7 @@ product rule by Leibniz and the quotient rule.
         -\sin x\cfrac{d}{dx}\left(\cos x\right)}{\cos^2 x}
         =\frac{\cos x\cos x-\sin x(-\sin x)}{\cos^2 x}  \\
         &= \frac{\sin^2 x+\cos^2 x}{\cos^2 x}=\frac{1}{\cos^2 x}
-        =\sec^2 x \qedhere
+        =\sec^2 x\qedhere
     \end{align*}
 \end{proof}
 
@@ -180,7 +180,7 @@ We have the \textbf{chain rule} formulated by \textbf{James Gregory}
     then \(F\) is differentiable and \(F'\) is
     \[F'(x)=f'(g(x))\cdot g'(x)\]
     If \(y=f(u)\) and \(u=g(x)\), then
-    \[\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx} \qedhere\]
+    \[\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\qedhere\]
 \end{theorem}
 \begin{proof}
     We know that by definition if \(y=f(x)\),

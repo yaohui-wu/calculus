@@ -1,9 +1,9 @@
 \subsection{Implicit Differentiation}
 \subsubsection{Implicit Differentiation}
-An \textbf{explicit function} \(y=f(x)\) is defined by expressing one variable
+An explicit function \(y=f(x)\) is defined by expressing one variable
 explicitly in terms of another variable.
-An \textbf{implicit function} is defined implicitly by a relation between
-\(x\) and \(y\).
+An implicit function is defined implicitly by a relation between \(x\) and
+\(y\).
 An example of implicit functions is the equation of the circle \(x^2+y^2=r^2\)
 where the raidus \(r\) is a constant.
 In some cases it is possible to solve an implicit function to get an explicit function.
@@ -15,13 +15,13 @@ of \(y\) in an implicit function.
 \begin{solution}
     We differentiate on both sides of the equation then we have
     \begin{align*}
-        \frac{d}{dx}(x^2+y^2)&=\frac{d}{dx}(1)\\
-        \frac{d}{dx}(x^2)+\frac{d}{dx}(y^2)&=0
+        \frac{d}{dx}(x^2+y^2) &= \frac{d}{dx}(1) \\
+        \frac{d}{dx}(x^2)+\frac{d}{dx}(y^2) &= 0
     \end{align*}
     Since \(y=f(x)\), we use the chain rule then we have
     \begin{align*}
-        2x+\frac{d}{dy}(y^2)\frac{dy}{dx}=0\\
-        2x+2y\frac{dy}{dx}=0
+        2x+\frac{d}{dy}(y^2)\frac{dy}{dx} &= 0 \\
+        2x+2y\frac{dy}{dx} &= 0
     \end{align*}
     We solve for \(dy/dx\) then we have
     \[\frac{dy}{dx}=-\frac{x}{y}\qedhere\]
@@ -31,10 +31,13 @@ of \(y\) in an implicit function.
 \end{problem}
 \begin{solution}
     \begin{align*}
-        x^3+y^3&=6xy\\\frac{d}{dx}x^3+\frac{d}{dy}y^3\left(\frac{dy}{dx}\right)
-        &=\left[\frac{d}{dx}(6x)\right]y+6x\frac{dy}{dx}\\3x^2+3y^2\frac{dy}{dx}
-        &=6y+6x\frac{dy}{dx}\\x^2+y^2\frac{dy}{dx}&=2y+2x\frac{dy}{dx}
-        \\(y^2-2x)\frac{dy}{dx}&=2y-x^2\\\frac{dy}{dx}&=\frac{2y-x^2}{y^2-2x}\qedhere
+        x^3+y^3 &= 6xy \\
+        \frac{d}{dx}x^3+\frac{d}{dy}y^3\left(\frac{dy}{dx}\right)
+        &= \left[\frac{d}{dx}(6x)\right]y+6x\frac{dy}{dx} \\
+        3x^2+3y^2\frac{dy}{dx} &= 6y+6x\frac{dy}{dx} \\
+        x^2+y^2\frac{dy}{dx} &= 2y+2x\frac{dy}{dx} \\
+        (y^2-2x)\frac{dy}{dx} &= 2y-x^2 \\
+        \frac{dy}{dx} &= \frac{2y-x^2}{y^2-2x} \qedhere
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -62,7 +65,8 @@ of \(y\) in an implicit function.
     \begin{align*}
         \frac{d^2y}{dx^2} &= \frac{d}{dx}\left(-\frac{x^3}{y^3}\right)
         =-3x^2y^{-3}+(-x^3)(-3y^{-4})\frac{dy}{dx}
-        =3x^3y^{-4}(-x^3y^{-3})-3x^2y^{-3} \\ &=-3x^6y^{-7}-3x^2y^{-3}
+        =3x^3y^{-4}(-x^3y^{-3})-3x^2y^{-3} \\
+        &= -3x^6y^{-7}-3x^2y^{-3}
         =-3x^2y^{-7}(x^4+y^4)=-48\frac{x^2}{y^7} \qedhere
     \end{align*}
 \end{solution}

@@ -4,23 +4,22 @@
     The limit of \(f(x)\) as \(x\) approaches \(a\) is \textbf{infinity} if
     the values of \(f(x)\) can be made arbitrarily large by taking \(x\)
     sufficiently close to \(a\) but not equal to \(a\).
-    \[\lim_{x\to a}f(x)=\infty \qedhere\]
+    \[\lim_{x\to a}f(x)=\infty\qedhere\]
 \end{definition}
 \begin{definition}
-    The limit of \(f(x)\) as \(x\) approaches \(a\) is
-    \textbf{negative infinity} if the values of \(f(x)\) can be made
-    arbitrarily small by taking \(x\) sufficiently close to \(a\) but not
-    equal to \(a\).
-    \[\lim_{x\to a}f(x)=-\infty \qedhere\]
+    The limit of \(f(x)\) as \(x\) approaches \(a\) is negative infinity if
+    the values of \(f(x)\) can be made arbitrarily small by taking \(x\)
+    sufficiently close to \(a\) but not equal to \(a\).
+    \[\lim_{x\to a}f(x)=-\infty\qedhere\]
 \end{definition}
 Similar definitions can be given for one-sided infinite limits.
 \begin{align*}
-    &\lim_{x\to a^-}f(x)=\infty&&\lim_{x\to a^+}f(x)=\infty&
-    &\lim_{x\to a^-}f(x)=-\infty&&\lim_{x\to a^+}f(x)=-\infty&
+    &\lim_{x\to a^-}f(x)=\infty && \lim_{x\to a^+}f(x)=\infty&
+    &\lim_{x\to a^-}f(x)=-\infty && \lim_{x\to a^+}f(x)=-\infty&
 \end{align*}
 \begin{definition}
-    The \textbf{vertical asymptote} of the curve \(y=f(x)\) is the line
-    \(x=a\) if one of the infinite limits is infinity or negative infinity.
+    The vertical asymptote of the curve \(y=f(x)\) is the line \(x=a\) if one
+    of the infinite limits is infinity or negative infinity.
 \end{definition}
 
 \subsubsection{Limits at Infinity}
@@ -29,14 +28,14 @@ Similar definitions can be given for one-sided infinite limits.
     The limit of \(f(x)\) as \(x\) approaches infinity is \(L\) if the values
     of \(f(x)\) can be made as close to \(L\) as we like by taking \(x\)
     sufficiently large.
-    \[\lim_{x\to\infty}f(x)=L \qedhere\]
+    \[\lim_{x\to\infty}f(x)=L\qedhere\]
 \end{definition}
 \begin{definition}
     Let \(f\) be a function defined on some interval \((-\infty,a)\).
     The limit of \(f(x)\) as \(x\) approaches negative infinity is \(L\) if
     the values of \(f(x)\) can be made as close to \(L\) as we like by taking
     \(x\) sufficiently small.
-    \[\lim_{x\to -\infty}f(x)=L \qedhere\]
+    \[\lim_{x\to -\infty}f(x)=L\qedhere\]
 \end{definition}
 \begin{problem}
     Evaluate \(\lim_{x\to\infty}\sin x\) and \(\lim_{x\to\infty}\cos x\).
@@ -46,32 +45,34 @@ Similar definitions can be given for one-sided infinite limits.
     \(x\to\infty\) so the limits do not exist.
 \end{solution}
 \begin{definition}
-    The \textbf{horizontal asymptote} of the curve \(y=f(x)\) is the line
-    \(y=L\) if one of the limits at infinity is \(L\).
+    The horizontal asymptote of the curve \(y=f(x)\) is the line \(y=L\) if
+    one of the limits at infinity is \(L\).
 \end{definition}
 
 \subsubsection{Infinite Limits at Infinity}
 \begin{definition}
     The values of \(f(x)\) become arbitrarily large for sufficiently large
     \(x\).
-    \[\lim_{x\to\infty}f(x)=\infty \qedhere\]
+    \[\lim_{x\to\infty}f(x)=\infty\qedhere\]
 \end{definition}
 Similar definitions can be given for other infinite limits at infinity or
 negative infinity.
 \begin{align*}
-    &\lim_{x\to\infty}f(x)=-\infty&&\lim_{x\to -\infty}f(x)=\infty&
-    &\lim_{x\to -\infty}f(x)=-\infty&
+    &\lim_{x\to\infty}f(x)=-\infty && \lim_{x\to -\infty}f(x)=\infty &
+    & \lim_{x\to -\infty}f(x)=-\infty&
 \end{align*}
 
 \subsubsection{Precise Definitions}
 Let \(f\) be a function defined on some open interval that contains the number
 \(a\), except possibly at \(a\) itself.
 \begin{definition}
-    \[\lim_{x\to a}f(x)=\infty\] if for every \(M>0\), there is a
-    \(\delta>0\) such that \[0<|x-a|<\delta\implies f(x)>M \qedhere\]
+    \[\lim_{x\to a}f(x)=\infty\]
+    if for every \(M>0\), there is a
+    \(\delta>0\) such that
+    \[0<|x-a|<\delta\implies f(x)>M\qedhere\]
 \end{definition}
 \begin{problem}
-    Prove that \(\displaystyle{\lim_{x\to a}\frac{1}{x^2}=\infty}\).
+    Prove that \(\\lim_{x\to a}\frac{1}{x^2}=\infty\).
 \end{problem}
 \begin{solution}
     Let \(M>0\) be given, we want to find a \(\delta>0\) such that
@@ -86,11 +87,13 @@ Let \(f\) be a function defined on some open interval that contains the number
 \end{solution}
 Let \(f\) be a function defined on some interval \((a,\infty)\).
 \begin{definition}
-    \[\lim_{x\to \infty}f(x)=L\] if for every \(\epsilon>0\), there is an
-    \(N\) such that \[x>N\implies|f(x)-L|<\epsilon \qedhere\]
+    \[\lim_{x\to \infty}f(x)=L\]
+    if for every \(\epsilon>0\), there is an
+    \(N\) such that
+    \[x>N\implies|f(x)-L|<\epsilon\qedhere\]
 \end{definition}
 \begin{problem}
-    Prove that \(\displaystyle{\lim_{x\to \infty}\frac{1}{x}=0}\).
+    Prove that \(\lim_{x\to \infty}\frac{1}{x}=0\).
 \end{problem}
 \begin{proof}
     Given \(\epsilon>0\), we want to find an \(N\) such that
@@ -106,6 +109,6 @@ Let \(f\) be a function defined on some interval \((a,\infty)\).
 \end{proof}
 \begin{definition}
     \[\lim_{x\to \infty}f(x)=\infty\] if for every \(M>0\), there is an
-    \(N>0\) such that \[x>N\implies f(x)>M \qedhere\]
+    \(N>0\) such that \[x>N\implies f(x)>M\qedhere\]
 \end{definition}
 Similar definitions apply for limits involving negative infinity.

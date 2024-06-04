@@ -8,25 +8,24 @@ We have a formal definition of a function.
     A \textbf{function} \(f\) is a binary relation \(R\) between domain \(X\)
     and codomain \(Y\) that satisfies:
     \begin{itemize}
-        \item \(R\) is a subset of the \textbf{Cartesian product} of \(X\) and
-        \(Y\).
+        \item \(R\) is a subset of the Cartesian product of \(X\) and \(Y\).
         \[R\subset\{(x,y)\mid x\in X,y\in Y\}\]
         \item For every \(x\) in \(X\), there exists a \(y\) in \(Y\) such
         that \((x,y)\) is in \(R\).
         \[\forall x\in X,\exists y\in Y,(x,y)\in R\]
         \item If \((x,y)\) and \((x,z)\) are in \(R\), then \(y=z\).
-        \[(x,y),(x,z)\in R\implies y=z \qedhere\]
+        \[(x,y),(x,z)\in R\implies y=z\qedhere\]
     \end{itemize}
 \end{definition}
-The real line is the one-dimensional (1D) \textbf{Eculidean space} defined as
-the set of all real numbers \(\R\).
-The \(xy\)-plane in the \textbf{Cartesian coordinate system} by
-\textbf{René Descartes} (1596--1650) is the two-dimensional (2D) Eculidean
-space defined as the set of all ordered pairs of real numbers
-\((x,y)\in\R^2\).
-A \textbf{function of a real variable} is a function whose domain is the set
-of real numbers \(\R\). A real function is a real-valued function of a real
-variable whose domain and codomain is \(\R\).
+The real line is the one-dimensional (1D) Eculidean space defined as the set
+of all real numbers \(\R\).
+The \(xy\)-plane in the Cartesian coordinate system by \textbf{René Descartes}
+(1596--1650) is the two-dimensional (2D) Eculidean space defined as the set of
+all ordered pairs of real numbers \((x,y)\in\R^2\).
+A function of a real variable is a function whose domain is the set of real
+numbers \(\R\).
+A real function is a real-valued function of a real variable whose domain and
+codomain is \(\R\).
 
 \subsubsection{Intuitive Definition of a Limit}
 Newton and Leibniz introduced a working definition of a limit.
@@ -36,21 +35,20 @@ number \(a\), except possibly at \(a\) itself.
     The \textbf{limit} of \(f(x)\) as \(x\) approaches \(a\) equals \(L\) if
     we can make \(f(x)\) arbitrarily close to \(L\) by taking \(x\)
     sufficiently close to \(a\) from the left and the right but \(x\neq a\).
-    \[\lim_{x\to a}f(x)=L \qedhere\]
+    \[\lim_{x\to a}f(x)=L\qedhere\]
 \end{definition}
 \begin{definition}
-    The \textbf{left-hand limit} of \(f(x)\) as \(x\) approaches \(a\) from
-    the left equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\)
-    by taking \(x\) sufficiently close to \(a\) where \(x<a\).
-    \[\lim_{x\to a^-}f(x)=L \qedhere\]
+    The left-hand limit of \(f(x)\) as \(x\) approaches \(a\) from the left
+    equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\) by taking
+    \(x\) sufficiently close to \(a\) where \(x<a\).
+    \[\lim_{x\to a^-}f(x)=L\qedhere\]
 \end{definition}
 \begin{definition}
-    The \textbf{right-hand limit} of \(f(x)\) as \(x\) approaches \(a\) from
-    the right equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\)
-    by taking \(x\) sufficiently close to \(a\) where \(x>a\).
+    The right-hand limit of \(f(x)\) as \(x\) approaches \(a\) from the right
+    equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\) by taking
+    \(x\) sufficiently close to \(a\) where \(x>a\).
     \[\lim_{x\to a^+}f(x)=L\qedhere\]
 \end{definition}
-The limit \textbf{exists} if the left-hand limit and the right-hand limit of
-\(f(x)\) as \(x\) approaches \(a\) equal \(L\), otherwise the limit
-\textbf{does not exist}.
-\[\lim_{x\to a}f(x)=L \iff \lim_{x\to a^-}f(x) = \lim_{x\to a^+}f(x)=L\]
+The limit exists if the left-hand limit and the right-hand limit of \(f(x)\)
+as \(x\) approaches \(a\) equal \(L\), otherwise the limit does not exist.
+\[\lim_{x\to a}f(x)=L\iff\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L\]
