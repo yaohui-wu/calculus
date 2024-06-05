@@ -1,1 +1,35 @@
 \subsection{Partial Fractions}
+\subsubsection{Partial Fractions}
+Consider a rational function \(\displaystyle{f(x)=\frac{P(x)}{Q(x)}}\) where
+\(P\) and \(Q\) are polynomials.
+If \(f\) is improper, that is, \(\deg(P)\geq\deg(Q)\), then we simplify to get
+\(\displaystyle{f(x)=S(x)+\frac{R(x)}{Q(x)}}\) where \(S\) and \(R\) are
+polynomials.
+Then we can factor \(Q\) to be irreducible and express \(\dfrac{R(x)}{Q(x)}\)
+as the a sum of partial fractions of the form
+\[\frac{A}{(ax+b)^i}\quad\text{or}\quad\frac{Ax+B}{(ax^2+bx+c)^j}\]
+There are four possible cases:
+\begin{enumerate}
+    \item \(Q\) is a product of distinct linear factors.
+    Then
+    \[Q(x)=(a_1 x+b_1)(a_2 x+b_2)\cdots(a_k x+b_k)\]
+    and therefore
+    \[\frac{R(x)}{Q(x)}=\frac{A_1}{a_1 x+b_1}+\frac{A_2}{a_2 x+b_2}+\cdots+
+    \frac{A_k}{a_k x+b_k}\]
+    \item \(Q\) is a product of linear factors where some are repeated.
+    Suppose that the first linear factor is repeated \(r\) times, then we have
+    \[\frac{A_1}{a_1 x+b_1}+\frac{A_2}{(a_1 x+b_1)^2}+\cdots+
+    \frac{A_r}{(a_1 x+b_1)^r}\]
+    for the first repeated linear factor and similarly for other repeated
+    linear factors.
+    \item \(Q\) has irreducible quadratic factors without repeated
+    factors.
+    Then for every quadratic factor we have
+    \[\frac{Ax+B}{ax^2+bx+c}\]
+    \item \(Q\) has a repeated irreducible quadratic factor.
+    Suppose that the first quadratic factor is repeated \(r\) times,
+    then we have
+    \[\frac{A_1 x+B_1}{ax^2+bx+c}+\frac{A_2 x+B_2}{(ax^2+bx+c)^2}+\cdots
+    +\frac{A_r x+B_r}{(ax^2+bx+c)^r}\]
+    for the first repeated quadratic factor and similarly for the others.
+\end{enumerate}
