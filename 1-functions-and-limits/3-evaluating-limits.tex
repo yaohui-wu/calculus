@@ -243,20 +243,19 @@ Therefore, we have the following limit by the squeeze theorem.
     Evaluate \[\lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}\]
 \end{problem}
 \begin{solution}
-    By the \textbf{Pythagorean identity} \(\sin^2\theta+\cos^2\theta=1\),
-    we have
+    We have
     \[\frac{\cos\theta-1}{\theta}
     =\frac{\cos\theta-1}{\theta}\left(\frac{\cos\theta+1}{\cos\theta+1}\right)
     =\frac{\cos^2\theta-1}{\theta(\cos\theta+1)}
     =\frac{-\sin^2\theta}{\theta(\cos\theta+1)}
     =\frac{\sin\theta}{\theta}\left(\frac{-\sin\theta}{\cos\theta+1}\right)\]
-    We take the limit then we have
-    \[\lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}
-    =\lim_{\theta\to 0}\left[\frac{\sin\theta}{\theta}
-    \left(\frac{-\sin\theta}{\cos\theta+1}\right)\right]
-    =\left(\lim_{\theta\to 0}\frac{\sin\theta}{\theta}\right)
-    \left(\lim_{\theta\to 0}\frac{-\sin\theta}{\cos\theta+1}\right)
-    =1\left(\frac{(-1)(0)}{1+1}\right)=0\]
-    Therefore, it is shown that
-    \[\lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}=0\qedhere\]
+    We take the limit then
+    \begin{align*}
+        \lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}
+        &= \lim_{\theta\to 0}\left[\frac{\sin\theta}{\theta}
+        \left(\frac{-\sin\theta}{\cos\theta+1}\right)\right]
+        =\left(\lim_{\theta\to 0}\frac{\sin\theta}{\theta}\right)
+        \left(\lim_{\theta\to 0}\frac{-\sin\theta}{\cos\theta+1}\right) \\
+        &= 1\left(\frac{(-1)(0)}{1+1}\right)=0 \qedhere
+    \end{align*}
 \end{solution}

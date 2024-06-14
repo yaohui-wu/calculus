@@ -3,7 +3,6 @@
 \subsubsection{Functions}
 A function \(f:X\mapsto Y\) is a rule that assigns each element \(x\) in set
 \(X\) to exactly one element \(y\) in set \(Y\).
-We have a formal definition of a function.
 \begin{definition}
     A \textbf{function} \(f\) is a binary relation \(R\) between domain \(X\)
     and codomain \(Y\) that satisfies:
@@ -19,16 +18,33 @@ We have a formal definition of a function.
 \end{definition}
 The real line is the one-dimensional (1D) Eculidean space defined as the set
 of all real numbers \(\R\).
-The \(xy\)-plane in the Cartesian coordinate system by \textbf{René Descartes}
-(1596--1650) is the two-dimensional (2D) Eculidean space defined as the set of
-all ordered pairs of real numbers \((x,y)\in\R^2\).
+The \(xy\)-plane in the Cartesian coordinate system is the two-dimensional
+(2D) Eculidean space defined as the set of all ordered pairs of real numbers
+\((x,y)\in\R^2\).
 A function of a real variable is a function whose domain is the set of real
 numbers \(\R\).
 A real function is a real-valued function of a real variable whose domain and
 codomain is \(\R\).
+\begin{definition}
+    A function \(f\) is injective, or one-to-one if \(f(x_1)\neq f(x_2)\) when
+    \(x_1\neq x_2\).
+\end{definition}
+\begin{definition}
+    A function \(f\) is surjective, or onto if for all \(y\) in range \(Y\),
+    there exists an \(x\) in domain \(X\) such that \(f(x)=y\).
+\end{definition}
+\begin{definition}
+    A function \(f\) is bijective if \(f\) is injective and surjective.
+\end{definition}
+\begin{definition}
+    Let \(f\) be an injective function with domain \(X\) and range \(Y\).
+    Then its inverse function \(f^{-1}\) has domain \(Y\) and range \(X\) and
+    is defined by
+    \[f^{-1}(y)=x\iff f(x)=y\]
+    for all \(y\) in \(Y\).
+\end{definition}
 
 \subsubsection{Intuitive Definition of a Limit}
-Newton and Leibniz introduced a working definition of a limit.
 Let \(f(x)\) be a function defined on some open interval that contains the
 number \(a\), except possibly at \(a\) itself.
 \begin{definition}
