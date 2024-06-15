@@ -33,3 +33,96 @@ There are four possible cases:
     +\frac{A_r x+B_r}{(ax^2+bx+c)^r}\]
     for the first repeated quadratic factor and similarly for the others.
 \end{enumerate}
+\begin{problem}
+    Evaluate \(\displaystyle{\int\frac{x^2+2x-1}{2x^3+3x^2-2x}\,dx}\).
+\end{problem}
+\begin{solution}
+    We simplify to get \(2x^3+3x^2-2x=x(2x-1)(x+2)\) then
+    \begin{align*}
+        \frac{x^2+2x-1}{x(2x-1)(x+2)} &=
+        \frac{A}{x}+\frac{B}{2x-1}+\frac{C}{x+2} \\
+        x^2+2x-1 &= A(2x-1)(x+2)+Bx(x+2)+Cx(2x-1) \\
+        x=0\iff -1=-2A &\iff A=\frac{1}{2} \\
+        x=\frac{1}{2}\iff \frac{1}{4}=\frac{5}{4}B &\iff B=\frac{1}{5} \\
+        x=-2\iff -1=10C &\iff C=-\frac{1}{10}
+    \end{align*}
+    and therefore
+    \begin{align*}
+        \int\frac{x^2+2x-1}{2x^3+3x^2-2x}
+        &= \frac{1}{2}\int\frac{dx}{x}+\frac{1}{5}\int\frac{dx}{2x-1}
+        -\frac{1}{10}\int\frac{dx}{x+2} \\
+        &= \frac{1}{2}\ln|x|+\frac{1}{10}\ln|2x-1|
+        -\frac{1}{10}\ln|x+2|+K \qedhere
+    \end{align*}
+\end{solution}
+\begin{problem}
+    Evaluate \(\displaystyle{\int\frac{x^4-2x^2+4x+1}{x^3-x^2-x+1}\,dx}\).
+\end{problem}
+\begin{solution}
+    We simplify to get
+    \begin{align*}
+        x^4-2x^2+4x+1 &=(x^2-1)^2+4x=(x+1)^2(x-1)^2+4x \\
+        x^3-x^2-x+1 &= x^2(x-1)-(x-1)=(x^2-1)(x-1)=(x+1)(x-1)^2
+    \end{align*}
+    and so
+    \begin{align*}
+        \int\frac{x^4-2x^2+4x+1}{x^3-x^2-x+1}\,dx
+        &= \int(x+1)\,dx+\int\frac{4x}{(x+1)(x-1)^2}\,dx
+    \end{align*}
+    Then
+    \begin{align*}
+        \frac{4x}{(x+1)(x-1)^2} &=
+        \frac{A}{x+1}+\frac{B}{x-1}+\frac{C}{(x-1)^2} \\
+        4x &= A(x-1)^2+B(x+1)(x-1)+C(x+1) \\
+        x=-1\iff -4=4A &\iff A=-1 \\ x=1\iff 4=2C &\iff C=2 \\
+        x=0\iff 0=-1-B+2 &\iff B=1
+    \end{align*}
+    and therefore
+    \begin{align*}
+        \int\frac{x^4-2x^2+4x+1}{x^3-x^2-x+1}\,dx
+        &= \int(x+1)\,dx-\int\frac{dx}{x+1}+\int\frac{dx}{x-1}
+        +2\int\frac{dx}{(x-1)^2} \\
+        &= \frac{x^2}{2}+x-\ln|x+1|+\ln|x-1|-\frac{2}{x-1}+K \qedhere
+    \end{align*}
+\end{solution}
+\begin{problem}
+    Evaluate \(\displaystyle{\int\frac{2x^2-x+4}{x^3+4x}\,dx}\).
+\end{problem}
+\begin{solution}
+    We do partial fraction decomposition then
+    \begin{align*}
+        \frac{2x^2-x+4}{x^3+4x} &= \frac{2x^2-x+4}{x(x^2+4)}
+        =\frac{A}{x}+\frac{Bx+C}{x^2+4} \\
+        2x^2-x+4 &= A(x^2+4)+(Bx+C)x=(A+B)x^2+Cx+4A \\
+        A &=1,\quad B=1,\quad C=-1
+    \end{align*}
+    and so
+    \begin{align*}
+        \int\frac{2x^2-x+4}{x^3+4x}\,dx
+        &= \int\frac{dx}{x}+\int\frac{x-1}{x^2+4}\,dx
+        =\ln|x|+\frac{1}{2}\ln|x^2+4|
+        +\frac{1}{2}\arctan\left(\frac{x}{2}\right)+K \qedhere
+    \end{align*}
+\end{solution}
+\begin{problem}
+    Evaluate \(\displaystyle{\int\frac{4x^2-3x+2}{4x^2-4x+3}\,dx}\).
+\end{problem}
+\begin{solution}
+    
+\end{solution}
+\begin{problem}
+    Evaluate \(\displaystyle{\int\frac{1-x+2x^2-x^3}{x(x^2+1)^2}\,dx}\).
+\end{problem}
+\begin{solution}
+    We do partial fraction decomposition then
+    \begin{align*}
+        \frac{1-x+2x^2-x^3}{x(x^2+1)^2}
+        &= \frac{A}{x}+\frac{Bx+C}{x^2+1}+\frac{Dx+E}{(x^2+1)^2} \\
+        1-x+2x^2-x^3 &= A(x^2+1)^2+(Bx+C)x(x^2+1)+(Dx+E)x \\
+        x=0\iff A&=1
+    \end{align*}
+    and so
+    \begin{align*}
+        1-x+2x^2-x^3 &=
+    \end{align*}
+\end{solution}
