@@ -1,0 +1,20 @@
+\subsection{Population Growth}
+Let \(y=y(t)\) such that
+\[\frac{dy}{dt}=ky\]
+where \(k\) is a constant, then the differential equation is the law of
+natural growth if \(k>0\) or the law of natural decay if \(k<0\).
+Since the differential equation is separable, then
+\begin{align*}
+    \frac{dy}{dt} &= ky \\
+    \int\frac{dy}{y} &= \int k\,dt \\
+    \ln|y| &= kt+C \\
+    |y| &= e^{kt+C}=e^Ce^{kt} \\
+    y &= \pm e^Ce^{kt}=Ae^{kt}
+\end{align*}
+is the general solution of the differential equation so
+\[\frac{dy}{dt}=kAe^{kt}=ky\]
+and \(y(0)=Ae^0=A\) is the initial value.
+
+\subsubsection{Logistic Growth}
+If \(M\) is the carrying capacity, then the logistic differential equation is
+\[\frac{dy}{dt}=ky(M-y)\]
