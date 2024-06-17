@@ -52,3 +52,25 @@ then
 \[y=\frac{y_0M}{(M-y_0+y_0e^{kMt})e^{-kMt}}=\frac{y_0M}{y_0+(M-y_0)e^{-kMt}}\]
 is the solution of the differential equation and
 \[\lim_{t\to\infty}y(t)=\frac{y_0M}{y_0+0}=M\]
+We can show that
+\begin{align*}
+    \frac{d^2y}{dt^2} &= \frac{d}{dt}(kMy-ky^2)=kM\frac{dy}{dt}-2ky\frac{dy}{dt}
+    =k(M-2y)\frac{dy}{dt}=k(M-2y)ky(M-y) \\
+    &= k^2y(M-y)(M-2y)
+\end{align*}
+Then
+\[k^2y(M-y)(M-2y)=0\]
+and
+\begin{align*}
+    k^2y &= 0 & M-y &= 0 & M-2y &= 0 \\
+    y &= 0 & y &= M & y &= \frac{M}{2}
+\end{align*}
+so
+\begin{align*}
+    &\left.\frac{dy}{dt}\right|_{y=0}=k(0)(M-0)=0 \\
+    &\left.\frac{dy}{dt}\right|_{y=M}=kM(M-M)=0 \\
+    &\left.\frac{dy}{dt}\right|_{y=M/2}=k\frac{M}{2}\left(M-\frac{M}{2}\right)
+    =\frac{kM^2}{4}
+\end{align*}
+We deduce that a population grows fastest when it reaches half its carrying
+capacity.
