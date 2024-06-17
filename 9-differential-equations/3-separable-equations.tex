@@ -3,30 +3,28 @@
 A \textbf{separable equation} is a first order differential equation that can
 be written in the form
 \[\frac{dy}{dx}=f(x)g(y)\]
-We can separate the variables if \(g(y)\neq0\), let \(h(y)=1/g(y)\) then we
-have
+We can separate the variables if \(g(y)\neq0\), let \(h(y)=1/g(y)\) then
 \[\frac{dy}{dx}=\frac{f(x)}{h(y)}\]
 We write the equation in the differential form
 \[h(y)\,dy=f(x)\,dx\]
-Then we integrate both sides of the equation with respect to the variable of
-the function:
+Then we integrate both sides of the equation:
 \[\int h(y)\,dy=\int f(x)\,dx\]
-Now we have an implicit solution and in some cases we can solve for an
-explicit solution.
-We use the chain rule then we have
+Now we have an implicit solution of the differential equation and sometimes we
+can solve for an explicit solution.
+We can justify the method of separation of variables by using the chain rule
+to show that
 \begin{align*}
     \frac{d}{dx}\int h(y)\,dy &= \frac{d}{dx}\int f(x)\,dx \\
     \frac{d}{dy}\int h(y)\,dy\frac{dy}{dx} &= f(x) \\
-    h(y)\frac{dy}{dx} &= f(x)
+    h(y)\frac{dy}{dx} &= f(x) \\
+    \frac{dy}{dx} &= \frac{f(x)}{h(y)}=f(x)g(y)
 \end{align*}
-Therefore, we solved the differential equation by
-\textbf{separation of variables}.
 \begin{problem}
     Solve the differential equation \(\dfrac{dy}{dx}=-xy\).
 \end{problem}
 \begin{solution}
     Notice that \(y=0\) is a trivial solution then we solve the differential
-    equation assuming that \(y\neq 0\).
+    equation for non-trivial solutions \(y\neq 0\).
     We use separation of variables then
     \begin{align*}
         \dfrac{dy}{dx} &= -xy \\
@@ -35,8 +33,8 @@ Therefore, we solved the differential equation by
     \end{align*}
     Let \(C=C_2-C_1\), then
     \begin{align*}
-        \ln |y| &= -\frac{x^2}{2}+C \\
-        |y| &= e^{(-x^2/2)+C} \\
+        \ln |y| &= -\frac{x^2}{2}+C_2-C_1=-\frac{x^2}{2}+C \\
+        |y| &= e^{(-x^2/2)+C}=e^Ce^{-x^2/2} \\
         y &= \pm e^Ce^{-x^2/2}=Ae^{-x^2/2}
     \end{align*}
     where \(A\in\R\) is an arbitrary constant.
@@ -55,9 +53,10 @@ Therefore, we solved the differential equation by
         y^3 &= x^3+3C \\
         y &= \sqrt[3]{x^3+K},\quad K=3C
     \end{align*}
-    We consider the initial condition to find the particular solution then
-    \[y(0)=2=\sqrt[3]{(0)^3+K}\iff 2=\sqrt[3]{K}\iff K=8\]
-    The solution to the differential equation is \(y=\sqrt[3]{x^3+8}\).
+    We consider the initial condition \(y(0)=2\) to find the particular
+    solution then
+    \[y(0)=\sqrt[3]{0+K}\iff 2=\sqrt[3]{K}\iff K=8\]
+    The solution of the initial value problem is \(y=\sqrt[3]{x^3+8}\).
 \end{solution}
 \begin{problem}
     Solve the differential equation \(\dfrac{dy}{dx}=\dfrac{6x^2}{2y+\cos y}\).
@@ -99,23 +98,28 @@ Therefore, we solved the differential equation by
     \(R=6,378\) km and \(g=9.8\ \text{m/s}^2\).
 \end{problem}
 \begin{solution}
-    By the chain rule,
+    By the chain rule
     \[\frac{dv}{dt}=\frac{dx}{dt}\frac{dv}{dx}=v\frac{dv}{dx}\]
-    Then
+    then
     \begin{align*}
         m\frac{dv}{dt}=mv\frac{dv}{dx} &= -\frac{mgR^2}{(x+R)^2} \\
-        v\,dv &= -\frac{gR^2}{(x+R)^2}\,dx \\
-        \int_{v_0}^0 y\,dy &= -\int_0^h \frac{gR^2}{(x+R)^2}\,dx \\
-        \left[\frac{y^2}{2}\right]_{v_0}^0
+        v\,dv &= -\frac{gR^2}{(x+R)^2}\,dx
+    \end{align*}
+    Since the height is zero when \(v=v_0\) and the height is maximum when
+    \(v=0\) then
+    \begin{align*}
+        \int_{v_0}^0 v\,dv &= -\int_0^h \frac{gR^2}{(x+R)^2}\,dx \\
+        \left[\frac{v^2}{2}\right]_{v_0}^0
         &= \left[\frac{gR^2}{x+R}\right]_0^h \\
         -\frac{(v_0)^2}{2} &= gR^2\left(\frac{1}{R+h}-\frac{1}{R}\right)
         =gR^2\left(\frac{R-(R+h)}{R(R+h)}\right)=-\frac{gRh}{R+h} \\
         v_0= &= \sqrt{\dfrac{2gRh}{R+h}}
     \end{align*}
-    Therefore, the escape velocity of the earth is
+    The escape velocity of the earth is
     \begin{align*}
         v_e &= \lim_{h\to\infty}\sqrt{\dfrac{2gRh}{R+h}}
-        =\sqrt{\lim_{h\to\infty}\frac{2gR}{0+1}}=\sqrt{2gR} \\
+        =\sqrt{\lim_{h\to\infty}\frac{2gR}{(R/h)+1}}=\sqrt{\frac{2gR}{0+1}}
+        =\sqrt{2gR} \\
         &=\sqrt{2(9.8)(6.378\times10^6)}\ \text{m/s}
         \approx 11.1807\ \text{km/s} \qedhere
     \end{align*}
