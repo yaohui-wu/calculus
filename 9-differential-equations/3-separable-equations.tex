@@ -127,7 +127,7 @@ Then
     -\frac{1}{4}\ln|v+2|+\frac{1}{4}\ln|v-2|-\frac{1}{2}\ln|v^2-4|
     &= \ln|x|+C_1 \\
     \ln|v-2|-\ln|v+2|-2\ln|v^2-4| &= 4\ln|x|+C_2,\quad C_2=4C_1 \\
-    \ln\left|\frac{v-2}{v+2}\right|-\ln|(v^2-4)^2|
+    \ln\left|\frac{v-2}{v+2}\right|-\ln((v^2-4)^2)
     =\ln\left|\frac{v-2}{(v+2)(v+2)^2(v-2)^2}\right| &= \ln(x^4)+C_2 \\
     \ln\left|\frac{1}{(v+2)^3(v-2)}\right| &= \ln(x^4)+C_2 \\
     \frac{1}{(v+2)^3(v-2)} &= C_3x^4,\quad C_3=\pm e^{C_2} \\
@@ -152,7 +152,9 @@ Therefore the solution is
     \end{align*}
     and by separation of variables
     \begin{align*}
-        \int\frac{dv}{1+v^2} &= \int\frac{dx}{x}
+        \int\frac{dv}{1+v^2} &= \int\frac{dx}{x} \\
+        \arctan v &= \ln x+C \\
+        \arctan\left(\frac{y}{x}\right)-\ln x &= C \qedhere
     \end{align*}
 \end{solution}
 
