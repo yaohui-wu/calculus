@@ -74,3 +74,61 @@ so
 \end{align*}
 We deduce that a population grows fastest when it reaches half its carrying
 capacity.
+
+\subsubsection{Mathematical Modeling}
+An object of mass \(m\) is moving horizontally through a medium which resists the
+motion with a force that is a function of the velocity
+\[m\frac{d^2s}{dt^2}=m\frac{dv}{dt}=f(v)\]
+where \(v=v(t)\) and \(s=s(t)\) represent the velocity and position of the
+object at time \(t\), respectively.
+Let \(v(0)=v_0\) and \(s(0)=s_0\) be the initial values of \(v\) and \(s\).
+Suppose that the resisting force is proportional to the velocity for small
+values of \(v\) so
+\[f(v)=-kv\]
+where \(k\) is a positive constant.
+For large values of \(v\) a better model is
+\[f(v)=-kv^2\]
+where \(k\) is a positive constant.
+\begin{problem}
+    According to Newton's law of universal gravitation,
+    the gravitational force on an object of mass \(m\) that has been
+    projected vertically upward from the earth's surface is
+    \[F=\frac{mgR^2}{(x+R)^2}\]
+    where \(x=x(t)\) is the object's distance
+    above the surface at time \(t\), \(R\) is the
+    earth's radius, and \(g\) is the acceleration due to gravity.
+    Also, by Newton's second law,
+    \[F=ma=m\frac{dv}{dt}=-\frac{mgR^2}{(x+R)^2}\]
+    Suppose a rocket is fired vertically upward with an initial velocity \(v_0\).
+    Let \(h\) be the maximum height above the surface reached by the object.
+    Show that \(v_0=\sqrt{\dfrac{2gRh}{R+h}}\) and compute
+    \(v_e=\lim_{h\to\infty}v_0\), the escape velocity of the earth, using
+    \(R=6,378\) km and \(g=9.8\ \text{m/s}^2\).
+\end{problem}
+\begin{solution}
+    By the chain rule
+    \[\frac{dv}{dt}=\frac{dx}{dt}\frac{dv}{dx}=v\frac{dv}{dx}\]
+    then
+    \begin{align*}
+        m\frac{dv}{dt}=mv\frac{dv}{dx} &= -\frac{mgR^2}{(x+R)^2} \\
+        v\,dv &= -\frac{gR^2}{(x+R)^2}\,dx
+    \end{align*}
+    Since the height is zero when \(v=v_0\) and the height is maximum when
+    \(v=0\) then
+    \begin{align*}
+        \int_{v_0}^0 v\,dv &= -\int_0^h \frac{gR^2}{(x+R)^2}\,dx \\
+        \left[\frac{v^2}{2}\right]_{v_0}^0
+        &= \left[\frac{gR^2}{x+R}\right]_0^h \\
+        -\frac{(v_0)^2}{2} &= gR^2\left(\frac{1}{R+h}-\frac{1}{R}\right)
+        =gR^2\left(\frac{R-(R+h)}{R(R+h)}\right)=-\frac{gRh}{R+h} \\
+        v_0= &= \sqrt{\dfrac{2gRh}{R+h}}
+    \end{align*}
+    The escape velocity of the earth is
+    \begin{align*}
+        v_e &= \lim_{h\to\infty}\sqrt{\dfrac{2gRh}{R+h}}
+        =\sqrt{\lim_{h\to\infty}\frac{2gR}{(R/h)+1}}=\sqrt{\frac{2gR}{0+1}}
+        =\sqrt{2gR} \\
+        &=\sqrt{2(9.8)(6.378\times10^6)}\ \text{m/s}
+        \approx 11.1807\ \text{km/s} \qedhere
+    \end{align*}
+\end{solution}
