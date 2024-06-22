@@ -76,19 +76,83 @@ We deduce that a population grows fastest when it reaches half its carrying
 capacity.
 
 \subsubsection{Mathematical Modeling}
-An object of mass \(m\) is moving horizontally through a medium which resists the
-motion with a force that is a function of the velocity
-\[m\frac{d^2s}{dt^2}=m\frac{dv}{dt}=f(v)\]
-where \(v=v(t)\) and \(s=s(t)\) represent the velocity and position of the
-object at time \(t\), respectively.
-Let \(v(0)=v_0\) and \(s(0)=s_0\) be the initial values of \(v\) and \(s\).
-Suppose that the resisting force is proportional to the velocity for small
-values of \(v\) so
-\[f(v)=-kv\]
-where \(k\) is a positive constant.
-For large values of \(v\) a better model is
-\[f(v)=-kv^2\]
-where \(k\) is a positive constant.
+\begin{problem}
+    An object of mass \(m\) is moving horizontally through a medium which resists the
+    motion with a force that is a function of the velocity
+    \[m\frac{d^2s}{dt^2}=m\frac{dv}{dt}=f(v)\]
+    where \(v=v(t)\) and \(s=s(t)\) represent the velocity and position of the
+    object at time \(t\), respectively.
+    Let \(v(0)=v_0\) and \(s(0)=s_0\) be the initial values of \(v\) and \(s\).
+    Suppose that the resisting force is proportional to the velocity for small
+    values of \(v\) so
+    \[f(v)=-kv\]
+    where \(k\) is a positive constant.
+    For large values of \(v\) a better model is
+    \[f(v)=-kv^2\]
+    where \(k\) is a positive constant.
+    Determine \(v\) and \(s\) at any time \(t\) for each of the two models.
+    What is the total distance that the object travels in each case?
+\end{problem}
+\begin{solution}
+    For small values of \(v\) we have
+    \begin{align*}
+        m\frac{dv}{dt} &= -kv \\
+        \int\frac{dv}{v} &= -\int\frac{k}{m}\,dt \\
+        \ln(|v|) &= -\frac{k}{m}t+C \\
+        |v| &= e^{-(k/m)t+C}=e^Ce^{-(k/m)t} \\
+        v &= \pm e^Ce^{-(k/m)t}=Ae^{-(k/m)t}
+    \end{align*}
+    and since \(v(0)=A=v_0\) hence \(v=v_0e^{-(k/m)t}\).
+    Then
+    \[s=\int v_0e^{-(k/m)t}\,dt=-\frac{m}{k}v_0e^{-(k/m)t}+C\]
+    and since \(s(0)=-(m/k)v_0+C=s_0\iff C=s_0+(m/k)v_0\) hence
+    \[s=-\frac{m}{k}v_0e^{-(k/m)t}+s_0+\frac{m}{k}v_0
+    =s_0+\frac{m}{k}v_0(1-e^{-(k/m)t})\]
+    The total distance traveled by the object is
+    \begin{align*}
+        \lim_{t\to\infty}(s(t)-s(0))
+        &= \lim_{t\to\infty}\left(s_0+\frac{m}{k}v_0(1-e^{-(k/m)t})-s_0\right)
+        =\lim_{t\to\infty}\frac{m}{k}v_0(1-e^{-(k/m)t}) \\
+        &= \frac{m}{k}v_0(1-0)=\frac{m}{k}v_0
+    \end{align*}
+    For large values of \(k\) we have
+    \begin{align*}
+        m\frac{dv}{dt} &= -kv^2 \\
+        \int\frac{dv}{v^2} &= -\int\frac{k}{m}\,dt \\
+        -\frac{1}{v} &= -\frac{k}{m}t+C_1 \\
+        \frac{1}{v} &= \frac{k}{m}t+C=\frac{kt+Cm}{m} \\
+        v &= \frac{m}{kt+Cm}
+    \end{align*}
+    and since \(v(0)=m/(Cm)=v_0\iff C=1/v_0\) hence
+    \[v=\frac{m}{kt+(m/v_0)}\]
+    Then
+    \begin{align*}
+        s &= \int\frac{m}{kt+(m/v_0)}\,dt=\frac{m}{k}\int\frac{du}{u}
+        =\frac{m}{k}\ln(|u|)+C
+        =\frac{m}{k}\ln\left(\left|kt+\frac{m}{v_0}\right|\right)+C
+    \end{align*}
+    and since \(s(0)=(m/k)\ln(|m/v_0|)+C=s_0\iff C=s_0-(m/k)\ln(|m/v_0|)\)
+    hence
+    \begin{align*}
+        s &= \frac{m}{k}\ln\left(\left|kt+\frac{m}{v_0}\right|\right)+s_0
+        -\frac{m}{k}\ln\left(\left|\frac{m}{v_0}\right|\right)
+        =s_0+\frac{m}{k}\left(\ln\left(\left|kt+\frac{m}{v_0}\right|\right)
+        -\ln\left(\left|\frac{m}{v_0}\right|\right)\right) \\
+        &= s_0+\frac{m}{k}
+        \left(\ln\left(\left|\frac{kt+(m/v_0)}{m/v_0}\right|\right)\right)
+        =s_0+\frac{m}{k}
+        \left(\ln\left(\left|\frac{k}{m}v_0t+1\right|\right)\right)
+    \end{align*}
+    Since \(m\) is the mass so \(m\) is positive and given \(k\) is positive
+    therefore
+    \[s=s_0+\frac{m}{k}\ln\left(\frac{k}{m}v_0t+1\right)\]
+    and the distance traveled by the object is
+    \[\lim_{t\to\infty}(s(t)-s(0))
+    =\lim_{t\to\infty}\left(s_0
+    +\frac{m}{k}\ln\left(\frac{k}{m}v_0t+1\right)-s_0\right)=
+    \lim_{t\to\infty}\frac{m}{k}\ln\left(\frac{k}{m}v_0t+1\right)
+    =\infty\qedhere\]
+\end{solution}
 \begin{problem}
     According to Newton's law of universal gravitation,
     the gravitational force on an object of mass \(m\) that has been
