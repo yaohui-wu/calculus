@@ -58,7 +58,7 @@ We can show that
     =k(M-2y)\frac{dy}{dt}=k(M-2y)ky(M-y) \\
     &= k^2y(M-y)(M-2y)
 \end{align*}
-Then
+then
 \[k^2y(M-y)(M-2y)=0\]
 and
 \begin{align*}
@@ -66,16 +66,13 @@ and
     y &= 0 & y &= M & y &= \frac{M}{2}
 \end{align*}
 so
-\begin{align*}
-    &\left.\frac{dy}{dt}\right|_{y=0}=k(0)(M-0)=0 \\
-    &\left.\frac{dy}{dt}\right|_{y=M}=kM(M-M)=0 \\
-    &\left.\frac{dy}{dt}\right|_{y=M/2}=k\frac{M}{2}\left(M-\frac{M}{2}\right)
-    =\frac{kM^2}{4}
-\end{align*}
+\[\left.\frac{dy}{dt}\right|_{y=0}=k(0)(M-0)=0\]
+\[\left.\frac{dy}{dt}\right|_{y=M}=kM(M-M)=0\]
+\[\left.\frac{dy}{dt}\right|_{y=M/2}=k\frac{M}{2}\left(M-\frac{M}{2}\right)
+=\frac{kM^2}{4}\]
 We deduce that a population grows fastest when it reaches half its carrying
 capacity.
 
-\subsubsection{Mathematical Modeling}
 \begin{problem}
     An object of mass \(m\) is moving horizontally through a medium which resists the
     motion with a force that is a function of the velocity
@@ -115,7 +112,7 @@ capacity.
         =\lim_{t\to\infty}\frac{m}{k}v_0(1-e^{-(k/m)t}) \\
         &= \frac{m}{k}v_0(1-0)=\frac{m}{k}v_0
     \end{align*}
-    For large values of \(k\) we have
+    For large values of \(v\) we have
     \begin{align*}
         m\frac{dv}{dt} &= -kv^2 \\
         \int\frac{dv}{v^2} &= -\int\frac{k}{m}\,dt \\
@@ -139,9 +136,8 @@ capacity.
         =s_0+\frac{m}{k}\left(\ln\left(\left|kt+\frac{m}{v_0}\right|\right)
         -\ln\left(\left|\frac{m}{v_0}\right|\right)\right) \\
         &= s_0+\frac{m}{k}
-        \left(\ln\left(\left|\frac{kt+(m/v_0)}{m/v_0}\right|\right)\right)
-        =s_0+\frac{m}{k}
-        \left(\ln\left(\left|\frac{k}{m}v_0t+1\right|\right)\right)
+        \ln\left(\left|\frac{kt+(m/v_0)}{m/v_0}\right|\right)
+        =s_0+\frac{m}{k}\ln\left(\left|\frac{k}{m}v_0t+1\right|\right)
     \end{align*}
     Since \(m\) is the mass so \(m\) is positive and given \(k\) is positive
     therefore
