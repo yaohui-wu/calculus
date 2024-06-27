@@ -1,6 +1,6 @@
 \subsection{Sequences}
 An infinite \textbf{sequence} \(\{a_n\}\) is a list of numbers defined by
-\[a_1,a_2,a_3\dots,a_n,\dots\]
+\[a_1,a_2,a_3\dots,a_n,a_{n+1},\dots\]
 where \(a_n\) is the \(n\)th term of the sequence.
 \begin{definition}
     A sequence \(\{a_n\}\) has the limit \(L\)
@@ -29,4 +29,24 @@ where \(a_n\) is the \(n\)th term of the sequence.
     If \(\lim_{n\to\infty}a_n=L\) and the function \(f\) is continuous at
     \(L\), then
     \[\lim_{n\to\infty}f(a_n)=f(L)\qedhere\]
+\end{theorem}
+The sequence \(\{r^n\}\) is convergent if \(-1<r\leq 1\) and divergent for all
+other values of \(r\).
+\begin{definition}
+    A sequence \(\{a_n\}\) is increasing if \(a_n<a_{n+1}\) for all
+    \(n\geq 1\), that is, \(a_1<a_2<a_3<\cdots<a_n<a_{n+1}<\cdots\).
+    A sequence \(\{a_n\}\) is decreasing if \(a_n>a_{n+1}\) for all
+    \(n\geq 1\), that is, \(a_1>a_2>a_3>\cdots>a_n>a_{n+1}>\cdots\).
+    A sequence is monotonic if it is either increasing or decreasing.
+\end{definition}
+\begin{definition}
+    A sequence \(\{a_n\}\) is bounded above if there exists a number \(M\)
+    such that \(a_n\leq M\) for all \(n\leq 1\).
+    A sequence \(\{a_n\}\) is bounded below if there exists a number \(m\)
+    such that \(m\leq a_n\) for all \(n\leq 1\).
+    If a sequence \(\{a_n\}\) is bounded above and below, then \(\{a_n\}\) is
+    a bounded sequence.
+\end{definition}
+\begin{theorem}[Monotonic Sequence Theorem]
+    Every bounded, monotonic sequence is convergent.
 \end{theorem}
