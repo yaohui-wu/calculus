@@ -1,4 +1,32 @@
 \subsection{Sequences}
-An infinite \textbf{sequence} \(a_n\) is a list of numbers defined by
-\[a_1,a_2,\dots,a_n,\dots\]
+An infinite \textbf{sequence} \(\{a_n\}\) is a list of numbers defined by
+\[a_1,a_2,a_3\dots,a_n,\dots\]
 where \(a_n\) is the \(n\)th term of the sequence.
+\begin{definition}
+    A sequence \(\{a_n\}\) has the limit \(L\)
+    \[\lim_{n\to\infty}a_n=L\]
+    if we can make the terms \(a_n\) as close to \(L\) as we like by taking
+    \(n\) sufficiently large.
+    If \(\lim_{n\to\infty}a_n\) exists, then the sequence is convergent,
+    otherwise it is divergent.
+\end{definition}
+\begin{definition}
+    A sequence \(\{a_n\}\) has the limit \(L\)
+    \[\lim_{n\to\infty}a_n=L\]
+    if for every \(\epsilon>0\) there eixsts an integer \(N\) such that
+    \[n>N\implies |a_n-L|<\epsilon\qedhere\]
+\end{definition}
+\begin{theorem}
+    If \(\lim_{x\to\infty}f(x)=L\) and \(f(n)=a_n\) when \(n\) is an integer,
+    then \(\lim_{n\to\infty}a_n=L\).
+\end{theorem}
+\begin{definition}
+    \(\lim_{n\to\infty}a_n=\infty\) if for every positive number \(M\) there
+    is a positive integer \(N\) such that
+    \[n>N\implies a_n>M\qedhere\]
+\end{definition}
+\begin{theorem}[Continuity and Convergence Theorem]
+    If \(\lim_{n\to\infty}a_n=L\) and the function \(f\) is continuous at
+    \(L\), then
+    \[\lim_{n\to\infty}f(a_n)=f(L)\qedhere\]
+\end{theorem}
