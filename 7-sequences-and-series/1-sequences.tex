@@ -1,7 +1,21 @@
 \subsection{Sequences}
-An infinite \textbf{sequence} \(\{a_n\}\) is a list of numbers defined by
+An infinite \textbf{sequence} \(\{a_n\}\) is a list of numbers is a definite
+number
 \[a_1,a_2,a_3\dots,a_n,a_{n+1},\dots\]
 where \(a_n\) is the \(n\)th term of the sequence.
+Consider the sequence
+\[a_n=\left\{\frac{1}{2},\frac{1}{4},\frac{1}{8},\frac{1}{16},\frac{1}{32},
+\cdots\right\}\]
+we can rewrite it as
+\[a_n=\left\{\frac{1}{2},\frac{1}{2^2},\frac{1}{2^3},\frac{1}{2^4},
+\frac{1}{2^5},\cdots\right\}\]
+so the formula for the \(n\)th term is
+\[a_n=\frac{1}{2^n}\]
+for \(n=1,2,3,\cdots\) and
+\[\{a_n\}=\left\{\frac{1}{2^n}\right\}\]
+
+\subsubsection*{The Limit of a Sequence}
+The intuitive definition of a limit of a sequence is:
 \begin{definition}
     A sequence \(\{a_n\}\) has the limit \(L\)
     \[\lim_{n\to\infty}a_n=L\]
@@ -10,43 +24,77 @@ where \(a_n\) is the \(n\)th term of the sequence.
     If \(\lim_{n\to\infty}a_n\) exists, then the sequence is convergent,
     otherwise it is divergent.
 \end{definition}
+The precise definition of a limit of a sequence is:
 \begin{definition}
     A sequence \(\{a_n\}\) has the limit \(L\)
     \[\lim_{n\to\infty}a_n=L\]
     if for every \(\epsilon>0\) there eixsts an integer \(N\) such that
-    \[n>N\implies |a_n-L|<\epsilon\qedhere\]
+    \[n>N\implies |a_n-L|<\epsilon\]
 \end{definition}
 \begin{theorem}
     If \(\lim_{x\to\infty}f(x)=L\) and \(f(n)=a_n\) when \(n\) is an integer,
     then \(\lim_{n\to\infty}a_n=L\).
 \end{theorem}
+The precise definition of an infinite limit of a sequence is:
 \begin{definition}
     \(\lim_{n\to\infty}a_n=\infty\) if for every positive number \(M\) there
     is a positive integer \(N\) such that
-    \[n>N\implies a_n>M\qedhere\]
+    \[n>N\implies a_n>M\]
 \end{definition}
+
+\subsubsection*{Properties of Convergent Sequences}
 \begin{theorem}[Continuity and Convergence Theorem]
     If \(\lim_{n\to\infty}a_n=L\) and the function \(f\) is continuous at
     \(L\), then
-    \[\lim_{n\to\infty}f(a_n)=f(L)\qedhere\]
+    \[\lim_{n\to\infty}f(a_n)=f(L)\]
 \end{theorem}
 The sequence \(\{r^n\}\) is convergent if \(-1<r\leq 1\) and divergent for all
 other values of \(r\).
+
+\subsubsection*{Monotonic and Bounded Sequences}
 \begin{definition}
-    A sequence \(\{a_n\}\) is increasing if \(a_n<a_{n+1}\) for all
-    \(n\geq 1\), that is, \(a_1<a_2<a_3<\cdots<a_n<a_{n+1}<\cdots\).
-    A sequence \(\{a_n\}\) is decreasing if \(a_n>a_{n+1}\) for all
-    \(n\geq 1\), that is, \(a_1>a_2>a_3>\cdots>a_n>a_{n+1}>\cdots\).
-    A sequence is monotonic if it is either increasing or decreasing.
+    A sequence \(\{a_n\}\) is \textbf{increasing} if \(a_n<a_{n+1}\) for all
+    \(n\geq 1\), that is, \(a_1<a_2<a_3<\cdots\).
+    A sequence is \textbf{decreasing} if \(a_n>a_{n+1}\) for all \(n\geq 1\).
+    A sequence is \textbf{monotonic} if it is either increasing or decreasing.
 \end{definition}
 \begin{definition}
-    A sequence \(\{a_n\}\) is bounded above if there exists a number \(M\)
-    such that \(a_n\leq M\) for all \(n\leq 1\).
-    A sequence \(\{a_n\}\) is bounded below if there exists a number \(m\)
-    such that \(m\leq a_n\) for all \(n\leq 1\).
-    If a sequence \(\{a_n\}\) is bounded above and below, then \(\{a_n\}\) is
-    a bounded sequence.
+    A sequence \(\{a_n\}\) is \textbf{bounded above} if there is a number
+    \(M\) such that \(a_n\leq M\) for all \(n\geq 1\).
+    A sequence is \textbf{bounded below} if there is a number
+    \(m\) such that \(m\leq a_n\) for all \(n\geq 1\).
+    If a sequence is bounded above and below, then it is a
+    \textbf{bounded sequence}.
 \end{definition}
 \begin{theorem}[Monotonic Sequence Theorem]
     Every bounded, monotonic sequence is convergent.
+    In particular, a sequence that is increasing and bounded above converges,
+    and a sequence that is decreasing and bounded below converges.
 \end{theorem}
+The proof of the monotonic sequence theorem is based on the
+\textbf{completeness axiom} of the set of real numbers \(\R\).
+The completeness axiom states if \(S\) is a nonempty set of real numbers that
+has an upper bound \(M\) so \(x\leq M\) for all \(x\in S\), then \(S\) has a
+\textbf{least upper bound} \(b\).
+(This means that \(b\) is an upper bound of \(S\),
+but if \(M\) is any other upper bound, then \(b\leq M\).)
+The completeness axiom is an expression of the intuitive fact that there is no
+gap or hole in the real number line.
+\begin{proof}
+    Suppose \(\{a_n\}\) is an incerasing sequence.
+    Since \(\{a_n\}\) is an bounded, the set \(S=\{a_n\mid n\geq 1\}\) has an
+    upper bound.
+    By the completeness axiom, it has a least upper bound \(L\).
+    Given \(\epsilon>0\), \(L-\epsilon\) is not an upper bound for \(S\) since
+    \(L\) is the least upper bound.
+    Therefore we have \(a_N>L-\epsilon\) for some integer \(N\) but the
+    sequence is incerasing so \(a_n\geq a_N\) for every \(n>N\).
+    Thus if \(n>N\), we have
+    \begin{align*}
+        a_n &> L-\epsilon \\
+        a_n+\epsilon &> L \\
+        L &< a_n +\epsilon \\
+        0 \leq L-a_n &< \epsilon
+    \end{align*}
+    since \(a_n\leq L\).
+\end{proof}
