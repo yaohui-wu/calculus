@@ -1,27 +1,71 @@
 \subsection{Series}
-An infinite \textbf{series} is the sum of the terms of an infinite sequence
-\[\sum_{n=1}^{\infty}a_n=a_1+a_2+\dots+a_n+\cdots\]
+
+\subsubsection*{Infinite Series}
+The sum of the terms of an infinite sequence \(\{a_n\}\) is the infinite
+series
+\[\sum_{n=1}^{\infty}a_n=a_1+a_2+a_3+\dots+a_n+\cdots\]
 \begin{definition}
-    Given a series \(\sum_{n=1}^{\infty}a_n=a_1+a_2+\dots+a_n+\cdots\), let
-    \(s_n\) be the \(n\)th partial sum:
-    \[s_n=\sum_{i=1}^n a_1+a_2+\dots+a_n\]
-    If the sequence \(\{s_n\}\) is convergent and \(\lim_{n\to\infty}s_n\)
-    exists as a real number, then the series \(\sum a_n\) is convergent and
+    Given a series
+    \(\displaystyle{\sum_{n=1}^{\infty}a_n=a_1+a_2+a_3\cdots}\), let \(s_n\)
+    be the \(n\)th partial sum:
+    \[s_n=\sum_{i=1}^n a_1+a_2+\cdots+a_n\]
+    If the sequence \(\{s_n\}\) is convergent and
+    \(\displaystyle{\lim_{n\to\infty}s_n=s}\) exists as a real number, then the
+    series \(\displaystyle{\sum_{n=1}^\infty a_n}\) is convergent and
     \[\sum_{n=1}^{\infty}a_n=a_1+a_2+\dots+a_n+\cdots=s\]
-    The number \(s\) is the sum of the series.
+    The number \(s\) is the \textbf{sum} of the series.
     If the sequence \(\{s_n\}\) is divergent, then the series is divergent.
 \end{definition}
+
+\subsubsection*{Sum of a Geometric Series}
+Consider the \textbf{geometric series}
+\[\sum_{n=1}^\infty ar^{n-1}=a+ar+ar^2+\cdots,\quad a\neq 0\]
+with common ratio \(r\).
+If \(r=1\), then \(s_n=a+a+\cdots+a=na\).
+Thus \(\displaystyle{\lim_{n\to\infty}s_n=\pm\infty}\) so the limit does not
+exist and the geometric series diverges when \(r=1\).
+If \(r\neq 1\), then we have
+\begin{align*}
+    s_n &= a+ar+ar^2+\cdots+ar^{n-1} \\
+    rs_n &= ar+ar^2+ar^3\cdots+ar^{n-1}+ar^n \\
+    s_n-rs_n &= a-ar^n \\
+    (1-r)s_n &= a(1-r^n) \\
+    s_n &= \frac{a(1-r^n)}{1-r}
+\end{align*}
+If \(-1<r<1\), since \(\displaystyle{\lim_{n\to\infty}r^n}=0\), so
+\[\lim_{n\to\infty}s_n=\lim_{n\to\infty}\frac{a(1-r^n)}{1-r}
+=\frac{a}{1-r}-\frac{a}{1-r}\cdot\lim_{n\to\infty}r^n=\frac{a}{1-r}\]
+Thus when \(|r|<1\) the geometric series is convergent and its sum is
+\(a/(1-r)\).
+If \(r\leq -1\) or \(r>1\), then the sequence \(\{r^n\}\) is divergent so
+\(\displaystyle{\lim_{n\to\infty}s_n}\) does not exist thus the geometric
+series diverges.
 The geometric series
-\[\sum_{n=1}^\infty ar^{n-1}=a+ar+ar^2+\cdots\] is convergent if \(|r|<1\) and
+\[\sum_{n=1}^\infty ar^{n-1}=a+ar+ar^2+\cdots\]
+is convergent if \(|r|<1\) and
 its sum is
 \[\sum_{n=1}^\infty ar^{n-1}=\frac{a}{1-r}\]
 If \(|r|\geq 1\), then the geometric series is divergent.
+\begin{problem}
+    Find the sum of the series \(\displaystyle{\sum_{n=0}^\infty x^n}\) where
+    \(|x|<1\).
+\end{problem}
+
+\subsubsection*{Test for Divergence}
+\begin{problem}
+    Show that the \textbf{harmonic series}
+    \[\sum_{n=1}^\infty \frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}
+    +\cdots\]
+    is divergent.
+\end{problem}
 \begin{theorem}
-    If the series \(\sum_{n=1}^{\infty}a_n\) is convergent, then
-    \(\lim_{n\to\infty}a_n=0\).
+    If the series \(\displaystyle{\sum_{n=1}^\infty a_n}\) is convergent, then
+    \(\displaystyle{\lim_{n\to\infty}a_n=0}\).
 \end{theorem}
 \begin{theorem}[Test for Divergence]
-    If \(\lim_{n\to\infty}a_n\) does not exist or
-    \(\lim_{n\to\infty}a_n\neq0\), then the series \(\sum_{n=1}^\infty a_n\)
-    is divergent.
+    If \(\displaystyle{\lim_{n\to\infty}a_n}\) does not exist or if
+    \(\displaystyle{\lim_{n\to\infty}a_n\neq 0}\), then the series
+    \(\displaystyle{\sum_{n=1}^\infty a_n}\) is divergent.
 \end{theorem}
+
+\subsubsection*{Properties of Convergent Series}

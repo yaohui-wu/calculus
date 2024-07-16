@@ -1,4 +1,6 @@
 \subsection{Taylor Series}
+
+\subsubsection*{Taylor Series and Maclaurin Series}
 The \textbf{Taylor series} of a function \(f\) centered at \(a\) is
 \[f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n
 =f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots\]
@@ -26,6 +28,8 @@ For the special case of \(a=0\), the Taylor series becomes the
     so by the ratio test the series converges for all \(x\in\R\) and the
     radius of convergence is \(R=\infty\).
 \end{solution}
+
+\subsubsection*{When Is a Function Represented by Its Taylor Series?}
 The \(n\)th degree Taylor polynomial \(T_n\) of \(f\) at \(a\) is the partial
 sum
 \begin{align*}
@@ -52,6 +56,9 @@ If \(\lim_{n\to\infty}R_n(x)=0\), then
     which is the Lagrange's form of the remainder term.
 \end{theorem}
 \[\lim_{n\to\infty}\frac{x^n}{n!}=0\] for all \(x\in\R\).
+
+\subsubsection*{Taylor Series of Important Functions}
+\[e^x=\sum_{n=0}^\infty=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots\]
 \[e=\sum_{n=0}^\infty\frac{1}{n!}=1+1+\frac{1}{2!}+\frac{1}{3!}+\cdots\]
 
 \[\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots
@@ -66,3 +73,7 @@ If \(k\) is any real number and \(|x|<1\), then the binomial series is
 \begin{problem}
     Evaluate \(\displaystyle{\int e^{-x^2}}\,dx\) as an infinite series.
 \end{problem}
+
+\subsubsection*{New Taylor Series from Old}
+
+\subsubsection*{Multiplication and Division of Power Series}
