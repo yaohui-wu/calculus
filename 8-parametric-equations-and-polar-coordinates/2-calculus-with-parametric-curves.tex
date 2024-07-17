@@ -1,0 +1,39 @@
+\subsection{Calculus with Parametric Curves}
+
+\subsubsection*{Tangents}
+Suppose \(f\) and \(g\) are differentiable functions and we want to find the
+tangent line at a point on the parametric curve \(x=f(t),y=g(t)\), where \(y\)
+is a differentiable function of \(x\).
+Then the chain rule gives
+\[\frac{dy}{dt}=\frac{dy}{dx}\cdot\frac{dx}{dt}\]
+If \(dx/dt\neq0\), then
+\[\frac{dy}{dx}=\frac{dy/dt}{dx/dt}\]
+It follows that
+\[\frac{d^2y}{dx^2}=\frac{d}{dx}\left(\frac{dy}{dx}\right)
+=\frac{\dfrac{d}{dt}\left(\dfrac{dy}{dx}\right)}{\dfrac{dx}{dt}}\]
+
+\subsubsection*{Areas}
+If the curve \(y=F(x)\) from \(a\) to \(b\) is traced out once by the
+parametric equations \(x=f(t),y=g(t),\alpha\leq t\leq\beta\), then the area
+under the curve is
+\[A=\int_{a}^{b}y\,dx=\int_{\alpha}^{\beta}g(t)f'(t)\,dt\]
+
+\subsubsection*{Arc Length}
+\begin{theorem}
+    If a curve \(C\) is described by the parametric equations
+    \(x=f(t),y=g(t),\alpha\leq t\leq\beta\), where \(f'\) and \(g'\) are
+    continuous on \([\alpha,\beta]\) and \(C\) is traversed exactly once at
+    \(t\) increases from \(\alpha\) to \(\beta\), then the length of \(C\) is
+    \[L=\int_{\alpha}^{\beta}
+    \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt\]
+\end{theorem}
+
+\subsubsection*{Surface Area}
+Suppose that a curve \(C\) is given by the parametric equations
+\(x=f(t),y=g(t),\alpha\leq t\leq\beta\) where \(f',g'\) are continuous,
+\(g(t)\geq0\), and \(C\) is traversed exactly once as \(t\) increases from
+\(\alpha\) to \(\beta\).
+If \(C\) is rotated about the \(x\)-axis, then the area of the resulting
+surface is given by
+\[S=\int_{\alpha}^{\beta}2\pi y
+\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt\]

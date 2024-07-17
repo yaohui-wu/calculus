@@ -1,0 +1,37 @@
+\subsection{Calculus in Polar Coordinates}
+
+\subsubsection*{Area}
+
+\subsubsection*{Arc Length}
+Let \(\theta\) be a parameter, then the parametric equations for a polar curve
+\(r=f(\theta)\) are
+\begin{align*}
+    x &= r\cos\theta=f(\theta)\cos\theta & y &= r\sin\theta=f(\theta)\sin\theta
+\end{align*}
+To find the length of the polar curve \(r=f(\theta),a\leq\theta\leq b\),
+we differentiate with respect to \(\theta\) (using the product rule):
+\begin{align*}
+    \frac{dx}{d\theta} &= \frac{dr}{d\theta}\cos\theta-r\sin\theta
+    & \frac{dy}{d\theta} &= \frac{dr}{d\theta}\sin\theta+r\cos\theta
+\end{align*}
+Then we have
+\begin{align*}
+    \left(\frac{dx}{d\theta}\right)^2+\left(\frac{dy}{d\theta}\right)^2
+    &= \left(\frac{dr}{d\theta}\right)^2\cos^2\theta
+    -2r\frac{dr}{d\theta}\cos\theta\sin\theta+r^2\sin^2\theta \\
+    &+ \left(\frac{dr}{d\theta}\right)^2\sin^2\theta
+    +2r\frac{dr}{d\theta}\sin\theta\cos\theta+r^2\cos^2\theta \\
+    &= \left(\frac{dr}{d\theta}\right)^2+r^2
+\end{align*}
+Assuming that \(f'\) is continuous, the length of a curve with polar equation
+\(r=f(\theta),\alpha\leq\theta\leq\beta\), is
+\[L
+=\int_{\alpha}^{\beta}\sqrt{r^2+\left(\frac{dr}{d\theta}\right)^2}\,d\theta\]
+
+\subsubsection*{Tangents}
+To find a tangent line for polar curve \(r=f(\theta)\),
+we find the slope of the parametric curve.
+We have
+\[\frac{dy}{dx}=\frac{dy/d\theta}{dx/d\theta}
+=\frac{\frac{dr}{d\theta}\cos\theta-r\sin\theta}
+{\frac{dr}{d\theta}\sin\theta+r\cos\theta}\]
