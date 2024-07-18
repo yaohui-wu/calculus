@@ -3,11 +3,9 @@
 \subsubsection*{Functions}  
 A function \(f\) is a rule that assigns to each element \(x\) in a set \(D\)
 exactly one element \(f(x)\) in a set \(E\).
-The set \(D\) is the \textbf{domain} of the function.
-The number \(f(x)\) is the value of \(f\) at \(x\) and is read ``\(f\) of \(x\).''
 \begin{definition}
     A \textbf{function} \(f\) is a binary relation \(R\) between domain \(X\)
-    and codomain \(Y\) that satisfies:
+    and codomain \(Y\) that satisfies
     \begin{itemize}
         \item \(R\) is a subset of the Cartesian product of \(X\) and \(Y\).
         \[R\subset\{(x,y)\mid x\in X,y\in Y\}\]
@@ -15,7 +13,7 @@ The number \(f(x)\) is the value of \(f\) at \(x\) and is read ``\(f\) of \(x\).
         that \((x,y)\) is in \(R\).
         \[\forall x\in X,\exists y\in Y,(x,y)\in R\]
         \item If \((x,y)\) and \((x,z)\) are in \(R\), then \(y=z\).
-        \[(x,y),(x,z)\in R\implies y=z\qedhere\]
+        \[(x,y)\wedge(x,z)\in R\implies y=z\]
     \end{itemize}
 \end{definition}
 The real line is the one-dimensional (1D) Eculidean space defined as the set
@@ -28,45 +26,83 @@ numbers \(\R\).
 A real function is a real-valued function of a real variable whose domain and
 codomain is \(\R\).
 \begin{definition}
-    A function \(f\) is injective, or one-to-one if \(f(x_1)\neq f(x_2)\) when
-    \(x_1\neq x_2\).
+    A function \(f\) is \textbf{injective} (or one-to-one) if
+    \(f(x_1)\neq f(x_2)\) when \(x_1\neq x_2\).
 \end{definition}
 \begin{definition}
-    A function \(f\) is surjective, or onto if for all \(y\) in range \(Y\),
+    A function \(f\) is \textbf{surjective} (or onto) if for all \(y\) in
+    range \(Y\),
     there exists an \(x\) in domain \(X\) such that \(f(x)=y\).
 \end{definition}
 \begin{definition}
-    A function \(f\) is bijective if \(f\) is injective and surjective.
+    A function \(f\) is \textbf{bijective} if \(f\) is injective and surjective.
 \end{definition}
 \begin{definition}
-    Let \(f\) be an injective function with domain \(X\) and range \(Y\).
-    Then its inverse function \(f^{-1}\) has domain \(Y\) and range \(X\) and
-    is defined by
+    Let \(f\) be an injective function with domain \(A\) and range \(B\).
+    Then its \textbf{inverse function} \(f^{-1}\) has domain \(B\) and range
+    \(A\) and is defined by
     \[f^{-1}(y)=x\iff f(x)=y\]
-    for all \(y\) in \(Y\).
+    for all \(y\) in \(B\).
 \end{definition}
 
 \subsubsection*{Intuitive Definition of a Limit}
-Let \(f(x)\) be a function defined on some open interval that contains the
-number \(a\), except possibly at \(a\) itself.
+Let \(f(x)\) be a function defined near the number \(a\), that is, \(f(x)\) is
+defined on some open interval that contains the number \(a\),
+except possibly at \(a\) itself.
 \begin{definition}
-    The \textbf{limit} of \(f(x)\) as \(x\) approaches \(a\) equals \(L\) if
-    we can make \(f(x)\) arbitrarily close to \(L\) by taking \(x\)
-    sufficiently close to \(a\) from the left and the right but \(x\neq a\).
-    \[\lim_{x\to a}f(x)=L\qedhere\]
+    The \textbf{limit} of \(f(x)\) as \(x\) approaches \(a\) equals \(L\) and
+    we write
+    \[\lim_{x\to a}f(x)=L\]
+    or \(f(x)\to L\) as \(x\to a\)
+    if we can make the values of \(f(x)\) arbitrarily close to \(L\) by
+    restricting \(x\) to be sufficiently close to \(a\) but \(x\neq a\).
 \end{definition}
 \begin{definition}
-    The left-hand limit of \(f(x)\) as \(x\) approaches \(a\) from the left
-    equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\) by taking
-    \(x\) sufficiently close to \(a\) where \(x<a\).
-    \[\lim_{x\to a^-}f(x)=L\qedhere\]
+    We write
+    \[\lim_{x\to a^-}f(x)=L\]
+    and say that the \textbf{left-hand limit} of \(f(x)\) as \(x\) approaches
+    \(a\) from the left equals \(L\) if we can make x\(f(x)\) arbitrarily
+    close to \(L\) by taking \(x\) sufficiently close to \(a\) where \(x<a\).
 \end{definition}
 \begin{definition}
-    The right-hand limit of \(f(x)\) as \(x\) approaches \(a\) from the right
-    equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\) by taking
-    \(x\) sufficiently close to \(a\) where \(x>a\).
-    \[\lim_{x\to a^+}f(x)=L\qedhere\]
+    We write
+    \[\lim_{x\to a^+}f(x)=L\]
+    and say that the \textbf{right-hand limit} of \(f(x)\) as \(x\) approaches
+    \(a\) from the right equals \(L\) if we can make \(f(x)\) arbitrarily
+    close to \(L\) by taking \(x\) sufficiently close to \(a\) where \(x>a\).
 \end{definition}
 The limit exists if the left-hand limit and the right-hand limit of \(f(x)\)
 as \(x\) approaches \(a\) equal \(L\), otherwise the limit does not exist.
 \[\lim_{x\to a}f(x)=L\iff\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L\]
+
+\subsubsection*{Infinite Limits and Vertical Asymptotes}
+Let \(f\) be a function defined on both sides of \(a\),
+except possibly at \(a\) itself.
+\begin{definition}
+    The notation
+    \[\lim_{x\to a}f(x)=\infty\]
+    or \(f(x)\to\infty\) as \(x\to a\) means that the values of \(f(x)\) can
+    be made arbitrarily large by taking \(x\) sufficiently close to \(a\) but
+    \(x\neq a\).
+\end{definition}
+\begin{definition}
+    The notation
+    \[\lim_{x\to a}f(x)=-\infty\]
+    means that the values of \(f(x)\) can be made arbitrarily large negative
+    by taking \(x\) sufficiently close to \(a\) but \(x\neq a\).
+\end{definition}
+Similar definitions can be given for the one-sided infinite limits
+\begin{align*}
+    \lim_{x\to a^-}f(x) &= \infty & \lim_{x\to a^+}f(x) &= \infty \\
+    \lim_{x\to a^-}f(x) &= -\infty & \lim_{x\to a^+}f(x) &= -\infty
+\end{align*}
+\begin{definition}
+    The vertical line \(x=a\) is the \textbf{vertical asymptote} of the curve
+    \(y=f(x)\) if at least one of the following statements is true:
+    \begin{align*}
+        \lim_{x\to a}f(x) &= \infty & \lim_{x\to a^-}f(x) &= \infty
+        & \lim_{x\to a^+}f(x) &= \infty \\
+        \lim_{x\to a}f(x) &= -\infty & \lim_{x\to a^-}f(x) &= -\infty
+        & \lim_{x\to a^+}f(x) &= -\infty
+    \end{align*}
+\end{definition}

@@ -1,23 +1,26 @@
 \subsection{The Precise Definition of a Limit}
 
-\subsubsection{Epsilon-Delta Definition of a Limit}
+\subsubsection{The Precise Definition of a Limit}
+Let \(f\) be a function defined on some open interval that contains the number
+\(a\), except possibly at a itself.
 \begin{definition}
-    \[\lim_{x\to a}f(x)=L\] if for every number \(\epsilon>0\), there exists a
-    number \(\delta>0\) such that
-    \[0<|x-a|<\delta\implies|f(x)-L|<\epsilon\qedhere\]
+    The limit of \(f(x)\) as \(x\) approaches \(a\) is \(L\) and we write
+    \[\lim_{x\to a}f(x)=L\]
+    if for every number \(\epsilon>0\) there is a number \(\delta>0\) such that
+    \[0<|x-a|<\delta\implies|f(x)-L|<\epsilon\]
 \end{definition}
 \begin{definition}
     \[\lim_{x\to a^-}f(x)=L\] if for every number \(\epsilon>0\), there exists
     a number \(\delta>0\) such that
-    \[a-\delta<x<a\implies|f(x)-L|<\epsilon\qedhere\]
+    \[a-\delta<x<a\implies|f(x)-L|<\epsilon\]
 \end{definition}
 \begin{definition}
     \[\lim_{x\to a^+}f(x)=L\] if for every number \(\epsilon>0\), there exists
     a number \(\delta>0\) such that
-    \[a<x<a+\delta\implies|f(x)-L|<\epsilon\qedhere\]
+    \[a<x<a+\delta\implies|f(x)-L|<\epsilon\]
 \end{definition}
 \begin{problem}
-    Prove that \(\lim_{x\to 3}(4x-5)=7\).
+    Prove that \(\displaystyle{\lim_{x\to 3}(4x-5)=7}\).
 \end{problem}
 \begin{solution}
     Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
@@ -32,7 +35,7 @@
     \(\lim_{x\to 3}(4x-5)=7\).
 \end{solution}
 \begin{problem}
-    Prove that \(\lim_{x\to 3}x^2=9\).
+    Prove that \(\displaystyle{\lim_{x\to 3}x^2=9}\).
 \end{problem}
 \begin{solution}
     Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
@@ -52,7 +55,7 @@
     Therefore, it is proved that \(\lim_{x\to 3}x^2=9\).
 \end{solution}
 \begin{problem}
-    Prove that \(\lim_{x\to 0^+}\sqrt{x}=0\).
+    Prove that \(\displaystyle{\lim_{x\to 0^+}\sqrt{x}=0}\).
 \end{problem}
 \begin{solution}
     Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
