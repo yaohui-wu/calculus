@@ -1,16 +1,17 @@
 \subsection{The Substitution Rule}
-\subsubsection{The Substitution Rule}
+
+\subsubsection*{The Substitution Rule}
 \begin{theorem}[The Substitution Rule]
     If \(u=g(x)\) is a differentiable function whose range is an interval
     \(I\) and \(f\) is continuous on \(I\), then
     \[\int f(g(x))g'(x)\,dx=\int f(u)\,du\]
     If \(g'\) is continuous on \([a,b]\) and \(f\) is continuous on \(I\),
     then
-    \[\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)} f(u)\,du\qedhere\]
+    \[\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)} f(u)\,du\]
 \end{theorem}
 \begin{proof}
     Let \(F'=f\), then by the chain rule we have
-    \[\int f(g(x))g'(x)\,dx=F(g(x))+C=F(u)+C=\int f(u)\,du\qedhere\]
+    \[\int f(g(x))g'(x)\,dx=F(g(x))+C=F(u)+C=\int f(u)\,du\]
 \end{proof}
 \begin{problem}
     Evaluate \(\displaystyle{\int\frac{x}{\sqrt{1-4x^2}}\,dx}\).
@@ -19,7 +20,7 @@
     Let \(u=1-4x^2\iff du=-8x\,dx\) so \(xdx=-\dfrac{1}{8}\,du\).
     Therefore,
     \[\int\frac{x}{\sqrt{1-4x^2}}\,dx=-\int\frac{1}{8}u^{-(1/2)}\,du
-    =-\frac{1}{8}(2\sqrt{u})+C=-\frac{1}{4}\sqrt{1-4x^2}+C\qedhere\]
+    =-\frac{1}{8}(2\sqrt{u})+C=-\frac{1}{4}\sqrt{1-4x^2}+C\]
 \end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\int\tan x\,dx}\).
@@ -28,7 +29,7 @@
     We have \(\displaystyle{\int\tan x\,dx=\int\frac{\sin x}{\cos x}}\,dx\),
     let \(u=\cos x \iff du=-\sin\,dx\) then
     \[\int\tan x\,dx=-\int\frac{du}{u}=-\ln|u|+C=-\ln|\cos x|+C
-    =\ln\frac{1}{|\sec x|}+C=\ln|\sec x|+C\qedhere\]
+    =\ln\frac{1}{|\sec x|}+C=\ln|\sec x|+C\]
 \end{solution}
 \begin{problem}
     Calculate \(\displaystyle{\int_1^e \frac{\ln x}{x}\,dx}\).
@@ -36,16 +37,16 @@
 \begin{solution}
     Let \(u=\ln x\iff du=\dfrac{1}{x}\,dx\), then
     \[\int_1^e \frac{\ln x}{x}\,dx=\int_0^1 u\,du
-    =\left[\frac{u^2}{2}\right]_0^1=\frac{1}{2}\qedhere\]
+    =\left[\frac{u^2}{2}\right]_0^1=\frac{1}{2}\]
 \end{solution}
 
-\subsubsection{Symmetry}
+\subsubsection*{Symmetry}
 \begin{theorem}
     Suppose \(f\) is continuous on \([-a,a]\), then
     \begin{itemize}
         \item If \(f(-x)=f(x)\) so \(f\) is even, then
         \(\displaystyle{\int_{-a}^a f(x)\,dx=2\int_a^a f(x)\,dx}\).
         \item If \(f(-x)=-f(x)\) so \(f\) is odd, then
-        \(\displaystyle{\int_{-a}^a f(x)\,dx=0}\).\qedhere
+        \(\displaystyle{\int_{-a}^a f(x)\,dx=0}\).
     \end{itemize}
 \end{theorem}

@@ -16,22 +16,17 @@
     {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% Specify theorem head.
 
 \theoremstyle{theorem}
-\newtheorem{thm}{Theorem}[subsection]
-\newenvironment*{theorem}
-    {\renewcommand*{\qedsymbol}{\(\square\)}\pushQED{\qed}\begin{thm}}
-    {\popQED\end{thm}}
+\newtheorem{theorem}{Theorem}[subsection]
 
 \theoremstyle{theorem}
-\newtheorem{defn}{Definition}[subsection]
-\newenvironment*{definition}
-    {\renewcommand*{\qedsymbol}{\(\square\)}\pushQED{\qed}\begin{defn}}
-    {\popQED\end{defn}}
+\newtheorem{definition}{Definition}[subsection]
 
 \theoremstyle{theorem}
 \newtheorem{problem}{Problem}[subsection]
 
 \newenvironment*{solution}{\begin{proof}[Solution]}{\end{proof}}
 
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}} % Natural numbers.
+\newcommand{\Z}{\mathbb{Z}} % Integers.
+\newcommand{\R}{\mathbb{R}} % Real numbers.
+\newcommand{\diff}{\mathrm{d}} % Differential operator.

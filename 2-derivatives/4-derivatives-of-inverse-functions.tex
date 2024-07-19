@@ -1,5 +1,6 @@
 \subsection{Derivatives of Inverse Functions}
-\subsubsection{Differentiation and Inverse Functions}
+
+\subsubsection*{Differentiation and Inverse Functions}
 \begin{theorem}
     If \(f\) is a one-to-one continuous function defined on an interval,
     then its inverse function \(f^{-1}\) is also continuous.
@@ -9,22 +10,22 @@
     \(f^{-1}\) and \(f'(f^{-1}(a))\neq 0\), then the inverse function is
     differentiable at \(a\) and
     \[(f^{-1})'(x)=\frac{1}{f'(f^{-1}(x))}\iff\frac{dy}{dx}
-    =\frac{1}{\cfrac{dx}{dy}}\qedhere\]
+    =\frac{1}{\cfrac{dx}{dy}}\]
 \end{theorem}
 
-\subsubsection{Derivatives of Logarithmic Functions}
+\subsubsection*{Derivatives of Logarithmic Functions}
 The \textbf{Euler's number} \(e\) named after \textbf{Leonhard Euler} (1707--1783)
 is the base of the natural exponential function \(y=e^x\) and the natural
 logarithmic function \(y=\ln x\).
 \begin{definition}[Euler's Number]
     The Euler's number \(e\) is defined as
     \[e=\lim_{x\to 0}(1+x)^{1/x}
-    =\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n\qedhere\]
+    =\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n\]
 \end{definition}
 Note that the approximate value of \(e\) is \(e\approx2.71828\).
 \begin{theorem}
     The exponential function \(f(x)=\log_a x\) is differentiable and
-    \[\frac{d}{dx}\log_a x=\frac{1}{x}\log_a e=\frac{1}{x\ln a}\qedhere\]
+    \[\frac{d}{dx}\log_a x=\frac{1}{x}\log_a e=\frac{1}{x\ln a}\]
 \end{theorem}
 \begin{proof}
     First we have
@@ -42,15 +43,15 @@ Note that the approximate value of \(e\) is \(e\approx2.71828\).
     We know from the change of base formula that
     \[\log_b x=\frac{\log_a x}{\log_a b}\]
     Therefore,
-    \[\frac{d}{dx}\log_a x=\frac{1}{x}\log_a e=\frac{1}{x\ln a}\qedhere\]
+    \[\frac{d}{dx}\log_a x=\frac{1}{x}\log_a e=\frac{1}{x\ln a}\]
 \end{proof}
 \begin{theorem}
     The derivative of the natural logarithmic function \(f(x)=\ln x\) is
-    \[\frac{d}{dx}\ln x=\frac{1}{x}\qedhere\]
+    \[\frac{d}{dx}\ln x=\frac{1}{x}\]
 \end{theorem}
 \begin{proof}
     \[\frac{d}{dx}\ln x=\frac{d}{dx}\log_e x=\frac{1}{x\ln e}
-    =\frac{1}{x}\qedhere\]
+    =\frac{1}{x}\]
 \end{proof}
 \begin{problem}
     Find \(f'(x)\) if \(f(x)=\ln|x|\).
@@ -65,24 +66,24 @@ Note that the approximate value of \(e\) is \(e\approx2.71828\).
     Therefore, \(\dfrac{d}{dx}\ln|x|=\dfrac{1}{x}\) for all \(x\neq 0\).
 \end{solution}
 
-\subsubsection{Derivatives of Exponential Functions}
+\subsubsection*{Derivatives of Exponential Functions}
 \begin{theorem}
     The exponential function \(f(x)=a^x,a>0\) is differentiable and
-    \[\frac{d}{dx}a^x=a^x\ln a\qedhere\]
+    \[\frac{d}{dx}a^x=a^x\ln a\]
 \end{theorem}
 \begin{proof}
     Let \(y=a^x\iff \log_a y=x\) then by implicit differentiation we have
     \begin{align*}
         \log_a y &= x \\ \frac{1}{y\ln a}\frac{dy}{dx} &= 1 \\
-        \frac{dy}{dx} &= y\ln a=a^x\ln a \qedhere
+        \frac{dy}{dx} &= y\ln a=a^x\ln a 
     \end{align*}
 \end{proof}
 \begin{theorem}
     The derivative of the natural exponential function \(f(x)=e^x\) is
-    \[\frac{d}{dx}e^x=e^x\qedhere\]
+    \[\frac{d}{dx}e^x=e^x\]
 \end{theorem}
 \begin{proof}
-    \[\frac{d}{dx}e^x=e^x\ln e=e^x\qedhere\]
+    \[\frac{d}{dx}e^x=e^x\ln e=e^x\]
 \end{proof}
 \begin{problem}
     Prove the power rule \(\dfrac{d}{dx}x^n=nx^{n-1}\) for \(n\in\R\).
@@ -99,13 +100,13 @@ Note that the approximate value of \(e\) is \(e\approx2.71828\).
     \begin{align*}
         \ln|y| &= \ln(-x^n)=\ln[((-1)^{1/n}x)^n]=n\ln[(-1)^{1/n}x] \\
         \frac{1}{y}\frac{dy}{dx} &= n\frac{1}{(-1)^{1/n}x}(-1)^{1/n}
-        =\frac{n}{x} \\ \frac{dy}{dx} &= nx^{-1}y=nx^{-1}x^n=nx^{n-1} \qedhere
+        =\frac{n}{x} \\ \frac{dy}{dx} &= nx^{-1}y=nx^{-1}x^n=nx^{n-1} 
     \end{align*}
 \end{solution}
 
-\subsubsection{Inverse Trigonometric Functions}
+\subsubsection*{Inverse Trigonometric Functions}
 \begin{theorem}
-    \[\frac{d}{dx}\arcsin x=\frac{1}{\sqrt{1-x^2}},\quad -1<x<1 \qedhere\]
+    \[\frac{d}{dx}\arcsin x=\frac{1}{\sqrt{1-x^2}},\quad -1<x<1 \]
 \end{theorem}
 \begin{proof}
     Let \(y=\arcsin x \iff \sin y=x\) and \(-\pi/2\leq y\leq\pi/2\) such that
@@ -121,7 +122,7 @@ Note that the approximate value of \(e\) is \(e\approx2.71828\).
     Therefore, \(\dfrac{dy}{dx}=\dfrac{1}{\sqrt{1-x^2}}\).
 \end{proof}
 \begin{theorem}
-    \[\frac{d}{dx}\arccos x=-\frac{1}{\sqrt{1-x^2}},\quad -1<x<1 \qedhere\]
+    \[\frac{d}{dx}\arccos x=-\frac{1}{\sqrt{1-x^2}},\quad -1<x<1 \]
 \end{theorem}
 \begin{proof}
     Let \(y=\arccos x \iff \cos y=x\) and \(0\leq y\leq\pi\) such that
@@ -136,7 +137,7 @@ Note that the approximate value of \(e\) is \(e\approx2.71828\).
     Therefore, \(\dfrac{dy}{dx}=-\dfrac{1}{\sqrt{1-x^2}}\).
 \end{proof}
 \begin{theorem}
-    \[\frac{d}{dx}\arctan x=\frac{1}{1+x^2} \qedhere\]
+    \[\frac{d}{dx}\arctan x=\frac{1}{1+x^2} \]
 \end{theorem}
 \begin{proof}
     Let \(y=\arctan x \iff \tan y=x\).

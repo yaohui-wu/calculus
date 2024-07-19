@@ -1,5 +1,6 @@
 \subsection{Trigonometric Integrals and Substitutions}
-\subsubsection{Trigonometric Integrals}
+
+\subsubsection*{Trigonometric Integrals}
 We can use trigonometric identities to integrate trigonometric integrals.
 \begin{problem}
     Evaluate \(\displaystyle{\int\sin 5x\sin 2x\,dx}\).
@@ -9,7 +10,7 @@ We can use trigonometric identities to integrate trigonometric integrals.
         \int\sin 5x\sin 2x\,dx &= \int\frac{1}{2}(\cos(5x-2x)-\cos(5x+2x))\,dx
         =\frac{1}{2}\int(\cos 3x-\cos 7x)\,dx \\
         &= \frac{1}{2}\left(\frac{1}{3}\sin 3x-\frac{1}{7}\sin 7x\right)+C
-        =\frac{1}{6}\sin 3x-\frac{1}{14}\sin 7x+C \qedhere
+        =\frac{1}{6}\sin 3x-\frac{1}{14}\sin 7x+C
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -20,7 +21,7 @@ We can use trigonometric identities to integrate trigonometric integrals.
         \int\sin 3x\cos x\,dx &= \int\frac{1}{2}(\sin(3x+x)+\sin(3x-x))\,dx
         =\frac{1}{2}\int(\sin 4x+\sin 2x)\,dx \\
         &= \frac{1}{2}\left(-\frac{1}{4}\cos 4x-\frac{1}{2}\cos 2x\right)+C
-        =-\frac{1}{8}\cos 4x-\frac{1}{4}\cos 2x+C \qedhere
+        =-\frac{1}{8}\cos 4x-\frac{1}{4}\cos 2x+C
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -28,7 +29,7 @@ We can use trigonometric identities to integrate trigonometric integrals.
 \end{problem}
 \begin{solution}
     \[\int\cos^3 x\,dx=\int(1-\sin^2 x)\cos x\,dx=\int(1-u^2)\,du
-    =u-\frac{u^3}{3}+C=\sin x-\frac{1}{3}\sin^3 x+C\qedhere\]
+    =u-\frac{u^3}{3}+C=\sin x-\frac{1}{3}\sin^3 x+C\]
 \end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\int\sin^5 x\cos^2 x\,dx}\).
@@ -40,7 +41,7 @@ We can use trigonometric identities to integrate trigonometric integrals.
         &= -\int(u^2-2u^4+u^6)\,du
         =-\frac{1}{3}u^3+\frac{2}{5}u^5-\frac{1}{7}u^7+C \\
         &= -\frac{1}{3}\cos^3 x+\frac{2}{5}\cos^5 x-\frac{1}{7}\cos^7 x
-        +C \qedhere
+        +C
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -49,7 +50,7 @@ We can use trigonometric identities to integrate trigonometric integrals.
 \begin{solution}
     \[\int\cos^2 x\,dx=\int\frac{1}{2}(1+\cos 2x)\,dx
     =\frac{1}{2}\int(1+\cos 2x)\,dx
-    =\frac{1}{2}\left(x+\frac{1}{2}\sin 2x\right)+C\qedhere\]
+    =\frac{1}{2}\left(x+\frac{1}{2}\sin 2x\right)+C\]
 \end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\int_0^\pi\sin^2 x\,dx}\).
@@ -60,7 +61,7 @@ We can use trigonometric identities to integrate trigonometric integrals.
     =\frac{1}{2}\int_0^{\pi}(1+\cos 2x)\,dx \\
     &=\frac{1}{2}
     \left(\bigl[x\bigr]_0^\pi-\frac{1}{2}\bigl[\sin 2x\bigr]_0^\pi\right)
-    =\frac{\pi}{2} \qedhere
+    =\frac{\pi}{2}
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -74,7 +75,7 @@ We can use trigonometric identities to integrate trigonometric integrals.
         \left(x-\sin 2x+\frac{1}{2}
         \left(x+\frac{1}{4}\sin 4x\right)\right)+C \\
         &= \frac{1}{4}
-        \left(\frac{3}{2}x-\sin 2x+\frac{1}{8}\sin 4x\right)+C \qedhere
+        \left(\frac{3}{2}x-\sin 2x+\frac{1}{8}\sin 4x\right)+C
     \end{align*}
 \end{solution}
 In general, an integral of powers of \(\sin x\) and \(\cos x\) is in the
@@ -94,7 +95,7 @@ If \(m\) and \(n\) are even, then we use the power reduction formulas.
         \int\tan^6 x\sec^4 x\,dx &= \int\tan^6 x(\tan^2 x+1)\sec^2 x\,dx
         =\int u^6(u^2+1)\,du=\int u^8+u^6 \\
         & =\frac{u^9}{9}+\frac{u^7}{7}
-        =\frac{1}{9}\tan^9 x+\frac{1}{7}\tan^7 x+C \qedhere
+        =\frac{1}{9}\tan^9 x+\frac{1}{7}\tan^7 x+C
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -108,7 +109,7 @@ If \(m\) and \(n\) are even, then we use the power reduction formulas.
         &= \int(u^{10}-2u^8+u^6)\,dx
         =\frac{1}{11}u^{11}-\frac{2}{9}u^9+\frac{1}{7}u^7+C \\
         &= \frac{1}{11}\sec^{11}x-\frac{2}{9}\sec^9 x+\frac{1}{7}\sec^7 x
-        +C \qedhere
+        +C
     \end{align*}
 \end{solution}
 In general, an integral of powers of \(\tan x\) and \(\sec x\) is in the
@@ -128,7 +129,7 @@ rest in terms of \(\tan x\) for substitution.
     =\int\frac{\sec^2 x+\sec x\tan x}{\sec x+\tan x}\,dx\]
     Let \(u=\sec x+\tan x\iff du=(\sec x\tan x+\sec^2 x)\,dx\), then
     \[\int\sec x\,dx=\int\frac{\sec x\tan x+\sec^2 x}{\sec x+\tan x}\,dx
-    =\int\frac{du}{u}=\ln|u|+C=\ln|\sec x+\tan x|+C\qedhere\]
+    =\int\frac{du}{u}=\ln|u|+C=\ln|\sec x+\tan x|+C\]
 \end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\int\tan^3 x\,dx}\).
@@ -137,7 +138,7 @@ rest in terms of \(\tan x\) for substitution.
     \begin{align*}
     \int\tan^3 x\,dx &= \int\tan x(\sec^2x-1)\,dx
     =\int\tan x\sec^2\,dx-\int\tan x\,dx \\
-    &= \frac{1}{2}\tan^2 x-\ln|\sec x|+C \qedhere
+    &= \frac{1}{2}\tan^2 x-\ln|\sec x|+C
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -154,11 +155,11 @@ rest in terms of \(\tan x\) for substitution.
     \begin{align*}
         \int\sec^3 x\,dx &= \sec x\tan x-\int\sec^3 x\,dx+\int\sec x\,dx \\
         \int\sec^3 x\,dx
-        &= \frac{1}{2}(\sec x\tan x+\ln|\sec x+\tan x|)+C \qedhere
+        &= \frac{1}{2}(\sec x\tan x+\ln|\sec x+\tan x|)+C
     \end{align*}
 \end{solution}
 
-\subsubsection{Trigonometric Substitutions}
+\subsubsection*{Trigonometric Substitutions}
 If an integral has the form \(\displaystyle{\int\sqrt{a^2-x^2}\,dx}\),
 then we can use the substitution \(x=a\sin\theta\) where
 \(-\pi/2\leq\theta\leq\pi/2\) to get
@@ -185,7 +186,7 @@ then we can use the substitution \(x=a\sec\theta\) where
         =\int\frac{\cos^2\theta}{\sin^2\theta}=\int\cot^2\theta\,d\theta
         =\int(\csc^2\theta-1)\,d\theta \\
         &=-\cot\theta-\theta+C
-        =-\frac{\sqrt{9-x^2}}{x}-\arcsin\left(\frac{x}{3}\right)+C \qedhere
+        =-\frac{\sqrt{9-x^2}}{x}-\arcsin\left(\frac{x}{3}\right)+C
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -201,7 +202,7 @@ then we can use the substitution \(x=a\sec\theta\) where
         =\frac{1}{4}\int\frac{\cos\theta}{\sin^2\theta}\,d\theta
         =\frac{1}{4}\int\frac{du}{u^2} \\
         &= -\frac{1}{4u}+C=-\frac{1}{4\sin\theta}+C
-        =-\frac{\sqrt{x^2+4}}{4x}+C \qedhere
+        =-\frac{\sqrt{x^2+4}}{4x}+C
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -216,7 +217,7 @@ then we can use the substitution \(x=a\sec\theta\) where
         =4r^2\int_0^{\pi/2}\cos^2\theta\,d\theta
         =4r^2\left(\frac{1}{2}\left(\bigl[\theta\bigr]_0^{\pi/2}
         +\frac{1}{2}\bigl[\sin2\theta\bigr]_0^{\pi/2}\right)\right) \\
-        &= 4r^2\left(\frac{\pi}{4}\right)=\pi r^2 \qedhere
+        &= 4r^2\left(\frac{\pi}{4}\right)=\pi r^2
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -229,5 +230,5 @@ then we can use the substitution \(x=a\sec\theta\) where
     \(0\leq\theta\leq\pi/2\), then
     \[A=4\int_0^{\pi/2}\frac{b}{a}(a\cos\theta)(a\cos\theta)\,d\theta
     =4ab\int_0^{\pi/2}\cos^2\theta\,d\theta
-    =4ab\left(\frac{\pi}{4}\right)=\pi ab\qedhere\]
+    =4ab\left(\frac{\pi}{4}\right)=\pi ab\]
 \end{solution}

@@ -1,6 +1,6 @@
 \subsection{Evaluating Limits}
 
-\subsubsection{Limit Laws}
+\subsubsection*{Limit Laws}
 Suppose that \(c\) is a constant and the limits
 \begin{align*}
     \lim_{x\to a}f(x) &= L & \lim_{x\to a}g(x) &= M
@@ -9,7 +9,7 @@ exist.
 We have the following properties of limits called the limit laws to compute
 limits.
 \begin{theorem}
-    \[\lim_{x\to a}c=c\qedhere\]
+    \[\lim_{x\to a}c=c\]
 \end{theorem}
 \begin{proof}
     Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
@@ -21,7 +21,7 @@ limits.
     \(\lim_{x\to a}c=c\).
 \end{proof}
 \begin{theorem}
-    \[\lim_{x\to a}x=a\qedhere\]
+    \[\lim_{x\to a}x=a\]
 \end{theorem}
 \begin{proof}
     Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
@@ -32,7 +32,7 @@ limits.
     \(\lim_{x\to a}x=a\).
 \end{proof}
 \begin{theorem}[Constant Multiple Law]
-    \[\lim_{x\to a}[c\,f(x)]=c\lim_{x\to a}f(x)=cL\qedhere\]
+    \[\lim_{x\to a}[c\,f(x)]=c\lim_{x\to a}f(x)=cL\]
 \end{theorem}
 \begin{proof}
     Note that if \(c=0\), then \(cf(x)=0\) and we have
@@ -47,11 +47,11 @@ limits.
     Let \(\delta=\delta_1\), we have
     \[0<|x-a|<\delta\implies|cf(x)-c\lim_{x\to a}f(x)|<\epsilon\]
     Therefore, by the definition of the limit, it is proved that
-    \[\lim_{x\to a}[c\,f(x)]=c\lim_{x\to a}f(x)=cL\qedhere\]
+    \[\lim_{x\to a}[c\,f(x)]=c\lim_{x\to a}f(x)=cL\]
 \end{proof}
 \begin{theorem}[\textbf{Sum and Difference Law}]
     \[\lim_{x\to a}[f(x)\pm g(x)]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)
-    =L\pm M\qedhere\]
+    =L\pm M\]
 \end{theorem}
 \begin{proof}
     First we prove the sum law.
@@ -82,11 +82,11 @@ limits.
     \end{align*}
     Therefore, it is proved that
     \[\lim_{x\to a}[f(x)\pm g(x)]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)
-    =L\pm M\qedhere\]
+    =L\pm M\]
 \end{proof}
 \begin{theorem}[Product Law]
     \[\lim_{x\to a}[f(x)g(x)]=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)
-    =L\cdot M\qedhere\]
+    =L\cdot M\]
 \end{theorem}
 \begin{proof}
     Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
@@ -114,12 +114,12 @@ limits.
     \end{align*}
     Therefore, it is proved that
     \[\lim_{x\to a}[f(x)g(x)]=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)
-    =L\cdot M\qedhere\]
+    =L\cdot M\]
 \end{proof}
 \begin{theorem}[Quotient Law]
     \[\lim_{x\to a}\frac{f(x)}{g(x)}
     =\frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)}
-    =\frac{L}{M}\iff\lim_{x\to a}g(x)=M\neq0\qedhere\]
+    =\frac{L}{M}\iff\lim_{x\to a}g(x)=M\neq0\]
 \end{theorem}
 \begin{proof}
     First we prove that \[\lim_{x\to a}\frac{1}{g(x)}=\frac{1}{M}\]
@@ -148,18 +148,18 @@ limits.
     \[\lim_{x\to a}\frac{f(x)}{g(x)}
     =\lim_{x\to a}f(x)\left(\frac{1}{g(x)}\right)
     =\lim_{x\to a}f(x)\lim_{x\to a}\frac{1}{g(x)}=L\cdot\frac{1}{M}
-    =\frac{L}{M}\qedhere\]
+    =\frac{L}{M}\]
 \end{proof}
 \begin{theorem}[Power Law]
-    \[\lim_{x\to a}[f(x)]^n=[\lim_{x\to a}f(x)]^n,n\in\R\qedhere\]
+    \[\lim_{x\to a}[f(x)]^n=[\lim_{x\to a}f(x)]^n,n\in\R\]
 \end{theorem}
 \begin{theorem}[Root Law]
-    \[\lim_{x\to a}\sqrt[n]{f(x)}=\sqrt[n]{\lim_{x\to a}f(x)},n\in\R\qedhere\]
+    \[\lim_{x\to a}\sqrt[n]{f(x)}=\sqrt[n]{\lim_{x\to a}f(x)},n\in\R\]
 \end{theorem}
 \begin{theorem}[Direct Substitution Property]
     If \(f\) is a polynomial function, rational function, or trigonometric
     function and \(a\) is in the domain of \(f\), then
-    \[\lim_{x\to a}f(x)=f(a)\qedhere\]
+    \[\lim_{x\to a}f(x)=f(a)\]
 \end{theorem}
 Thus, we have the following limits
 \begin{align*}
@@ -184,7 +184,7 @@ then \(\lim_{x\to a}f(x)=\lim_{x\to a}g(x)\) if the limits exist.
         \lim_{x\to a}f(x) &= L & \lim_{x\to a}g(x) &= M
     \end{align*}
     then
-    \[\lim_{x\to a}f(x)\leq\lim_{x\to a}g(x)\iff L\leq M\qedhere\]
+    \[\lim_{x\to a}f(x)\leq\lim_{x\to a}g(x)\iff L\leq M\]
 \end{theorem}
 \begin{proof}
     We use the technique of proof by contradiction.
@@ -203,14 +203,14 @@ then \(\lim_{x\to a}f(x)=\lim_{x\to a}g(x)\) if the limits exist.
     but this is a contradiction since given \(f(x)\leq g(x)\).
     Then the inequality \(L>M\) must be false so \(L\leq M\) must be true.
     Therefore, it is proved that
-    \[\lim_{x\to a}f(x)\leq\lim_{x\to a}g(x)\qedhere\]
+    \[\lim_{x\to a}f(x)\leq\lim_{x\to a}g(x)\]
 \end{proof}
 \begin{theorem}[Squeeze Theorem]
     If \(f(x)\leq g(x)\leq h(x)\) for all \(x\) in an open interval that
     contains \(a\), except possibly at \(a\), and
     \[\lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L\]
     then
-    \[\lim_{x\to a}g(x)=L\qedhere\]
+    \[\lim_{x\to a}g(x)=L\]
 \end{theorem}
 \begin{proof}
     Let \(\epsilon>0\) be given. Since \(\lim_{x\to a}f(x)=L\), there exists a
@@ -225,7 +225,7 @@ then \(\lim_{x\to a}f(x)=\lim_{x\to a}g(x)\) if the limits exist.
     \[L-\epsilon<f(x)\leq g(x)\leq h(x)<L+\epsilon\implies L-\epsilon<g(x)
     <L+\epsilon\implies|g(x)-L|<\epsilon\]
     which is what we want to prove.
-    Therefore, it is proved that \[\lim_{x\to a}g(x)=L\qedhere\]
+    Therefore, it is proved that \[\lim_{x\to a}g(x)=L\]
 \end{proof}
 If \(0<\theta<\pi/2\), then
 \begin{align*}
@@ -256,6 +256,6 @@ Therefore, we have the following limit by the squeeze theorem.
         \left(\frac{-\sin\theta}{\cos\theta+1}\right)\right]
         =\left(\lim_{\theta\to 0}\frac{\sin\theta}{\theta}\right)
         \left(\lim_{\theta\to 0}\frac{-\sin\theta}{\cos\theta+1}\right) \\
-        &= 1\left(\frac{(-1)(0)}{1+1}\right)=0 \qedhere
+        &= 1\left(\frac{(-1)(0)}{1+1}\right)=0 
     \end{align*}
 \end{solution}

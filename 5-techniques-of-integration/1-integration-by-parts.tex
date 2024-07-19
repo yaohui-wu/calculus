@@ -1,17 +1,18 @@
 \subsection{Integration by Parts}
+
 \begin{theorem}[Integration by Parts Formula]
     If \(f\) and \(g\) are differentiable functions, then
     \[\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx\]
     If \(u=f(x)\) and \(v=g(x)\), then
     \[\int u\,dv=uv-\int v\,du\]
     and
-    \[\int_a^b u\,dv=[uv]_a^b-\int_a^b v\,du\qedhere\]
+    \[\int_a^b u\,dv=[uv]_a^b-\int_a^b v\,du\]
 \end{theorem}
 \begin{proof}
     We know from the product rule that
     \[f(x)g(x)=\int f'(x)g(x)\,dx+\int f(x)g'(x)\,dx\]
     and therefore
-    \[\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx\qedhere\]
+    \[\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx\]
 \end{proof}
 \begin{problem}
     Evaluate \(\displaystyle{\int\ln x\,dx}\).
@@ -19,7 +20,7 @@
 \begin{solution}
     Let \(u=\ln x\iff du=\dfrac{1}{x}\,dx\) and \(dv=dx\iff v=x\),
     then
-    \[\int\ln x\,dx=x\ln x-\int dx=x\ln x-x+C\qedhere\]
+    \[\int\ln x\,dx=x\ln x-\int dx=x\ln x-x+C\]
 \end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\int\arctan x\,dx}\).
@@ -31,7 +32,7 @@
     \[\int\frac{x}{1+x^2}\,dx=\frac{1}{2}\int\frac{du}{u}=\frac{1}{2}\ln|u|+C
     =\frac{1}{2}\ln(1+x^2)+C\]
     Therefore,
-    \[\int\arctan x\,dx=x\arctan x-\frac{1}{2}\ln(1+x^2)+C\qedhere\]
+    \[\int\arctan x\,dx=x\arctan x-\frac{1}{2}\ln(1+x^2)+C\]
 \end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\int e^x\sin x\,dx}\).
@@ -46,7 +47,7 @@
     Therefore,
     \begin{align*}
         \int e^x\sin x\,dx &= e^x\sin x-e^x\cos x-\int e^x\sin x\,dx \\
-        \int e^x\sin x\,dx &= \frac{1}{2}e^x(\sin x-\cos x) \qedhere
+        \int e^x\sin x\,dx &= \frac{1}{2}e^x(\sin x-\cos x) 
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -70,7 +71,7 @@
         &= -\sin^{n-1}x\cos x+(n-1)\int \sin^{n-2}x\,dx \\
         \int\sin^n x\,dx
         &= -\frac{1}{n}\sin^{n-1}x\cos x
-        +\frac{n-1}{n}\int\sin^{n-2}x\,dx \qedhere
+        +\frac{n-1}{n}\int\sin^{n-2}x\,dx 
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -94,7 +95,7 @@
         &= \cos^{n-1}x\sin x+(n-1)\int \cos^{n-2}x\,dx \\
         \int\cos^n x\,dx
         &= \frac{1}{n}\cos^{n-1}x\sin x
-        +\frac{n-1}{n}\int\cos^{n-2}x\,dx \qedhere
+        +\frac{n-1}{n}\int\cos^{n-2}x\,dx 
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -115,7 +116,7 @@
     and since \(\sin(0)=0\) and \(\cos(\pi/2)=0\) so
     \[\int_0^{\pi/2}\sin^n x\,dx=-\frac{1}{n}(0)
     +\frac{n-1}{n}\int_0^{\pi/2}\sin^{n-2} x\,dx
-    =\frac{n-1}{n}\int_0^{\pi/2}\sin^{n-2} x\,dx\qedhere\]
+    =\frac{n-1}{n}\int_0^{\pi/2}\sin^{n-2} x\,dx\]
 \end{solution}
 \begin{problem}
     Show that
@@ -139,7 +140,7 @@
     hence
     \[\int_0^{\pi/2}\sin^{2n+1} x\,dx
     =\frac{2\cdot4\cdot6\cdot\cdots\cdot2n}
-    {3\cdot5\cdot7\cdot\cdots\cdot(2n+1)}\qedhere\]
+    {3\cdot5\cdot7\cdot\cdots\cdot(2n+1)}\]
 \end{solution}
 \begin{problem}
     Show that
@@ -155,7 +156,7 @@
         =\frac{(2n-1)(2n-3)}{(2n)(2n-2)}\int_0^{\pi/2}\sin^{2n-4} x\,dx \\
         &= \frac{(2n-1)(2n-3)\cdots(5)(3)(1)}{(2n)(2n-2)\cdots(6)(4)(2)}
         \int_0^{\pi/2}\,dx=\frac{1\cdot3\cdot5\cdot\cdots\cdot(2n-1)}
-        {2\cdot4\cdot6\cdot\cdots\cdot2n}\frac{\pi}{2} \qedhere
+        {2\cdot4\cdot6\cdot\cdots\cdot2n}\frac{\pi}{2} 
     \end{align*}
 \end{solution}
 \begin{problem}
@@ -166,7 +167,7 @@
     Let \(u=(\ln x)^n\iff du=\dfrac{n}{x}(\ln x)^{n-1}\) and \(dv=dx\iff v=x\)
     then
     \[\int(\ln x)^n\,dx=x(\ln x)^n-\int x\cdot\frac{n}{x}(\ln x)^{n-1}\,dx
-    =x(\ln x)^n-n\int(\ln x)^{n-1}\,dx\qedhere\]
+    =x(\ln x)^n-n\int(\ln x)^{n-1}\,dx\]
 \end{solution}
 \begin{problem}
     Prove the reduction formula
@@ -175,5 +176,5 @@
 \begin{solution}
     Let \(u=x^n\iff du=nx^{n-1}\,dx\) and \(dv=e^x\,dx\iff v=e^x\) then
     \[\int x^n e^x\,dx=x^n e^x-\int nx^{n-1}e^x\,dx
-    =x^n e^x-n\int x^{n-1}e^x\,dx\qedhere\]
+    =x^n e^x-n\int x^{n-1}e^x\,dx\]
 \end{solution}

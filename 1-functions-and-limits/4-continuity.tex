@@ -1,11 +1,12 @@
 \subsection{Continuity}
-\subsubsection{Continuous Functions}
+
+\subsubsection*{Continuous Functions}
 Let \(f(x)\) be a function and the number \(a\) is in the domain of \(f\) so
 \(f(a)\) is defined.
 If the limit exists, then we have the following definition.
 \begin{definition}
     A function \(f\) is \textbf{continuous} at the number \(a\) if
-    \[\lim_{x\to a}f(x)=f(a)\qedhere\]
+    \[\lim_{x\to a}f(x)=f(a)\]
 \end{definition}
 A function \(f\) is continuous from the left at \(a\) if the left-hand limit
 equals \(f(a)\) and it is continuous from the right at \(a\) if the right-hand
@@ -17,7 +18,7 @@ then it is a discontinuous function at \(a\).
 If \(f\) and \(g\) are continuous functions at \(a\) and \(c\) is a constant,
 then the following functions are also continuous at \(a\).
     \begin{align*}
-        &f+g & f-g && cf && f\cdot g && \dfrac{f}{g}\iff g(x)\neq 0 &\qedhere
+        &f+g & f-g && cf && f\cdot g && \dfrac{f}{g}\iff g(x)\neq 0 &
     \end{align*}
 \begin{theorem}
     Let \(P(x)\) be any polynomial, then \(P(x)\) is continuous on
@@ -46,7 +47,7 @@ exponential functions are continuous on their domain.
 \begin{theorem}
     If \(f\) is continuous at \(b\) and \(\lim_{x\to a}g(x)=b\), then
     the limit of the composite function \(f\circ g\) is
-    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\qedhere\]
+    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\]
 \end{theorem}
 \begin{proof}
     Let \(\epsilon>0\) be given, we want to find \(\delta>0\) such that
@@ -58,7 +59,7 @@ exponential functions are continuous on their domain.
     Since \(\lim_{x\to a}g(x)=b\), there exists \(\delta>0\) such that
     \[0<|x-a|<\delta\implies|g(x)-b|<\delta_1\implies|f(g(x))-f(b)|<\epsilon\]
     Therefore, it is proved that
-    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\qedhere\]
+    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\]
 \end{proof}
 \begin{theorem}
     If \(g\) is continuous at \(a\) and \(f\) is continuous at \(g(a)\), then

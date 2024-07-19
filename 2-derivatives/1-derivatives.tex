@@ -1,6 +1,6 @@
 \subsection{Derivatives}
 
-\subsubsection{Derivatives and Rates of Change}
+\subsubsection*{Derivatives and Rates of Change}
 \begin{definition}
     The tangent line of the curve \(y=f(x)\) at the point \(P(a, f(a))\) is
     the line through \(P\) with slope
@@ -10,7 +10,7 @@
 \end{definition}
 \begin{definition}
     The velocity at time \(t=a\) of a position function \(s=f(t)\) is
-    \[v(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}\qedhere\]
+    \[v(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}\]
 \end{definition}
 \begin{definition}
     The \textbf{derivative} of a function \(f\) at a number \(a\) is
@@ -31,10 +31,10 @@ If \(s=f(t)\) is a position function of an object, then the velocity of the
 object at time \(t=a\) is \(v(a)=f'(a)\) and the speed of the object is
 \(|f'(a)|\), the magnitude of the velocity.
 
-\subsubsection{The Derivative as a Function}
+\subsubsection*{The Derivative as a Function}
 \begin{definition}
     The derivative of a function \(f(x)\) is the function
-    \[f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\qedhere\]
+    \[f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\]
 \end{definition}
 The following notations of the derivative of \(y=f(x)\) with respect to \(x\)
 are equivalent.
@@ -54,11 +54,11 @@ The notations of the derivative of \(f(x)\) at \(a\) are
         \frac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}}\right) \\
         &= \lim_{h\to 0}\frac{x+h-x}{h(\sqrt{x+h}+\sqrt{x})}
         =\lim_{h\to 0}\frac{1}{\sqrt{x+h}+\sqrt{x}}
-        =\frac{1}{\sqrt{x}+\sqrt{x}}=\frac{1}{2\sqrt{x}} \qedhere
+        =\frac{1}{\sqrt{x}+\sqrt{x}}=\frac{1}{2\sqrt{x}} 
     \end{align*}
 \end{solution}
 
-\subsubsection{Differentiable Functions}
+\subsubsection*{Differentiable Functions}
 \begin{definition}
     A function \(f\) is \textbf{differentiable} at \(a\) if \(f'(a)\) exists.
     \(f\) is differentiable on an open interval if it is differentiable at
@@ -95,7 +95,7 @@ thus the limit does not exist so \(f'(0)\) does not exist.
 If a function is differentiable, then it has no sharp points, it is
 continuous, and it has no vertical tangent lines.
 
-\subsubsection{Higher Order Derivatives}
+\subsubsection*{Higher Order Derivatives}
  If \(y=f(x)\) is a differentiable function and its derivative \(f'(x)\) is
  differentiable, then the second derivative of \(f\) is
 \[y''=f''(x)=\frac{d^2y}{dx^2}\]
@@ -128,6 +128,6 @@ In general, the \(n\)th derivative of \(y=f(x)\) is
         f''(x) &= \lim_{h\to 0}\frac{3(x+h)^2-3x^2}{h}
         =\lim_{h\to 0}\frac{3(x^2+2hx+h^2-x^2)}{h}
         =\lim_{h\to 0}\frac{6hx+3h^2}{h} \\
-        &= \lim_{h\to 0}(6x+3h)=6x \qedhere
+        &= \lim_{h\to 0}(6x+3h)=6x 
     \end{align*}
 \end{solution}
