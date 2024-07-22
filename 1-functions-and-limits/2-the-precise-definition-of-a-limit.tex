@@ -73,13 +73,25 @@ Let \(f\) be a function defined on some open interval that contains the number
 \subsubsection*{Infinite Limits}
 \begin{definition}
     \[\lim_{x\to a}f(x)=\infty\]
-    if for every positive number \(M\) there is a positive number \(\delta\)
-    such that
+    means that for every positive number \(M\) there is a positive number
+    \(\delta\) such that
     \[0<|x-a|<\delta\implies f(x)>M\]
 \end{definition}
 \begin{problem}
     Prove that \(\displaystyle{\lim_{x\to 0}\frac{1}{x^2}=\infty}\).
 \end{problem}
+\begin{solution}
+    Let \(M\) be a given positive number
+    We want to find a number \(\delta\) such that
+    \[0<|x|<\delta\implies\frac{1}{x^2}>M\]
+    We have
+    \[\frac{1}{x^2}>M\iff x^2<\frac{1}{M}\iff\sqrt{x^2}<\sqrt{\frac{1}{M}}
+    \iff|x|<\frac{1}{\sqrt{M}}\]
+    Let \(\delta=1/\sqrt{M}\), then
+    \[0<|x|<\delta=\frac{1}{\sqrt{M}}\implies\frac{1}{x^2}>M\]
+    This shows that
+    \(\displaystyle{\lim_{x\to 0}\frac{1}{x^2}=\infty}\).
+\end{solution}
 \begin{definition}
     \[\lim_{x\to a}f(x)=-\infty\]
     if for every negative number \(N\) there is a positive number \(\delta\)

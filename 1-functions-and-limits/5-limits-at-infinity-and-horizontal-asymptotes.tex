@@ -1,0 +1,95 @@
+\subsection{Limits at Infinity and Horizontal Asymptotes}
+
+\subsubsection*{Limits at Infinity and Horizontal Asymptotes}
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((a,\infty)\).
+    Then
+    \[\lim_{x\to\infty}f(x)=L\]
+    or \(f(x)\to L\) as \(x\to\infty\) means that the values of \(f(x)\) can
+    be made arbitrarily close to \(L\) by requiring \(x\) to be sufficiently
+    large.
+\end{definition}
+We say that the limit of \(f(x)\),
+as \(x\) approaches infinity,
+is \(L\).
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((-\infty,a)\).
+    Then
+    \[\lim_{x\to-\infty}f(x)=L\]
+    means that the values of \(f(x)\) can be made arbitrarily close to \(L\) by requiring
+    \(x\) to be sufficiently large negative.
+\end{definition}
+We say that the limit of \(f(x)\),
+as \(x\) approaches negative infinity,
+is \(L\).
+\begin{definition}
+    The line \(y=L\) is called a \textbf{horizontal asymptote} of the curve
+    \(y=f(x)\) if either
+    \[\lim_{x\to\infty}f(x)=L\]
+    or
+    \[\lim_{x\to-\infty}f(x)=L\]
+\end{definition}
+
+\subsubsection*{Evaluating Limits at Infinity}
+\begin{theorem}
+    If \(r>0\) is a rational number,
+    then
+    \[\lim_{x\to\infty}\frac{1}{x^r}=0\]
+    If \(r>0\) is a rational number such that \(x^r\) is defined for all \(x\),
+    then
+    \[\lim_{x\to-\infty}\frac{1}{x^r}=0\]
+\end{theorem}
+
+\subsubsection*{Infinite Limits at Infinity}
+The notation
+\[\lim_{x\to\infty}f(x)=\infty\]
+is used to indicate that the values of \(f(x)\) become large as \(x\) becomes
+large.
+Similar meanings are attached to the following symbols:
+\begin{align*}
+    \lim_{x\to\infty}f(x) &= \infty & \lim_{x\to\infty}f(x) &= -\infty
+    & \lim_{x\to-\infty}f(x) &= -\infty
+\end{align*}
+
+\subsubsection*{Precise Definitions}
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((a,\infty)\).
+    Then
+    \[\lim_{x\to\infty}f(x)=L\]
+    means that for every \(\epsilon>0\) there is a corresponding number \(N\)
+    such that
+    \[x>N\implies|f(x)-L|<\epsilon\]
+\end{definition}
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((-\infty,a)\).
+    Then
+    \[\lim_{x\to-\infty}f(x)=L\]
+    means that for every \(\epsilon>0\) there is a corresponding number \(N\)
+    such that
+    \[x<N\implies|f(x)-L|<\epsilon\]
+\end{definition}
+\begin{problem}
+    Prove that \(\displaystyle{\lim_{x\to \infty}\frac{1}{x}=0}\).
+\end{problem}
+\begin{solution}
+    Given \(\epsilon>0\), we want to find an \(N\) such that
+    \[x>N\implies\left|\frac{1}{x}-0\right|<\epsilon\]
+    Since \(x\to \infty\),
+    we can that \(x>0\) in computing the limit.
+    Then \(1/x<\epsilon\iff x>1/\epsilon\).
+    Let \(N=1/\epsilon\),
+    so
+    \[x>N=\frac{1}{\epsilon}\implies\left|\frac{1}{x}-0\right|=\frac{1}{x}
+    <\epsilon\]
+    Therefore, by definition,
+    \[\lim_{x\to \infty}\frac{1}{x}=0\]
+\end{solution}
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((a,\infty)\).
+    Then
+    \[\lim_{x\to\infty}f(x)=\infty\]
+    means that for every positive number \(M\) there is a corresponding
+    positive number \(N\) such that
+    \[x>N\implies f(x)>M\]
+\end{definition}
+Similar definitions apply when the symbol \(\infty\) is replaced by \(-\infty\).

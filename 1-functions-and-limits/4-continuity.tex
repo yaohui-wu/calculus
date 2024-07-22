@@ -9,12 +9,6 @@ Note that \(f\)  is continuous at \(a\) requires that \(f(a)\) is defined and
 the limit exists.
 We say that \(f\) is \textbf{discontinuous} at \(a\) if \(f\) is not
 continuous at \(a\).
-If we can remove the discontinuity by redefining \(f\) at \(a\),
-then it is a \textbf{removable discontinuity}.
-If \(f\) has a vertical asymptote,
-then it has an \textbf{infinite discontinuity}.
-If the left-hand limit is not equal to the right-hand limit,
-then \(f\) has a \textbf{jump discontinuity}.
 \begin{definition}
     A function \(f\) is \textbf{continuous from the right at a number} \(a\)
     if
@@ -39,6 +33,19 @@ then \(f\) has a \textbf{jump discontinuity}.
         \item \(\dfrac{f}{g}\) if \(g(a)\neq 0\).
     \end{enumerate}
 \end{theorem}
+\begin{proof}
+    Each of the five parts follows from the corresponding limit law.
+    We give the proof for part 1.
+    Since \(f\) and \(g\) are continuous at \(a\),
+    we have
+    \begin{align*}
+        \lim_{x\to a}f(x) &= f(a) & \lim_{x\to a}g(x) &= g(a)
+    \end{align*}
+    Then
+    \[\lim_{x\to a}(f+g)(x)=\lim_{x\to a}\bigl[f(x)+g(x)\bigr]
+    =\lim_{x\to a}f(x)+\lim_{x\to a}g(x)=f(a)+g(a)=(f+g)(a)\]
+    This shows that \(f+g\) is continuous at \(a\).
+\end{proof}
 \begin{theorem}
     Let \(P(x)\) be any polynomial, then \(P(x)\) is continuous on
     \(\R=(-\infty,\infty)\).
@@ -76,29 +83,39 @@ then \(f\) has a \textbf{jump discontinuity}.
 \begin{theorem}
     If \(f\) is continuous at \(b\) and
     \(\displaystyle{\lim_{x\to a}g(x)=b}\), then
-    \[\lim_{x\to a}f(g(x))=f\Bigl(\lim_{x\to a}g(x)\Bigr)=f(b)\]
+    \[\lim_{x\to a}f(g(x))=f(b)\]
 \end{theorem}
 \begin{proof}
-    Let \(\epsilon>0\) be given, we want to find \(\delta>0\) such that
+    Let \(\epsilon>0\) be given.
+    We want to find a number \(\delta>0\) such that
     \[0<|x-a|<\delta\implies|f(g(x))-f(b)|<\epsilon\]
     Since \(f\) is continuous at \(b\),
-    then we have \(\lim_{y\to b}f(y)=f(b)\).
-    There exists \(\delta_1>0\) such that
+    we have
+    \[\lim_{y\to b}f(y)=f(b)\]
+    and so there exists \(\delta_1>0\) such that
     \[0<|y-b|<\delta_1\implies|f(y)-f(b)|<\epsilon\]
-    Since \(\lim_{x\to a}g(x)=b\), there exists \(\delta>0\) such that
-    \[0<|x-a|<\delta\implies|g(x)-b|<\delta_1\implies|f(g(x))-f(b)|<\epsilon\]
-    It is proved that
-    \[\lim_{x\to a}f(g(x))=f\Bigl(\lim_{x\to a}g(x)\Bigr)=f(b)\]
+    Since \(\displaystyle{\lim_{x\to a}g(x)=b}\),
+    there exists \(\delta>0\) such that
+    \[0<|x-a|<\delta\implies|g(x)-b|<\delta_1\]
+    Combining these two statements,
+    we see that when \(0<|x-a|<\delta\) we have \(|g(x)-b|<\delta_1\),
+    which implies that \(|f(g(x))-f(b)|<\epsilon\).
+    Therefore we have proved that \(\displaystyle{\lim_{x\to a}f(g(x))=f(b)}\).
 \end{proof}
 \begin{theorem}
-    If \(g\) is continuous at \(a\) and \(f\) is continuous at \(g(a)\), then
-    the composite function \(f(g(x))\) is continuous at \(a\).
+    If \(g\) is continuous at \(a\) and \(f\) is continuous at \(g(a)\),
+    then the composite function \(f\circ g\) given by \(f\circ g=f(g(x))\) is
+    continuous at \(a\).
 \end{theorem}
 \begin{proof}
-    Since \(g\) is continuous at \(a\), we have \(\lim_{x\to a}g(x)=g(a)\).
-    Since \(f\) is continuous at \(g(a)\), we have
+    Since \(g\) is continuous at \(a\),
+    we have
+    \[\lim_{x\to a}g(x)=g(a)\]
+    Since \(f\) is continuous at \(b=g(a)\),
+    we have
     \[\lim_{x\to a}f(g(x))=f(g(a))\]
-    Therefore, \(f(g(x))\) is continuous at \(a\).
+    which is precisely the statement that the function \(f(g(x))\) is
+    continuous at \(a\).
 \end{proof}
 
 \subsubsection*{The Intermediate Value Theorem}
@@ -109,6 +126,8 @@ then \(f\) has a \textbf{jump discontinuity}.
     Then there exists a number \(c\) in the open interval \((a,b)\) such that
     \(f(c)=N\).
 \end{theorem}
+The intermediate value theorem states that a continuous function takes on
+every intermediate value between the function values \(f(a)\) and \(f(b)\).
 If a continuous function \(f(x)\) has values of opposite sign in an interval
 \((a,b)\), then there exists a root of \(f(x)\) in \((a,b)\) by the
 intermediate value theorem.
