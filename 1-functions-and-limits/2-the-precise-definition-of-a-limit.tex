@@ -2,22 +2,12 @@
 
 \subsubsection*{The Precise Definition of a Limit}
 Let \(f\) be a function defined on some open interval that contains the number
-\(a\), except possibly at a itself.
+\(a\), except possibly at \(a\) itself.
 \begin{definition}
-    The limit of \(f(x)\) as \(x\) approaches \(a\) is \(L\) and we write
+    The limit of \(f(x)\) as \(x\) approaches \(a\) is \(L\), and we write
     \[\lim_{x\to a}f(x)=L\]
     if for every number \(\epsilon>0\) there is a number \(\delta>0\) such that
     \[0<|x-a|<\delta\implies|f(x)-L|<\epsilon\]
-\end{definition}
-\begin{definition}
-    \[\lim_{x\to a^-}f(x)=L\] if for every number \(\epsilon>0\), there exists
-    a number \(\delta>0\) such that
-    \[a-\delta<x<a\implies|f(x)-L|<\epsilon\]
-\end{definition}
-\begin{definition}
-    \[\lim_{x\to a^+}f(x)=L\] if for every number \(\epsilon>0\), there exists
-    a number \(\delta>0\) such that
-    \[a<x<a+\delta\implies|f(x)-L|<\epsilon\]
 \end{definition}
 \begin{problem}
     Prove that \(\displaystyle{\lim_{x\to 3}(4x-5)=7}\).
@@ -32,7 +22,7 @@ Let \(f\) be a function defined on some open interval that contains the number
     \[0<|x-3|<\frac{\epsilon}{4}\implies4|x-3|<\epsilon\implies
     |(4x-5)-7|<\epsilon\]
     Therefore, by the definition of a limit, it is proved that
-    \(\lim_{x\to 3}(4x-5)=7\).
+    \(\displaystyle{\lim_{x\to 3}(4x-5)=7}\).
 \end{solution}
 \begin{problem}
     Prove that \(\displaystyle{\lim_{x\to 3}x^2=9}\).
@@ -45,15 +35,26 @@ Let \(f\) be a function defined on some open interval that contains the number
     Let \(C\) be a positive constant such that
     \[|x+3|\,|x-3|<C\,|x-3|<\epsilon \iff |x-3|<\frac{\epsilon}{C}\]
     Since we are interested only in values of \(x\) that are close to 3, it is
-    reasonable to assume that \(|x-3|<1\) such that \(|x+3|<7\) so \(C=7\).
-    Let \(\delta=\min\{1,\epsilon/7\}\), we have
-    \begin{align*}
-        0<|x-3|<1 \iff |x+3| &< 7 \\
-        0<|x-3|<\frac{\epsilon}{7} \iff 7\,|x-3| &< \epsilon \\
-        |x+3|\,|x-3|<7\,|x-3|<\epsilon\implies|x^2-9| &< \epsilon
-    \end{align*}
-    Therefore, it is proved that \(\lim_{x\to 3}x^2=9\).
+    reasonable to assume that \(|x-3|<1\) then \(|x+3|<7\) so \(C=7\).
+    Let \(\delta=\min\{1,\epsilon/7\}\).
+    If \(0<|x-3|<\delta\), then
+    \[|x^2-9|=|x+3|\,|x-3|<7\cdot\frac{\epsilon}{7}=\epsilon\]
+    It is proved that \(\displaystyle{\lim_{x\to 3}x^2=9}\).
 \end{solution}
+
+\subsubsection*{One-Sided Limits}
+\begin{definition}
+    \[\lim_{x\to a^-}f(x)=L\]
+    if for every number \(\epsilon>0\) there is a number \(\delta>0\) such
+    that
+    \[a-\delta<x<a\implies|f(x)-L|<\epsilon\]
+\end{definition}
+\begin{definition}
+    \[\lim_{x\to a^+}f(x)=L\]
+    if for every number \(\epsilon>0\) there is a number \(\delta>0\) such
+    that
+    \[a<x<a+\delta\implies|f(x)-L|<\epsilon\]
+\end{definition}
 \begin{problem}
     Prove that \(\displaystyle{\lim_{x\to 0^+}\sqrt{x}=0}\).
 \end{problem}
@@ -62,7 +63,26 @@ Let \(f\) be a function defined on some open interval that contains the number
     that
     \[0<x<\delta\implies|\sqrt{x}-0|<\epsilon\]
     We simplify to get \(\sqrt{x}<\epsilon\iff x<\epsilon^2\).
-    Let \(\delta=\epsilon^2\), we have
-    \[0<x<\epsilon^2\implies|\sqrt{x}-0|<\epsilon\]
-    It is proved that \(\lim_{x\to 0^+}\sqrt{x}=0\).
+    Let \(\delta=\epsilon^2\).
+    If \(0<x<\delta\), then
+    \(\sqrt{x}<\sqrt{\delta}=\sqrt{\epsilon^2}=\epsilon\)
+    so \(|\sqrt{x}-0|<\epsilon\).
+    It is proved that \(\displaystyle{\lim_{x\to 0^+}\sqrt{x}=0}\).
 \end{solution}
+
+\subsubsection*{Infinite Limits}
+\begin{definition}
+    \[\lim_{x\to a}f(x)=\infty\]
+    if for every positive number \(M\) there is a positive number \(\delta\)
+    such that
+    \[0<|x-a|<\delta\implies f(x)>M\]
+\end{definition}
+\begin{problem}
+    Prove that \(\displaystyle{\lim_{x\to 0}\frac{1}{x^2}=\infty}\).
+\end{problem}
+\begin{definition}
+    \[\lim_{x\to a}f(x)=-\infty\]
+    if for every negative number \(N\) there is a positive number \(\delta\)
+    such that
+    \[0<|x-a|<\delta\implies f(x)<N\]
+\end{definition}

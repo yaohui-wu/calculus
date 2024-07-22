@@ -1,30 +1,10 @@
 \subsection{The Limit of a Function}
 
-\subsubsection*{Functions}  
-A function \(f\) is a rule that assigns to each element \(x\) in a set \(D\)
-exactly one element \(f(x)\) in a set \(E\).
+\subsubsection*{Functions}
 \begin{definition}
-    A \textbf{function} \(f\) is a binary relation \(R\) between domain \(X\)
-    and codomain \(Y\) that satisfies
-    \begin{itemize}
-        \item \(R\) is a subset of the Cartesian product of \(X\) and \(Y\).
-        \[R\subset\{(x,y)\mid x\in X,y\in Y\}\]
-        \item For every \(x\) in \(X\), there exists a \(y\) in \(Y\) such
-        that \((x,y)\) is in \(R\).
-        \[\forall x\in X,\exists y\in Y,(x,y)\in R\]
-        \item If \((x,y)\) and \((x,z)\) are in \(R\), then \(y=z\).
-        \[(x,y)\wedge(x,z)\in R\implies y=z\]
-    \end{itemize}
+    A \textbf{function} \(f\) is a rule that assigns to each element \(x\) in
+    a set \(D\) exactly one element \(f(x)\) in a set \(E\).
 \end{definition}
-The real line is the one-dimensional (1D) Eculidean space defined as the set
-of all real numbers \(\R\).
-The \(xy\)-plane in the Cartesian coordinate system is the two-dimensional
-(2D) Eculidean space defined as the set of all ordered pairs of real numbers
-\((x,y)\in\R^2\).
-A function of a real variable is a function whose domain is the set of real
-numbers \(\R\).
-A real function is a real-valued function of a real variable whose domain and
-codomain is \(\R\).
 \begin{definition}
     A function \(f\) is \textbf{injective} (or one-to-one) if
     \(f(x_1)\neq f(x_2)\) when \(x_1\neq x_2\).
@@ -50,43 +30,47 @@ Let \(f(x)\) be a function defined near the number \(a\), that is, \(f(x)\) is
 defined on some open interval that contains the number \(a\),
 except possibly at \(a\) itself.
 \begin{definition}
-    The \textbf{limit} of \(f(x)\) as \(x\) approaches \(a\) equals \(L\) and
+    The \textbf{limit} of \(f(x)\) as \(x\) approaches \(a\) equals \(L\), and
     we write
     \[\lim_{x\to a}f(x)=L\]
     or \(f(x)\to L\) as \(x\to a\)
     if we can make the values of \(f(x)\) arbitrarily close to \(L\) by
     restricting \(x\) to be sufficiently close to \(a\) but \(x\neq a\).
 \end{definition}
+\subsubsection*{One-Sided Limits}
 \begin{definition}
     We write
     \[\lim_{x\to a^-}f(x)=L\]
     and say that the \textbf{left-hand limit} of \(f(x)\) as \(x\) approaches
-    \(a\) from the left equals \(L\) if we can make x\(f(x)\) arbitrarily
-    close to \(L\) by taking \(x\) sufficiently close to \(a\) where \(x<a\).
+    \(a\) equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\) by
+    taking \(x\) sufficiently close to \(a\) with \(x<a\).
 \end{definition}
 \begin{definition}
     We write
     \[\lim_{x\to a^+}f(x)=L\]
     and say that the \textbf{right-hand limit} of \(f(x)\) as \(x\) approaches
-    \(a\) from the right equals \(L\) if we can make \(f(x)\) arbitrarily
-    close to \(L\) by taking \(x\) sufficiently close to \(a\) where \(x>a\).
+    \(a\) equals \(L\) if we can make \(f(x)\) arbitrarily close to \(L\) by
+    taking \(x\) sufficiently close to \(a\) with \(x>a\).
 \end{definition}
-The limit exists if the left-hand limit and the right-hand limit of \(f(x)\)
-as \(x\) approaches \(a\) equal \(L\), otherwise the limit does not exist.
-\[\lim_{x\to a}f(x)=L\iff\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=L\]
+\begin{theorem}
+    \(\displaystyle{\lim_{x\to a}f(x)=L}\) if and only if
+    \(\displaystyle{\lim_{x\to a^-}f(x)}=L\) and
+    \(\displaystyle{\lim_{x\to a^+}f(x)}=L\).
+\end{theorem}
+The limit \textbf{exists} if the left-hand limit and the right-hand limit of
+\(f(x)\) as \(x\) approaches \(a\) equal \(L\), otherwise the limit
+\textbf{does not exist}.
 
 \subsubsection*{Infinite Limits and Vertical Asymptotes}
 Let \(f\) be a function defined on both sides of \(a\),
 except possibly at \(a\) itself.
 \begin{definition}
-    The notation
     \[\lim_{x\to a}f(x)=\infty\]
     or \(f(x)\to\infty\) as \(x\to a\) means that the values of \(f(x)\) can
     be made arbitrarily large by taking \(x\) sufficiently close to \(a\) but
     \(x\neq a\).
 \end{definition}
 \begin{definition}
-    The notation
     \[\lim_{x\to a}f(x)=-\infty\]
     means that the values of \(f(x)\) can be made arbitrarily large negative
     by taking \(x\) sufficiently close to \(a\) but \(x\neq a\).

@@ -1,25 +1,44 @@
 \subsection{Continuity}
 
-\subsubsection*{Continuous Functions}
-Let \(f(x)\) be a function and the number \(a\) is in the domain of \(f\) so
-\(f(a)\) is defined.
-If the limit exists, then we have the following definition.
+\subsubsection*{Continuity of a Function}
 \begin{definition}
-    A function \(f\) is \textbf{continuous} at the number \(a\) if
+    A function \(f\) is \textbf{continuous at a number} \(a\) if
     \[\lim_{x\to a}f(x)=f(a)\]
 \end{definition}
-A function \(f\) is continuous from the left at \(a\) if the left-hand limit
-equals \(f(a)\) and it is continuous from the right at \(a\) if the right-hand
-limit equals \(f(a)\).
-A function \(f\) is continuous on an interval if it is continuous
-at every number in the interval.
-If \(f\) is not continuous at \(a\),
-then it is a discontinuous function at \(a\).
-If \(f\) and \(g\) are continuous functions at \(a\) and \(c\) is a constant,
-then the following functions are also continuous at \(a\).
-    \begin{align*}
-        &f+g & f-g && cf && f\cdot g && \dfrac{f}{g}\iff g(x)\neq 0 &
-    \end{align*}
+Note that \(f\)  is continuous at \(a\) requires that \(f(a)\) is defined and
+the limit exists.
+We say that \(f\) is \textbf{discontinuous} at \(a\) if \(f\) is not
+continuous at \(a\).
+If we can remove the discontinuity by redefining \(f\) at \(a\),
+then it is a \textbf{removable discontinuity}.
+If \(f\) has a vertical asymptote,
+then it has an \textbf{infinite discontinuity}.
+If the left-hand limit is not equal to the right-hand limit,
+then \(f\) has a \textbf{jump discontinuity}.
+\begin{definition}
+    A function \(f\) is \textbf{continuous from the right at a number} \(a\)
+    if
+    \[\lim_{x\to a^+}f(x)=f(a)\]
+    and \(f\) is \textbf{continuous from the left at} \(a\) if
+    \[\lim_{x\to a^-}f(x)=f(a)\]
+\end{definition}
+\begin{definition}
+    A function \(f\) is \textbf{continuous on an interval} if it is continuous
+    at every number in the interval.
+\end{definition}
+
+\subsubsection*{Properties of Continuous Functions}
+\begin{theorem}
+    If \(f\) and \(g\) are continuous at \(a\) and \(c\) is a constant, then
+    the following functions are also continuous at \(a\):
+    \begin{enumerate}
+        \item \(f+g\)
+        \item \(f-g\)
+        \item \(cf\)
+        \item \(fg\)
+        \item \(\dfrac{f}{g}\) if \(g(a)\neq 0\).
+    \end{enumerate}
+\end{theorem}
 \begin{theorem}
     Let \(P(x)\) be any polynomial, then \(P(x)\) is continuous on
     \(\R=(-\infty,\infty)\).
@@ -27,7 +46,7 @@ then the following functions are also continuous at \(a\).
 \begin{proof}
     A polynomial \(P(x)\) is a function of the form
     \[a_nx^n+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_1x+a_0\]
-    where the coefficients \(a_i\) are constants.
+    where the coefficients \(a_0,a_1,\dots,a_n\) are constants.
     \(P(x)\) is the sum of power functions with a constant multiple and
     therefore it is continuous.
 \end{proof}
@@ -41,13 +60,23 @@ then the following functions are also continuous at \(a\).
     We know that polynomials are continuous so a rational function is
     continuous on its domain.
 \end{proof}
-Polynomials, rational functions, root functions, trigonometric
-functions, inverse trigonometric functions, logarithmic functions, and
-exponential functions are continuous on their domain.
 \begin{theorem}
-    If \(f\) is continuous at \(b\) and \(\lim_{x\to a}g(x)=b\), then
-    the limit of the composite function \(f\circ g\) is
-    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\]
+    The following types of functions are continuous at every number in their
+    domains:
+    \begin{itemize}
+        \item Polynomials
+        \item Rational functions
+        \item Root functions
+        \item Trigonometric functions
+        \item Inverse trigonometric functions
+        \item Exponential functions
+        \item Logarithmic functions
+    \end{itemize}
+\end{theorem}
+\begin{theorem}
+    If \(f\) is continuous at \(b\) and
+    \(\displaystyle{\lim_{x\to a}g(x)=b}\), then
+    \[\lim_{x\to a}f(g(x))=f\Bigl(\lim_{x\to a}g(x)\Bigr)=f(b)\]
 \end{theorem}
 \begin{proof}
     Let \(\epsilon>0\) be given, we want to find \(\delta>0\) such that
@@ -58,12 +87,12 @@ exponential functions are continuous on their domain.
     \[0<|y-b|<\delta_1\implies|f(y)-f(b)|<\epsilon\]
     Since \(\lim_{x\to a}g(x)=b\), there exists \(\delta>0\) such that
     \[0<|x-a|<\delta\implies|g(x)-b|<\delta_1\implies|f(g(x))-f(b)|<\epsilon\]
-    Therefore, it is proved that
-    \[\lim_{x\to a}f(g(x))=f\left(\lim_{x\to a}g(x)\right)=f(b)\]
+    It is proved that
+    \[\lim_{x\to a}f(g(x))=f\Bigl(\lim_{x\to a}g(x)\Bigr)=f(b)\]
 \end{proof}
 \begin{theorem}
     If \(g\) is continuous at \(a\) and \(f\) is continuous at \(g(a)\), then
-    \(f\circ g\) is continuous at \(a\).
+    the composite function \(f(g(x))\) is continuous at \(a\).
 \end{theorem}
 \begin{proof}
     Since \(g\) is continuous at \(a\), we have \(\lim_{x\to a}g(x)=g(a)\).
@@ -71,15 +100,15 @@ exponential functions are continuous on their domain.
     \[\lim_{x\to a}f(g(x))=f(g(a))\]
     Therefore, \(f(g(x))\) is continuous at \(a\).
 \end{proof}
-An important property of continuous functions is formulated by the following
-theorem proved by \textbf{Bernard Bolzano} (1781--1848).
+
+\subsubsection*{The Intermediate Value Theorem}
 \begin{theorem}[Intermediate Value Theorem]
     Suppose that \(f\) is continuous on the closed interval \([a,b]\) and let
-    \(N\) be any number between \(f(a)\) and \(f(b)\) where \(f(a)\neq f(b)\)
-    such that \[\min\{f(a),f(b)\}<N<\max\{f(a),f(b)\}\]
+    \(N\) be any number between \(f(a)\) and \(f(b)\),
+    where \(f(a)\neq f(b)\).
     Then there exists a number \(c\) in the open interval \((a,b)\) such that
     \(f(c)=N\).
 \end{theorem}
 If a continuous function \(f(x)\) has values of opposite sign in an interval
-\((a,b)\), then there exists a root of \(f(x)\) in \((a,b)\) which follows
-immediately from the intermediate value theorem.
+\((a,b)\), then there exists a root of \(f(x)\) in \((a,b)\) by the
+intermediate value theorem.
