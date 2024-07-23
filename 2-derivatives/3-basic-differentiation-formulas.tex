@@ -1,30 +1,43 @@
-\subsection{Differentiation}
+\subsection{Basic Differentiation Formulas}
 
-\subsubsection*{Differentiation Formulas}
-Let \(f(x)\) and \(g(x)\) be differentiable functions, then we have the
-following differentiation formulas.
-\begin{theorem}
-    Let \(f(x)=c\) where \(c\) is a constant, then
-    \[\frac{d}{dx}(c)=0\]
-\end{theorem}
+
+The derivative of the constant function \(f(x)=c\) is
+\[\frac{d}{dx}(c)=0\]
 \begin{proof}
     \[f'(x)=\lim_{h\to 0}\frac{c-c}{h}=\lim_{h\to 0}0=0\]
 \end{proof}
-\begin{theorem}[Power Rule]
-    \[\frac{d}{dx}(x^n)=nx^{n-1},\quad n\in\R\]
-\end{theorem}
+
+\subsubsection*{Power Functions}
+\[\frac{d}{dx}(x)=1\]
 \begin{proof}
-    We prove the power rule for \(n\in\N\).
-    \[\frac{d}{dx}(x^n)=\lim_{h\to 0}\frac{(x+h)^n-x^n}{h}\]
-    We use the binomial theorem to expand \((x+h)^n\) then we have
-    \begin{align*}
-        \frac{d}{dx}(x^n)
-        &= \lim_{h\to 0}\frac{x^n+nx^{n-1}h+\dots+nxh^{n-1}+h^n-x^n}{h} \\
-        &= \lim_{h\to 0}(nx^{n-1}+\dots+nxh^{n-2}+h^{n-1})=nx^{x-1}
-    \end{align*}
-    because every term has a factor of \(h\) except \(nx^{n-1}\).
+    \[f'(x)=\lim_{h\to 0}\frac{x+h-x}{h}=\lim_{h\to 0}\frac{h}{h}=1\]
 \end{proof}
-Note the special case when \(n=1\), then we have \[\frac{d}{dx}(x)=1\]
+The power rule:
+If \(n\) is a positive integer, then
+\[\frac{d}{dx}(x^n)=nx^{n-1}\]
+\begin{proof}
+    Let \(f(x)=x^n\), then
+    \[f'(x)=\lim_{h\to 0}\frac{(x+h)^n-x^n}{h}\]
+    We use the binomial theorem to expand \((x+h)^n\) then
+    \begin{align*}
+        f'(x)
+        &= \lim_{h\to 0}
+        \frac{
+            \left(x^n+nx^{n-1}h+\dfrac{n(n-1)}{2}x^{n-2}h^2+\cdots+nxh^{n-1}
+            +h^n\right)-x^n}{h} \\
+        &= \lim_{h\to 0}
+        \frac{
+            nx^{n-1}h+\dfrac{n(n-1)}{2}x^{n-2}h^2+\cdots+nxh^{n-1}+h^n}{h} \\
+        &= \lim_{h\to 0}
+        (nx^{n-1}+\frac{n(n-1)}{2}x^{n-2}h+\dots+nxh^{n-2}+h^{n-1}) \\
+        &= nx^{n-1}
+    \end{align*}
+    because every term except the first has \(h\) as a factor and therefore
+    approaches 0.
+\end{proof}
+The power rule (general version):
+If \(n\) is any real number, then
+\[\frac{d}{dx}(x^n)=nx^{n-1}\]
 \begin{problem}
     Differentiate \(f(x)=1/x\).
 \end{problem}
@@ -32,43 +45,36 @@ Note the special case when \(n=1\), then we have \[\frac{d}{dx}(x)=1\]
     \[\frac{d}{dx}\left(\frac{1}{x}\right)=\frac{d}{dx}x^{-1}=(-1)x^{-1-1}
     =-x^{-2}=-\frac{1}{x^2}\]
 \end{solution}
-\begin{theorem}[Constant Multiple Rule]
-    If \(c\) is a constant, then
-    \[\frac{d}{dx}[cf(x)]=c\,\frac{d}{dx}f(x)\]
-\end{theorem}
+The \textbf{normal line} to a curve \(C\) at a point \(P\) is the line through
+\(P\) that is perpendicular to the tangent line at \(P\).
+The constant multiple rule:
+If \(c\) is a constant and \(f\) is a differentiable function, then
+\[\frac{d}{dx}\bigl[cf(x)\bigr]=c\,\frac{d}{dx}f(x)\]
 \begin{proof}
+    Let \(g(x)=cf(x)\).
+    Then
     \begin{align*}
-        \frac{d}{dx}[cf(x)]&= \lim_{h\to 0}\frac{cf(x+h)-cf(x)}{h}
-        =\lim_{h\to 0}\left[c\left(\frac{f(x+h)-f(x)}{h}\right)\right] \\
-        &= c\left(\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\right)
+        g'(x) &= \lim_{h\to 0}\frac{cf(x+h)-cf(x)}{h}
+        =\lim_{h\to 0}c\left(\frac{f(x+h)-f(x)}{h}\right) \\
+        &= c\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
         =c\,\frac{d}{dx}f(x)
     \end{align*}
 \end{proof}
-\begin{theorem}[Sum and Difference Rule]
-    \[\frac{d}{dx}[f(x)\pm g(x)]
-    =\frac{d}{dx}f(x)\pm \frac{d}{dx}g(x)\]
-\end{theorem}
+The sum rule: If \(f\) and \(g\) are both differentiable, then
+\[\frac{d}{dx}\bigl[f(x)+g(x)\bigr]=\frac{d}{dx}f(x)+\frac{d}{dx}g(x)\]
 \begin{proof}
-    We prove the sum rule.
+    Let \(F(x)=f(x)+g(x)\).
+    Then
     \begin{align*}
-        \frac{d}{dx}[f(x)+g(x)]
-        &= \lim_{h\to 0}\frac{f(x+h)+g(x+h)-[f(x)+g(x)]}{h} \\
+        F'(x) &= \lim_{h\to 0}\frac{f(x+h)+g(x+h)-[f(x)+g(x)]}{h} \\
         &= \lim_{h\to 0}\frac{f(x+h)-f(x)+g(x+h)-g(x)}{h} \\
         &= \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
         +\lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \\
         &= \frac{d}{dx}f(x)+\frac{d}{dx}g(x)
     \end{align*}
-    Then we prove the difference rule.
-    \begin{align*}
-        \frac{d}{dx}[f(x)-g(x)]
-        &= \lim_{h\to 0}\frac{f(x+h)-g(x+h)-[f(x)-g(x)]}{h} \\
-        &= \lim_{h\to 0}\frac{f(x+h)-f(x)-g(x+h)+g(x)}{h} \\
-        &= \lim_{h\to 0}\frac{f(x+h)-f(x)-[g(x+h)-g(x)]}{h} \\
-        &= \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
-        -\lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \\
-        &= \frac{d}{dx}f(x)-\frac{d}{dx}g(x)
-    \end{align*}
 \end{proof}
+The difference rule: If \(f\) and \(g\) are both differentiable, then
+\[\frac{d}{dx}\bigl[f(x)-g(x)\bigr]=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)\]
 
 \subsubsection*{Product and Quotient Rules}
 Let \(f(x)\) and \(g(x)\) be differentiable functions, then we have the
