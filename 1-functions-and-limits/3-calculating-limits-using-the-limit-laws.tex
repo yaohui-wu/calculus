@@ -1,6 +1,5 @@
 \subsection{Calculating Limits Using the Limit Laws}
 
-\subsubsection*{Properties of Limits}
 We have the following properties of limits called the \textbf{limit laws} to
 calculate limits.
 Suppose that \(c\) is a constant and the limits
@@ -14,80 +13,77 @@ Then
     \item Difference Law: \(\displaystyle{\lim_{x\to a}\bigl[f(x)-g(x)\bigr]=L-M}\)
     \item Constant Multiple Law: \(\displaystyle{\lim_{x\to a}\bigl[cf(x)\bigr]=cL}\)
     \item Product Law: \(\displaystyle{\lim_{x\to a}\bigl[f(x)g(x)\bigr]=LM}\)
-    \item Quotient Law: \(\displaystyle{\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}}\) if
+    \item Quotient Law:
+    \(\displaystyle{\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}}\) if
     \(M\neq 0\).
     \item Power Law: \(\displaystyle{\lim_{x\to a}\bigl[f(x)\bigr]^n
     =\Bigl[\lim_{x\to a}f(x)\Bigr]^n}\) where \(n\) is a positive integer.
     \item Root Law: \(\displaystyle{\lim_{x\to a}\sqrt[n]{f(x)}
     =\sqrt[n]{\lim_{x\to a}f(x)}}\) where \(n\) is a positive integer.
-    If \(n\) is even, we assume that \(\displaystyle{\lim_{x\to a}f(x)>0}\).
+    If \(n\) is even,
+    we assume that \(\displaystyle{\lim_{x\to a}f(x)>0}\).
     \item \(\displaystyle{\lim_{x\to a}c=c}\)
     \item \(\displaystyle{\lim_{x\to a}x=a}\)
     \item \(\displaystyle{\lim_{x\to a}x^n=a^n}\) where \(n\) is a positive
     integer.
     \item \(\displaystyle{\lim_{x\to a}\sqrt[n]{x}=\sqrt[n]{a}}\) where \(n\)
     is a positive integer.
-    If \(n\) is even, we assume that \(a>0\).
+    If \(n\) is even,
+    we assume that \(a>0\).
 \end{enumerate}
 \begin{proof}
-    Proof of limit law 1, the sum law:
-    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that
+    Proof of limit law 8:
+    Let \(\epsilon>0\) be given,
+    we want to find a number \(\delta>0\) such that
+    \[0<|x-a|<\delta\implies|c-c|<\epsilon\]
+    We have \(|c-c|=0<\epsilon\) so the trivial inequality is always true for
+    any number \(\delta>0\).
+    It is proved that \(\displaystyle{\lim_{x\to a}c=c}\).
+\end{proof}
+\begin{proof}
+    Proof of limit law 9:
+    Let \(\epsilon>0\) be given,
+    we want to find a number \(\delta>0\) such
+    that \[0<|x-a|<\delta\implies|x-a|<\epsilon\]
+    Let \(\delta=\epsilon\),
+    we have
+    \[0<|x-a|<\delta=\epsilon\implies|x-a|<\epsilon\]
+    It is proved that \(\displaystyle{\lim_{x\to a}x=a}\).
+\end{proof}
+\begin{proof}
+    Proof of the sum law:
+    Let \(\epsilon>0\) be given,
+    we want to find a number \(\delta>0\) such that
     \[0<|x-a|<\delta\implies|f(x)+g(x)-(L+M)|<\epsilon\]
-    By the triangle inequality, we have
+    By the triangle inequality,
+    we have
     \[|f(x)+g(x)-(L+M)|=|f(x)-L+g(x)-M|\leq|f(x)-L|+|g(x)-M|\]
     We make \(|f(x)-L|+|g(x)-M|\) less than \(\epsilon\) by making each of the
     terms \(|f(x)-L|\) and \(|g(x)-M|\) less than \(\epsilon/2\).
     Since \(\displaystyle{\lim_{x\to a}f(x)=L}\),
     there is a number \(\delta_1>0\) such that
     \[0<|x-a|<\delta_1\implies|f(x)-L|<\frac{\epsilon}{2}\]
-    Similarly, there is a number \(\delta_2>0\) such that
+    Similarly,
+    there is a number \(\delta_2>0\) such that
     \[0<|x-a|<\delta_2\implies|g(x)-M|<\frac{\epsilon}{2}\]
     Let \(\delta=\min\{\delta_1,\delta_2\}\).
-    If \(0<|x-a|<\delta\), then \(0<|x-a|<\delta_1\) and \(0<|x-a|<\delta_2\)
+    If \(0<|x-a|<\delta\),
+    then \(0<|x-a|<\delta_1\) and \(0<|x-a|<\delta_2\)
     and so
     \[|f(x)-L|+|g(x)-M|<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon\]
     Then
     \[0<|x-a|<\delta\implies|f(x)+g(x)-(L+M)|<\epsilon\]
-    Therefore, by the definition of the limit, it is proved that
+    Thus,
+    by the definition of a limit,
     \[\lim_{x\to a}\bigl[f(x)+g(x)\bigr]=L+M\]
 \end{proof}
 \begin{proof}
-    Proof of limit law 2, the difference law:
-    Using the sum law and the constant multiple law with \(c=-1\), we have
-    \begin{align*}
-        \lim_{x\to a}\bigl[f(x)-g(x)\bigr]
-        &= \lim_{x\to a}\bigl[f(x)+(-1)g(x)\bigr]
-        =\lim_{x\to a}f(x)+\lim_{x\to a}(-1)g(x) \\
-        &=\lim_{x\to a}f(x)+(-1)\lim_{x\to a}g(x)
-        =\lim_{x\to a}f(x)-\lim_{x\to a}g(x)=L-M
-    \end{align*}
-\end{proof}
-\begin{proof}
-    Proof of limit law 3, the constant multiple law:
-    If we take \(g(x)=c\) then by the product law and limit law 8, we get
-    \[\lim_{x\to a}\bigl[cf(x)\bigr]=\lim_{x\to a}c\cdot\lim_{x\to a}f(x)
-    =c\lim_{x\to a}f(x)=cL\]
-    We can prove the constant multiple law using the precise the definition.
-    Note that if \(c=0\), then \(cf(x)=0\) and we have
-    \[\lim_{x\to a}\bigl[0\cdot f(x)\bigr]=\lim_{x\to a}0=0
-    =0\cdot\lim_{x\to a}f(x)=0\cdot L\]
-    Let \(\epsilon>0\) and \(c\neq0\) be given, we want to find a number
-    \(\delta>0\) such that
-    \[0<|x-a|<\delta\implies|cf(x)-cL|<\epsilon\]
-    We simplify to get
-    \[|f(x)-L|<\frac{\epsilon}{|c|}\]
-    By the definition of the limit, there is a number \(\delta_1>0\) such that
-    \[0<|x-a|<\delta_1\implies|f(x)-L|<\frac{\epsilon}{|c|}\]
-    Let \(\delta=\delta_1\), we have
-    \[0<|x-a|<\delta\implies|cf(x)-cL|<\epsilon\]
-    It is proved that \(\displaystyle{\lim_{x\to a}\bigl[cf(x)\bigr]=cL}\).
-\end{proof}
-\begin{proof}
-    Proof of limit law 4, the product law:
-    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
+    Proof of the product law:
+    Let \(\epsilon>0\) be given,
+    we want to find a number \(\delta>0\) such
     that \[0<|x-a|<\delta\implies|f(x)g(x)-LM|<\epsilon\]
-    In order to get terms that contain \(|f(x)-L|\) and \(|g(x)-M|\), we add
+    In order to get terms that contain \(|f(x)-L|\) and \(|g(x)-M|\),
+    we add
     and subtract \(Lg(x)\) as follows and use the triangle inequality:
     \begin{align*}
         |f(x)g(x)-LM| &= |f(x)g(x)-Lg(x)+Lg(x)-LM| \\
@@ -100,16 +96,19 @@ Then
     Since \(\displaystyle{\lim_{x\to a}g(x)=M}\),
     there is a number \(\delta_1>0\) such that
     \[0<|x-a|<\delta_1\implies|g(x)-M|<\frac{\epsilon}{2(1+|L|)}\]
-    Also, there is a number \(\delta_2>0\) such that
+    Also,
+    there is a number \(\delta_2>0\) such that
     \[0<|x-a|<\delta_2\implies|g(x)-M|<1\] and therefore
     \[|g(x)|=|g(x)-M+M|\leq|g(x)-M|+|M|<1+|M|\]
     Since \(\displaystyle{\lim_{x\to a}f(x)=L}\),
     there is a number \(\delta_3>0\) such that
     \[0<|x-a|<\delta_3\implies|f(x)-L|<\frac{\epsilon}{2(1+|M|)}\]
     Let \(\delta=\min\{\delta_1,\delta_2,\delta_3\}\).
-    If \(0<|x-a|<\delta\), then \(0<|x-a|<\delta_1\), \(0<|x-a|<\delta_2\),
+    If \(0<|x-a|<\delta\),
+    then \(0<|x-a|<\delta_1\),
+    \(0<|x-a|<\delta_2\),
     and \(0<|x-a|<\delta_3\).
-    Therefore we can combine the inequalities to get
+    Then we can combine the inequalities to get
     \begin{align*}
         |f(x)g(x)-LM|
         &\leq |f(x)-L|\,|g(x)|+|L|\,|g(x)-M| \\
@@ -118,11 +117,47 @@ Then
         +(1+|L|)\frac{\epsilon}{2(1+|L|)} \\
         &= \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon
     \end{align*}
-    It is proved that
+    This shows that
     \[\lim_{x\to a}\bigl[f(x)g(x)\bigr]=LM\]
 \end{proof}
 \begin{proof}
-    Proof of limit law 5, the quotient law:
+    Proof of the constant multiple law:
+    If we take \(g(x)=c\) then by the product law and limit law 8,
+    we get
+    \[\lim_{x\to a}\bigl[cf(x)\bigr]=\lim_{x\to a}c\cdot\lim_{x\to a}f(x)
+    =c\lim_{x\to a}f(x)=cL\]
+    We can prove the constant multiple law using the precise the definition.
+    Note that if \(c=0\),
+    then \(cf(x)=0\) and we have
+    \[\lim_{x\to a}\bigl[0\cdot f(x)\bigr]=\lim_{x\to a}0=0
+    =0\cdot\lim_{x\to a}f(x)=0\cdot L\]
+    Let \(\epsilon>0\) and \(c\neq0\) be given,
+    we want to find a number \(\delta>0\) such that
+    \[0<|x-a|<\delta\implies|cf(x)-cL|<\epsilon\]
+    We simplify to get
+    \[|f(x)-L|<\frac{\epsilon}{|c|}\]
+    By the definition of a limit,
+    there is a number \(\delta_1>0\) such that
+    \[0<|x-a|<\delta_1\implies|f(x)-L|<\frac{\epsilon}{|c|}\]
+    Let \(\delta=\delta_1\),
+    we have
+    \[0<|x-a|<\delta\implies|cf(x)-cL|<\epsilon\]
+    This shows that \(\displaystyle{\lim_{x\to a}\bigl[cf(x)\bigr]=cL}\).
+\end{proof}
+\begin{proof}
+    Proof of the difference law:
+    Using the sum law and the constant multiple law with \(c=-1\),
+    we have
+    \begin{align*}
+        \lim_{x\to a}\bigl[f(x)-g(x)\bigr]
+        &= \lim_{x\to a}\bigl[f(x)+(-1)g(x)\bigr]
+        =\lim_{x\to a}f(x)+\lim_{x\to a}(-1)g(x) \\
+        &=\lim_{x\to a}f(x)+(-1)\lim_{x\to a}g(x)
+        =\lim_{x\to a}f(x)-\lim_{x\to a}g(x)=L-M
+    \end{align*}
+\end{proof}
+\begin{proof}
+    Proof of the quotient law:
     First we prove that \[\lim_{x\to a}\frac{1}{g(x)}=\frac{1}{M}\]
     Let \(\epsilon>0\) be given,
     we want to find a number \(\delta>0\) such that
@@ -137,13 +172,16 @@ Then
     This shows that
     \[0<|x-a|<\delta_1\implies\frac{|M|}{2}<|g(x)|\iff\frac{1}{|g(x)|}
     <\frac{2}{|M|}\]
-    and so, for these values of \(x\),
+    and so,
+    for these values of \(x\),
     \[\frac{1}{|Mg(x)|}=\frac{1}{|M|\,|g(x)|}<\frac{1}{|M|}\cdot\frac{2}{|M|}
     =\frac{2}{M^2}\]
-    Also, there is a number \(\delta_2>0\) such that
+    Also,
+    there is a number \(\delta_2>0\) such that
     \[0<|x-a|<\delta_2\implies|g(x)-M|<\frac{M^2}{2}\epsilon\]
     Let \(\delta=\min\{\delta_1,\delta_2\}\).
-    If \(0<|x-a|<\delta\), then
+    If \(0<|x-a|<\delta\),
+    then
     \[\left|\frac{1}{g(x)}-\frac{1}{M}\right|=\frac{|M-g(x)|}{|Mg(x)|}
     =\frac{1}{|Mg(x)|}|g(x)-M|<\frac{2}{M^2}\frac{M^2}{2}\epsilon=\epsilon\]
     which is what we want to show.
@@ -153,29 +191,11 @@ Then
     =\lim_{x\to a}f(x)\lim_{x\to a}\frac{1}{g(x)}=L\cdot\frac{1}{M}
     =\frac{L}{M}\]
 \end{proof}
-\begin{proof}
-    Proof of limit law 8:
-    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that
-    \[0<|x-a|<\delta\implies|c-c|<\epsilon\]
-    We have \(|c-c|=0<\epsilon\) so the trivial inequality is always true for
-    any number \(\delta>0\).
-    It is proved that \(\displaystyle{\lim_{x\to a}c=c}\).
-\end{proof}
-\begin{proof}
-    Proof of limit law 9:
-    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that \[0<|x-a|<\delta\implies|x-a|<\epsilon\]
-    Let \(\delta=\epsilon\), we have
-    \[0<|x-a|<\delta=\epsilon\implies|x-a|<\epsilon\]
-    It is proved that \(\displaystyle{\lim_{x\to a}x=a}\).
-\end{proof}
-
-\subsubsection*{Evaluating Limits by Direct Substitution}
 We have the following \textbf{direct substitution property} to calculate
 limits.
-If \(f\) is a polynomial or rational function and \(a\) is in the domain of
-\(f\), then
+If \(f\) is a polynomial or a rational function and \(a\) is in the domain of
+\(f\),
+then
 \[\lim_{x\to a}f(x)=f(a)\]
 \begin{problem}
     Find \(\displaystyle{\lim_{x\to 1}\frac{x^2-1}{x-1}}\).
@@ -183,19 +203,19 @@ If \(f\) is a polynomial or rational function and \(a\) is in the domain of
 If \(f(x)=g(x)\) when \(x\neq a\),
 then \(\displaystyle{\lim_{x\to a}f(x)=\lim_{x\to a}g(x)}\),
 provided that this limit exists.
-
-\subsubsection*{Using One-Sided Limits}
-When computing one-sided limits, we use the fact that the limit laws also hold
-for one-sided limits.
+When computing one-sided limits,
+we use the fact that the limit laws also hold for one-sided limits.
 \begin{problem}
     Show that \(\displaystyle{\lim_{x\to 0}|x|=0}\).
 \end{problem}
 \begin{solution}
-    Since \(|x|=x\) for \(x>0\), we have
+    Since \(|x|=x\) for \(x>0\),
+    we have
     \[\lim_{x\to 0^+}|x|=\lim_{x\to 0^+}x=0\]
     For \(x<0\) we have \(|x|=-x\) so
     \[\lim_{x\to 0^-}|x|=\lim_{x\to 0^-}(-x)=0\]
-    Therefore, it is shown that \(\displaystyle{\lim_{x\to 0}|x|=0}\).
+    Therefore,
+    it is shown that \(\displaystyle{\lim_{x\to 0}|x|=0}\).
 \end{solution}
 
 \subsubsection*{The Squeeze Theorem}
@@ -209,21 +229,26 @@ for one-sided limits.
 \end{theorem}
 \begin{proof}
     We use the method of proof by contradiction.
-    Suppose  that \(L>M\), then we have
+    Suppose  that \(L>M\),
+    then we have
     \[\lim_{x\to a}\bigl[g(x)-f(x)\bigr]=M-L\]
-    Therefore, for any number \(\epsilon>0\),
+    Therefore,
+    for any number \(\epsilon>0\),
     there is a number \(\delta>0\) such that
     \[0<|x-a|<\delta\implies
     \left|\bigl[g(x)-f(x)\bigr]-(M-L)\right|<\epsilon\]
     Note that \(L-M>0\) by the hypothesis.
-    Let \(\epsilon=L-M\), there is a number \(\delta>0\) such that
+    Let \(\epsilon=L-M\),
+    there is a number \(\delta>0\) such that
     \[0<|x-a|<\delta\implies\left|\bigl[g(x)-f(x)\bigr]-(M-L)\right|<L-M\]
-    Since \(b\leq|b|\) for any number \(b\), we have
-    \[0<|x-a|<\delta\implies g(x)-f(x)-(M-L)<L-M\]
+    Since \(a\leq|a|\) for any number \(a\),
+    we have
+    \[0<|x-a|<\delta\implies \bigl[g(x)-f(x)\bigr]-(M-L)<L-M\]
     which simplifies to
     \[0<|x-a|<\delta\implies g(x)<f(x)\]
-    but this is a contradiction since \(f(x)\leq g(x)\).
-    Then the inequality \(L>M\) must be false therefore \(L\leq M\).
+    But this contradicts \(f(x)\leq g(x)\).
+    Thus the inequality \(L>M\) must be false.
+    Therefore \(L\leq M\).
 \end{proof}
 \begin{theorem}[Squeeze Theorem]
     If \(f(x)\leq g(x)\leq h(x)\) for all \(x\) in an open interval that
@@ -243,30 +268,40 @@ for one-sided limits.
     \[0<|x-a|<\delta_2\implies|h(x)-L|<\epsilon\implies L-\epsilon<h(x)
     <L+\epsilon\]
     Let \(\delta=\min\{\delta_1,\delta_2\}\).
-    If \(0<|x-a|<\delta\), then \(0<|x-a|<\delta-1\) and \(0<|x-a|<\delta_2\).
-    Then
-    \begin{align*}
-        L-\epsilon<f(x) &\leq g(x)\leq h(x)<L+\epsilon \\
-        L-\epsilon &< g(x)<L+\epsilon
-    \end{align*}
-    and so \(|g(x)-L<\epsilon|\).
+    If \(0<|x-a|<\delta\),
+    then \(0<|x-a|<\delta_1\) and \(0<|x-a|<\delta_2\),
+    so
+    \[L-\epsilon<f(x)\leq g(x)\leq h(x)<L+\epsilon\]
+    In particular,
+    \[L-\epsilon<g(x)<L+\epsilon\]
+    and so \(|g(x)-L|<\epsilon\).
     Therefore \(\displaystyle{\lim_{x\to a}g(x)=L}\).
 \end{proof}
+\begin{problem}
+    Show that
+    \(\displaystyle{\lim_{x\to 0}x^2\sin\frac{1}{x}=0}\).
+\end{problem}
 
-If \(0<\theta<\pi/2\), then
-\begin{align*}
-    \sin\theta<\theta &\implies \frac{\sin\theta}{\theta}<1
-    & \theta<\tan\theta=\frac{\sin\theta}{\cos\theta}\implies\cos\theta
-    <\frac{\sin\theta}{\theta}
-\end{align*}
-so we have the following inequality
-\[\cos\theta<\frac{\sin\theta}{\theta}<1\]
-Since \((\sin\theta)/\theta\) is an even function, its left and right limits
-must be equal.
-Therefore, we have the following limit by the squeeze theorem.
+If \(0<\theta<\pi/2\),
+then \[\sin\theta<\theta\implies\frac{\sin\theta}{\theta}<1\]
+and \(\theta\leq\tan\theta\).
+Therefore we have
+\[\theta<\tan\theta=\frac{\sin\theta}{\cos\theta}
+\implies\cos\theta<\frac{\sin\theta}{\theta}<1\]
+We know that \(\displaystyle{\lim_{\theta\to 0}1=1}\) and
+\(\displaystyle{\lim_{\theta\to 0}\cos\theta=1}\),
+so by the squeeze theorem,
+we have
+\[\lim_{\theta\to 0^+}\frac{\sin\theta}{\theta}=1\]
+But the function \((\sin\theta)/\theta\) is an even function,
+so its left and right limits must be equal.
+Hence we have
 \[\lim_{\theta\to 0}\frac{\sin\theta}{\theta}=1\]
 \begin{problem}
-    Evaluate \[\lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}\]
+    Find \(\displaystyle{\lim_{x\to 0}\frac{\sin 7x}{4x}}\)
+\end{problem}
+\begin{problem}
+    Evaluate \(\displaystyle{\lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}}\).
 \end{problem}
 \begin{solution}
     We have

@@ -1,48 +1,50 @@
 \subsection{The Precise Definition of a Limit}
 
-\subsubsection*{The Precise Definition of a Limit}
+\subsubsection*{Precise Definition of a Limit}
 Let \(f\) be a function defined on some open interval that contains the number
 \(a\), except possibly at \(a\) itself.
 \begin{definition}
-    The limit of \(f(x)\) as \(x\) approaches \(a\) is \(L\), and we write
+    We say that limit of \(f(x)\) as \(x\) approaches \(a\) is \(L\),
+    and we write
     \[\lim_{x\to a}f(x)=L\]
-    if for every number \(\epsilon>0\) there is a number \(\delta>0\) such that
+    if for every number \(\epsilon>0\) there is a corresponding number
+    \(\delta>0\) such that
     \[0<|x-a|<\delta\implies|f(x)-L|<\epsilon\]
 \end{definition}
 \begin{problem}
     Prove that \(\displaystyle{\lim_{x\to 3}(4x-5)=7}\).
 \end{problem}
 \begin{solution}
-    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that
+    Let \(\epsilon>0\) be a given positive number.
+    We want to find a number \(\delta\) such that
     \[0<|x-3|<\delta \implies|(4x-5)-7|<\epsilon\]
-    We simplify to get \(|(4x-5)-7|=|4x-12|=4|x-3|\) so we have
-    \[4|x-3|<\epsilon\iff|x-3|<\frac{\epsilon}{4}\]
+    But \(|(4x-5)-7|=|4x-12|=4|x-3|\).
+    Note that \(4|x-3|<\epsilon\iff|x-3|<\epsilon/4\).
     Let \(\delta=\epsilon/4\), we have
     \[0<|x-3|<\frac{\epsilon}{4}\implies4|x-3|<\epsilon\implies
     |(4x-5)-7|<\epsilon\]
-    Therefore, by the definition of a limit, it is proved that
-    \(\displaystyle{\lim_{x\to 3}(4x-5)=7}\).
+    Therefore, by the definition of a limit,
+    \[\lim_{x\to 3}(4x-5)=7\]
 \end{solution}
 \begin{problem}
     Prove that \(\displaystyle{\lim_{x\to 3}x^2=9}\).
 \end{problem}
 \begin{solution}
-    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that
+    Let \(\epsilon\) be a given positive number.
+    We want to find a number \(\delta\) such that
     \[0<|x-3|<\delta\implies|x^2-9|<\epsilon\]
     We simplify to get \[|x^2-9|=|x+3|\,|x-3|<\epsilon\]
     Let \(C\) be a positive constant such that
     \[|x+3|\,|x-3|<C\,|x-3|<\epsilon \iff |x-3|<\frac{\epsilon}{C}\]
-    Since we are interested only in values of \(x\) that are close to 3, it is
-    reasonable to assume that \(|x-3|<1\) then \(|x+3|<7\) so \(C=7\).
+    Since we are interested only in values of \(x\) that are close to 3,
+    it is reasonable to assume that \(|x-3|<1\).
+    Then we have \(|x+3|<7\), and so \(C=7\).
     Let \(\delta=\min\{1,\epsilon/7\}\).
-    If \(0<|x-3|<\delta\), then
+    If \(0<|x-3|<\delta\),
+    then
     \[|x^2-9|=|x+3|\,|x-3|<7\cdot\frac{\epsilon}{7}=\epsilon\]
-    It is proved that \(\displaystyle{\lim_{x\to 3}x^2=9}\).
+    This shows that \(\displaystyle{\lim_{x\to 3}x^2=9}\).
 \end{solution}
-
-\subsubsection*{One-Sided Limits}
 \begin{definition}
     \[\lim_{x\to a^-}f(x)=L\]
     if for every number \(\epsilon>0\) there is a number \(\delta>0\) such
@@ -59,42 +61,13 @@ Let \(f\) be a function defined on some open interval that contains the number
     Prove that \(\displaystyle{\lim_{x\to 0^+}\sqrt{x}=0}\).
 \end{problem}
 \begin{solution}
-    Let \(\epsilon>0\) be given, we want to find a number \(\delta>0\) such
-    that
+    Let \(\epsilon\) be a given positive number
+    We want to find a number \(\delta\) such that
     \[0<x<\delta\implies|\sqrt{x}-0|<\epsilon\]
-    We simplify to get \(\sqrt{x}<\epsilon\iff x<\epsilon^2\).
+    But \(\sqrt{x}<\epsilon\iff x<\epsilon^2\).
     Let \(\delta=\epsilon^2\).
     If \(0<x<\delta\), then
     \(\sqrt{x}<\sqrt{\delta}=\sqrt{\epsilon^2}=\epsilon\)
     so \(|\sqrt{x}-0|<\epsilon\).
-    It is proved that \(\displaystyle{\lim_{x\to 0^+}\sqrt{x}=0}\).
+    This shows that \(\displaystyle{\lim_{x\to 0^+}\sqrt{x}=0}\).
 \end{solution}
-
-\subsubsection*{Infinite Limits}
-\begin{definition}
-    \[\lim_{x\to a}f(x)=\infty\]
-    means that for every positive number \(M\) there is a positive number
-    \(\delta\) such that
-    \[0<|x-a|<\delta\implies f(x)>M\]
-\end{definition}
-\begin{problem}
-    Prove that \(\displaystyle{\lim_{x\to 0}\frac{1}{x^2}=\infty}\).
-\end{problem}
-\begin{solution}
-    Let \(M\) be a given positive number
-    We want to find a number \(\delta\) such that
-    \[0<|x|<\delta\implies\frac{1}{x^2}>M\]
-    We have
-    \[\frac{1}{x^2}>M\iff x^2<\frac{1}{M}\iff\sqrt{x^2}<\sqrt{\frac{1}{M}}
-    \iff|x|<\frac{1}{\sqrt{M}}\]
-    Let \(\delta=1/\sqrt{M}\), then
-    \[0<|x|<\delta=\frac{1}{\sqrt{M}}\implies\frac{1}{x^2}>M\]
-    This shows that
-    \(\displaystyle{\lim_{x\to 0}\frac{1}{x^2}=\infty}\).
-\end{solution}
-\begin{definition}
-    \[\lim_{x\to a}f(x)=-\infty\]
-    if for every negative number \(N\) there is a positive number \(\delta\)
-    such that
-    \[0<|x-a|<\delta\implies f(x)<N\]
-\end{definition}

@@ -1,6 +1,5 @@
 \subsection{Continuity}
 
-\subsubsection*{Continuity of a Function}
 \begin{definition}
     A function \(f\) is \textbf{continuous at a number} \(a\) if
     \[\lim_{x\to a}f(x)=f(a)\]
@@ -20,10 +19,9 @@ continuous at \(a\).
     A function \(f\) is \textbf{continuous on an interval} if it is continuous
     at every number in the interval.
 \end{definition}
-
-\subsubsection*{Properties of Continuous Functions}
 \begin{theorem}
-    If \(f\) and \(g\) are continuous at \(a\) and \(c\) is a constant, then
+    If \(f\) and \(g\) are continuous at \(a\) and \(c\) is a constant,
+    then
     the following functions are also continuous at \(a\):
     \begin{enumerate}
         \item \(f+g\)
@@ -34,8 +32,9 @@ continuous at \(a\).
     \end{enumerate}
 \end{theorem}
 \begin{proof}
-    Each of the five parts follows from the corresponding limit law.
-    We give the proof for part 1.
+    Each of the five parts of this theorem follows from the corresponding
+    limit law.
+    We give the proof of part 1.
     Since \(f\) and \(g\) are continuous at \(a\),
     we have
     \begin{align*}
@@ -47,25 +46,21 @@ continuous at \(a\).
     This shows that \(f+g\) is continuous at \(a\).
 \end{proof}
 \begin{theorem}
-    Let \(P(x)\) be any polynomial, then \(P(x)\) is continuous on
-    \(\R=(-\infty,\infty)\).
+    Any polynomial is continuous on \(\R=(-\infty,\infty)\).
+    Any rational function is continuous on its domain.
 \end{theorem}
 \begin{proof}
-    A polynomial \(P(x)\) is a function of the form
-    \[a_nx^n+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_1x+a_0\]
+    A polynomial is a function of the form
+    \[P(x)=a_nx^n+a_{n-1}x^{n-1}+\dotsb +a_{2}x^{2}+a_1x+a_0\]
     where the coefficients \(a_0,a_1,\dots,a_n\) are constants.
     \(P(x)\) is the sum of power functions with a constant multiple and
     therefore it is continuous.
-\end{proof}
-\begin{theorem}
-    Let \(f\) be any rational function,
-    then \(f\) is continuous on its domain.
-\end{theorem}
-\begin{proof}
-    A rational function \(f\) is a function of the form
-    \[f(x)=\frac{P(x)}{Q(x)}\] where \(P\) and \(Q\) are polynomials.
-    We know that polynomials are continuous so a rational function is
-    continuous on its domain.
+    A rational function is a function of the form
+    \[f(x)=\frac{P(x)}{Q(x)}\]
+    where \(P\) and \(Q\) are polynomials.
+    The domain of \(f\) is \(D=\{x\in\R\mid Q(x)\neq 0\}\).
+    We know that polynomials are continuous on \(\R\) so the rational function
+    \(f\) is continuous at every number in \(D\).
 \end{proof}
 \begin{theorem}
     The following types of functions are continuous at every number in their
@@ -82,7 +77,8 @@ continuous at \(a\).
 \end{theorem}
 \begin{theorem}
     If \(f\) is continuous at \(b\) and
-    \(\displaystyle{\lim_{x\to a}g(x)=b}\), then
+    \(\displaystyle{\lim_{x\to a}g(x)=b}\),
+    then
     \[\lim_{x\to a}f(g(x))=f(b)\]
 \end{theorem}
 \begin{proof}
@@ -117,8 +113,6 @@ continuous at \(a\).
     which is precisely the statement that the function \(f(g(x))\) is
     continuous at \(a\).
 \end{proof}
-
-\subsubsection*{The Intermediate Value Theorem}
 \begin{theorem}[Intermediate Value Theorem]
     Suppose that \(f\) is continuous on the closed interval \([a,b]\) and let
     \(N\) be any number between \(f(a)\) and \(f(b)\),
@@ -129,5 +123,5 @@ continuous at \(a\).
 The intermediate value theorem states that a continuous function takes on
 every intermediate value between the function values \(f(a)\) and \(f(b)\).
 If a continuous function \(f(x)\) has values of opposite sign in an interval
-\((a,b)\), then there exists a root of \(f(x)\) in \((a,b)\) by the
-intermediate value theorem.
+\((a,b)\),
+then by the intermediate value theorem there exists a root of \(f(x)\) in \((a,b)\).

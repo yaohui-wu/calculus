@@ -1,0 +1,167 @@
+\subsection{Limits Involving Infinity}
+
+\subsubsection*{Infinite Limits}
+\begin{definition}
+    The notation
+    \[\lim_{x\to a}f(x)=\infty\]
+    means that the values of \(f(x)\) can be made arbitrarily large by taking
+    \(x\) sufficiently close to \(a\) but \(x\neq a\).
+\end{definition}
+Another notation for the limit is \(f(x)\to\infty\) as \(x\to a\).
+We say that the limit of \(f(x)\),
+as \(x\) approaches \(a\),
+is infinity.
+\begin{definition}
+    \[\lim_{x\to a}f(x)=-\infty\]
+    means that the values of \(f(x)\) can be made arbitrarily large negative
+    by taking \(x\) sufficiently close to \(a\) but \(x\neq a\).
+\end{definition}
+We say that the limit of \(f(x)\),
+as \(x\) approaches \(a\),
+is negative infinity.
+Similar definitions can be given for the one-sided infinite limits
+\begin{align*}
+    \lim_{x\to a^-}f(x) &= \infty & \lim_{x\to a^+}f(x) &= \infty \\
+    \lim_{x\to a^-}f(x) &= -\infty & \lim_{x\to a^+}f(x) &= -\infty
+\end{align*}
+\begin{definition}
+    The vertical line \(x=a\) is called a \textbf{vertical asymptote} of the
+    curve \(y=f(x)\) if at least one of the following statements is true:
+    \begin{align*}
+        \lim_{x\to a}f(x) &= \infty & \lim_{x\to a^-}f(x) &= \infty
+        & \lim_{x\to a^+}f(x) &= \infty \\
+        \lim_{x\to a}f(x) &= -\infty & \lim_{x\to a^-}f(x) &= -\infty
+        & \lim_{x\to a^+}f(x) &= -\infty
+    \end{align*}
+\end{definition}
+
+\subsubsection*{Limits at Infinity}
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((a,\infty)\).
+    Then
+    \[\lim_{x\to\infty}f(x)=L\]
+    means that the values of \(f(x)\) can be made arbitrarily close to \(L\)
+    by requiring \(x\) to be sufficiently large.
+\end{definition}
+Another notation is \(f(x)\to L\) as \(x\to\infty\).
+We say that the limit of \(f(x)\),
+as \(x\) approaches infinity,
+is \(L\).
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((-\infty,a)\).
+    Then
+    \[\lim_{x\to-\infty}f(x)=L\]
+    means that the values of \(f(x)\) can be made arbitrarily close to \(L\) by requiring
+    \(x\) to be sufficiently large negative.
+\end{definition}
+We say that the limit of \(f(x)\),
+as \(x\) approaches negative infinity,
+is \(L\).
+\begin{definition}
+    The line \(y=L\) is called a \textbf{horizontal asymptote} of the curve
+    \(y=f(x)\) if either
+    \[\lim_{x\to\infty}f(x)=L\]
+    or
+    \[\lim_{x\to-\infty}f(x)=L\]
+\end{definition}
+If \(n\) is a positive integer,
+then
+\begin{align*}
+    \lim_{x\to\infty}\frac{1}{x^n} &= 0 & \lim_{x\to-\infty}\frac{1}{x^n} &= 0
+\end{align*}
+\begin{problem}
+    Evaluate \(\displaystyle{\lim_{x\to\infty}\sin x}\).
+\end{problem}
+\begin{solution}
+    As \(x\) increases,
+    the values of \(sin x\) oscillate between 1 and \(-1\) infinitely often.
+    Thus \(\displaystyle{\lim_{x\to\infty}\sin x}\) does not exist.
+\end{solution}
+
+\subsubsection*{Infinite Limits at Infinity}
+The notation
+\[\lim_{x\to\infty}f(x)=\infty\]
+is used to indicate that the values of \(f(x)\) become large as \(x\) becomes
+large.
+Similar meanings are attached to the following symbols:
+\begin{align*}
+    \lim_{x\to\infty}f(x) &= \infty & \lim_{x\to\infty}f(x) &= -\infty
+    & \lim_{x\to-\infty}f(x) &= -\infty
+\end{align*}
+
+\subsubsection*{Precise Definitions}
+Let \(f\) be a function defined on some open interval that contains the number
+\(a\),
+except possibly at \(a\) itself.
+\begin{definition}
+    \[\lim_{x\to a}f(x)=\infty\]
+    means that for every positive number \(M\) there is a positive number
+    \(\delta\) such that
+    \[0<|x-a|<\delta\implies f(x)>M\]
+\end{definition}
+\begin{problem}
+    Prove that \(\displaystyle{\lim_{x\to 0}\frac{1}{x^2}=\infty}\).
+\end{problem}
+\begin{solution}
+    Let \(M\) be a given positive number
+    We want to find a number \(\delta\) such that
+    \[0<|x|<\delta\implies\frac{1}{x^2}>M\]
+    But
+    \[\frac{1}{x^2}>M\iff x^2<\frac{1}{M}\iff\sqrt{x^2}<\sqrt{\frac{1}{M}}
+    \iff|x|<\frac{1}{\sqrt{M}}\]
+    Let \(\delta=1/\sqrt{M}\),
+    then
+    \[0<|x|<\delta=\frac{1}{\sqrt{M}}\implies\frac{1}{x^2}>M\]
+    This shows that
+    \(\displaystyle{\lim_{x\to 0}\frac{1}{x^2}=\infty}\).
+\end{solution}
+\begin{definition}
+    \[\lim_{x\to a}f(x)=-\infty\]
+    if for every negative number \(N\) there is a positive number \(\delta\)
+    such that
+    \[0<|x-a|<\delta\implies f(x)<N\]
+\end{definition}
+
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((a,\infty)\).
+    Then
+    \[\lim_{x\to\infty}f(x)=L\]
+    means that for every \(\epsilon>0\) there is a corresponding number \(N\)
+    such that
+    \[x>N\implies|f(x)-L|<\epsilon\]
+\end{definition}
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((-\infty,a)\).
+    Then
+    \[\lim_{x\to-\infty}f(x)=L\]
+    means that for every \(\epsilon>0\) there is a corresponding number \(N\)
+    such that
+    \[x<N\implies|f(x)-L|<\epsilon\]
+\end{definition}
+\begin{problem}
+    Prove that \(\displaystyle{\lim_{x\to \infty}\frac{1}{x}=0}\).
+\end{problem}
+\begin{solution}
+    Given \(\epsilon>0\),
+    we want to find an \(N\) such that
+    \[x>N\implies\left|\frac{1}{x}-0\right|<\epsilon\]
+    Since \(x\to \infty\),
+    we can that \(x>0\) in computing the limit.
+    Then \(1/x<\epsilon\iff x>1/\epsilon\).
+    Let \(N=1/\epsilon\),
+    so
+    \[x>N=\frac{1}{\epsilon}\implies\left|\frac{1}{x}-0\right|=\frac{1}{x}
+    <\epsilon\]
+    Therefore,
+    by definition,
+    \[\lim_{x\to \infty}\frac{1}{x}=0\]
+\end{solution}
+\begin{definition}
+    Let \(f\) be a function defined on some interval \((a,\infty)\).
+    Then
+    \[\lim_{x\to\infty}f(x)=\infty\]
+    means that for every positive number \(M\) there is a corresponding
+    positive number \(N\) such that
+    \[x>N\implies f(x)>M\]
+\end{definition}
+Similar definitions apply when the symbol \(\infty\) is replaced by \(-\infty\).
