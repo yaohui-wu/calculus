@@ -56,7 +56,6 @@ Then
     we want to find a number \(\delta>0\) such that
     \[0<|x-a|<\delta\implies|f(x)+g(x)-(L+M)|<\epsilon\]
     By the triangle inequality,
-    we have
     \[|f(x)+g(x)-(L+M)|=|f(x)-L+g(x)-M|\leq|f(x)-L|+|g(x)-M|\]
     We make \(|f(x)-L|+|g(x)-M|\) less than \(\epsilon\) by making each of the
     terms \(|f(x)-L|\) and \(|g(x)-M|\) less than \(\epsilon/2\).
@@ -200,6 +199,11 @@ then
 \begin{problem}
     Find \(\displaystyle{\lim_{x\to 1}\frac{x^2-1}{x-1}}\).
 \end{problem}
+\begin{solution}
+    \[\lim_{x\to 1}\frac{x^2-1}{x-1}
+    =\lim_{x\to 1}\frac{(x+1)(x-1)}{x-1}
+    =\lim_{x\to 1}(x+1)=1+1=2\]
+\end{solution}
 If \(f(x)=g(x)\) when \(x\neq a\),
 then \(\displaystyle{\lim_{x\to a}f(x)=\lim_{x\to a}g(x)}\),
 provided that this limit exists.
@@ -281,6 +285,18 @@ we use the fact that the limit laws also hold for one-sided limits.
     Show that
     \(\displaystyle{\lim_{x\to 0}x^2\sin\frac{1}{x}=0}\).
 \end{problem}
+\begin{solution}
+    Since
+    \[-1\leq\sin\frac{1}{x}\leq 1\]
+    then
+    \[-x^2\leq x^2\sin\frac{1}{x}\leq x^2\]
+    We know that
+    \begin{align*}
+        \lim_{x\to 0}(-x^2) &= 0 & \lim_{x\to 0}x^2 &= 0
+    \end{align*}
+    By the squeeze theorem,
+    \[\lim_{x\to 0}x^2\sin\frac{1}{x}=0\]
+\end{solution}
 
 If \(0<\theta<\pi/2\),
 then \[\sin\theta<\theta\implies\frac{\sin\theta}{\theta}<1\]
@@ -298,8 +314,13 @@ so its left and right limits must be equal.
 Hence we have
 \[\lim_{\theta\to 0}\frac{\sin\theta}{\theta}=1\]
 \begin{problem}
-    Find \(\displaystyle{\lim_{x\to 0}\frac{\sin 7x}{4x}}\)
+    Find \(\displaystyle{\lim_{x\to 0}\frac{\sin 7x}{4x}}\).
 \end{problem}
+\begin{solution}
+    \[\lim_{x\to 0}\frac{\sin 7x}{4x}
+    =\lim_{x\to 0}\frac{7x\cdot\sin 7x}{4x\cdot7x}
+    =\frac{7}{4}\lim_{x\to 0}\frac{\sin 7x}{7x}=\frac{7}{4}\]
+\end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}}\).
 \end{problem}
@@ -313,10 +334,14 @@ Hence we have
     We take the limit then
     \begin{align*}
         \lim_{\theta\to 0}\frac{\cos\theta-1}{\theta}
-        &= \lim_{\theta\to 0}\left[\frac{\sin\theta}{\theta}
-        \left(\frac{-\sin\theta}{\cos\theta+1}\right)\right]
-        =\left(\lim_{\theta\to 0}\frac{\sin\theta}{\theta}\right)
-        \left(\lim_{\theta\to 0}\frac{-\sin\theta}{\cos\theta+1}\right) \\
-        &= 1\left(\frac{(-1)(0)}{1+1}\right)=0 
+        &= \lim_{\theta\to 0}\left(\frac{\cos\theta-1}{\theta}
+        \cdot\frac{\cos\theta+1}{\cos\theta+1}\right)
+        = \lim_{\theta\to 0}\frac{\cos^2\theta-1}{\theta(\cos\theta+1)}
+        = \lim_{\theta\to 0}\frac{-\sin^2\theta}{\theta(\cos\theta+1)} \\
+        &= -\lim_{\theta\to 0}\left(\frac{\sin\theta}{\theta}
+        \cdot\frac{\sin\theta}{\cos\theta+1}\right)
+        =-\lim_{\theta\to 0}\frac{\sin\theta}{\theta}
+        \cdot\lim_{\theta\to 0}\frac{\sin\theta}{\cos\theta+1}
+        = -1\cdot\frac{0}{1+1}=0
     \end{align*}
 \end{solution}
