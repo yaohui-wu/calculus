@@ -1,0 +1,104 @@
+\subsection{The Product and Quotient Rules}
+
+\subsubsection*{The Product Rule}
+The Product Rule: If \(f\) and \(g\) are both differentiable, then
+\[\frac{d}{dx}\bigl[f(x)g(x)\bigr]
+=\left[\frac{d}{dx}\big[f(x)\big]\right]g(x)+f(x)\frac{d}{dx}\big[g(x)\big]\]
+\begin{proof}
+    Let \(F(x)=f(x)g(x)\).
+    Then
+    \begin{align*}
+        F'(x) 
+        &= \lim_{h\to 0}\frac{F(x+h)-F(x)}{h}
+        =\lim_{h\to 0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)g(x+h)-f(x)g(x)+f(x+h)g(x)-f(x+h)g(x)}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)g(x)-f(x)g(x)+f(x+h)g(x+h)-f(x+h)g(x)}{h} \\
+        &= \lim_{h\to 0}
+        \left[\frac{f(x+h)-f(x)}{h}g(x)+f(x+h)\frac{g(x+h)-g(x)}{h}\right] \\
+        &= \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\cdot\lim_{h\to 0}g(x)
+        +\lim_{h\to 0}f(x+h)\lim_{h\to 0}\frac{g(x+h)-g(x)}{h} \\
+        &= f'(x)g(x)+f(x)g'(x)
+    \end{align*}
+\end{proof}
+
+\subsubsection*{The Quotient Rule}
+The Quotient Rule: If \(f\) and \(g\) are both differentiable, then
+\[\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]
+=\frac{\left[\dfrac{d}{dx}\big[f(x)\big]\right]g(x)
+-f(x)\dfrac{d}{dx}\big[g(x)\big]}{\big[g(x)\big]^2}\]
+\begin{proof}
+    Let \(F(x)=\dfrac{f(x)}{g(x)}\).
+    Then
+    \allowdisplaybreaks
+    \begin{align*}
+        F'(x) 
+        &= \lim_{h\to 0}\frac{F(x+h)-F(x)}{h}
+        =\lim_{h\to 0}\frac{\dfrac{f(x+h)}{g(x+h)}-\dfrac{f(x)}{g(x)}}{h}
+        =\lim_{h\to 0}\frac{f(x+h)g(x)-f(x)g(x+h)}{hg(x+h)g(x)} \\
+        &= \lim_{h\to 0}
+        \frac{f(x+h)g(x)-f(x)g(x+h)+f(x)g(x)-f(x)g(x)}{hg(x+h)g(x)} \\
+        &= \lim_{h\to 0}
+        \frac{f(x+h)g(x)-f(x)g(x)-f(x)g(x+h)+f(x)g(x)}{hg(x+h)g(x)} \\
+        &= \lim_{h\to 0}
+        \frac{f(x+h)g(x)-f(x)g(x)
+        -\big[f(x)g(x+h)-f(x)g(x)\big]}{hg(x+h)g(x)} \\
+        &= \lim_{h\to 0}
+        \frac{\dfrac{f(x+h)-f(x)}{h}g(x)
+        -f(x)\dfrac{g(x+h)-g(x)}{h}}{g(x+h)g(x)} \\
+        &= {\frac{\displaystyle{\lim_{h\to 0}}
+        \dfrac{f(x+h)-f(x)}{h}\cdot\displaystyle{\lim_{h\to 0}}g(x)
+        -\displaystyle{\lim_{h\to 0}}f(x)\cdot\displaystyle{\lim_{h\to 0}}
+        \dfrac{g(x+h)-g(x)}{h}}{\displaystyle{\lim_{h\to 0}}g(x+h)
+        \cdot\displaystyle{\lim_{h\to 0}}g(x)}} \\
+        &= \frac{f'(x)g(x)-f(x)g'(x)}{\big[g(x)^2\big]}
+    \end{align*}
+\end{proof}
+
+\subsubsection*{Trigonometric Functions}
+\[\frac{d}{dx}(\tan x)=\sec^2 x\]
+\begin{proof}
+    \begin{align*}
+        \frac{d}{dx}(\tan x)
+        &= \frac{d}{dx}\left(\frac{\sin x}{\cos x}\right)
+        =\frac{\left[\dfrac{d}{dx}(\sin x)\right]\cos x
+        -\sin x\dfrac{d}{dx}(\cos x)}{\cos^2 x} \\
+        &= \frac{\cos x\cdot\cos x-\sin x(-\sin x)}{\cos^2 x}
+        =\frac{\cos^2 x+\sin^2 x}{\cos^2 x}=\frac{1}{\cos^2 x}=\sec^2 x
+    \end{align*}
+\end{proof}
+\[\frac{d}{dx}(\csc x)=-\csc x\cot x\]
+\begin{proof}
+    \begin{align*}
+        \frac{d}{dx}(\csc x)
+        &= \frac{d}{dx}\left(\frac{1}{\sin x}\right)
+        =\frac{\left[\dfrac{d}{dx}(1)\right]\sin x
+        -1\cdot\dfrac{d}{dx}(\sin x)}{\sin^2 x}
+        =\frac{0\cdot\sin x-1\cdot\cos x}{\sin^2 x} \\
+        &= \frac{-\cos x}{\sin^2 x}
+        =-\frac{1}{\sin x}\cdot\frac{\cos x}{\sin x}=-\csc x\cot x
+    \end{align*}
+\end{proof}
+\[\frac{d}{dx}(\sec x)=\sec x\tan x\]
+\begin{proof}
+    \begin{align*}
+        \frac{d}{dx}(\sec x)
+        &= \frac{d}{dx}\left(\frac{1}{\cos x}\right)
+        =\frac{\left[\dfrac{d}{dx}(1)\right]\cos x
+        -1\cdot\dfrac{d}{dx}(\cos x)}{\cos^2 x}
+        =\frac{0\cdot\cos x-1\cdot(-\sin x)}{\cos^2 x} \\
+        &= \frac{\sin x}{\cos^2 x}=\frac{1}{\cos x}\cdot\frac{\sin x}{\cos x}
+        =\sec x\tan x
+    \end{align*}
+\end{proof}
+\[\frac{d}{dx}(\cot x)=-\csc^2 x\]
+\begin{proof}
+    \begin{align*}
+        \frac{d}{dx}(\cot x)
+        &= \frac{d}{dx}\left(\frac{\cos x}{\sin x}\right)
+        =\frac{\left[\dfrac{d}{dx}(\cos x)\right]\sin x
+        -\cos x\dfrac{d}{dx}(\sin x)}{\sin^2 x} \\
+        &= \frac{(-\sin x)\cdot\sin x-\cos x\cdot\cos x}{\sin^2 x}
+        =\frac{-\sin^2 x-\cos^2 x}{\sin^2x} \\
+        &= \frac{-(\sin^2 x+\cos^2 x)}{\sin^2 x}=-\frac{1}{\sin^2 x}=-\csc^2 x
+    \end{align*}
+\end{proof}
