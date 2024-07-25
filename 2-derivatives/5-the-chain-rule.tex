@@ -1,1 +1,83 @@
 \subsection{The Chain Rule}
+
+The Chain Rule: If \(f\) and \(g\) are both differentiable and \(F=f\circ g\)
+is the composite function defined by \(F(x)=f(g(x))\), then \(F\) is
+differentiable and \(F'\) is given by the product
+\[F'(x)=f'(g(x))\cdot g'(x)\]
+In Leibniz notation, if \(y=f(u)\) and \(u=g(x)\) are both differentiable
+functions, then
+\[\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}\]
+Comments on the proof of the Chain Rule: Let \(\Delta u\) be the change in
+\(u\) corresponding to a change of \(\Delta x\) in \(x\), that is,
+\[\Delta u=g(x+\Delta x)-g(x)\]
+Then the corresponding change in \(y\) is
+\[\Delta y=f(u+\Delta u)-f(u)\]
+It is tempting to write
+\begin{align*}
+    \frac{dy}{dx} &= \lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}
+    =\lim_{\Delta x\to 0}
+    \frac{\Delta y}{\Delta u}\cdot\frac{\Delta u}{\Delta x}
+    =\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta u}
+    \cdot\lim_{\Delta x\to 0}\frac{\Delta u}{\Delta x} \\
+    &= \lim_{\Delta u\to 0}\frac{\Delta y}{\Delta u}
+    \cdot\lim_{\Delta x\to 0}\frac{\Delta u}{\Delta x}
+    =\frac{dy}{du}\cdot\frac{du}{dx}
+\end{align*}
+Note that \(\Delta u\to 0\) as \(\Delta x\to 0\) since \(g\) is continuous.
+The only flaw in this reasoning is that it might happen that \(\Delta u=0\)
+(even when \(\Delta x\neq 0\)) and, of course, we cannot divide by 0.
+Nonetheless, this reasoning does at least suggest that the Chain Rule is true.
+Note that \(dy/dx\) is the derivative of \(y\) with respect to \(x\), whereas
+\(dy/du\) is the derivative of \(y\) with respect to \(u\).
+The Power Rule combined with the Chain Rule: If \(n\) is any real number and
+\(u=g(x)\) is differentiable, then
+\[\frac{d}{dx}(u^n)=nu^{n-1}\frac{du}{dx}\]
+Alternatively,
+\[\frac{d}{dx}\big[g(x)\big]^n=n\big[g(x)\big]^{n-1}\cdot g'(x)\]
+Suppose that \(y=f(u),u=g(x)\), and \(x=h(t)\) where \(f,g,h\) are
+differentiable functions.
+Then, to compute the derivative of \(y\) with respect to \(t\), we use the
+Chain Rule twice:
+\[\frac{dy}{dt}=\frac{dy}{dx}\cdot\frac{dx}{dt}
+=\frac{dy}{du}\cdot\frac{du}{dx}\cdot\frac{dx}{dt}\]
+
+\subsubsection*{Proof of the Chain Rule}
+If we denote \(\epsilon\) the difference between the difference quotient and
+the derivative, we obtain
+\[\lim_{\Delta x\to 0}\epsilon
+=\lim_{\Delta x\to 0}\left(\frac{\Delta y}{\Delta x}-f'(a)\right)
+=f'(a)-f'(a)=0\]
+But
+\[\epsilon=\frac{\Delta y}{\Delta x}-f'(a)
+\implies \Delta y=f'(a)\Delta x+\epsilon\Delta x\]
+If we define \(\epsilon\) to be 0 when \(\Delta x=0\), then \(\epsilon\)
+becomes a continuous function of \(\Delta x\).
+Thus, for a differentiable function \(f\), we can write
+\[\Delta y=f'(a)\Delta x+\epsilon\Delta x\]
+where \(\epsilon\to 0\) as \(\Delta x\to 0\) and \(\epsilon\) is a continuous
+function of \(\Delta x\).
+The proof of the Chain Rule:
+\begin{proof}
+    Suppose \(u=g(x)\) is differentiable at \(a\) and \(y=f(u)\) is
+    differentiable at \(b=g(a)\).
+    If \(\Delta x\) is an increment in \(x\) and \(\Delta u\) and \(\Delta y\)
+    are the corresponding increments in \(u\) and \(y\), then we can write
+    \[\Delta u=g'(a)\Delta x+\epsilon_1\Delta x
+    =\big[g'(a)+\epsilon_1\big]\Delta x\]
+    where \(\epsilon_1\to 0\) as \(\Delta x\to 0\).
+    Similarly,
+    \[\Delta y=f'(b)+\epsilon_2\Delta u=\big[f'(b)+\epsilon_2\big]\Delta x\]
+    where \(\epsilon_2\to 0\) as \(\Delta u\to 0\)
+    If we now substitute the expression for \(\Delta u\), we get
+    \[\Delta y=\big[f'(b)+\epsilon_2\big]\big[g'(a)+\epsilon_1\big]\Delta x\]
+    so
+    \[\frac{\Delta y}{\Delta x}
+    =\big[f'(b)+\epsilon_2\big]\big[g'(a)+\epsilon_1\big]\]
+    As \(\Delta x\to 0\), it shows that \(\Delta u\to 0\).
+    So both \(\epsilon_1\to 0\) and \(\epsilon_2\to 0\) as \(\Delta x\to 0\).
+    Therefore
+    \[\frac{dy}{dx}=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}
+    =\lim_{\Delta x\to 0}\big[f'(b)+\epsilon_2\big]\big[g'(a)+\epsilon_1\big]
+    =f'(b)g'(a)=f'(g(a))g'(a)\]
+    This proves the Chain Rule.
+\end{proof}
