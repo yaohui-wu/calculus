@@ -1,0 +1,43 @@
+\subsection{Hyperbolic Functions}
+
+Definition of \textbf{hyperbolic functions}:
+\begin{align*}
+    \sinh x &= \frac{e^x-e^{-x}}{2} & \csch x &= \frac{1}{\sinh x} \\
+    \cosh x &= \frac{e^x+e^{-x}}{2} & \sech x &= \frac{1}{\cosh x} \\
+    \tanh x &= \frac{\sinh x}{\cosh x} & \coth x &= \frac{\cosh x}{\sinh x}
+\end{align*}
+Hyperbolic Identities:
+\begin{itemize}
+    \item \(\sinh(-x)=-\sinh x\)
+    \item \(\cosh(-x)=\cosh x\)
+    \item \(\cosh^2 x-\sinh^2 x=1\)
+    \item \(1-\tanh^2 x=\sech^2 x\)
+    \item \(\sinh(x+y)=\sinh x\cosh x+\cosh x\sinh y\)
+    \item \(\cosh(x+y)=\cosh x\cosh x+\sinh x\sinh y\)
+\end{itemize}
+Derivatives of hyperbolic functions:
+\begin{align*}
+    \frac{d}{dx}(\sinh x) &= \cosh x
+    & \frac{d}{dx}(\csch x) &= -\csch x\coth x \\
+    \frac{d}{dx}(\cosh x) &= \sinh x
+    & \frac{d}{dx}(\sech x) &= -\sech x\tanh x \\
+    \frac{d}{dx}(\tanh x) &= \sech^2 x
+    & \frac{d}{dx}(\coth x) &= -\csch^2 x
+\end{align*}
+
+\subsubsection*{Inverse Hyperbolic Functions}
+\begin{align*}
+    \arsinh x &= \ln(x+\sqrt{x^2+1}),\quad x\in\R \\
+    \arcosh x &= \ln(x+\sqrt{x^2-1}),\quad x\geq 1 \\
+    \artanh x &= \frac{1}{2}\ln\left(\frac{1+x}{1-x}\right),
+    \quad -1\leq x\leq 1
+\end{align*}
+Derivatives of inverse hyperbolic functions:
+\begin{align*}
+    \frac{d}{dx}(\arsinh x) &= \frac{1}{\sqrt{1+x^2}}
+    & \frac{d}{dx}(\arcsch x) &= -\frac{1}{|x|\sqrt{x^2+1}} \\
+    \frac{d}{dx}(\arcosh x) &= \frac{1}{\sqrt{x^2-1}}
+    & \frac{d}{dx}(\arsech x) &= -\frac{1}{x\sqrt{1-x^2}} \\
+    \frac{d}{dx}(\artanh x) &= \frac{1}{1-x^2}
+    & \frac{d}{dx}(\arcoth x) &= \frac{1}{1-x^2}
+\end{align*}

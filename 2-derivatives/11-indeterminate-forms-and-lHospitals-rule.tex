@@ -1,16 +1,16 @@
-\subsection{Indeterminate Forms and L'Hôpital's Rule}
+\subsection{Indeterminate Forms and l'Hospital Rule}
 
-\subsubsection*{Indeterminate Forms and L'Hôpital's Rule}
+\subsubsection*{Indeterminate Forms and l'Hospital Rule}
 Consider the limit of the form \[\lim_{x\to a}\frac{f(x)}{g(x)}\]
 If \(f(x)\to 0\) and \(g(x)\to 0\) as \(x\to a\), then the limit is an
 \textbf{indeterminate form} of type \(0/0\).
 If \(f(x)\to\infty\) or \(-\infty\) and \(g(x)\to\infty\) or \(-\infty\),
 then the limit is an indeterminate form of type \(\infty/\infty\).
-We have the \textbf{L'Hôpital's Rule} discoverd by
+We have the \textbf{l'Hospital Rule} discoverd by
 \textbf{Johann Bernoulli} (1667--1748) and named after
 \textbf{Guillaume de l'Hôpital} (1661--1704) to evaluate limits of indeterminate
 forms of type \(0/0\) and \(\infty/\infty\).
-\begin{theorem}[L'Hôpital's Rule]
+\begin{theorem}[l'Hospital Rule]
     Suppose that \(f\) and \(g\) are differentiable and \(g'(x)\neq 0\) near \(a\),
     except possibly at \(a\).
     If
@@ -25,14 +25,14 @@ forms of type \(0/0\) and \(\infty/\infty\).
     \[\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}\]
     if the limit on the right side exists, is \(\infty\), or is \(-\infty\).
 \end{theorem}
-L'Hôpital's rule is also valid for one-sided limits and for limits at infinity
+l'Hospital rule is also valid for one-sided limits and for limits at infinity
 or negative infinity.
 \begin{problem}
     Find \(\displaystyle{\lim_{x\to 1}\frac{\ln x}{x-1}}\).
 \end{problem}
 \begin{solution}
     Notice that the limit is an indeterminate form of \(0/0\).
-    We apply L'Hôpital's rule then we have
+    We apply l'Hospital rule then we have
     \[\lim_{x\to 1}\dfrac{\ln x}{x-1}=\lim_{x\to 1}\frac{1/x}{1}
     =\lim_{x\to 1}\frac{1}{x}=1\]
 \end{solution}
@@ -41,23 +41,23 @@ or negative infinity.
 \end{problem}
 \begin{proof}
     Notice that the limit is an indeterminate form of \(0/0\).
-    We apply L'Hôpital's rule then we have
+    We apply l'Hospital rule then we have
     \[\lim_{x\to 0}\frac{\tan x-x}{x^3}=\lim_{x\to 0}\frac{\sec^2 x-1}{3x^2}\]
     The limit still is an indeterminate form of \(0/0\) so we apply
-    L'Hôpital's rule again then we have
+    l'Hospital rule again then we have
     \[\lim_{x\to 0}\frac{\tan x-x}{x^3}
     =\lim_{x\to 0}\frac{2\sec^2 x\tan x}{6x}\]
-    Similarly, we apply L'Hôpital's rule again then we have
+    Similarly, we apply l'Hospital rule again then we have
     \[\lim_{x\to 0}\frac{\tan x-x}{x^3}
     =\lim_{x\to 0}\frac{2\sec^4 x+4\sec^2 x\tan^2 x}{6}
     =\frac{2(1)+4(1)(0)}{6}=\frac{1}{3}\]
 \end{proof}
-Note that L'Hôpital's rule only applies if the limit is one of the
+Note that l'Hospital rule only applies if the limit is one of the
 indeterminate forms of type \(0/0\) or \(\infty/\infty\).
 If \(\lim_{x\to a}f(x)=0\) and \(\lim_{x\to a}g(x)=\infty\) (or \(-\infty\)),
 then the limit \(\lim_{x\to a}f(x)g(x)\) is an indeterminate form of type
 \(0\cdot\infty\).
-We can express the product as a quotient then use L'Hôpital's rule to
+We can express the product as a quotient then use l'Hospital rule to
 calculate the limit.
 \begin{problem}
     Evaluate \(\lim_{x\to 0^+}x\ln x\).
@@ -69,7 +69,7 @@ calculate the limit.
 If \(\lim_{x\to a}f(x)=\infty\) and \(\lim_{x\to a}g(x)=\infty\), then the
 limit \(\lim_{x\to a}[f(x)-g(x)]\) is an indeterminate form of type
 \(\infty-\infty\).
-We can convert the difference into a quotient to apply L'Hôpital's rule to
+We can convert the difference into a quotient to apply l'Hospital rule to
 calculate the limit.
 \begin{problem}
     Compute \(\lim_{x\to (\pi/2)^-}(\sec x-\tan x)\).
@@ -95,7 +95,7 @@ Let \(y=f(x)^{g(x)}\), then we can write \(\ln y=\ln f(x)^{g(x)}\) and
 \end{problem}
 \begin{solution}
     Let \(y=(1+\sin 4x)^{\cot x}\), then \(\ln y=\ln[(1+\sin 4x)^{\cot x}]=\cot x\ln(1+\sin 4x)\).
-    We apply L'Hôpital's rule then we have
+    We apply l'Hospital rule then we have
     \begin{align*}
     \lim_{x\to 0^+}\ln y &= \lim_{x\to 0^+}\frac{\ln(1+\sin 4x)}{\tan x}
     =\lim_{x\to 0^+}\frac{[1/(1+\sin 4x)](\cos 4x)(4)}{\sec^2 x} \\

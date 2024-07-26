@@ -18,11 +18,12 @@ If we write \(y=f^{-1}(x)\), then \(f(y)=x\), in Leibniz notation we have
 
 \subsubsection*{Derivatives of Logarithmic Functions}
 The \textbf{Euler's number} \(e\) is the base of the natural exponential
-function \(y=e^x\) and the natural logarithmic function \(y=\ln x\).
+function \(y=e^x\).
+It is also the base of the the natural logarithmic function \(y=\ln x\).
 \begin{definition}[Euler's Number]
     The Euler's number \(e\) is defined as
-    \[e=\lim_{x\to 0}(1+x)^{1/x}
-    =\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n\]
+    \[e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n
+    =\lim_{x\to 0}(1+x)^{1/x}\]
 \end{definition}
 Note that the approximate value of \(e\) is \(e\approx2.71828\).
 \begin{theorem}
@@ -63,10 +64,11 @@ In general, if \(u=f(x)\), then
     Since \(f(x)=\ln x\) for \(x>0\) and \(f(x)=\ln(-x)\) for \(x<0\),
     it follows that
     \begin{align*}
-        f'(x) &= \frac{d}{dx}\ln x=\frac{1}{x},\quad x>0 \\
-        f'(x) &= \frac{d}{dx}\ln(-x)=\frac{1}{-x}(-1)=\frac{1}{x},\quad x<0
+        f'(x) &= \frac{d}{dx}(\ln x)=\frac{1}{x},\quad x>0 \\
+        f'(x) &= \frac{d}{dx}\big[\ln(-x)\big]=\frac{1}{-x}(-1)
+        =\frac{1}{x},\quad x<0
     \end{align*}
-    Therefore, \(\dfrac{d}{dx}\ln|x|=\dfrac{1}{x}\) for all \(x\neq 0\).
+    Therefore \(\dfrac{d}{dx}\ln|x|=\dfrac{1}{x}\) for all \(x\neq 0\).
 \end{solution}
 
 \subsubsection*{Logarithmic Differentiation}
@@ -77,12 +79,10 @@ The steps in \textbf{logarithmic differentiation} are
     \item Differentiate implicitly with respect to \(x\).
     \item Solve the resulting equation for \(y'\).
 \end{enumerate}
-The proof of the Power Rule:
+The proof of the Power Rule (general version):
 \begin{proof}
-    Let \(y=x^n\) and use logarithmic differentiation:
-    \begin{align*}
-        \ln|y| &= \ln|x|^n=n\ln|x| & x\neq 0
-    \end{align*}
+    Let \(y=x^n\) and we use logarithmic differentiation:
+    \[\ln|y|=\ln|x|^n=n\ln|x|,\quad x\neq 0\]
     Therefore
     \[\frac{1}{y}\cdot\frac{dy}{dx}=\frac{n}{x}\]
     Hence
@@ -108,7 +108,7 @@ definition of the derivative.
         \frac{dy}{dx} &= y\ln a=a^x\ln a 
     \end{align*}
 \end{proof}
-The derivative of the natural exponential function \(f(x)=e^x\) is
+The derivative of the natural exponential function \(f(x)=e^x\) is:
 \[\frac{d}{dx}(e^x)=e^x\]
 \begin{proof}
     \[\frac{d}{dx}(e^x)=e^x\ln e=e^x\]
@@ -117,57 +117,50 @@ In general, if \(u=f(x)\), then
 \[\frac{d}{dx}(e^u)=e^u\cdot\frac{du}{dx}\]
 
 \subsubsection*{Inverse Trigonometric Functions}
-\begin{theorem}
-    \[\frac{d}{dx}\arcsin x=\frac{1}{\sqrt{1-x^2}},\quad -1<x<1 \]
-\end{theorem}
+\[\frac{d}{dx}(\arcsin x)=\frac{1}{\sqrt{1-x^2}},\quad -1<x<1\]
 \begin{proof}
-    Let \(y=\arcsin x \iff \sin y=x\) and \(-\pi/2\leq y\leq\pi/2\) such that
-    \(-1\leq x\leq 1\).
-    Note the approximate value of \(\pi\) is \(\pi\approx 3.14159\).
-    Then we have
+    Let \(y=\arcsin x \).
+    Then \(\sin y=x\) and \(-\pi/2\leq y\leq\pi/2\).
+    By implicit differentiation we have
     \begin{align*}
-        \frac{d}{dx}\sin y &= \frac{d}{dx}x \\
-        \cos y\frac{dy}{dx} &= 1 \\
+        \frac{d}{dx}(\sin y) &= \frac{d}{dx}(x) \\
+        \cos y\cdot\frac{dy}{dx} &= 1 \\
         \frac{dy}{dx} &= \frac{1}{\cos y}
     \end{align*}
-    Since \(-\pi/2\leq y\leq\pi/2\) so \(\cos y\geq0\) thus
-    \(\cos y=\sqrt{1-\sin^2 y}\).
-    Therefore, \(\dfrac{dy}{dx}=\dfrac{1}{\sqrt{1-x^2}}\).
+    Now \(\cos y\geq0\) since \(-\pi/2\leq y\leq\pi/2\), so
+    \[\cos y=\sqrt{1-\sin^2 y}\]
+    Therefore
+\[\frac{d}{dx}(\arcsin x)=\frac{1}{\sqrt{1-x^2}},\quad -1<x<1\]
 \end{proof}
-\begin{theorem}
-    \[\frac{d}{dx}\arccos x=-\frac{1}{\sqrt{1-x^2}},\quad -1<x<1 \]
-\end{theorem}
+\[\frac{d}{dx}(\arccos x)=-\frac{1}{\sqrt{1-x^2}},\quad -1<x<1\]
 \begin{proof}
-    Let \(y=\arccos x \iff \cos y=x\) and \(0\leq y\leq\pi\) such that
-    \(-1\leq x\leq 1\).
-    Then we have
+    Let \(y=\arccos x\).
+    Then \(\cos y=x\) and \(0\leq y\leq\pi\).
+    By implicit differentiation we have
     \begin{align*}
-        \frac{d}{dx}\cos y &= \frac{d}{dx}x \\
-        -\sin y\frac{dy}{dx} &= 1 \\
+        \frac{d}{dx}(\cos y) &= \frac{d}{dx}(x) \\
+        -\sin y\cdot\frac{dy}{dx} &= 1 \\
         \frac{dy}{dx} &= -\frac{1}{\sin y}
     \end{align*}
-    Since \(0\leq y\leq\pi\) so \(\sin y\geq0\) thus
-    \(\sin y=\sqrt{1-\cos^2 y}\).
-    Therefore, \(\dfrac{dy}{dx}=-\dfrac{1}{\sqrt{1-x^2}}\).
+    Now \(\sin y\geq0\) since \(0\leq y\leq\pi\), so
+    \[\sin y=\sqrt{1-\cos^2 y}\]
+    Therefore
+    \[\frac{d}{dx}(\arccos x)=-\frac{1}{\sqrt{1-x^2}},\quad -1<x<1\]
 \end{proof}
-\begin{theorem}
-    \[\frac{d}{dx}\arctan x=\frac{1}{1+x^2} \]
-\end{theorem}
+\[\frac{d}{dx}(\arctan x)=\frac{1}{1+x^2}\]
 \begin{proof}
-    Let \(y=\arctan x \iff \tan y=x\).
-    Then we have
+    Let \(y=\arctan x\).
+    Then \(\tan y=x\) and \(-\pi/2<y<\pi/2\).
+    We have
     \begin{align*}
-        \frac{d}{dx}\tan y &= \frac{d}{dx}x \\
-        \sec^2 y\frac{dy}{dx} &= 1 \\
-        \frac{dy}{dx} &= \cos^2 y
+        \frac{d}{dx}(\tan y) &= \frac{d}{dx}(x) \\
+        \sec^2 y\cdot\frac{dy}{dx} &= 1 \\
+        \frac{dy}{dx} &= \frac{1}{\sec^2 y}=\frac{1}{\tan^2 y+1}
+        =\frac{1}{1+x^2}
     \end{align*}
-    Then we can show that
-    \begin{align*}
-        \tan y &= x \\
-        1+\frac{\sin^2 y}{\cos^2 y} &= 1+x^2\\
-        1+\frac{1-\cos^2 y}{\cos^2 y} &= 1+x^2 \\
-        \sec^2 y &= 1+x^2 \\
-        \cos^2y &= \frac{1}{1+x^2}
-    \end{align*}
-    Therefore, \(\dfrac{dy}{dx}=\dfrac{1}{1+x^2}\).
+    Therefore
+    \[\frac{d}{dx}(\arctan x)=\frac{1}{1+x^2} \]
 \end{proof}
+\[\frac{d}{dx}(\arccsc x)=-\frac{1}{x\sqrt{x^2-1}}\]
+\[\frac{d}{dx}(\arcsec x)=\frac{1}{x\sqrt{x^2-1}}\]
+\[\frac{d}{dx}(\arccot x)=\frac{1}{x\sqrt{1+x^2}}\]
