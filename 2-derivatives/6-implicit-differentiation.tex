@@ -28,9 +28,11 @@ This consists of differentiating both sides of the equation with respect to
     \[\frac{dy}{dx}=-\frac{x}{y}\]
 \end{solution}
 \begin{problem}
-    Find \(dy/dx\) of the folium of Descartes \(x^3+y^3=6xy\).
+    Find \(dy/dx\) and the tangent to the folium of Descartes \(x^3+y^3=6xy\)
+    at point \((3,3)\).
 \end{problem}
 \begin{solution}
+    We have
     \begin{align*}
         x^3+y^3 &= 6xy \\
         \frac{d}{dx}x^3+\frac{d}{dy}y^3\left(\frac{dy}{dx}\right)
@@ -40,6 +42,13 @@ This consists of differentiating both sides of the equation with respect to
         (y^2-2x)\frac{dy}{dx} &= 2y-x^2 \\
         \frac{dy}{dx} &= \frac{2y-x^2}{y^2-2x} 
     \end{align*}
+    When \(x=3\) and \(y=3\), the slope of the tangent line is
+    \[\frac{dy}{dx}=\frac{2\cdot 3-3^2}{3^2-2\cdot 3}=-1\]
+    The equation of the tangent line is
+    \begin{align*}
+        y-3 &= -1(x-3) \\
+        y &= -x+6
+    \end{align*}
 \end{solution}
 \begin{problem}
     Find \(y'\) if \(\sin(x+y)=y^2\cos x\).
@@ -48,7 +57,7 @@ This consists of differentiating both sides of the equation with respect to
     \begin{align*}
         \sin(x+y) &= y^2\cos x \\
         \cos(x+y)(1+\frac{dy}{dx}) &= 2y\frac{dy}{dx}\cos x-y^2\sin x \\
-        [2y\cos x-\cos(x+y)]\frac{dy}{dx} &= \cos(x+y)+y^2\sin x \\
+        \big[2y\cos x-\cos(x+y)\big]\frac{dy}{dx} &= \cos(x+y)+y^2\sin x \\
         \frac{dy}{dx}
         &= \frac{\cos(x+y)+y^2\sin x}{2y\cos x-\cos(x+y)} 
     \end{align*}

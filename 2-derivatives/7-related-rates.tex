@@ -1,0 +1,30 @@
+\subsection{Related Rates}
+
+In a related rates problem the idea is to compute the rate of change of one
+quantity in terms of the rate of change of another quantity.
+The procedure is to find an equation that relates the two quantities and then
+use the Chain Rule to differentiate both sides with respect to time.
+\begin{problem}
+    Air is being pumped into a spherical balloon so that its volume increases
+    at a rate of 100 \(\text{cm}^3/\text{s}\).
+    How fast is the radius of the balloon increasing when the diameter is 50
+    cm?
+\end{problem}
+\begin{solution}
+    Let \(V\) be the volume of the balloon and let \(r\) be its radius.
+    The rate of increase of the volume with respect to time is
+    \(\dfrac{dV}{dt}\), and the rate of increase of the radius is
+    \(\dfrac{dr}{dt}\).
+    Then, we are given that
+    \[\frac{dV}{dt}=100\ \text{cm}^3/\text{s}\]
+    and we want to find \(\dfrac{dr}{dt}\) when \(r=25\) cm.
+    we relate \(V\) and \(r\) by the formula of the volume of a sphere:
+    \[V=\frac{4}{3}\pi r^3\]
+    Then by the Chain Rule,
+    \[\frac{dV}{dt}=\frac{dV}{dr}\cdot\frac{dr}{dt}=4\pi r^2\frac{dr}{dt}\]
+    If \(r=25\) and \(\dfrac{dV}{dt}=100\), then
+    \[\frac{dr}{dt}=\frac{1}{4\pi r^2}\frac{dV}{dt}
+    =\frac{1}{4\pi(25)^2}\cdot100=\frac{1}{25\pi}\]
+    The radius of the balloon is increasing at the rate of
+    \(\dfrac{1}{25\pi}\) cm/s.
+\end{solution}
