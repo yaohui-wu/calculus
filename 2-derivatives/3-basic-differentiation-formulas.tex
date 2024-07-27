@@ -15,14 +15,14 @@ The derivative of the constant function \(f(x)=c\) is
     \[f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}=\lim_{h\to 0}\frac{x+h-x}{h}
     =\lim_{h\to 0}\frac{h}{h}=\lim_{h\to 0}1=1\]
 \end{proof}
-The power rule:
+The \textbf{Power Rule}:
 If \(n\) is a positive integer, then
 \[\frac{d}{dx}(x^n)=nx^{n-1}\]
 \begin{proof}
     Let \(f(x)=x^n\), then
     \[f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
     =\lim_{h\to 0}\frac{(x+h)^n-x^n}{h}\]
-    We use the binomial theorem to expand \((x+h)^n\) then
+    We use the Binomial Theorem to expand \((x+h)^n\) then
     \begin{align*}
         f'(x)
         &= \lim_{h\to 0}
@@ -39,7 +39,7 @@ If \(n\) is a positive integer, then
     because every term except the first has \(h\) as a factor and therefore
     approaches 0.
 \end{proof}
-The power rule (general version):
+The Power Rule (general version):
 If \(n\) is any real number, then
 \[\frac{d}{dx}(x^n)=nx^{n-1}\]
 \begin{problem}
@@ -51,7 +51,7 @@ If \(n\) is any real number, then
 \end{solution}
 The \textbf{normal line} to a curve \(C\) at a point \(P\) is the line through
 \(P\) that is perpendicular to the tangent line at \(P\).
-The constant multiple rule:
+The \textbf{Constant Multiple Rule}:
 If \(c\) is a constant and \(f\) is a differentiable function, then
 \[\frac{d}{dx}\bigl[cf(x)\bigr]=c\,\frac{d}{dx}f(x)\]
 \begin{proof}
@@ -64,7 +64,7 @@ If \(c\) is a constant and \(f\) is a differentiable function, then
         =c\,\frac{d}{dx}f(x)
     \end{align*}
 \end{proof}
-The sum rule: If \(f\) and \(g\) are both differentiable, then
+The \textbf{Sum Rule}: If \(f\) and \(g\) are both differentiable, then
 \[\frac{d}{dx}\bigl[f(x)+g(x)\bigr]=\frac{d}{dx}f(x)+\frac{d}{dx}g(x)\]
 \begin{proof}
     Let \(F(x)=f(x)+g(x)\).
@@ -79,10 +79,10 @@ The sum rule: If \(f\) and \(g\) are both differentiable, then
         &= \frac{d}{dx}f(x)+\frac{d}{dx}g(x)
     \end{align*}
 \end{proof}
-The sum rule can be extended to the sum of any number of functions.
-By writing \(f-g\) as \(f+(-1)g\) and applying the sum rule and the constant
+The Sum Rule can be extended to the sum of any number of functions.
+By writing \(f-g\) as \(f+(-1)g\) and applying the Sum Rule and the constant
 multiple rule, we get the following formula.
-The difference rule: If \(f\) and \(g\) are both differentiable, then
+The \textbf{Difference Rule}: If \(f\) and \(g\) are both differentiable, then
 \[\frac{d}{dx}\bigl[f(x)-g(x)\bigr]=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)\]
 \begin{proof}
     Let \(F(x)=f(x)-g(x)\).
@@ -99,7 +99,6 @@ The difference rule: If \(f\) and \(g\) are both differentiable, then
         &= \frac{d}{dx}f(x)-\frac{d}{dx}g(x)
     \end{align*}
 \end{proof}
-
 The Constant Multiple Rule, the Sum Rule, and the Difference Rule can be
 combined with the Power Rule to differentiate any polynomial.
 

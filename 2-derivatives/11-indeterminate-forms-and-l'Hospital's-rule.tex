@@ -1,0 +1,157 @@
+\subsection{Indeterminate Forms and l'Hospital's Rule}
+
+In general, if we have a limit of the form
+\[\lim_{x\to a}\frac{f(x)}{g(x)}\]
+where both \(f(x)\to 0\) and \(g(x)\to 0\) as \(x\to a\), then this limit may
+or may not exist and is called an \textbf{indeterminate form of type}
+\(\mathbf{\dfrac{0}{0}}\).
+In general, if we have a limit of the form
+\[\lim_{x\to a}\frac{f(x)}{g(x)}\]
+where both \(f(x)\to\infty\) (or \(-\infty\)) and \(g(x)\to\infty\)
+(or \(-\infty\)), then this limit may or may not exist and is called an
+\textbf{indeterminate form of type} \(\mathbf{\dfrac{\infty}{\infty}}\).
+\begin{theorem}[l'Hospital's Rule]
+    Suppose \(f\) and \(g\) are differentiable and \(g'(x)\neq 0\) near \(a\)
+    (except possibly at \(a\)).
+    Suppose that
+    \begin{align*}
+        \lim_{x\to a}f(x) &= 0 & \lim_{x\to a}g(x) &= 0
+    \end{align*}
+    or that
+    \begin{align*}
+        \lim_{x\to a}f(x) &= \pm\infty & \lim_{x\to a}g(x) &= \pm\infty
+    \end{align*}
+    In other words, we have an indeterminate form of type \(\dfrac{0}{0}\) or
+    \(\dfrac{\infty}{\infty}\).
+    Then
+    \[\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}\]
+    if the limit on the right side exists (or is \(\infty\) or \(-\infty\)).
+\end{theorem}
+It is important to verify the conditions regarding the limits of \(f\) and \(g\) before using
+l'Hospital's Rule.
+L'Hospital's Rule is also valid for one-sided limits and for limits at
+infinity or negative infinity.
+For the special case in which \(f(a)=g(a)=0\), \(f'\) and \(g'\) is
+continuous, and \(g'(a)\neq 0\), we have
+\[\lim_{x\to a}\frac{f'(x)}{g'(x)}=\frac{f'(a)}{g'(a)}
+= \frac{\displaystyle{\lim_{x\to a}\frac{f(x)-f(a)}{x-a}}}
+{\displaystyle{\lim_{x\to a}\frac{g(x)-g(a)}{x-a}}}
+=\lim_{x\to a}\frac{f(x)-f(a)}{g(x)-g(a)}=\lim_{x\to a}\frac{f(x)}{g(x)}\]
+
+\begin{problem}
+    Find \(\displaystyle{\lim_{x\to 1}\frac{\ln x}{x-1}}\).
+\end{problem}
+\begin{solution}
+    Notice that we have an indeterminate form of type \(\dfrac{0}{0}\).
+    We apply l'Hospital's rule then
+    \[\lim_{x\to 1}\dfrac{\ln x}{x-1}=\lim_{x\to 1}\frac{1/x}{1}
+    =\lim_{x\to 1}\frac{1}{x}=1\]
+\end{solution}
+\begin{problem}
+    Calculate \(\displaystyle{\lim_{x\to\infty}\frac{e^x}{x^2}}\).
+\end{problem}
+\begin{solution}
+    Notice that we have an indeterminate form of type
+    \(\dfrac{\infty}{\infty}\).
+    Then l'Hospital's Rule gives
+    \[\lim_{x\to\infty}\frac{e^x}{x^2}=\lim_{x\to\infty}\frac{e^x}{2x}\]
+    Since we stil have an indeterminate form of \(\dfrac{\infty}{\infty}\), a
+    second application of l'Hospital's Rule gives
+    \[\lim_{x\to\infty}\frac{e^x}{x^2}=\lim_{x\to\infty}\frac{e^x}{2x}
+    =\lim_{x\to\infty}\frac{e^x}{2}=\infty\]
+\end{solution}
+\begin{problem}
+    Find \(\displaystyle{\lim_{x\to 0}\frac{\tan x-x}{x^3}}\).
+\end{problem}
+\begin{solution}
+    Notice that we have an indeterminate form of type \(\dfrac{0}{0}\).
+    We apply l'Hospital's rule then
+    \begin{align*}
+        \lim_{x\to 0}\frac{\tan x-x}{x^3}
+        &= \lim_{x\to 0}\frac{\sec^2 x-1}{3x^2}
+        =\lim_{x\to 0}\frac{2\sec^2 x\tan x}{6x}
+        =\lim_{x\to 0}\frac{2\sec^4 x+4\sec^2 x\tan^2 x}{6} \\
+        &= \frac{2(1)+4(1)(0)}{6}=\frac{1}{3}
+    \end{align*}
+\end{solution}
+
+\subsubsection*{Indeterminate Products}
+If \(\displaystyle{\lim_{x\to a}f(x)=0}\) and
+\(\displaystyle{\lim_{x\to a}g(x)=\infty}\) (or \(-\infty\)),
+then the limit
+\[\lim_{x\to a}f(x)g(x)\]
+is called an \textbf{indeterminate form of type} \(\mathbf{0\cdot\infty}\).
+We can deal with it by writing the product \(fg\) as a quotient:
+\[fg=\frac{f}{1/g}\]
+or
+\[fg=\frac{g}{1/f}\]
+This converts the given limit into an indeterminate form of type
+\(\dfrac{0}{0}\) or \(\dfrac{\infty}{\infty}\) so that we can use l'Hospital's
+Rule.
+\begin{problem}
+    Evaluate \(\displaystyle{\lim_{x\to 0^+}x\ln x}\).
+\end{problem}
+\begin{solution}
+
+    \[\lim_{x\to 0^+}x\ln x=\lim_{x\to 0^+}\frac{\ln x}{1/x}
+    =\lim_{x\to 0^+}\frac{1/x}{-1/x^2}=\lim_{x\to 0^+}(-x)=0\]
+\end{solution}
+
+\subsubsection*{Indeterminate Differences}
+If \(\displaystyle{\lim_{x\to a}f(x)=\infty}\) and
+\(\displaystyle{\lim_{x\to a}g(x)=\infty}\), then the limit
+\[\lim_{x\to a}\bigl[f(x)-g(x)\bigr]\]
+is called an \textbf{indeterminate form of type} \(\infty-\infty\).
+We can convert the difference into a quotient so that we have an indeterminate
+form of type \(\dfrac{0}{0}\) or \(\dfrac{\infty}{\infty}\).
+\begin{problem}
+    Compute \(\displaystyle{\lim_{x\to (\pi/2)^-}(\sec x-\tan x)}\).
+\end{problem}
+\begin{solution}
+    \[\lim_{x\to (\pi/2)^-}(\sec x-\tan x)
+    =\lim_{x\to (\pi/2)^-}\frac{1-\sin x}{\cos x}
+    =\lim_{x\to (\pi/2)^-}\frac{-\cos x}{-\sin x}=0\]
+\end{solution}
+
+\subsubsection*{Indeterminate Powers}
+Several indeterminate forms arise from the limit
+\[\lim_{x\to a}\bigl[f(x)\bigr]^{g(x)}\]
+\begin{itemize}
+    \item Type \(0^0\): \(\displaystyle{\lim_{x\to a}f(x)=0}\) and
+    \(\displaystyle{\lim_{x\to a}g(x)=0}\).
+    \item Type \(\infty^0\): \(\displaystyle{\lim_{x\to a}f(x)=\infty}\) and
+    \(\displaystyle{\lim_{x\to a}g(x)=0}\).
+    \item Type \(1^\infty\): \(\displaystyle{\lim_{x\to a}f(x)=1}\) and
+    \(\displaystyle{\lim_{x\to a}g(x)=\pm\infty}\).
+\end{itemize}
+Note that the form \(0^\infty\) is not indeterminate.
+Each of these three cases can be treated either by taking the natural
+logarithm: let \(y=\bigl[f(x)\bigr]^{g(x)}\), then \(\ln y=g(x)\ln f(x)\) or
+by writing the function as an exponential:
+\[\bigl[f(x)\bigr]^{g(x)}=e^{g(x)\ln f(x)}\]
+In either method we are led to the indeterminate product \(g(x)\ln f(X)\),
+which is of type \(0\cdot\infty\).
+\begin{problem}
+    Calculate \(\displaystyle{\lim_{x\to 0^+}(1+\sin 4x)^{\cot x}}\).
+\end{problem}
+\begin{solution}
+    Let
+    \[y=(1+\sin 4x)^{\cot x}\]
+    Then
+    \[\ln y=\ln\bigl[(1+\sin 4x)^{\cot x}\bigr]=\cot x\ln(1+\sin 4x)\]
+    so l'Hospital's Rule gives
+    \[\lim_{x\to 0^+}\ln y=\lim_{x\to 0^+}\frac{\ln(1+\sin 4x)}{\tan x}
+    =\lim_{x\to 0^+}\frac{\dfrac{4\cos 4x}{1+\sin 4x}}{\sec^2 x}=4\]
+    Then
+    \[\lim_{x\to 0^+}(1+\sin 4x)^{\cot x}=\lim_{x\to 0^+}y
+    =\lim_{x\to 0^+}e^{\ln y}=e^4\]
+\end{solution}
+\begin{problem}
+    Find \(\displaystyle{\lim_{x\to 0^+}x^x}\).
+\end{problem}
+\begin{solution}
+    We used l'Hospital's Rule to show that
+   \[\lim_{x\to 0^+}x\ln x=0\]
+   Therefore
+   \[\lim_{x\to 0^+}x^x=\lim_{x\to 0^+}e^{x\ln x}=e^0=1\]
+\end{solution}
