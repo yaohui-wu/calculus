@@ -1,0 +1,23 @@
+\subsection{Derivatives and the Shapes of Graphs}
+
+Increasing/Decreasing Test:
+\begin{enumerate}
+    \item If \(f'(x)>0\) on an interval, then \(f\) is increasing on that
+    interval.
+    \item If \(f'(x)<0\) on an interval, then \(f\) is decreasing on that
+    interval.
+\end{enumerate}
+\begin{proof}
+    Let \(x_1\) and \(x_2\) be any two numbers in the interval with
+    \(x_1<x_2\).
+    Given \(f'(x)>0\), we know that \(f\) is differentiable on \([x_1,x_2]\).
+    By Lagrange's Mean Value Theorem, there is a number \(c\) between \(x_1\)
+    and \(x_2\) such that
+    \[f(x_2)-f(x_1)=f'(c)(x_2-x_1)\]
+    Since \(f'(c)>0\) and \(x_2-x_1>0\), thus
+    \[f(x_2)-f(x_1)>0\]
+    or
+    \[f(x_1)<f(x_2)\]
+    This shows that \(f\) is increasing.
+    Part 2 is proved similarly.
+\end{proof}

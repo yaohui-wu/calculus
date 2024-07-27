@@ -1,23 +1,120 @@
 \subsection{The Mean Value Theorem}
 
-\subsubsection*{Rolle's Theorem}
 \begin{theorem}[Rolle's Theorem]
-    Suppose that \(f\) is a continuous function on the closed interval \([a,b]\),
-    \(f\) is differentiable on the open interval \((a,b)\), and \(f(a)=f(b)\).
+    Let \(f\) be a function that satisfies the following three hypotheses:
+    \begin{enumerate}
+        \item \(f\) is continuous on the closed interval \([a,b]\).
+        \item \(f\) is differentiable on the open interval \((a,b)\).
+        \item \(f(a)=f(b)\)
+    \end{enumerate}
     Then there is a number \(c\) in \((a,b)\) such that \(f'(c)=0\).
 \end{theorem}
-
-\subsubsection*{The Mean Value Theorem}
+\begin{proof}
+    There are three cases: \\
+    Case 1: \(f(x)=k\), a constant \\
+    Then \(f'(x)=0\) so the number \(c\) can be any number in \((a,b)\). \\
+    Case 2: \(f(x)>f(a)\) for some \(x\) in \((a,b)\) \\
+    By the Extreme Value Theorem, \(f\) has a maximum value somewhere in
+    \([a,b]\).
+    Since \(f(a)=f(b)\), it must attain this maximum value at a number \(c\)
+    in the open interval \((a,b)\).
+    Then \(f\) has a local maximum at \(c\).
+    Therefore \(f'(c)=0\) by Fermat's Theorem. \\
+    Case 3: \(f(x)<f(a)\) for some \(x\) in \((a,b)\) \\
+    By the Extreme Value Theorem, \(f\) has a minimum value somewhere in
+    \([a,b]\), and since \(f(a)=f(b)\), it attains this minimum value at a
+    number \(c\) in \((a,b)\).
+    Then \(f'(c)=0\) by Fermat's Theorem.
+\end{proof}
 \begin{theorem}[Lagrange's Mean Value Theorem]
-    Suppose that \(f\) is a continuous function on the closed interval \([a,b]\),
-    \(f\) is differentiable on the open interval \((a,b)\), and \(f(a)=f(b)\).
+    Let \(f\) be a function that satisfies the following hypotheses:
+    \begin{enumerate}
+        \item \(f\) is continuous on the closed interval \([a,b]\).
+        \item \(f\) is differentiable on the open interval \((a,b)\).
+    \end{enumerate}
     Then there is a number \(c\) in \((a,b)\) such that
-    \[f'(c)=\frac{f(b)-f(a)}{b-a}\qedhere\]
+    \[f'(c)=\frac{f(b)-f(a)}{b-a}\]
+    or, equivalently,
+    \[f(b)-f(a)=f'(c)(b-a)\]
 \end{theorem}
-
+\begin{proof}
+    We apply Rolle's Theorem to a new function \(h\) defined as a difference
+    between \(f\) and the function whose graph is the secant line \(AB\) where
+    \(A\) is the point \((a,f(a))\) and \(B\) is the point \((b,f(b))\).
+    The slope of the secant line \(AB\) is
+    \[m=\frac{f(b)-f(a)}{b-a}\]
+    Then the equation of the secant line \(AB\) is
+    \[y-f(a)=\frac{f(b)-f(a)}{b-a}(x-a)\]
+    or
+    \[y=f(a)+\frac{f(b)-f(a)}{b-a}(x-a)\]
+    So,
+    \[h(x)=f(x)-f(a)-\frac{f(b)-f(a)}{b-a}(x-a)\]
+    First we must verify that \(h\) satisfies the three hypotheses of Rolle's
+    Theorem.
+    \begin{enumerate}
+        \item The function \(h\) is continuous on \([a,b]\) because it is the
+        sum of \(f\) and a first degree polynomial, both of which is
+        continuous.
+        \item The function \(h\) is differentiable on \((a,b)\) because both
+        \(f\) and a first degree polynomial are differentiable.
+        In fact, we can compute \(h'\) directly:
+        \[h'(x)=f'(x)-\frac{f(b)-f(a)}{b-a}\]
+        Note that \(f(a)\) and \(\dfrac{f(b)-f(a)}{b-a}\) are constants.
+        \item
+        \[h(a)=f(a)-f(a)-\frac{f(b)-f(a)}{b-a}(a-a)=0\]
+        \[h(b)=f(b)-f(a)-\frac{f(b)-f(a)}{b-a}(b-a)
+        =f(b)-f(a)-\big[f(b)-f(a)\big]=0\]
+        Therefore \(h(a)=h(b)\).
+        Since \(h\) satisfies the hypotheses of Rolle's Theorem,
+        there is a number \(c\) in \((a,b)\) such that \(h'(c)=0\).
+        Therefore
+        \[0=h'(c)=f'(c)-\frac{f(b)-f(a)}{b-a}\]
+        and so
+        \[f'(c)=\frac{f(b)-f(a)}{b-a}\]
+    \end{enumerate}
+\end{proof}
+In general, Lagrange's Mean Value Theorem can be interpreted as saying that
+there is a number at which the instantaneous rate of change is equal to the
+average rate of change over an interval.
+The main significance of Lagrange's Mean Value Theorem is that it enables
+us to obtain information about a function from information about its
+derivative.
+\begin{theorem}
+    If \(f'(x)=0\) for all \(x\) in an interval \((a,b)\), then \(f\) is a
+    constant on \((a,b)\).
+\end{theorem}
+\begin{proof}
+    Let \(x_1\) and \(x_2\) be any two numbers in \((a,b)\) with \(x_1<x_2\).
+    Since \(f\) is differentiable on \((a,b)\), it must be differentiable on
+    \((x_1,x_2)\) and continuous on \([x_1,x_2]\).
+    By applying Lagrange's Mean Value Theorem to \(f\) on the interval
+    \([x_1,x_2]\), we get a number \(c\) such that \(x_1<c<x_2\) and
+    \[f(x_2)-f(x_1)=f'(c)(x_2-x_1)\]
+    Since \(f'(x)=0\) for all \(x\), we have \(f'(c)=0\), and so
+    \[f(x_2)-f(x_1)=0\]
+    or
+    \[f(x_2)=f(x_1)\]
+    Therefore \(f\) has the same value at any two numbers \(x_1\) and \(x_2\)
+    in \((a,b)\).
+    This means that \(f\) is a constant on \((a,b)\).
+\end{proof}
+\begin{corollary}
+    If \(f'(x)=g'(x)\) for all \(x\) in an interval \((a,b)\), then \(f-g\) is
+    a constant on \((a,b)\); that is; \(f(x)=g(x)+c\) where \(c\) is a
+    constant.
+\end{corollary}
+\begin{proof}
+    Since \(f'(x)=g'(x)\), we have \(f'(x)-g'(x)=0\).
+    Let \(F(x)=f(x)-g(x)\).
+    Then
+    \[F'(x)=f'(x)-g'(x)=0\]
+    for all \(x\) in \((a,b)\).
+    Thus \(F\) is a constant; that is, \(f-g\) is a constant.
+\end{proof}
 \begin{theorem}[Cauchy's Mean Value Theorem]
     Suppose that the fucntions \(f\) and \(g\) are continuous on \([a,b]\) and
-    differentiable on \((a,b)\) and \(g(x)\neq 0\) for all \(x\) in \((a,b)\).
-    Then there is a number \(c\) in \(a,b\) such that
-    \[\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}\qedhere\]
+    differentiable on \((a,b)\), and \(g(x)\neq 0\) for all \(x\) in
+    \((a,b)\).
+    Then there is a number \(c\) in \((a,b)\) such that
+    \[\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}\]
 \end{theorem}
