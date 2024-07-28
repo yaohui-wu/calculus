@@ -5,6 +5,34 @@
     A \textbf{function} \(f\) is a rule that assigns to each element \(x\) in
     a set \(D\) exactly one element \(f(x)\) in a set \(E\).
 \end{definition}
+We usually consider functions for which the sets \(D\) and \(E\) are sets of
+real numbers.
+The set \(D\) is called the \textbf{domain} of the function.
+The \textbf{range} of \(f\) is the set of all possible values of \(f(x)\) as
+\(x\) varies throughout the domain.
+A symbol that represents an arbitrary number in the domain of a function \(f\)
+is called an \textbf{independent variable}.
+A symbol that represents a number in the range of \(f\) is called a
+\textbf{dependent variable}.
+If \(f\) is a function with domain \(D\), then its \textbf{graph} is the set
+of ordered pairs
+\[\{(x,f(x))\mid x\in D\}\]
+
+\subsubsection*{Symmetry}
+If a function \(f\) satisfies \(f(-x)=f(x)\) for every number \(x\) in its
+domain, then \(f\) is called an \textbf{even function}.
+If \(f\) satisfies \(f(-x)=-f(x)\) for every number \(x\) in its
+domain, then \(f\) is called an \textbf{odd function}.
+
+\subsubsection*{Increasing and Decreasing Functions}
+A function \(f\) is called \textbf{increasing} on an interval \(I\) if
+\[f(x_1)<f(x_2)\]
+whenever \(x_1<x_2\) in \(I\).
+It is called \textbf{decreasing} on \(I\) if
+\[f(x_1)>f(x_2)\]
+whenever \(x_1<x_2\) in \(I\).
+
+\subsubsection*{Inverse Functions}
 \begin{definition}
     A function \(f\) is \textbf{injective} (or \textbf{one-to-one}) if
     \(f(x_1)\neq f(x_2)\) when \(x_1\neq x_2\).
@@ -16,7 +44,7 @@
 \end{definition}
 \begin{definition}
     A function \(f\) is \textbf{bijective} if \(f\) is injective and
-    surjective.
+    surjective (or one-to-one and onto).
 \end{definition}
 \begin{definition}
     Let \(f\) be a one-to-one function with domain \(A\) and range \(B\).
@@ -25,6 +53,8 @@
     \[f^{-1}(y)=x\iff f(x)=y\]
     for all \(y\) in \(B\).
 \end{definition}
+We usually reverse the roles of \(x\) and \(y\) and write
+\[f^{-1}(x)=y\iff f(y)=x\]
 
 \subsubsection*{Intuitive Definition of a Limit}
 Suppose \(f(x)\) is defined near the number \(a\).

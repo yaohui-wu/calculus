@@ -9,15 +9,15 @@ Suppose that \(c\) is a constant and the limits
 exist.
 Then
 \begin{enumerate}
-    \item Sum Law: \(\displaystyle{\lim_{x\to a}\bigl[f(x)+g(x)\bigr]=L+M}\)
-    \item Difference Law: \(\displaystyle{\lim_{x\to a}\bigl[f(x)-g(x)\bigr]=L-M}\)
-    \item Constant Multiple Law: \(\displaystyle{\lim_{x\to a}\bigl[cf(x)\bigr]=cL}\)
-    \item Product Law: \(\displaystyle{\lim_{x\to a}\bigl[f(x)g(x)\bigr]=LM}\)
+    \item Sum Law: \(\displaystyle{\lim_{x\to a}\big[f(x)+g(x)\big]=L+M}\)
+    \item Difference Law: \(\displaystyle{\lim_{x\to a}\big[f(x)-g(x)\big]=L-M}\)
+    \item Constant Multiple Law: \(\displaystyle{\lim_{x\to a}\big[cf(x)\big]=cL}\)
+    \item Product Law: \(\displaystyle{\lim_{x\to a}\big[f(x)g(x)\big]=LM}\)
     \item Quotient Law:
     \(\displaystyle{\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{L}{M}}\) if
     \(M\neq 0\).
-    \item Power Law: \(\displaystyle{\lim_{x\to a}\bigl[f(x)\bigr]^n
-    =\Bigl[\lim_{x\to a}f(x)\Bigr]^n}\) where \(n\) is a positive integer.
+    \item Power Law: \(\displaystyle{\lim_{x\to a}\big[f(x)\big]^n
+    =\Big[\lim_{x\to a}f(x)\Big]^n}\) where \(n\) is a positive integer.
     \item Root Law: \(\displaystyle{\lim_{x\to a}\sqrt[n]{f(x)}
     =\sqrt[n]{\lim_{x\to a}f(x)}}\) where \(n\) is a positive integer.
     If \(n\) is even,
@@ -74,7 +74,7 @@ Then
     \[0<|x-a|<\delta\implies|f(x)+g(x)-(L+M)|<\epsilon\]
     Thus,
     by the definition of a limit,
-    \[\lim_{x\to a}\bigl[f(x)+g(x)\bigr]=L+M\]
+    \[\lim_{x\to a}\big[f(x)+g(x)\big]=L+M\]
 \end{proof}
 \begin{proof}
     Proof of the product law:
@@ -86,9 +86,9 @@ Then
     and subtract \(Lg(x)\) as follows and use the triangle inequality:
     \begin{align*}
         |f(x)g(x)-LM| &= |f(x)g(x)-Lg(x)+Lg(x)-LM| \\
-        &= \left|\bigl[f(x)-L\bigr]g(x)+L[g(x)-M]\right| \\
-        &\leq \left|\bigl[f(x)-L\bigr]g(x)\right|
-        +\left|L\bigl[g(x)-M\bigr]\right| \\
+        &= \left|\big[f(x)-L\big]g(x)+L[g(x)-M]\right| \\
+        &\leq \left|\big[f(x)-L\big]g(x)\right|
+        +\left|L\big[g(x)-M\big]\right| \\
         &= |f(x)-L|\,|g(x)|+|L|\,|g(x)-M|
     \end{align*}
     We want to make both of the terms less than \(\epsilon/2\).
@@ -117,18 +117,18 @@ Then
         &= \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon
     \end{align*}
     This shows that
-    \[\lim_{x\to a}\bigl[f(x)g(x)\bigr]=LM\]
+    \[\lim_{x\to a}\big[f(x)g(x)\big]=LM\]
 \end{proof}
 \begin{proof}
     Proof of the constant multiple law:
     If we take \(g(x)=c\) then by the product law and limit law 8,
     we get
-    \[\lim_{x\to a}\bigl[cf(x)\bigr]=\lim_{x\to a}c\cdot\lim_{x\to a}f(x)
+    \[\lim_{x\to a}\big[cf(x)\big]=\lim_{x\to a}c\cdot\lim_{x\to a}f(x)
     =c\lim_{x\to a}f(x)=cL\]
     We can prove the constant multiple law using the precise the definition.
     Note that if \(c=0\),
     then \(cf(x)=0\) and we have
-    \[\lim_{x\to a}\bigl[0\cdot f(x)\bigr]=\lim_{x\to a}0=0
+    \[\lim_{x\to a}\big[0\cdot f(x)\big]=\lim_{x\to a}0=0
     =0\cdot\lim_{x\to a}f(x)=0\cdot L\]
     Let \(\epsilon>0\) and \(c\neq0\) be given,
     we want to find a number \(\delta>0\) such that
@@ -141,15 +141,15 @@ Then
     Let \(\delta=\delta_1\),
     we have
     \[0<|x-a|<\delta\implies|cf(x)-cL|<\epsilon\]
-    This shows that \(\displaystyle{\lim_{x\to a}\bigl[cf(x)\bigr]=cL}\).
+    This shows that \(\displaystyle{\lim_{x\to a}\big[cf(x)\big]=cL}\).
 \end{proof}
 \begin{proof}
     Proof of the difference law:
     Using the sum law and the constant multiple law with \(c=-1\),
     we have
     \begin{align*}
-        \lim_{x\to a}\bigl[f(x)-g(x)\bigr]
-        &= \lim_{x\to a}\bigl[f(x)+(-1)g(x)\bigr]
+        \lim_{x\to a}\big[f(x)-g(x)\big]
+        &= \lim_{x\to a}\big[f(x)+(-1)g(x)\big]
         =\lim_{x\to a}f(x)+\lim_{x\to a}(-1)g(x) \\
         &=\lim_{x\to a}f(x)+(-1)\lim_{x\to a}g(x)
         =\lim_{x\to a}f(x)-\lim_{x\to a}g(x)=L-M
@@ -235,19 +235,19 @@ we use the fact that the limit laws also hold for one-sided limits.
     We use the method of proof by contradiction.
     Suppose  that \(L>M\),
     then we have
-    \[\lim_{x\to a}\bigl[g(x)-f(x)\bigr]=M-L\]
+    \[\lim_{x\to a}\big[g(x)-f(x)\big]=M-L\]
     Therefore,
     for any number \(\epsilon>0\),
     there is a number \(\delta>0\) such that
     \[0<|x-a|<\delta\implies
-    \left|\bigl[g(x)-f(x)\bigr]-(M-L)\right|<\epsilon\]
+    \left|\big[g(x)-f(x)\big]-(M-L)\right|<\epsilon\]
     Note that \(L-M>0\) by the hypothesis.
     Let \(\epsilon=L-M\),
     there is a number \(\delta>0\) such that
-    \[0<|x-a|<\delta\implies\left|\bigl[g(x)-f(x)\bigr]-(M-L)\right|<L-M\]
+    \[0<|x-a|<\delta\implies\left|\big[g(x)-f(x)\big]-(M-L)\right|<L-M\]
     Since \(a\leq|a|\) for any number \(a\),
     we have
-    \[0<|x-a|<\delta\implies \bigl[g(x)-f(x)\bigr]-(M-L)<L-M\]
+    \[0<|x-a|<\delta\implies \big[g(x)-f(x)\big]-(M-L)<L-M\]
     which simplifies to
     \[0<|x-a|<\delta\implies g(x)<f(x)\]
     But this contradicts \(f(x)\leq g(x)\).
