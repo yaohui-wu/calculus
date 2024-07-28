@@ -1,7 +1,7 @@
 \subsection{The Derivative as a Function}
 
 \begin{definition}
-    The \textbf{derivative of a function \textit{f}} is the function
+    The \textbf{derivative of a function} \(f\) is the function
     \[f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\]
 \end{definition}
 \begin{problem}
@@ -22,10 +22,10 @@
 The following notations for the derivative of the function \(y=f(x)\) with
 respect to \(x\) are equivalent:
 \[y'=f'(x)=\frac{dy}{dx}=\frac{d}{dx}f(x)=D_x f(x)\]
-The symbols \(d/dx\) and \(D_x\) are called \textbf{differential operators}
+The symbols \(\dfrac{d}{dx}\) and \(D_x\) are called \textbf{differential operators}
 because they indicate the operation of \textbf{differentiation},
 which is the process of calculating a derivative.
-The symbol \(dy/dx\) is callled the Leibniz notation.
+The symbol \(\dfrac{dy}{dx}\) is callled the Leibniz notation.
 We can rewrite the definition of the derivative in Leibniz notation in the
 form
 \[\frac{dy}{dx}=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}\]
@@ -37,8 +37,7 @@ evaluated at the number \(a\) are equivalent:
 
 \subsubsection*{Differentiable Functions}
 \begin{definition}
-    A function \(f\) is \textbf{differentiable at \textit{a}} if \(f'(a)\)
-    exists.
+    A function \(f\) is \textbf{differentiable at} \(a\) if \(f'(a)\) exists.
     It is \textbf{differentiable on an open interval} \((a,b)\)
     (or \((a,\infty)\) or \((-\infty,a)\) or \((-\infty,\infty)\))
     if it is differentiable at every number in the interval.
@@ -54,12 +53,12 @@ evaluated at the number \(a\) are equivalent:
     \[f'(a)=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}\]
     exists.
     Then
-    \[\lim_{x\to a}\bigl[f(x)-f(a)\bigr]
+    \[\lim_{x\to a}\big[f(x)-f(a)\big]
     =\lim_{x\to a}\frac{f(x)-f(a)}{x-a}(x-a)
     =\lim_{x\to a}\frac{f(x)-f(a)}{x-a}\cdot\lim_{x\to a}(x-a)
     =f'(a)\cdot 0=0\]
     and
-    \[\lim_{x\to a}f(x)=\lim_{x\to a}\bigl[f(a)+(f(x)-f(a))\bigr]
+    \[\lim_{x\to a}f(x)=\lim_{x\to a}\big[f(a)+(f(x)-f(a))\big]
     =\lim_{x\to a}f(a)+\lim_{x\to a}(f(x)-f(a))=f(a)+0=f(a)\]
     Therefore \(f\) is continuous at \(a\).
 \end{proof}

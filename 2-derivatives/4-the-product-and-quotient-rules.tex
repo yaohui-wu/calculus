@@ -2,8 +2,8 @@
 
 \subsubsection*{The Product Rule}
 The \textbf{Product Rule}: If \(f\) and \(g\) are both differentiable, then
-\[\frac{d}{dx}\bigl[f(x)g(x)\bigr]
-=\left[\frac{d}{dx}\bigl[f(x)\bigr]\right]g(x)+f(x)\frac{d}{dx}\bigl[g(x)\bigr]\]
+\[\frac{d}{dx}\big[f(x)g(x)\big]
+=\left[\frac{d}{dx}\big[f(x)\big]\right]g(x)+f(x)\frac{d}{dx}\big[g(x)\big]\]
 \begin{proof}
     Let \(F(x)=f(x)g(x)\).
     Then
@@ -24,8 +24,8 @@ The \textbf{Product Rule}: If \(f\) and \(g\) are both differentiable, then
 \subsubsection*{The Quotient Rule}
 The \textbf{Quotient Rule}: If \(f\) and \(g\) are both differentiable, then
 \[\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]
-=\frac{\left[\dfrac{d}{dx}\bigl[f(x)\bigr]\right]g(x)
--f(x)\dfrac{d}{dx}\bigl[g(x)\bigr]}{\bigl[g(x)\bigr]^2}\]
+=\frac{\left[\dfrac{d}{dx}\big[f(x)\big]\right]g(x)
+-f(x)\dfrac{d}{dx}\big[g(x)\big]}{\big[g(x)\big]^2}\]
 \begin{proof}
     Let \(F(x)=\dfrac{f(x)}{g(x)}\).
     Then
@@ -41,7 +41,7 @@ The \textbf{Quotient Rule}: If \(f\) and \(g\) are both differentiable, then
         \frac{f(x+h)g(x)-f(x)g(x)-f(x)g(x+h)+f(x)g(x)}{hg(x+h)g(x)} \\
         &= \lim_{h\to 0}
         \frac{f(x+h)g(x)-f(x)g(x)
-        -\bigl[f(x)g(x+h)-f(x)g(x)\bigr]}{hg(x+h)g(x)} \\
+        -\big[f(x)g(x+h)-f(x)g(x)\big]}{hg(x+h)g(x)} \\
         &= \lim_{h\to 0}
         \frac{\dfrac{f(x+h)-f(x)}{h}g(x)
         -f(x)\dfrac{g(x+h)-g(x)}{h}}{g(x+h)g(x)} \\
@@ -50,7 +50,7 @@ The \textbf{Quotient Rule}: If \(f\) and \(g\) are both differentiable, then
         -\displaystyle{\lim_{h\to 0}}f(x)\cdot\displaystyle{\lim_{h\to 0}}
         \dfrac{g(x+h)-g(x)}{h}}{\displaystyle{\lim_{h\to 0}}g(x+h)
         \cdot\displaystyle{\lim_{h\to 0}}g(x)}} \\
-        &= \frac{f'(x)g(x)-f(x)g'(x)}{\bigl[g(x)^2\bigr]}
+        &= \frac{f'(x)g(x)-f(x)g'(x)}{\big[g(x)^2\big]}
     \end{align*}
 \end{proof}
 

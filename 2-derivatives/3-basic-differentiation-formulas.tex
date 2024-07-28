@@ -50,10 +50,10 @@ If \(n\) is any real number, then
     =-x^{-2}=-\frac{1}{x^2}\]
 \end{solution}
 The \textbf{normal line} to a curve \(C\) at a point \(P\) is the line through
-\(P\) that is perpendicular to the tangent line at \(P\).
+\(P\) that is perpendicular to the tangent line at \(P\). \\
 The \textbf{Constant Multiple Rule}:
 If \(c\) is a constant and \(f\) is a differentiable function, then
-\[\frac{d}{dx}\bigl[cf(x)\bigr]=c\,\frac{d}{dx}f(x)\]
+\[\frac{d}{dx}\big[cf(x)\big]=c\,\frac{d}{dx}f(x)\]
 \begin{proof}
     Let \(g(x)=cf(x)\).
     Then
@@ -65,13 +65,13 @@ If \(c\) is a constant and \(f\) is a differentiable function, then
     \end{align*}
 \end{proof}
 The \textbf{Sum Rule}: If \(f\) and \(g\) are both differentiable, then
-\[\frac{d}{dx}\bigl[f(x)+g(x)\bigr]=\frac{d}{dx}f(x)+\frac{d}{dx}g(x)\]
+\[\frac{d}{dx}\big[f(x)+g(x)\big]=\frac{d}{dx}f(x)+\frac{d}{dx}g(x)\]
 \begin{proof}
     Let \(F(x)=f(x)+g(x)\).
     Then
     \begin{align*}
         F'(x) &= \lim_{h\to 0}
-        \frac{\bigl[f(x+h)+g(x+h)\bigr]-\bigl[f(x)+g(x)\bigr]}{h} \\
+        \frac{\big[f(x+h)+g(x+h)\big]-\big[f(x)+g(x)\big]}{h} \\
         &= \lim_{h\to 0}
         \left[\frac{f(x+h)-f(x)}{h}+\frac{g(x+h)-g(x)}{h}\right] \\
         &= \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
@@ -80,18 +80,18 @@ The \textbf{Sum Rule}: If \(f\) and \(g\) are both differentiable, then
     \end{align*}
 \end{proof}
 The Sum Rule can be extended to the sum of any number of functions.
-By writing \(f-g\) as \(f+(-1)g\) and applying the Sum Rule and the constant
-multiple rule, we get the following formula.
+By writing \(f-g\) as \(f+(-1)g\) and applying the Sum Rule and the Constant
+Multiple Rule, we get the following formula. \\
 The \textbf{Difference Rule}: If \(f\) and \(g\) are both differentiable, then
-\[\frac{d}{dx}\bigl[f(x)-g(x)\bigr]=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)\]
+\[\frac{d}{dx}\big[f(x)-g(x)\big]=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)\]
 \begin{proof}
     Let \(F(x)=f(x)-g(x)\).
     Then
     \begin{align*}
         F'(x) &= \lim_{h\to 0}
-        \frac{\bigl[f(x+h)-g(x+h)\bigr]-\bigl[f(x)-g(x)\bigr]}{h} \\
+        \frac{\big[f(x+h)-g(x+h)\big]-\big[f(x)-g(x)\big]}{h} \\
         &= \lim_{h\to 0}\frac{f(x+h)-f(x)-g(x+h)+g(x)}{h} \\
-        &= \lim_{h\to 0}\frac{f(x+h)-f(x)-\bigl[g(x+h)-g(x)\bigr]}{h} \\
+        &= \lim_{h\to 0}\frac{f(x+h)-f(x)-\big[g(x+h)-g(x)\big]}{h} \\
         & =\lim_{h\to 0}
         \left[\frac{f(x+h)-f(x)}{h}-\frac{g(x+h)-g(x)}{h}\right] \\
         &= \lim_{h\to 0}

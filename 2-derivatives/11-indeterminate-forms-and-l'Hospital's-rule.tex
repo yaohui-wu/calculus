@@ -4,12 +4,12 @@ In general, if we have a limit of the form
 \[\lim_{x\to a}\frac{f(x)}{g(x)}\]
 where both \(f(x)\to 0\) and \(g(x)\to 0\) as \(x\to a\), then this limit may
 or may not exist and is called an \textbf{indeterminate form of type}
-\(\mathbf{\dfrac{0}{0}}\).
+\(\dfrac{0}{0}\).
 In general, if we have a limit of the form
 \[\lim_{x\to a}\frac{f(x)}{g(x)}\]
 where both \(f(x)\to\infty\) (or \(-\infty\)) and \(g(x)\to\infty\)
 (or \(-\infty\)), then this limit may or may not exist and is called an
-\textbf{indeterminate form of type} \(\mathbf{\dfrac{\infty}{\infty}}\).
+\textbf{indeterminate form of type} \(\dfrac{\infty}{\infty}\).
 \begin{theorem}[l'Hospital's Rule]
     Suppose \(f\) and \(g\) are differentiable and \(g'(x)\neq 0\) near \(a\)
     (except possibly at \(a\)).
@@ -55,7 +55,7 @@ continuous, and \(g'(a)\neq 0\), we have
     \(\dfrac{\infty}{\infty}\).
     Then l'Hospital's Rule gives
     \[\lim_{x\to\infty}\frac{e^x}{x^2}=\lim_{x\to\infty}\frac{e^x}{2x}\]
-    Since we stil have an indeterminate form of \(\dfrac{\infty}{\infty}\), a
+    Since we still have an indeterminate form of \(\dfrac{\infty}{\infty}\), a
     second application of l'Hospital's Rule gives
     \[\lim_{x\to\infty}\frac{e^x}{x^2}=\lim_{x\to\infty}\frac{e^x}{2x}
     =\lim_{x\to\infty}\frac{e^x}{2}=\infty\]
@@ -80,7 +80,7 @@ If \(\displaystyle{\lim_{x\to a}f(x)=0}\) and
 \(\displaystyle{\lim_{x\to a}g(x)=\infty}\) (or \(-\infty\)),
 then the limit
 \[\lim_{x\to a}f(x)g(x)\]
-is called an \textbf{indeterminate form of type} \(\mathbf{0\cdot\infty}\).
+is called an \textbf{indeterminate form of type} \(0\cdot\infty\).
 We can deal with it by writing the product \(fg\) as a quotient:
 \[fg=\frac{f}{1/g}\]
 or
@@ -100,7 +100,7 @@ Rule.
 \subsubsection*{Indeterminate Differences}
 If \(\displaystyle{\lim_{x\to a}f(x)=\infty}\) and
 \(\displaystyle{\lim_{x\to a}g(x)=\infty}\), then the limit
-\[\lim_{x\to a}\bigl[f(x)-g(x)\bigr]\]
+\[\lim_{x\to a}\big[f(x)-g(x)\big]\]
 is called an \textbf{indeterminate form of type} \(\infty-\infty\).
 We can convert the difference into a quotient so that we have an indeterminate
 form of type \(\dfrac{0}{0}\) or \(\dfrac{\infty}{\infty}\).
@@ -115,7 +115,7 @@ form of type \(\dfrac{0}{0}\) or \(\dfrac{\infty}{\infty}\).
 
 \subsubsection*{Indeterminate Powers}
 Several indeterminate forms arise from the limit
-\[\lim_{x\to a}\bigl[f(x)\bigr]^{g(x)}\]
+\[\lim_{x\to a}\big[f(x)\big]^{g(x)}\]
 \begin{itemize}
     \item Type \(0^0\): \(\displaystyle{\lim_{x\to a}f(x)=0}\) and
     \(\displaystyle{\lim_{x\to a}g(x)=0}\).
@@ -126,10 +126,10 @@ Several indeterminate forms arise from the limit
 \end{itemize}
 Note that the form \(0^\infty\) is not indeterminate.
 Each of these three cases can be treated either by taking the natural
-logarithm: let \(y=\bigl[f(x)\bigr]^{g(x)}\), then \(\ln y=g(x)\ln f(x)\) or
+logarithm: let \(y=\big[f(x)\big]^{g(x)}\), then \(\ln y=g(x)\ln f(x)\) or
 by writing the function as an exponential:
-\[\bigl[f(x)\bigr]^{g(x)}=e^{g(x)\ln f(x)}\]
-In either method we are led to the indeterminate product \(g(x)\ln f(X)\),
+\[\big[f(x)\big]^{g(x)}=e^{g(x)\ln f(x)}\]
+In either method we are led to the indeterminate product \(g(x)\ln f(x)\),
 which is of type \(0\cdot\infty\).
 \begin{problem}
     Calculate \(\displaystyle{\lim_{x\to 0^+}(1+\sin 4x)^{\cot x}}\).
@@ -138,7 +138,7 @@ which is of type \(0\cdot\infty\).
     Let
     \[y=(1+\sin 4x)^{\cot x}\]
     Then
-    \[\ln y=\ln\bigl[(1+\sin 4x)^{\cot x}\bigr]=\cot x\ln(1+\sin 4x)\]
+    \[\ln y=\ln\big[(1+\sin 4x)^{\cot x}\big]=\cot x\ln(1+\sin 4x)\]
     so l'Hospital's Rule gives
     \[\lim_{x\to 0^+}\ln y=\lim_{x\to 0^+}\frac{\ln(1+\sin 4x)}{\tan x}
     =\lim_{x\to 0^+}\frac{\dfrac{4\cos 4x}{1+\sin 4x}}{\sec^2 x}=4\]
