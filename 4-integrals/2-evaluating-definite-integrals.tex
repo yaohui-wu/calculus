@@ -1,0 +1,51 @@
+\subsection{Evaluating Definite Integrals}
+
+\begin{theorem}[Evaluation Theorem]
+    If \(f\) is continuous on the interval \([a,b]\), then
+    \[\int_a^b f(x)\,dx=F(b)-F(a)\]
+    where \(F\) is any antiderivative of \(f\), that is, \(F'=f\).
+\end{theorem}
+\begin{proof}
+    We divide the interval \([a,b]\) into \(n\) subintervals with endpoints \\
+    \(x_0=a,x_1,x_2,\cdots,x_n=b\) and with length
+    \(\Delta x=\dfrac{b-a}{n}\).
+    Let \(F\) be any antiderivative of \(f\).
+    Then
+    \begin{align*}
+        & F(b)-F(a) \\
+        &= F(x_n)-F(x_0) \\
+        &= F(x_n)-F(x_{n-1})+F(x_{n-1})-F(x_{n-2})+\cdots+F(x_2)-F(x_1)+F(x_1)
+        -F(x_0) \\
+        &= \sum_{i=1}^n\big[F(x_i)-F(x_{i-1})\big]
+    \end{align*}
+    Now \(F\) is continuous because it's differentiable and so we can apply
+    Lagrange's Mean Value Theorem to \(F\) on each subinterval
+    \([x_{i-1},x_i]\).
+    Thus there exists a number \(x_i^*\) between \(x_{i-1}\) and \(x_i\) such
+    that
+    \[F(x_i)-F(x_{i-1})=F'(x_i^*)(x_i-x_{i-1})=f(x_i^*)\Delta x\]
+    Therefore
+    \[F(b)-F(a)=\sum_{i=1}^n f(x_i^*)\Delta x\]
+    Now we take the limit of each side of this equation as \(n\to\infty\).
+    Then
+    \[F(b)-F(a)=\lim_{n\to\infty}\sum_{i=1}^n f(x_i^*)\Delta x
+    =\int_a^b f(x)\,dx\]
+\end{proof}
+When applying the Evaluation Theorem we use the notation
+\[\int_a^b f(x)\,dx=F(b)-F(a)=\big[F(x)\big]_a^b=F(x)\Big|_a^b\]
+
+\subsubsection*{Indefinite Integrals}
+The notation
+\[\int f(x)\,dx\]
+is used for an antiderivative of \(f\) and is called an
+\textbf{indefinite intergral}.
+Thus
+\[\int f(x)\,dx=F(x)\]
+means that
+\[F'(x)=f(x)\]
+
+\subsubsection*{Applications}
+\begin{theorem}[Net Change Theorem]
+    The integral of a rate of change is the net change:
+    \[\int_a^b F'(x)\,dx=F(b)-F(a)\]
+\end{theorem}
