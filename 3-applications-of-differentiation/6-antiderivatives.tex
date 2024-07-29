@@ -1,0 +1,33 @@
+\subsection{Antiderivatives}
+
+\begin{definition}
+    A function \(F\) is called an \textbf{antiderivative} of \(f\) on an
+    interval \(I\) if \(F'(x)=f(x)\) for all \(x\) in \(I\).
+\end{definition}
+\begin{theorem}
+    If \(F\) is an antiderivative of \(f\) on interval \(I\), then the most
+    general antiderivative of \(f\) on \(I\) is
+    \[F(x)+C\]
+    where \(C\) is an arbitrary constant.
+\end{theorem}
+\begin{problem}
+    Find the most general antiderivative of \(f(x)=\dfrac{1}{x}\).
+\end{problem}
+\begin{solution}
+    We know that
+    \[\frac{d}{dx}(\ln |x|)=\frac{1}{x}\]
+    for all \(x\neq 0\).
+    Then the antiderivative of \(f\) is \(F(x)=\ln x+C_1\) if \(x>0\)
+    or \(F(x)=\ln(-x)+C_2\) if \(x<0\).
+    The general antiderivative of \(f\) is \(F(x)=\ln |x|+C\) on each of the
+    intervals \((-\infty,0)\) and \((0,\infty)\).
+\end{solution}
+\begin{problem}
+    Find the most general antiderivative of \(f(x)=x^n,\quad n\neq -1\).
+\end{problem}
+\begin{solution}
+    If \(n\neq -1\), then by the Power Rule,
+    \[\frac{d}{dx}\left(\frac{x^{n+1}}{n+1}\right)=\frac{(n+1)x^n}{n+1}=x^n\]
+    Thus the general antiderivative of \(f(x)=x^n\) is
+    \[F(x)=\frac{x^{n+1}}{n+1}+C\]
+\end{solution}

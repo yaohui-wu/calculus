@@ -1,0 +1,27 @@
+\subsection{Newton's Method}
+
+We have \textbf{Newton's Method} to find an approximate numerical value of the
+root of an equation.
+Let \(r\) be the root of the equation.
+We start with a first approximation \(x_1\).
+Consider the tangent line \(L\) to the curve \(y=f(x)\) at the point
+\((x_1,f(x_1))\) and we label the \(x\)-intercept of \(L\) as \(x_2\).
+The slope of \(L\) is \(f(x_1)\), so its equation is
+\[y-f(x_1)=f'(x_1)(x-x_1)\]
+Since the \(x\)-intercept of \(L\) is \(x_2\), we set \(y=0\) and obtain
+\[0-f(x_1)=f'(x_1)(x_2-x_1)\]
+If \(f'(x_1)\neq 0\), we can solve this equation for \(x_2\):
+\[x_2=x_1-\frac{f(x_1)}{f'(x_1)}\]
+We use \(x_2\) as a second approximation to \(r\).
+Next we repeat this procedure with \(x_1\) replaced by \(x_2\), using the
+tangent line at \((x_2,f(x_2))\).
+This gives a third approximation:
+\[x_3=x_2-\frac{f(x_2)}{f'(x_2)}\]
+If we keep repeating this process, we obtain a sequence of approximations
+\(x_1,x_2,x_3,x_4,\dots\).
+In general, if the \(n\)th approximation is \(x_n\) and \(f'(x_n)\neq 0\),
+then the next approximation is given by
+\[x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}\]
+If the numbers \(x_n\) become closer and closer to \(r\) as \(n\) becomes
+large, then we say that the sequence converges to \(r\) and we write
+\[\lim_{n\to\infty}x_n=r\]

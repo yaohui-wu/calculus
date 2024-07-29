@@ -1,0 +1,31 @@
+\subsection{Optimization Problems}
+
+\begin{problem}
+    A farmer has 2400 m of fencing and wants to fence off a rectangular field
+    that borders a straight river.
+    He needs no fence along the river.
+    What are the dimensions of the field that has the largest area?
+\end{problem}
+\begin{solution}
+    We want to maximize the area \(A\) of the rectangle.
+    Let \(x\) and \(y\) be the length and width of the rectangle.
+    Then the area is
+    \[A=xy\]
+    Given that the total length of fencing is 2400 m so
+    \[x+2y=2400\]
+    Thus
+    \[y=1200-\frac{1}{2}x\]
+    and so
+    \[A=x\left(1200-\frac{1}{2}x\right)=1200x-\frac{1}{2}x^2\]
+    Note that \(x\geq 0\) and \(x\leq 2400\).
+    So the function we want to maximize is
+    \[A(x)=1200x-\frac{1}{2}x^2,\quad 0\leq x\leq 2400\]
+    The derivative is \(A'(x)=1200-x\), so to find the critical numbers we solve
+    the equation
+    \[1200-x=0\]
+    which gives \(x=1200\).
+    Since \(A(0)=0,A(1200)=720000,A(2400)=0\), the Closed Interval Method
+    gives the maximum value as \(A(1200)=720000\).
+    Thus the rectangular field should have a length of 1,200 m and a width of
+    600 m.
+\end{solution}
