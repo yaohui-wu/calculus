@@ -1,18 +1,18 @@
 \subsection{The Substitution Rule}
 
-\subsubsection*{The Substitution Rule}
-\begin{theorem}[The Substitution Rule]
+\begin{theorem}[Substitution Rule]
     If \(u=g(x)\) is a differentiable function whose range is an interval
     \(I\) and \(f\) is continuous on \(I\), then
     \[\int f(g(x))g'(x)\,dx=\int f(u)\,du\]
-    If \(g'\) is continuous on \([a,b]\) and \(f\) is continuous on \(I\),
-    then
-    \[\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)} f(u)\,du\]
 \end{theorem}
 \begin{proof}
-    Let \(F'=f\), then by the chain rule we have
+    If \(F'=f\), then
     \[\int f(g(x))g'(x)\,dx=F(g(x))+C=F(u)+C=\int f(u)\,du\]
 \end{proof}
+If \(g'\) is continuous on \([a,b]\) and \(f\) is continuous on \(I\),
+then
+\[\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)} f(u)\,du\]
+
 \begin{problem}
     Evaluate \(\displaystyle{\int\frac{x}{\sqrt{1-4x^2}}\,dx}\).
 \end{problem}

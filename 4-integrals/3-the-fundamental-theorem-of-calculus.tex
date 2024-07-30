@@ -1,1 +1,90 @@
 \subsection{The Fundamental Theorem of Calculus}
+
+The \textbf{Fundamental Theorem of Calculus} establishes a connection between the two \\
+branches of calculus: differential calculus and integral calculus.
+It says that differentiation and integration are inverse processes and gives
+the precise inverse relationship between the derivative and the integral.
+\begin{theorem}[Fundamental Theorem of Calculus Part 1]
+    If \(f\) is continuous on \([a,b]\), then the function \(g\) defined by
+    \[g(x)=\int_a^x f(t)\,dt,\quad a\leq x\leq b\]
+    is an antiderivative of \(f\), that is, \(g'(x)=f(x)\) for \(a<x<b\).
+\end{theorem}
+\begin{proof}
+    If \(x\) and \(x+h\) are in the open interval \((a,b)\), then
+    \begin{align*}
+        g(x+h)-g(x) &= \int_a^{x+h}f(t)\,dt-\int_a^x f(t)\,dt \\
+        &= \left(\int_a^x f(t)\,dt+\int_x^{x+h}f(t)\,dt\right)
+        -\int_a^x f(t)\,dt \\
+        &= \int_x^{x+h}f(t)\,dt
+    \end{align*}
+    and so, for \(h\neq 0\),
+    \[\frac{g(x+h)-g(x)}{h}=\frac{1}{h}\int_x^{x+h}f(t)\,dt\]
+    Assume that \(h>0\).
+    Since \(f\) is continuous on \([x,x+h]\), the Extreme Value Theorem says
+    that there are numbers \(u\) and \(v\) in \([x,x+h]\) such that \(f(u)=m\)
+    and \(f(v)=M\), where \(m\) and \(M\) are the absolute minimum and the
+    absolute maximum values of \(f\) in \([x,x+h]\).
+    Then
+    \[m\cdot h\leq\int_x^{x+h}f(t)\,dt\leq M\cdot h\]
+    that is,
+    \[f(u)\cdot h\leq\int_x^{x+h}f(t)\,dt\leq f(v)\cdot h\]
+    Since \(h>0\), we have
+    \[f(u)\leq\frac{1}{h}\int_x^{x+h}f(t)\,dt\leq f(v)\]
+    Thus
+    \[f(u)\leq\frac{g(x+h)-g(x)}{h}\leq f(v)\]
+    This inequality can be proved in a similar manner for the case \(h<0\).
+    Let \(h\to 0\).
+    Then \(u\to x\) and \(v\to x\), since \(u\) and \(v\) lie between \(x\)
+    and \(x+h\).
+    Thus
+    \[\lim_{h\to 0}f(u)=\lim_{u\to x}f(u)=f(x)\]
+    and
+    \[\lim_{h\to 0}f(v)=\lim_{v\to x}f(v)=f(x)\]
+    because \(f\) is continuous at \(x\).
+    By the Squeeze Theorem,
+    \[g'(x)=\lim_{h\to 0}\frac{g(x+h)-g(x)}{h}=f(x)\]
+    If \(x=a\) or \(b\), then we can interpret this equation as a one-sided
+    limit.
+    Since \(g\) is differentiable, this shows that  \(g\) is continuous on
+    \([a,b]\).
+\end{proof}
+Using Leibniz notation for derivatives, we can write the Fundamental Theorem
+of Calculus Part 1 as
+\[\frac{d}{dx}\int_a^x f(t)\,dt=f(x)\]
+
+\subsubsection*{Differentiation and Integration as Inverse Processes}
+\begin{theorem}[Fundamental Theorem of Calculus]
+    Suppose \(f\) is continuous on \([a,b]\).
+    \begin{enumerate}
+        \item If
+        \[g(x)=\int_a^x f(t)\,dt\]
+        then
+        \[g'(x)=f(x)\]
+        \item
+        \[\int_a^b f(x)\,dx=F(b)-F(a)\]
+        where \(F\) is any antiderivative of \(f\), that is, \(F'=f\).
+    \end{enumerate}
+\end{theorem}
+The Fundamental Theorem of Calculus is the most important theorem in calculus.
+It is one of the greatest accomplishments of the human mind.
+
+\subsubsection*{Average Value of a Function}
+We define the \textbf{average value of} \(f\) on the interval \([a,b]\) as
+\[\overline{f}=\frac{1}{b-a}\int_a^b f(x)\,dx\]\
+\begin{theorem}[Mean Value Theorem for Integrals]
+    If \(f\) is continuous on \([a,b]\), then there exists a number \(c\) in
+    \([a,b]\) such that
+    \[f(c)=\overline{f}=\frac{1}{b-a}\int_a^b f(x)\,dx\]
+    that is,
+    \[\int_a^b f(x)\,dx=f(c)(b-a)\]
+\end{theorem}
+\begin{proof}
+    Let \(\displaystyle{F(x)=\int_a^x f(t)\,dt}\) for \\
+    \(a\leq x\leq b\).
+    By Lagrange's Mean Value Theorem for derivatives, there is a number \(c\)
+    between \(a\) and \(b\) such that
+    \[F(b)-F(a)=F'(c)(b-a)\]
+    But \(F'(x)=f(x)\) by the Fundamental Theorem of Calculus Part 1.
+    Therefore
+    \[\int_a^b f(t)\,dt-0=f(c)(b-a)\]
+\end{proof}
