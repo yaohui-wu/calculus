@@ -1,64 +1,78 @@
 \subsection{Integration by Parts}
 
-\begin{theorem}[Integration by Parts Formula]
-    If \(f\) and \(g\) are differentiable functions, then
-    \[\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx\]
-    If \(u=f(x)\) and \(v=g(x)\), then
-    \[\int u\,dv=uv-\int v\,du\]
-    and
-    \[\int_a^b u\,dv=[uv]_a^b-\int_a^b v\,du\]
-\end{theorem}
-\begin{proof}
-    We know from the product rule that
-    \[f(x)g(x)=\int f'(x)g(x)\,dx+\int f(x)g'(x)\,dx\]
-    and therefore
-    \[\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx\]
-\end{proof}
+Every differentiation rule has a corresponding integration rule.
+For instance, the Substitution Rule for integration corresponds to the Chain
+Rule for differentiation.
+The rule that corresponds to the Product Rule for differentiation is called
+the rule for integration by parts.
+The Product Rule states that if \(f\) and \(g\) are differentiable functions,
+then
+\[\frac{d}{dx}\big[f(x)g(x)\big]=f'(x)g(x)+f(x)g'(x)\]
+In the notation fo indefinite integrals this equation becomes
+\[f(x)g(x)=\int\big[f'(x)g(x)+f(x)g'(x)\big]\,dx\]
+or
+\[\int f'(x)g(x)\,dx+\int f(x)g'(x)\,dx=f(x)g(x)\]
+We can rearrange this equation as
+\[\int f(x)g'(x)\,dx=f(x)g(x)-\int g(x)f'(x)\,dx\]
+and this equation is called the \textbf{formula for integration by parts}.
+Let \(u=f(x)\) and \(v=f(x)\).
+Then the differentials are \(du=f'(x)\,dx\) and \(dv=g'(x)\,dx\), so, by the
+Substitution Rule, the formula for integration by parts becomes
+\[\int u\,dv=uv-\int v\,du\]
+
 \begin{problem}
     Evaluate \(\displaystyle{\int\ln x\,dx}\).
 \end{problem}
 \begin{solution}
-    Let \(u=\ln x\iff du=\dfrac{1}{x}\,dx\) and \(dv=dx\iff v=x\),
-    then
+    Let \(u=\ln x\iff du=\dfrac{1}{x}\,dx\) and \(dv=dx\iff v=x\).
+    Then
     \[\int\ln x\,dx=x\ln x-\int dx=x\ln x-x+C\]
-\end{solution}
-\begin{problem}
-    Evaluate \(\displaystyle{\int\arctan x\,dx}\).
-\end{problem}
-\begin{solution}
-    Let \(u=\arctan x\iff du=\dfrac{dx}{1+x^2}\) and \(dv=dx\iff v=x\), then
-    \[\int\arctan x\,dx=x\arctan x-\int\frac{x}{1+x^2}\,dx\]
-    Let \(u=1+x^2\iff du=2x\,dx\) so \(x\,dx=\dfrac{1}{2}\,du\), then
-    \[\int\frac{x}{1+x^2}\,dx=\frac{1}{2}\int\frac{du}{u}=\frac{1}{2}\ln|u|+C
-    =\frac{1}{2}\ln(1+x^2)+C\]
-    Therefore,
-    \[\int\arctan x\,dx=x\arctan x-\frac{1}{2}\ln(1+x^2)+C\]
 \end{solution}
 \begin{problem}
     Evaluate \(\displaystyle{\int e^x\sin x\,dx}\).
 \end{problem}
 \begin{solution}
-    Let \(u=\sin x\iff du=\cos x\,dx\) and \(dv=e^x\,dx\iff v=e^x\),
+    Let \(u=\sin x\iff du=\cos x\,dx\) and \(dv=e^x\,dx\iff v=e^x\).
     then
     \[\int e^x\sin x\,dx=e^x\sin x-\int e^x\cos x\,dx\]
-    Let \(u=\cos x\iff du=-\sin x\,dx\) and \(dv=e^x\,dx\iff v=e^x\),
-    then
+    Let \(u=\cos x\iff du=-\sin x\,dx\) and \(dv=e^x\,dx\iff v=e^x\).
+    Then
     \[\int e^x\cos x\,dx=e^x\cos x+\int e^x\sin x\,dx\]
-    Therefore,
+    Therefore
     \begin{align*}
         \int e^x\sin x\,dx &= e^x\sin x-e^x\cos x-\int e^x\sin x\,dx \\
         \int e^x\sin x\,dx &= \frac{1}{2}e^x(\sin x-\cos x) 
     \end{align*}
 \end{solution}
+The formula of integration by parts for definite integrals is
+\[\int_a^b f(x)g'(x)\,dx=\big[f(x)g(x)\big]_a^b-\int_a^b g(x)f'(x)\,dx\]
+or
+\[\int_a^b v\,du=\big[uv\big]_a^b-\int_a^b v\,du\]
+
+\begin{problem}
+    Evaluate \(\displaystyle{\int_0^1\arctan x\,dx}\).
+\end{problem}
+\begin{solution}
+    Let \(u=\arctan x\iff du=\dfrac{dx}{1+x^2}\) and \(dv=dx\iff v=x\), then
+    \[\int_0^1\arctan x\,dx
+    =\big[x\arctan x\big]_0^1-\int_0^1\frac{x}{1+x^2}\,dx\]
+    We have \(\big[x\arctan x\big]_0^1=\arctan(1)=\dfrac{\pi}{4}\).
+    Let \(u=1+x^2\iff du=2x\,dx\) so \(x\,dx=\dfrac{1}{2}\,du\), then
+    \[\int_0^1\frac{x}{1+x^2}\,dx=\frac{1}{2}\int_1^2\frac{du}{u}
+    =\left[\frac{1}{2}\ln|u|\right]_1^2=\frac{1}{2}\ln(2)\]
+    Therefore
+    \[\int_0^1\arctan x\,dx=\frac{\pi}{4}-\frac{1}{2}\ln(2)\]
+\end{solution}
 \begin{problem}
     Prove the reduction formula
     \[\int\sin^n x\,dx
     =-\frac{1}{n}\sin^{n-1}x\cos x+\frac{n-1}{n}\int\sin^{n-2}x\,dx\]
-    where \(n\in\N\) and \(n\geq 2\).
+    where \(n\geq 2\) is an integer.
 \end{problem}
 \begin{solution}
-    Let \(u=\sin^{n-1}x\iff du=(n-1)\sin^{n-2}x\cos x\,dx\) and
-    \(dv=\sin x\,dx\iff v=-\cos x\) then
+    Let \(u=\sin^{n-1}x\iff du=(n-1)\sin^{n-2}x\cos x\,dx\) and \\
+    \(dv=\sin x\,dx\iff v=-\cos x\).
+    Then
     \begin{align*}
         \int\sin^n x\,dx
         &= -\sin^{n-1}x\cos x+(n-1)\int \sin^{n-2}x\cos^2 x\,dx \\
@@ -78,11 +92,12 @@
     Prove the reduction formula
     \[\int\cos^n x\,dx
     =\frac{1}{n}\cos^{n-1}x\sin x+\frac{n-1}{n}\int\cos^{n-2}x\,dx\]
-    where \(n\in\N\) and \(n\geq 2\).
+    where \(n\geq 2\) is an integer.
 \end{problem}
 \begin{solution}
     Let \(u=\cos^{n-1}x\iff du=-(n-1)\cos^{n-2}x\sin x\,dx\) and
-    \(dv=\cos x\,dx\iff v=\sin x\) then
+    \(dv=\cos x\,dx\iff v=\sin x\).
+    Then
     \begin{align*}
         \int\cos^n x\,dx
         &= \cos^{n-1} x\sin x+(n-1)\int\cos^{n-2}x\sin^2 x\,dx \\
@@ -101,7 +116,7 @@
 \begin{problem}
     Show that
     \[\int_0^{\pi/2}\sin^n x\,dx=\frac{n-1}{n}\int_0^{\pi/2}\sin^{n-2}x\,dx\]
-    where \(n\in\N\) and \(n\geq 2\).
+    where \(n\geq 2\) is an integer.
 \end{problem}
 \begin{solution}
     We use the reduction formula then
@@ -123,7 +138,7 @@
     \[\int_0^{\pi/2}\sin^{2n+1} x\,dx
     =\frac{2\cdot4\cdot6\cdot\cdots\cdot2n}
     {3\cdot5\cdot7\cdot\cdots\cdot(2n+1)}\]
-    where \(n\in\N\) and \(n\geq 2\).
+    where \(n\geq 2\) is an integer.
 \end{problem}
 \begin{solution}
     By the reduction formula
@@ -147,7 +162,7 @@
     \[\int_0^{\pi/2}\sin^{2n} x\,dx
     =\frac{1\cdot3\cdot5\cdot\cdots\cdot(2n-1)}
     {2\cdot4\cdot6\cdot\cdots\cdot2n}\frac{\pi}{2}\]
-    where \(n\in\N\) and \(n\geq 2\).
+    where \(n\geq 2\) is an integer.
 \end{problem}
 \begin{solution}
     \begin{align*}

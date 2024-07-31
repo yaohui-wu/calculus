@@ -60,7 +60,7 @@ We can use trigonometric identities to integrate trigonometric integrals.
     \int_0^\pi\sin^2 x\,dx &= \int_0^\pi\frac{1}{2}(1-\cos 2x)\,dx
     =\frac{1}{2}\int_0^{\pi}(1+\cos 2x)\,dx \\
     &=\frac{1}{2}
-    \left(\bigl[x\bigr]_0^\pi-\frac{1}{2}\bigl[\sin 2x\bigr]_0^\pi\right)
+    \left(\big[x\big]_0^\pi-\frac{1}{2}\big[\sin 2x\big]_0^\pi\right)
     =\frac{\pi}{2}
     \end{align*}
 \end{solution}
@@ -81,7 +81,7 @@ We can use trigonometric identities to integrate trigonometric integrals.
 In general, an integral of powers of \(\sin x\) and \(\cos x\) is in the
 form
 \[\int\sin^m x\cos^n x\,dx\]
-where \(m,n\in\Z\) and \(m,n\geq 0\).
+where \(m\) and \(n\) are non-negative integers.
 If \(m\) is odd, then we save a factor of \(\sin x\) and express the rest in
 terms of \(\cos x\) for substitution.
 If \(n\) is odd, then we save a factor of \(\cos x\) and express the rest in
@@ -115,7 +115,7 @@ If \(m\) and \(n\) are even, then we use the power reduction formulas.
 In general, an integral of powers of \(\tan x\) and \(\sec x\) is in the
 form
 \[\int\tan^m x\sec^n x\,dx\]
-where \(m,n\in\Z\) and \(m,n\geq 0\).
+where \(m\) and \(n\) are non-negative integers.
 If \(m\) is odd, then we save a factor of \(\sec x\tan x\) and express the
 rest in terms of \(\sec x\) for substitution.
 If \(n\) is even, then we save a factor of \(\sec^2 x\) and express the
@@ -151,7 +151,7 @@ rest in terms of \(\tan x\) for substitution.
     We have
     \[\int\tan^2 x\sec x\,dx=\int(\sec^2 x-1)\sec x\,dx
     =\int\sec^3 x\,dx-\int\sec x\,dx\]
-    Therefore,
+    Therefore
     \begin{align*}
         \int\sec^3 x\,dx &= \sec x\tan x-\int\sec^3 x\,dx+\int\sec x\,dx \\
         \int\sec^3 x\,dx
@@ -215,8 +215,8 @@ then we can use the substitution \(x=a\sec\theta\) where
     \begin{align*}
         A &= 4\int_0^{\pi/2}r\cos\theta(r\cos\theta)\,d\theta
         =4r^2\int_0^{\pi/2}\cos^2\theta\,d\theta
-        =4r^2\left(\frac{1}{2}\left(\bigl[\theta\bigr]_0^{\pi/2}
-        +\frac{1}{2}\bigl[\sin2\theta\bigr]_0^{\pi/2}\right)\right) \\
+        =4r^2\left(\frac{1}{2}\left(\big[\theta\big]_0^{\pi/2}
+        +\frac{1}{2}\big[\sin2\theta\big]_0^{\pi/2}\right)\right) \\
         &= 4r^2\left(\frac{\pi}{4}\right)=\pi r^2
     \end{align*}
 \end{solution}
