@@ -4,6 +4,11 @@ The \textbf{Fundamental Theorem of Calculus} establishes a connection between th
 branches of calculus: differential calculus and integral calculus.
 It says that differentiation and integration are inverse processes and gives
 the precise inverse relationship between the derivative and the integral.
+The first part of the Fundamental Theorem of Calculus deals with functions
+defined by an equation of the form
+\[g(x)=\int_a^x f(t)\,dt\]
+where \(f\) is a continuous function on \([a,b]\) and \(x\) varies between
+\(a\) and \(b\).
 \begin{theorem}[Fundamental Theorem of Calculus Part 1]
     If \(f\) is continuous on \([a,b]\), then the function \(g\) defined by
     \[g(x)=\int_a^x f(t)\,dt,\quad a\leq x\leq b\]
@@ -51,6 +56,22 @@ the precise inverse relationship between the derivative and the integral.
 Using Leibniz notation for derivatives, we can write the Fundamental Theorem
 of Calculus Part 1 as
 \[\frac{d}{dx}\int_a^x f(t)\,dt=f(x)\]
+By the Fundamental Theorem of Calculus Part 1, the derivative of the Fresnel
+function
+\[S(x)=\int_0^x \sin\left(\frac{\pi t^2}{2}\right)\,dt\]
+is
+\[S'(x)=\sin\left(\frac{\pi x^2}{2}\right)\]
+\begin{problem}
+    Find \(\displaystyle{\frac{d}{dx}\int_1^{x^4}\sec t\,dt}\).
+\end{problem}
+\begin{solution}
+    We use the Chain Rule and the Fundamental Theorem of Calculus Part 1.
+    Let \(u=x^4\).
+    Then
+    \[\frac{d}{dx}\int_1^{x^4}\sec t\,dt
+    =\frac{d}{du}\int_1^u\sec t\,dt\cdot\frac{du}{dx}
+    =\sec u\cdot\frac{du}{dx}=\sec (x^4)\cdot 4x^3\]
+\end{solution}
 
 \subsubsection*{Differentiation and Integration as Inverse Processes}
 \begin{theorem}[Fundamental Theorem of Calculus]

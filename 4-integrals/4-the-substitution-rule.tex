@@ -1,17 +1,22 @@
 \subsection{The Substitution Rule}
-
-\begin{theorem}[Substitution Rule]
-    If \(u=g(x)\) is a differentiable function whose range is an interval
-    \(I\) and \(f\) is continuous on \(I\), then
-    \[\int f(g(x))g'(x)\,dx=\int f(u)\,du\]
-\end{theorem}
-\begin{proof}
-    If \(F'=f\), then
-    \[\int f(g(x))g'(x)\,dx=F(g(x))+C=F(u)+C=\int f(u)\,du\]
-\end{proof}
-If \(g'\) is continuous on \([a,b]\) and \(f\) is continuous on \(I\),
-then
-\[\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)} f(u)\,du\]
+In general, suppose we have an integral of the form
+\[\int f(g(x))g'(x)\,dx\]
+Observe that if \(F'=f\), then
+\[\int F'(g(x))g'(x)\,dx=F(g(x))+C\]
+because, by the Chain Rule,
+\[\frac{d}{dx}\big[F(g(x))\big]=F'(g(x))\cdot g'(x)\]
+If we make the ``change of variable'' or ``substitution'' \(u=g(x)\), then we
+have
+\[\int F'(g(x)g'(x)\,dx=F(g(x)))+C=F(u)+C=\int F'(u)\,du\]
+or, writing \(F'=f\), we get
+\[\int f(g(x))g'(x)\,dx=\int f(u)\,du\]
+Thus we proved the following rule. \\
+\textbf{The Substitution Rule}: If \(u=g(x)\) is a differentiable function
+whose range is an interval \(I\) and \(f\) is continuous on \(I\), then
+\[\int f(g(x))g'(x)\,dx=\int f(u)\,du\]
+Notice that if \(u=g(x)\), then \(du=g'(x)\,dx\).
+It is permissible to operate with \(dx\) and \(du\) after integral signs as if
+they were differentials.
 
 \begin{problem}
     Evaluate \(\displaystyle{\int\frac{x}{\sqrt{1-4x^2}}\,dx}\).
@@ -31,6 +36,23 @@ then
     \[\int\tan x\,dx=-\int\frac{du}{u}=-\ln|u|+C=-\ln|\cos x|+C
     =\ln\frac{1}{|\sec x|}+C=\ln|\sec x|+C\]
 \end{solution}
+
+\subsubsection*{Definite Integrals}
+\textbf{The Substitution Rule for Definite Integrals}: If \(g'\) is continuous
+on \([a,b]\) and \(f\) is continuous on the range of \(u=g(x)\), then
+\[\int_a^b f(g(x))g'(x)\,dx=\int_{g(a)}^{g(b)}f(u)\,du\]
+Note that we must change the limits of integration when the variable is
+changed for definite integrals.
+\begin{proof}
+    Let \(F\) be an antiderivative of \(f\).
+    Then \(F(g(x))\) is an antiderivative of \(f(g(x))g'(x)\) and so, by the
+    Fundamental Theorem of Calculus, we have
+    \[\int_a^b f(g(x))g'(x)\,dx=F(g(b))-F(g(a))\]
+    But, applying the Fundamental Theorem of Calculus a second time, we also
+    have
+    \[\int_{g(a)}^{g(b)}\int f(u)\,du=\big[F(u)\big]_{g(a)}^{g(b)}
+    =F(g(b))-F(g(a))\]
+\end{proof}
 \begin{problem}
     Calculate \(\displaystyle{\int_1^e \frac{\ln x}{x}\,dx}\).
 \end{problem}
@@ -41,12 +63,27 @@ then
 \end{solution}
 
 \subsubsection*{Symmetry}
-\begin{theorem}
-    Suppose \(f\) is continuous on \([-a,a]\), then
-    \begin{itemize}
-        \item If \(f(-x)=f(x)\) so \(f\) is even, then
-        \(\displaystyle{\int_{-a}^a f(x)\,dx=2\int_a^a f(x)\,dx}\).
-        \item If \(f(-x)=-f(x)\) so \(f\) is odd, then
-        \(\displaystyle{\int_{-a}^a f(x)\,dx=0}\).
-    \end{itemize}
-\end{theorem}
+Integrals of Symmetric Functions: Suppose \(f\) is continuous on \([-a,a]\).
+\begin{enumerate}
+    \item If \(f\) is even, then
+    \(\displaystyle{\int_{-a}^a f(x)\,dx}=2\int_0^a f(x)\,dx\).
+    \item If \(f\) is odd, then \(\displaystyle{\int_{-a}^a f(x)\,dx=0}\).
+\end{enumerate}
+\begin{proof}
+    We split the integral in two:
+    \[\int_{-a}^a f(x)\,dx=\int_{-a}^0 f(x)\,dx+\int_0^a f(x)\,dx
+    =-\int_0^{-a}f(x)\,dx+\int_0^a f(x)\,dx\]
+    We make the substitution \(u=-x\).
+    Then \(du=-dx\) and when \(x=-a,u=a\).
+    Therefore
+    \[-\int_0^{-a}f(x)\,dx=-\int_0^a f(-u)(-du)=\int_0^a f(-u)\,du\]
+    and so
+    \[\int_{-a}^a f(x)\,dx=\int_0^a f(-u)\,du+\int_0^a f(x)\,dx\]
+    \begin{enumerate}
+        \item If \(f\) is even, then \(f(-u)=f(u)\) so
+        \[\int_{-a}^a f(x)\,dx=\int_0^a f(u)\,du+\int_0^a f(x)\,dx
+        =2\int_0^a f(x)\,dx\]
+        \item If \(f\) is odd, then \(f(-u)=-f(u)\) so
+        \[\int_{-a}^a f(x)\,dx=-\int_0^a f(u)\,du+\int_0^a f(x)\,dx=0\]
+    \end{enumerate}
+\end{proof}
