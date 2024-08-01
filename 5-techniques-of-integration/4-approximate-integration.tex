@@ -1,28 +1,5 @@
 \subsection{Approximate Integration}
 
-Trapezoidal Rule:
-\[\int_a^b f(x)\,dx\approx T_n
-=\frac{\Delta x}{2}\big[f(x_0)+2f(x_1)+f(x_2)+\cdots+2f(x_{n-1})+f(x_n)\big]\]
-where \(Delta x=\dfrac{b-a}{n}\) and \(x_i=a+i\Delta x\). \\
-Error Bounds: Suppose \(|f''(x)|\leq k\) for \(a\leq x\leq b\).
-If \(E_r\) and \(E_m\) are the errors in the Trapezoidal and Midpoint Rules,
-then
-\[|E_r|\leq\frac{K(b-a)^3}{12n^2}\]
-and
-\[|E_m|\leq\frac{K(b-a)^3}{24n^2}\]
-
-\subsubsection*{Simpson's Rule}
-Simpson's Rule:
-\[\int_a^b f(x)\,dx\approx S_n
-=\frac{\Delta x}{3}\big[f(x_0)+4f(x_1)+2f(x)2+4f(x_3)+\cdots+2f(x_{n-2})
-+4f(x_{n-1})+f(x_n)\big]\]
-where \(n\) is even and \(\Delta x=\dfrac{b-a}{n}\). \\
-Error Bounds for Simpson's Rule: Suppose \(|f^{(4)}(x)|\leq k\) for
-\(a\leq x\leq b\).
-If \(E_s\) is the error involved in using Simpson's Rule, then
-\[|E_s|\leq\frac{K(b-a)^5}{180n^4}\]
-
-\subsubsection*{Elementary Functions}
 Most of the functions we study here in calculus are
 \textbf{elementary functions}.
 These are the polynomials, rational functions, power functions, exponential
@@ -32,3 +9,41 @@ operations of addition, subtraction, multiplication, division, and
 composition.
 If \(f\) is an elementary function, then \(f'\) is an elementary function but
 \(\displaystyle{\int f(x)\,dx}\) need not be an elementary function.
+Consider \(f(x)=e^{x^2}\).
+Since \(f\) is continuous, its integral exists, and if we define the function
+\(F\) by
+\[F(x)=\int_0^x e^{t^2}\,dt\]
+that we know that by the Fundamental Theorem of Calculus that
+\[F'(x)=e^{x^2}\]
+Thus \(f(x)=e^{x^2}\) has an antiderivative \(F\), but it can be proved that
+\(F\) is not an elementary function.
+This means that we cannot evaluate \(\displaystyle{\int e^{x^2}\,dx}\) in
+terms of elementary functions.
+The same can be said of the following integrals:
+\begin{align*}
+    & \int\frac{e^x}{x}\,dx && \int\sin(x^2)\,dx & \int\cos(e^x)\,dx \\
+    & \int\sqrt{x^3+1}\,dx && \int\frac{1}{\ln x}\,dx & \int\frac{\sin x}{x}\,dx
+\end{align*}
+In fact, the majority of elementary functions do not have elementary
+antiderivatives. \\
+Trapezoidal Rule:
+\[\int_a^b f(x)\,dx\approx T_n
+=\frac{\Delta x}{2}\big[f(x_0)+2f(x_1)+f(x_2)+\cdots+2f(x_{n-1})+f(x_n)\big]\]
+where \(\Delta x=\dfrac{b-a}{n}\) and \(x_i=a+i\Delta x\). \\
+Error Bounds: Suppose \(|f''(x)|\leq K\) for \(a\leq x\leq b\).
+If \(E_T\) and \(E_M\) are the errors in the Trapezoidal and Midpoint Rules,
+then
+\[|E_T|\leq\frac{K(b-a)^3}{12n^2}\]
+and
+\[|E_M|\leq\frac{K(b-a)^3}{24n^2}\]
+
+\subsubsection*{Simpson's Rule}
+Simpson's Rule:
+\[\int_a^b f(x)\,dx\approx S_n
+=\frac{\Delta x}{3}\big[f(x_0)+4f(x_1)+2f(x)2+4f(x_3)+\cdots+2f(x_{n-2})
++4f(x_{n-1})+f(x_n)\big]\]
+where \(n\) is even and \(\Delta x=\dfrac{b-a}{n}\). \\
+Error Bounds for Simpson's Rule: Suppose \(|f^{(4)}(x)|\leq K\) for
+\(a\leq x\leq b\).
+If \(E_S\) is the error involved in using Simpson's Rule, then
+\[|E_S|\leq\frac{K(b-a)^5}{180n^4}\]
