@@ -32,27 +32,34 @@ and divergent if \(p\leq 1\).
 
 \subsubsection*{Discontinuous Integrands}
 \begin{definition}
-    If \(f\) is continuous on \([a,b)\) and is discontinuous at \(b\), then
-    \[\int_a^b f(x)\,dx=\lim_{t\to b^-}\int_a^t f(x)\,dx\]
-    if the limit exists.
-    If \(f\) is continuous on \((a,b]\) and is discontinuous at \(a\), then
-    \[\int_a^b f(x)\,dx=\lim_{t\to a^+}\int_t^b f(x)\,dx\]
-    if the limit exists.
+    \begin{enumerate}
+        \item If \(f\) is continuous on \([a,b)\) and is discontinuous at
+        \(b\), then
+        \[\int_a^b f(x)\,dx=\lim_{t\to b^-}\int_a^t f(x)\,dx\]
+        if the limit exists.
+        \item If \(f\) is continuous on \((a,b]\) and is discontinuous at
+        \(a\), then
+        \[\int_a^b f(x)\,dx=\lim_{t\to a^+}\int_t^b f(x)\,dx\]
+        if the limit exists.
+    \end{enumerate}
     The improper integral \(\displaystyle{\int_a^b f(x)\,dx}\) is
     \textbf{convergent} if the corresponding limit exists and
-    \textbf{divergent} if the limit does not exist.
-    If \(f\) has a discontinuity at \(c\) where \(a<c<b\), and both
+    \textbf{divergent} if the limit does not exist. \\
+    If \(f\) has a discontinuity at \(c\), where \(a<c<b\), and both
     \(\displaystyle{\int_a^c f(x)\,dx}\) and
     \(\displaystyle{\int_c^b f(x)\,dx}\) are convergent,
     then
     \[\int_a^b f(x)\,dx=\int_a^c f(x)\,dx+\int_c^b f(x)\,dx\]
 \end{definition}
 
+\subsubsection*{Comparison Test for Improper Integrals}
 \begin{theorem}[Comparison Theorem]
     Suppose that \(f\) and \(g\) are continuous functions with
     \(f(x)\geq g(x)\geq 0\) for \(x\geq a\).
-    If \(\displaystyle{\int_a^\infty f(x)\,dx}\) is convergent, then
-    \(\displaystyle{\int_a^\infty g(x)\,dx}\) is convergent.
-    If \(\displaystyle{\int_a^\infty g(x)\,dx}\) is divergent, then
-    \(\displaystyle{\int_a^\infty f(x)\,dx}\) is divergent.
+    \begin{enumerate}
+        \item If \(\displaystyle{\int_a^\infty f(x)\,dx}\) is convergent, then
+        \(\displaystyle{\int_a^\infty g(x)\,dx}\) is convergent.
+        \item If \(\displaystyle{\int_a^\infty g(x)\,dx}\) is divergent, then
+        \(\displaystyle{\int_a^\infty f(x)\,dx}\) is divergent.
+    \end{enumerate}    
 \end{theorem}
