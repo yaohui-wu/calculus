@@ -1,9 +1,22 @@
 \subsection{Volumes}
 
-\subsubsection*{Definition of Volume}
-
-\subsubsection*{Volumes of Solids of Revolution}
-
-\subsubsection*{Finding Volume Using Cross-Sectional Area}
+\begin{definition}
+    Let \(S\) be a solid that lies between \(x=a\) and \(x=b\).
+    If the cross-sectional area of \(S\) in the plane \(P_x\), through \(x\)
+    and perpendicular to the \(x\)-axis, is \(A(x)\), where \(A\) is an
+    integrable function, then the \textbf{volume} of \(S\) is
+    \[V=\lim_{\max\Delta x_i\to 0}\sum_{i=1}^n A(x_i^*)\Delta x_i
+    =\int_a^b A(x)\,dx\]
+\end{definition}
+In general, we calculate the volume of a \textbf{solid of revolution} obtained
+by revolving a region about a line by using the basic defining formula
+\[V=\int_a^b A(x)\,dx\]
+or
+\[V=\int_c^d A(y)\,dy\]
 
 \subsubsection*{Volumes by Cylindrical Shells}
+
+The volume of the solid \(S\) obtained by rotating about the \(y\)-axis the
+region under the curve \(y=f(x)\) from \(a\) to \(b\), is
+\[V=\int_a^b 2\pi xf(x)\,dx\]
+where \(0\leq a<b\).

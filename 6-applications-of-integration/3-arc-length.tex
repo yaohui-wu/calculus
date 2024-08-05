@@ -1,7 +1,38 @@
 \subsection{Arc Length}
 
-\subsubsection*{Arc Length of a Curve}
+Suppose that a curve \(C\) is defined by the equation \(y=f(x)\), where \(f\)
+is continuous and \(a\leq x\leq b\).
+We define the \textbf{length} \(L\) of the curve \(C\) with equation
+\(y=f(x),a\leq x\leq b\), as the limit of the lengths of the inscribed
+polygons (if the limit exists):
+\[L=\lim_{n\to\infty}\sum_{i=1}^n |P_{i-1}P_i|\]
+We can derive an integral formula for \(L\) in the case where \(f\) has a
+continuous derivative.
+Such a function \(f\) is called \textbf{smooth} because a small change in
+\(x\) produces a small change in \(f'(x)\).
+\[L=\lim_{n\to\infty}\sum_{i=1}^n\sqrt{1+\big[f'(x_i^*)\big]^2}\Delta x\]
+The \textbf{Arc Length Formula}: If \(f'\) is continuous on \([a,b]\), then
+the length of the curve \(y=f(x),a\leq x\leq b\), is
+\[L=\int_a^b\sqrt{1+\big[f'(x)\big]^2}\,dx\]
+In Leibniz's notation:
+\[L=\int_a^b\sqrt{1+\left(\frac{dy}{dx}\right)^2}\,dx\]
+If a curve has the equation \(x=g(y),c\leq y\leq d\), and \(g'(y)\) is
+continuous, then the Arc Length Formula is:
+\[L=\int_c^d\sqrt{1+\big[g'(y)\big]^2}\,dy
+=\int_c^d\sqrt{1+\left(\frac{dx}{dy}\right)^2}\,dy\]
 
 \subsubsection*{The Arc Length Function}
-
-\subsection{Area of a Surface of Revolution}
+If a smooth curve \(C\) has the equation \(y=f(x),a\leq x\leq b\), let
+\(s(x)\) be the distance along \(C\) from the initial starting point
+\(P_0(a,f(a))\) to the point \(Q(x,f(x))\).
+Then \(s\) is a function, called the \textbf{arc length function}, and
+\[s(x)=\int_a^x\sqrt{1+\big[f'(t)\big]^2}\,dt\]
+By the Fundamental Theorem of Calculus,
+\[\frac{ds}{dx}=\sqrt{1+\big[f'(x)\big]^2}
+=\sqrt{1+\left(\frac{dy}{dx}\right)^2}\]
+The differential of arc length is
+\[ds=\sqrt{1+\left(\frac{dy}{dx}\right)^2}\,dx\]
+and this equation is sometimes written in the symmetric form
+\[(ds)^2=(dx)^2+(dy)^2\]
+If we write \(\displaystyle{L=\int ds}\), then we can solve to get
+\[ds=\sqrt{1+\left(\frac{dx}{dy}\right)^2}\,dy\]
