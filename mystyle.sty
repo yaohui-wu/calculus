@@ -13,12 +13,12 @@
 \renewcommand*{\qedsymbol}{\(\blacksquare\)}
 \renewcommand*{\epsilon}{\varepsilon}
 
-\newtheoremstyle{theorem}% Name.
-    {}{}% Space above and below.
-    {}{}% Body font and indentation amount.
-    {\bfseries}{.}% Theorem head font and punctuation after theorem head.
-    { }% Space after theorem head (normal).
-    {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% Specify theorem head.
+\newtheoremstyle{theorem}
+    {}{}
+    {}{}
+    {\bfseries}{.}
+    { }
+    {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}
 
 \theoremstyle{theorem}
 \newtheorem{definition}{Definition}[subsection]
@@ -30,9 +30,9 @@
 
 \newenvironment*{solution}{\begin{proof}[Solution]}{\end{proof}}
 
-\newcommand{\N}{\mathbb{N}} % Natural numbers.
-\newcommand{\Z}{\mathbb{Z}} % Integers.
-\newcommand{\R}{\mathbb{R}} % Real numbers.
+\newcommand{\N}{\mathbb{N}} % Set of natural numbers.
+\newcommand{\Z}{\mathbb{Z}} % Set of integers.
+\newcommand{\R}{\mathbb{R}} % Set of real numbers.
 
 \DeclareMathOperator{\arccsc}{arccsc} % Inverse cosecant function.
 \DeclareMathOperator{\arcsec}{arcsec} % Inverse secant function.
