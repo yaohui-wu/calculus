@@ -10,7 +10,7 @@ denoted by
     Given a series
     \(\displaystyle{\sum_{n=1}^{\infty}a_n=a_1+a_2+a_3\cdots}\), let \(s_n\)
     be its \(n\)th partial sum:
-    \[s_n=\sum_{i=1}^n a_i=a_1+a_2+\cdots+a_n\]
+    \[s_n=\sum_{k=1}^n a_i=a_1+a_2+\cdots+a_n\]
     If the sequence \(\{s_n\}\) is \textbf{convergent} and we write
     \(\displaystyle{\lim_{n\to\infty}s_n=s}\) exists as a real number, then the
     series \(\displaystyle{\sum_{n=1}^\infty a_n}\) is convergent and
@@ -21,14 +21,16 @@ denoted by
 \end{definition}
 Thus the sum of a series is the limit of the sequence of partial sums.
 Notice that
-\[\sum_{n=1}^\infty a_n=\lim_{n\to\infty}\sum_{i=1}^n a_i\]
+\[\sum_{n=1}^\infty a_n=\lim_{n\to\infty}\sum_{k=1}^n a_i\]
 Consider the \textbf{geometric series}
 \[\sum_{n=1}^\infty ar^{n-1}=a+ar+ar^2+ar^3+\cdots+ar^{n-1}+\cdots,
 \quad a\neq 0\]
 with common ratio \(r\).
+
 If \(r=1\), then \(s_n=a+a+\cdots+a=na\).
 Thus \(\displaystyle{\lim_{n\to\infty}s_n=\pm\infty}\) so the limit does not
 exist and the geometric series diverges when \(r=1\).
+
 If \(r\neq 1\), then we have
 \begin{align*}
     s_n &= a+ar+ar^2+\cdots+ar^{n-1} \\
@@ -37,14 +39,17 @@ If \(r\neq 1\), then we have
     (1-r)s_n &= a(1-r^n) \\
     s_n &= \frac{a(1-r^n)}{1-r}
 \end{align*}
+
 If \(-1<r<1\), since \(\displaystyle{\lim_{n\to\infty}r^n}=0\), so
 \[\lim_{n\to\infty}s_n=\lim_{n\to\infty}\frac{a(1-r^n)}{1-r}
 =\frac{a}{1-r}-\frac{a}{1-r}\cdot\lim_{n\to\infty}r^n=\frac{a}{1-r}\]
 Thus when \(|r|<1\) the geometric series is convergent and its sum is
 \(\dfrac{a}{1-r}\).
+
 If \(r\leq -1\) or \(r>1\), then the sequence \(\{r^n\}\) is divergent so
 \(\displaystyle{\lim_{n\to\infty}s_n}\) does not exist thus the geometric
 series diverges.
+
 The geometric series
 \[\sum_{n=1}^\infty ar^{n-1}=a+ar+ar^2+\cdots\]
 is convergent if \(|r|<1\) and
@@ -56,14 +61,41 @@ If \(|r|\geq 1\), then the geometric series is divergent.
     \(|x|<1\).
 \end{problem}
 \begin{solution}
-    
+    Notice that
+    \[\sum_{n=0}^\infty x^n=\sum_{n=1}^{\infty}x^{n-1}=1+x+x^2+x^3+\cdots\]
+    This is the geometric series with \(a=1\) and \(r=x\).
+    Since \(|r|=|x|<1\), it converges and gives
+    \[\sum_{n=0}^\infty x^n=\frac{1}{1-x}\]
 \end{solution}
 \begin{problem}
-    Show that the series \(\displaystyle{\sum_{n=1}^\infty}\frac{1}{n(n+1)}\)
+    Show that the series \(\displaystyle{\sum_{n=1}^\infty\frac{1}{n(n+1)}}\)
     is convergent, and find its sum.
 \end{problem}
 \begin{solution}
-    
+    From the definition of convergent series we compute the partial sums.
+    \[s_n=\sum_{k=1}^n\frac{1}{k(k+1)}
+    =\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\cdots
+    +\frac{1}{n(n+1)}\]
+    We can simplify this expression if we use the partial fraction
+    decomposition
+    \[\frac{1}{k(k+1)}=\frac{1}{k}-\frac{1}{k+1}\]
+    Thus we have
+    \begin{align*}
+        s_n &= \sum_{k=1}^n\frac{1}{k(k+1)}
+        =\sum_{k=1}^n\left(\frac{1}{k}-\frac{1}{k+1}\right) \\
+        &= \left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)
+        +\left(\frac{1}{3}-\frac{1}{4}\right)+\cdots
+        +\left(\frac{1}{n}-\frac{1}{n+1}\right) \\
+        &= 1-\frac{1}{n+1}
+    \end{align*}
+    Notice that the terms cancel in pairs.
+    This series is an example of a \textbf{telescoping series}.
+    Because of all the cancellations, the sum collapses into just two terms.
+    Then
+    \[\lim_{n\to\infty}s_n=\lim_{n\to\infty}\left(1-\frac{1}{n+1}\right)=1-0
+    =1\]
+    Therefore the given series is convergent and
+    \[\sum_{n=1}^\infty\frac{1}{n(n+1)}=1\]
 \end{solution}
 \begin{problem}
     Show that the \textbf{harmonic series}
@@ -72,13 +104,55 @@ If \(|r|\geq 1\), then the geometric series is divergent.
     is divergent.
 \end{problem}
 \begin{solution}
-    
+    For this particular series it is convenient to consider the partial sums
+    \[s_2,s_4,s_8,s_{16},s_{32},\dots\]
+    and show that they become large.
+    \begin{align*}
+        s_2 &= 1+\frac{1}{2} \\
+        s_4 &= 1+\frac{1}{2}+\left(\frac{1}{3}+\frac{1}{4}\right)
+        >1+\frac{1}{2}+\left(\frac{1}{4}+\frac{1}{4}\right)=1+\frac{2}{2} \\
+        s_8 &= 1+\frac{1}{2}+\left(\frac{1}{3}+\frac{1}{4}\right)
+        +\left(\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}\right) \\
+        &> 1+\frac{1}{2}+\left(\frac{1}{4}+\frac{1}{4}\right)
+        +\left(\frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right)
+        =1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}=1+\frac{3}{2} \\
+        s_{16} &= 1+\frac{1}{2}+\left(\frac{1}{3}+\frac{1}{4}\right)
+        +\left(\frac{1}{5}+\cdots+\frac{1}{8}\right)
+        +\left(\frac{1}{9}+\cdots+\frac{1}{16}\right) \\
+        &> 1+\frac{1}{2}+\left(\frac{1}{4}+\frac{1}{4}\right)
+        +\left(\frac{1}{8}+\cdots+\frac{1}{8}\right)
+        +\left(\frac{1}{16}+\cdots+\frac{1}{16}\right) \\
+        &= 1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}=1+\frac{4}{2}
+    \end{align*}
+    Similarly, \(s_{32}>1+\frac{5}{2},s_{64}>1+\frac{6}{2}\), and in general
+    \[s_{2^n}>1+\frac{n}{2}\]
+    This shows that \(s_{2^n}\to\infty\) as \(n\to\infty\) and so \(\{s_n\}\)
+    is divergent.
+    Therefore the harmonic series diverges.
 \end{solution}
 
 \begin{theorem}
     If the series \(\displaystyle{\sum_{n=1}^\infty a_n}\) is convergent, then
     \(\displaystyle{\lim_{n\to\infty}a_n=0}\).
 \end{theorem}
+\begin{proof}
+    Let \(s_n=a_1+a_2+\cdots+a_n\).
+    Then \(a_n=s_n-s_{n-1}\).
+    Since \(\displaystyle{\sum_{n=1}^\infty a_n}\) is convergent, the sequence
+    \(\{s_n\}\) is convergent.
+    Let \(\displaystyle{\lim_{n\to\infty}s_n=s}\).
+    Since \(n-1\to\infty\) as \(n\to\infty\), we also have
+    \(\displaystyle{\lim_{n\to\infty}s_{n-1}=s}\).
+    Therefore
+    \[\lim_{n\to\infty}a_n=\lim_{n\to\infty}(s_n-s_{n-1})
+    =\lim_{n\to\infty}s_n-\lim_{n\to\infty}s_{n-1}=s-s=0\]
+\end{proof}
+With any series \(\displaystyle{\sum_{n=1}^\infty a_n}\) we associate two
+sequences: the sequence \(\{s_n\}\) of its partial sums and the sequence
+\({a_n}\) of its terms.
+If \(\displaystyle{\sum_{n=1}^\infty a_n}\) is convergent, then the limit of
+the sequence \(\{s_n\}\) is \(s\) (the sum of the series) and the limit of the
+sequence \(\{a_n\}\) is 0.
 \begin{theorem}[Test for Divergence]
     If \(\displaystyle{\lim_{n\to\infty}a_n}\) does not exist or if
     \(\displaystyle{\lim_{n\to\infty}a_n\neq 0}\), then the series
@@ -102,3 +176,9 @@ is convergent, and so \(\displaystyle{\lim_{n\to\infty}a_n=0}\).
         =\sum_{n=1}^\infty a_n-\sum_{n=1}^\infty b_n}\)
     \end{enumerate}
 \end{theorem}
+A finite number of terms does not affect the convergence or divergence of a
+series.
+If it is known that the series \(\displaystyle{\sum_{n=N+1}^\infty}a_n\)
+converges, then the full series
+\[\sum_{n=1}^\infty a_n=\sum_{n=1}^N a_n+\sum_{n=N+1}^\infty a_n\]
+is also convergent.

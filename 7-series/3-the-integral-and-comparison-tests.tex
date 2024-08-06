@@ -2,6 +2,35 @@
 
 \subsubsection*{Testing with an Integral}
 
+\begin{theorem}[Integral Test]
+    Suppose \(f\) is continuous, positive, decreasing function on
+    \([1,\infty)\) and let \(a_n=f(n)\).
+    Then the series \(\displaystyle{\sum_{n=1}^\infty a_n}\) is convergent if
+    and only if the improper integral
+    \(\displaystyle{\int_1^\infty f(x)\,dx}\) is convergent.
+    \begin{enumerate}
+        \item If \(\displaystyle{\int_1^\infty f(x)\,dx}\) is convergent, then
+        \(\displaystyle{\sum_{n=1}^\infty a_n}\) is convergent.
+        \item If \(\displaystyle{\int_1^\infty f(x)\,dx}\) is divergent, then
+        \(\displaystyle{\sum_{n=1}^\infty a_n}\) is divergent.
+    \end{enumerate}
+\end{theorem}
+The \(p\)-series \(\displaystyle{\sum_{n=1}^\infty \frac{1}{n^p}}\) is
+convergent if \(p>1\) and divergent if \(p\leq 1\).
+
 \subsubsection*{Testing by Comparing}
+
+\begin{theorem}[Comparison Test]
+    Suppose that \(\displaystyle{\sum_{n=1}^\infty a_n}\) and
+    \(\displaystyle{\sum_{n=1}^\infty b_n}\) are series with positive terms.
+    \begin{enumerate}
+        \item If \(\displaystyle{\sum_{n=1}^\infty b_n}\) is convergent and
+        \(a_n\leq b_n\) for all \(n\), then
+        \(\displaystyle{\sum_{n=1}^\infty a_n}\) is also convergent.
+        \item If \(\displaystyle{\sum_{n=1}^\infty b_n}\) is divergent and
+        \(a_n\geq b_n\) for all \(n\), then
+        \(\displaystyle{\sum_{n=1}^\infty a_n}\) is also divergent.
+    \end{enumerate}
+\end{theorem}
 
 \subsubsection*{Proof of the Integral Test}
