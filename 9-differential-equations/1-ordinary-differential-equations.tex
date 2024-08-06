@@ -1,44 +1,62 @@
 \subsection{Ordinary Differential Equations}
-A \textbf{differential equation} is an equation that relates some unknown
-functions and their derivatives.
+
+A \textbf{differential equation }is an equation that contains an unknown
+function and one or more of its derivatives.
 An \textbf{ordinary differential equation} (ODE) is a differential equation
 that relates one or more functions of a single variable and their ordinary
-derivatives.
-The \textbf{order} of a differential equation is the highest order of the
-derivative in the equation.
-Newton's second law of motion, the force \(F\) acting on an object with mass
-\(m\) and acceleration \(a\) is \(F=ma\) can be written as an ordinary
-differential equation
-\[F=m\frac{dv}{dt}\]
-which is a first order differential equation, or
-\[F=m\frac{d^2s}{dt^2}\]
- which is a second order differential equation.
-By Newton's second law of motion, the net force \(F\) acting on a falling
-object with mass \(m\), velocity \(v\), and air resistance force \(\gamma v\)
-can be modeled by the differential equation
-\[F=m\frac{dv}{dt}=mg-\gamma v\]
-where \(g\) is the acceleration due to gravity and \(\gamma\) is the drag
-coefficient.
-A function \(f\) is a \textbf{solution} of a differential equation if the
-function and its derivatives satisfy the equation for all values of \(x\) in
-some open interval \(a<x<b\).
-It is possible that there are many solutions of a differential equation.
-An initial condition is a condition \(y(x_0)=y_0\) or
-\(y^{(n)}(x_0)=y_n\) on the solution.
-An \textbf{initial value problem} is solving a differential equation with initial conditions.
-The interval of validity is the largest possible interval on which
-the solution is valid and contains \(x_0\) in the initial conditions.
-The general solution of a differential equation is the set of all solutions
-and the particular solution is the solution that satisfies the initial
-conditions.
-An explicit solution is any solution in the form \(y=y(x)\), otherwise it is
-an implicit solution.
-The particular solution of the differential equation
-\[\frac{dy}{dx}=y\]
-with initial
-condition \(y(0)=1\) is \(y=e^x\) since
-\[\frac{dy}{dx}=\frac{d}{dx}e^x=e^x=y\]
-and \(y(0)=e^0=1\).
-The \textbf{existence} and \textbf{uniqueness} problem asks that given a
-differential equation, does there exist a solution and if any is there only
-one solution.
+derivatives.The importance of differential equations lies in the fact that
+when a scientist or engineer formulates a physical law in mathematical terms,
+it frequently turns out to be a differential equation.
+
+The \textbf{order} of a differential equation is the order of the highest
+derivative that occurs in the equation.
+
+A function \(f\) is called a \textbf{solution} of a differential equation if
+the equation is satisfied when \(y=f(x)\) and its derivatives are substituted
+into the equation.
+
+When we are asked to solve a differential equation we are expected to find all
+possible solutions of the equation.
+
+In many physical problems we need to find the particular solution that
+satisfies a condition of the form \(y(x_0)=y_0\).
+This is called an \textbf{initial condition}, and the problem of finding a
+solution of the differential equation that satisfies the initial condition is
+called an \textbf{initial value problem} (IVP).
+
+% Newton's second law of motion, the force \(F\) acting on an object with mass
+% \(m\) and acceleration \(a\) is \(F=ma\) can be written as an ordinary
+% differential equation
+% \[F=m\frac{dv}{dt}\]
+% which is a first order differential equation, or
+% \[F=m\frac{d^2s}{dt^2}\]
+%  which is a second order differential equation.
+% By Newton's second law of motion, the net force \(F\) acting on a falling
+% object with mass \(m\), velocity \(v\), and air resistance force \(\gamma v\)
+% can be modeled by the differential equation
+% \[F=m\frac{dv}{dt}=mg-\gamma v\]
+% where \(g\) is the acceleration due to gravity and \(\gamma\) is the drag
+% coefficient.
+% A function \(f\) is a \textbf{solution} of a differential equation if the
+% function and its derivatives satisfy the equation for all values of \(x\) in
+% some open interval \(a<x<b\).
+% It is possible that there are many solutions of a differential equation.
+% An initial condition is a condition \(y(x_0)=y_0\) or
+% \(y^{(n)}(x_0)=y_n\) on the solution.
+% An \textbf{initial value problem} is solving a differential equation with initial conditions.
+% The interval of validity is the largest possible interval on which
+% the solution is valid and contains \(x_0\) in the initial conditions.
+% The general solution of a differential equation is the set of all solutions
+% and the particular solution is the solution that satisfies the initial
+% conditions.
+% An explicit solution is any solution in the form \(y=y(x)\), otherwise it is
+% an implicit solution.
+% The particular solution of the differential equation
+% \[\frac{dy}{dx}=y\]
+% with initial
+% condition \(y(0)=1\) is \(y=e^x\) since
+% \[\frac{dy}{dx}=\frac{d}{dx}e^x=e^x=y\]
+% and \(y(0)=e^0=1\).
+% The \textbf{existence} and \textbf{uniqueness} problem asks that given a
+% differential equation, does there exist a solution and if any is there only
+% one solution.
