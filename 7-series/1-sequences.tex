@@ -1,0 +1,151 @@
+\subsection{Sequences}
+
+An infinite \textbf{sequence} \(\{a_n\}\) is a list of numbers written in a
+definite order:
+\[a_1,a_2,a_3\dots,a_n,a_{n+1},\dots\]
+where \(a_n\) is the \(n\)th term of the sequence.
+Consider the sequence
+\[a_n=\left\{\frac{1}{2},\frac{1}{4},\frac{1}{8},\frac{1}{16},\frac{1}{32},
+\cdots\right\}\]
+We can rewrite it as
+\[a_n=\left\{\frac{1}{2},\frac{1}{2^2},\frac{1}{2^3},\frac{1}{2^4},
+\frac{1}{2^5},\cdots\right\}\]
+so the formula for the \(n\)th term is
+\[a_n=\frac{1}{2^n}\]
+for \(n=1,2,3,\cdots\) and
+\[\{a_n\}=\left\{\frac{1}{2^n}\right\}_{n=1}^\infty\]
+\begin{definition}
+    A sequence \(\{a_n\}\) has the \textbf{limit} \(L\) and we write
+    \[\lim_{n\to\infty}a_n=L\]
+    or \(a_n\to L\) as \(n\to\infty\) if we can make the terms \(a_n\) as
+    close to \(L\) as we like by taking \(n\) sufficiently large.
+    If \(\displaystyle{\lim_{n\to\infty}a_n}\) exists, then the sequence is
+    \textbf{convergent}, otherwise it is \textbf{divergent}.
+\end{definition}
+The precise definition of a limit of a sequence is:
+\begin{definition}
+    A sequence \(\{a_n\}\) has the \textbf{limit} \(L\) and we write
+    \[\lim_{n\to\infty}a_n=L\]
+    if for every \(\epsilon>0\) there is an corresponding integer \(N\) such
+    that
+    \[n>N\implies |a_n-L|<\epsilon\]
+\end{definition}
+\begin{theorem}
+    If \(\displaystyle{\lim_{x\to\infty}f(x)=L}\) and \(f(n)=a_n\) when \(n\) is an integer,
+    then \(\displaystyle{\lim_{n\to\infty}a_n=L}\). 
+\end{theorem}
+In particular, we have
+\[\lim_{n\to\infty}\frac{1}{n^r}=0\]
+when \(r>0\).
+If \(a_n\) becomes large as \(n\) becomes large, we use the notation
+\[\lim_{n\to\infty}a_n=\infty\]
+\begin{definition}
+    \[\lim_{n\to\infty}a_n=\infty\]
+    means that for every positive number \(M\) there is a positive integer
+    \(N\) such that
+    \[n>N\implies a_n>M\]
+\end{definition}
+If \(\displaystyle{\lim_{n\to\infty}a_n=\infty}\) then the sequence
+\(\{a_n\}\) is divergent and we say that \(\{a_n\}\) diverges to \(\infty\).
+If \(a_n\) and \(b_n\) are convergent sequences and \(c\) is a constant, then
+\begin{enumerate}
+    \item
+    \(\displaystyle{\lim_{n\to\infty}(a_n+b_n)
+    =\lim_{n\to\infty}a_n+\lim_{n\to\infty}b_n}\)
+    \item
+    \(\displaystyle{\lim_{n\to\infty}(a_n-b_n)
+    =\lim_{n\to\infty}a_n-\lim_{n\to\infty}b_n}\)
+    \item \(\displaystyle{\lim_{n\to\infty}c\cdot a_n=c\lim_{n\to\infty}a_n}\)
+    \item \(\displaystyle{\lim_{n\to\infty}c=c}\)
+    \item
+    \(\displaystyle{\lim_{n\to\infty}(a_n\cdot b_n)
+    =\lim_{n\to\infty}a_n\cdot\lim_{n\to\infty}b_n}\)
+    \item
+    \(\displaystyle{\lim_{n\to\infty}\frac{a_n}{b_n}
+    =\frac{\displaystyle{\lim_{n\to\infty}a_n}}
+    {\displaystyle{\lim_{n\to\infty}b_n}}}\)
+    if \(\displaystyle{\lim_{n\to\infty}b_n\neq 0}\).
+    \item
+    \(\displaystyle{\lim_{n\to\infty}a_n^p=\big[\lim_{n\to\infty}a_n\big]^p}\)
+    if \(p>0\) and \(a_n>0\).
+\end{enumerate}
+\begin{theorem}
+    If \(a_n\leq b_n\leq c_n\) for \(n\geq n_0\) and
+    \(\displaystyle{\lim_{n\to\infty}a_n=\lim_{n\to\infty}c_n}=L\), then
+    \(\displaystyle{\lim_{n\to\infty}b_n=L}\).
+\end{theorem}
+\begin{theorem}
+    If \(\displaystyle{\lim_{n\to\infty}|a_n|=0}\), then
+    \(\displaystyle{\lim_{n\to\infty}a_n=0}\).
+\end{theorem}
+\begin{theorem}[Continuity and Convergence Theorem]
+    If \(\displaystyle{\lim_{n\to\infty}a_n=L}\) and the function \(f\) is
+    continuous at \(L\), then
+    \[\lim_{n\to\infty}f(a_n)=f(L)\]
+\end{theorem}
+The sequence \(\{r^n\}\) is convergent if \(-1<r\leq 1\) and divergent for all
+other values of \(r\).
+\[\lim_{n\to\infty}r^n=0\]
+if \(-1<r<1\) and
+\[\lim_{n\to\infty}r^n=1\]
+if \(r=1\).
+\begin{definition}
+    A sequence \(\{a_n\}\) is \textbf{increasing} if \(a_n<a_{n+1}\) for all
+    \(n\geq 1\), that is, \(a_1<a_2<a_3<\cdots\).
+    it is \textbf{decreasing} if \(a_n>a_{n+1}\) for all \(n\geq 1\).
+    A sequence is \textbf{monotonic} if it is either increasing or decreasing.
+\end{definition}
+\begin{definition}
+    A sequence \(\{a_n\}\) is \textbf{bounded above} if there is a number
+    \(M\) such that
+    \[a_n\leq M\]
+    for all \(n\geq 1\).
+    It is \textbf{bounded below} if there is a number
+    \(m\) such that
+    \[m\leq a_n\]
+    for all \(n\geq 1\).
+    If it is bounded above and below, then it is a \textbf{bounded sequence}.
+\end{definition}
+\begin{theorem}[Monotonic Sequence Theorem]
+    Every bounded, monotonic sequence is convergent.
+\end{theorem}
+The proof of the Monotonic Sequence Theorem is based on the
+\textbf{Completeness Axiom} of the set of real numbers \(\R\).
+The Completeness Axiom states if \(S\) is a nonempty set of real numbers that
+has an upper bound \(M\) (\(x\leq M\) for all \(x\in S\)), then \(S\) has a
+\textbf{least upper bound} \(b\).
+(This means that \(b\) is an upper bound of \(S\),
+but if \(M\) is any other upper bound, then \(b\leq M\).)
+The Completeness Axiom is an expression of the fact that there is no gap or
+hole in the real number line.
+\begin{proof}
+    Suppose \(\{a_n\}\) is an incerasing sequence.
+    Since \(\{a_n\}\) is bounded, the set \\ \(S=\{a_n\mid n\geq 1\}\) has an
+    upper bound.
+    By the Completeness Axiom it has a least upper bound \(L\).
+    Given \(\epsilon>0\), \(L-\epsilon\) is not an upper bound for \(S\)
+    (since \(L\) is the least upper bound).
+    Therefore
+    \[a_N>L-\epsilon\]
+    for some integer \(N\).
+    But the sequence is incerasing so \(a_n\geq a_N\) for every \(n>N\).
+    Thus if \(n>N\) we have
+    \begin{align*}
+        a_n &> L-\epsilon \\
+        a_n+\epsilon &> L \\
+        L &< a_n +\epsilon
+    \end{align*}
+    so
+    \[0\leq L-a_n<\epsilon\]
+    since \(a_n\leq L\).
+    Thus
+    \[|L-a_n|<\epsilon\]
+    which implies that
+    \[|a_n-L|<\epsilon\]
+    whenever \(n>N\) so \(\displaystyle{\lim_{n\to\infty}a_n=L}\).
+    A similar proof (using the greatest lower bound) works if \(\{a_n\}\) is
+    decreasing.
+\end{proof}
+The proof of the Monotonic Sequence Theorem shows that an increasing sequence
+that is bounded above is convergent and a decreasing sequence that is bounded
+below is convergent.
