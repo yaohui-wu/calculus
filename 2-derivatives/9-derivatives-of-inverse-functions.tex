@@ -11,10 +11,33 @@
     differentiable at \(a\) and
     \[(f^{-1})'(a)=\frac{1}{f'(f^{-1}(a))}\]
 \end{theorem}
+\begin{proof}
+    Let \(y=f^{-1}(x)\), then \(f(y)=x\).
+    Since \(f\) is differentiable, it is continuous, so \(f^{-1}\) is
+    continuous.
+    Thus if \(x\to a\), then \(f^{-1}(x)\to f^{-1}(a)\), that is, \(y\to b\).
+    Therefore
+    \begin{align*}
+        (f^{-1})'(a)
+        &= \lim_{x\to a}\frac{f^{-1}(x)-f^{-1}(a)}{x-a}
+        =\lim_{y\to b}\frac{y-b}{f(y)-f(b)} \\
+        &= \lim_{y\to b}\frac{1}{\dfrac{f(y)-f(b)}{y-b}}
+        =\frac{1}{\displaystyle{\lim_{y\to b}\frac{f(y)-f(b)}{y-b}}} \\
+        &= \frac{1}{f'(b)}=\frac{1}{f'(f^{-1}(a))}
+    \end{align*}
+\end{proof}
 In general, for any number \(x\) we have
 \[(f^{-1})'(x)=\frac{1}{f'(f^{-1}(x))}\]
-If we write \(y=f^{-1}(x)\), then \(f(y)=x\), in Leibniz notation we have
+If we write \(y=f^{-1}(x)\), then \(f(y)=x\), in Leibniz's notation we have
 \[\frac{dy}{dx}=\frac{1}{\dfrac{dx}{dy}}\]
+If it is known in advance that \(f^{-1}\) is differentiable, then its
+derivative can be computed more easily by using implicit differentiation.
+If \(y=f^{-1}(x)\), then \(f(y)=x\).
+Differentiating the equation \(f(y)=x\) implicitly with respect to \(x\), and
+using the Chain Rule, we get
+\[f'(y)\frac{dy}{dx}=1\]
+Therefore
+\[\frac{dy}{dx}=\frac{1}{f'(y)}=\frac{1}{\dfrac{dx}{dy}}\]
 
 \subsubsection*{Derivatives of Logarithmic Functions}
 The \textbf{Euler's number} \(e\) is the base of the natural exponential
