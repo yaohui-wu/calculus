@@ -14,13 +14,17 @@ A symbol that represents an arbitrary number in the domain of a function \(f\)
 is called an \textbf{independent variable}.
 A symbol that represents a number in the range of \(f\) is called a
 \textbf{dependent variable}.
+
 If \(f\) is a function with domain \(D\), then its \textbf{graph} is the set
 of ordered pairs
 \[\{(x,f(x))\mid x\in D\}\]
+The graph of \(f\) consists of all points \((x,y)\) in the coordinate plane
+such that \(y=f(x)\) and \(x\) is in the domain of \(f\).
 
 \subsubsection*{Symmetry}
 If a function \(f\) satisfies \(f(-x)=f(x)\) for every number \(x\) in its
 domain, then \(f\) is called an \textbf{even function}.
+
 If \(f\) satisfies \(f(-x)=-f(x)\) for every number \(x\) in its
 domain, then \(f\) is called an \textbf{odd function}.
 
@@ -35,7 +39,8 @@ whenever \(x_1<x_2\) in \(I\).
 \subsubsection*{Inverse Functions}
 \begin{definition}
     A function \(f\) is \textbf{injective} (or \textbf{one-to-one}) if
-    \(f(x_1)\neq f(x_2)\) when \(x_1\neq x_2\).
+    \[f(x_1)\neq f(x_2)\]
+    whenever \(x_1\neq x_2\).
 \end{definition}
 \begin{definition}
     A function \(f\) is \textbf{surjective} (or \textbf{onto}) if for all
@@ -53,8 +58,34 @@ whenever \(x_1<x_2\) in \(I\).
     \[f^{-1}(y)=x\iff f(x)=y\]
     for all \(y\) in \(B\).
 \end{definition}
-We usually reverse the roles of \(x\) and \(y\) and write
+The letter \(x\) is traditionally used as the independent variable, so when we
+concentrate on \(f^{-1}\) rather than on \(f\), we usually reverse the roles
+of \(x\) and \(y\) and write
 \[f^{-1}(x)=y\iff f(y)=x\]
+We have the following \textbf{ cancellation equations}:
+\[f^{-1}(f(x))=x\]
+for every \(x\) in \(A\) and
+\[f(f^{-1}(x))=x\]
+for every \(x\) in \(B\). \\
+Find the Inverse of a One-to-One Function \(f\):
+\begin{enumerate}
+    \item Write \(y=f(x)\).
+    \item Solve this equation for \(x\) in terms of \(y\) (if possible).
+    \item To express \(f^{-1}\) as a function of \(x\), interchange \(x\) and
+    \(y\).
+    The resulting equation is \(y=f^{-1}(x)\).
+\end{enumerate}
+The graph of \(f^{-1}\) is obtained by reflecting the graph of \(f\) about the
+line \(y=x\).
+
+\subsubsection*{Mathematical Modeling}
+A mathematical model is a mathematical description (often by means of a
+function or an equation) of a real-world phenomenon.
+The purpose of the model is to understand the phenomenon and perhaps
+to make predictions about future behavior.
+
+A mathematical model is never a completely accurate representation of a
+physical situation, it is an idealization.
 
 \subsubsection*{Intuitive Definition of a Limit}
 Suppose \(f(x)\) is defined near the number \(a\).
@@ -92,6 +123,6 @@ An alternative notation for the limit is \(f(x)\to L\) as \(x\to a\).
     \(\displaystyle{\lim_{x\to a^-}f(x)}=L\) and
     \(\displaystyle{\lim_{x\to a^+}f(x)}=L\).
 \end{theorem}
-The limit exists if and only if the left-hand limit and the right-hand limit of \(f(x)\)
-as \(x\) approaches \(a\) are equal to \(L\),
+The limit exists if and only if the left-hand limit and the right-hand limit
+of \(f(x)\) as \(x\) approaches \(a\) are equal to \(L\),
 otherwise the limit does not exist.
