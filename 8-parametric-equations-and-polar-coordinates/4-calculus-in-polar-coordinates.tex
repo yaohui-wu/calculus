@@ -1,8 +1,16 @@
 \subsection{Calculus in Polar Coordinates}
 
-\subsubsection*{Area}
+\subsubsection*{Tangents}
+To find a tangent line for polar curve \(r=f(\theta)\),
+we find the slope of the parametric curve.
+We have
+\[\frac{dy}{dx}=\frac{dy/d\theta}{dx/d\theta}
+=\frac{\frac{dr}{d\theta}\cos\theta-r\sin\theta}
+{\frac{dr}{d\theta}\sin\theta+r\cos\theta}\]
 
-\subsubsection*{Arc Length}
+\subsubsection*{Areas}
+
+\subsubsection*{Arc Lengths}
 Let \(\theta\) be a parameter, then the parametric equations for a polar curve
 \(r=f(\theta)\) are
 \begin{align*}
@@ -27,11 +35,3 @@ Assuming that \(f'\) is continuous, the length of a curve with polar equation
 \(r=f(\theta),\alpha\leq\theta\leq\beta\), is
 \[L
 =\int_{\alpha}^{\beta}\sqrt{r^2+\left(\frac{dr}{d\theta}\right)^2}\,d\theta\]
-
-\subsubsection*{Tangents}
-To find a tangent line for polar curve \(r=f(\theta)\),
-we find the slope of the parametric curve.
-We have
-\[\frac{dy}{dx}=\frac{dy/d\theta}{dx/d\theta}
-=\frac{\frac{dr}{d\theta}\cos\theta-r\sin\theta}
-{\frac{dr}{d\theta}\sin\theta+r\cos\theta}\]
