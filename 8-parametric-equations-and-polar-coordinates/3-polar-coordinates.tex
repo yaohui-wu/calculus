@@ -1,19 +1,29 @@
 \subsection{Polar Coordinates}
 
+A coordinate system represents a point in the plane by an ordered pair of
+numbers called coordinates.
+Usually we use Cartesian coordinates, which are directed distances from two
+perpendicular axes.
+Here we describe a coordinate system introduced by Newton, called the
+\textbf{polar coordinate system}.
+
 We choose a point \(O\) in the plane called the \textbf{pole} (or origin).
 Then we draw a ray (half-line) starting at \(O\) called the
 \textbf{polar axis}.
 This axis is usually drawn horizontally to the right and
 corresponds to the positive \(x\)-axis in Cartesian coordinates.
+
 If \(P\) is any other point in the plane, let \(r\) be the distance from \(O\)
-to \(P\) and let \(\theta\) be the angle between the polar axis and line \(OP\).
+to \(P\) and let \(\theta\) be the angle  (usually measured in radians)
+between the polar axis and line \(OP\).
 Then the point \(P\) is represented by the ordered pair \((r,\theta)\) called
-the polar coordinates of \(P\).
+the \textbf{polar coordinates} of \(P\).
 We use the convention that an angle is positive if measured in the
 counterclockwise direction from the polar axis and negative in the clockwise
 direction.
 If \(P=O\), then \(r=0\) and we agree that \((0,\theta)\) represents the pole
 for any value of \(\theta\).
+
 We extend the meaning of polar coordinates \((r,\theta)\) to the case \(r\) is
 negative by agreeing that, the points \((-r,\theta)\) and \((r,\theta)\) lie
 on the same line through \(O\) and at the same distance \(|r|\) from \(O\),
@@ -21,22 +31,37 @@ but on opposite sides of \(O\).
 If \(r>0\), the point \((r,\theta)\) lies in the same quadrant as \(\theta\);
 if \(r<0\), it lies in the quadrant on the opposite side of the pole.
 Note that \((-r,\theta)\) represents the same point as \((r,\theta+\pi)\).
-Suppose that point \(P\) has Cartesian coordinates \((x,y)\) and polar
-coordinates \((r,\theta)\).
-To find Cartesian coordinates \((x,y)\) when polar coordinates \((r,\theta)\)
-are known, we use the equations
+
+In fact, since a complete counterclockwise rotation is given by an angle
+\(2\pi\), the point represented by polar coordinates \((r,\theta)\) is also
+represented by
+\[(r,\theta+2n\pi)\]
+and
+\[(-r,\theta+(2n+1)\pi)\]
+where \(n\) is any integer.
+
+If the point \(P\) has Cartesian coordinates \((x,y)\) and polar
+coordinates \((r,\theta)\), then we have
+\begin{align*}
+    \cos\theta &= \frac{x}{r} & \sin\theta &= \frac{y}{r}
+\end{align*}
+and so
 \begin{align*}
     x &= r\cos\theta & y &= r\sin\theta
 \end{align*}
-To find polar coordinates \((x,y)\) when Cartesian coordinates \((r,\theta)\)
-are known, we use the equations
+To find \(r\) and \(\theta\) when \(x\) and \(y\) are known, we use the
+equations
 \begin{align*}
     r^2 &= x^2+y^2 & \tan\theta &= \frac{y}{x}
 \end{align*}
 
 \subsubsection*{Polar Curves}
-The graph of a polar equation \(r=f(\theta)\), or more generally
+
+The \textbf{graph of a polar equation} \(r=f(\theta)\), or more generally
 \(F(r,\theta)=0\), consists of all points \(P\) that have at least one polar
 representation \((r,\theta)\) whose coordinates satisfy the equation.
 
-\subsubsection*{Symmetry}
+The curve \(r=1+\sin\theta\) is called a \textbf{cardioid} because it is
+shaped like a heart.
+
+The  curve \(r=\cos 2\theta\) is a \textbf{four-leaved rose}.

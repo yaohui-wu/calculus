@@ -1,24 +1,27 @@
 \subsection{Calculus with Parametric Curves}
 
 \subsubsection*{Tangents}
+
 Suppose \(f\) and \(g\) are differentiable functions and we want to find the
-tangent line at a point on the parametric curve \(x=f(t),y=g(t)\), where \(y\)
+tangent line at a point on the parametric curve \(x=f(t),y=g(t)\) where \(y\)
 is a differentiable function of \(x\).
 Then the chain rule gives
 \[\frac{dy}{dt}=\frac{dy}{dx}\cdot\frac{dx}{dt}\]
-If \(dx/dt\neq0\), then
+If \(\dfrac{dx}{dt}\neq0\), then
 \[\frac{dy}{dx}=\frac{dy/dt}{dx/dt}\]
 It follows that
 \[\frac{d^2y}{dx^2}=\frac{d}{dx}\left(\frac{dy}{dx}\right)
-=\frac{\dfrac{d}{dt}\left(\dfrac{dy}{dx}\right)}{\dfrac{dx}{dt}}\]
+=\frac{\dfrac{d}{dt}\left(\dfrac{dy}{dx}\right)}{dx/dt}\]
 
 \subsubsection*{Areas}
-If the curve \(y=F(x)\) from \(a\) to \(b\) is traced out once by the
-parametric equations \(x=f(t),y=g(t),\alpha\leq t\leq\beta\), then the area
-under the curve is
+
+If the curve \(y=F(x)\) from \(a\) to \(b\) where \(F(x)\geq 0\) is given by
+the parametric equations \(x=f(t),y=g(t)\) and is traversed once as \(t\)
+increases from \(\alpha\) to \(\beta\), then the area under the curve is
 \[A=\int_{a}^{b}y\,dx=\int_{\alpha}^{\beta}g(t)f'(t)\,dt\]
 
 \subsubsection*{Arc Length}
+
 \begin{theorem}
     If a curve \(C\) is described by the parametric equations
     \(x=f(t),y=g(t),\alpha\leq t\leq\beta\), where \(f'\) and \(g'\) are

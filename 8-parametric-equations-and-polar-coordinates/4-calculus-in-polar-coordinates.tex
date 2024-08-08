@@ -1,16 +1,23 @@
 \subsection{Calculus in Polar Coordinates}
 
 \subsubsection*{Tangents}
-To find a tangent line for polar curve \(r=f(\theta)\),
-we find the slope of the parametric curve.
-We have
+
+To find a tangent line to a polar curve \(r=f(\theta)\) we regard as a
+parameter and write its parametric equations as
+\begin{align*}
+    x &= r\cos\theta=f(\theta)\cos\theta \\
+    y &= r\sin\theta=f(\theta)\sin\theta
+\end{align*}
+Then, using the method for finding slopes of parametric curves and the Product
+ Rule, we have
 \[\frac{dy}{dx}=\frac{dy/d\theta}{dx/d\theta}
-=\frac{\frac{dr}{d\theta}\cos\theta-r\sin\theta}
-{\frac{dr}{d\theta}\sin\theta+r\cos\theta}\]
+=\frac{\dfrac{dr}{d\theta}\sin\theta+r\cos\theta}
+{\dfrac{dr}{d\theta}\cos\theta-r\sin\theta}\]
 
 \subsubsection*{Areas}
 
 \subsubsection*{Arc Lengths}
+
 Let \(\theta\) be a parameter, then the parametric equations for a polar curve
 \(r=f(\theta)\) are
 \begin{align*}
