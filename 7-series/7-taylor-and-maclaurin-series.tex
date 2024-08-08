@@ -1,0 +1,116 @@
+\subsection{Taylor and Maclaurin Series}
+
+\begin{theorem}
+    If \(f\) has a power series expansion at \(a\), that is, if
+    \[f(x)=\sum_{n=0}^\infty c_n(x-a)^n,\quad|x-a|<R\]
+    then its coefficients are given by the formula
+    \[c_n=\frac{f^{(n)}(a)}{n!}\]
+\end{theorem}
+The \textbf{Taylor series} of a function \(f\) centered at \(a\) is
+\[f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n
+=f(a)+\frac{f'(a)}{1!}(x-a)+\frac{f''(a)}{2!}(x-a)^2+\frac{f'''(a)}{3!}(x-a)^2
++\cdots\]
+For the special case \(a=0\), the Taylor series becomes the
+\textbf{Maclaurin series}
+\[f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}x^n
+=f(0)+\frac{f'(0)}{1!}x+\frac{f''(0)}{2!}x^2+\cdots\]
+\begin{problem}
+    Find the Maclaurin series of the function \(f(x)=e^x\) and its radius of
+    convergence.
+\end{problem}
+\begin{solution}
+    Since \(f^{(n)}(x)=e^x\) and \(f^{(n)}(0)=e^0=1\) for all \(n\)
+    therefore
+    \[e^x=\sum_{n=0}^\infty\frac{x^n}{n!}
+    =1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots\]
+    Let \(a_n=\dfrac{x^n}{n!}\), then
+    \[\left|\frac{a_{n+1}}{a_n}\right|
+    =\left|\frac{x^{n+1}}{(n+1)!}\frac{n!}{x^n}\right|=\frac{|x|}{n+1}\]
+    and
+    \[\lim_{n\to\infty}\frac{|x|}{n+1}=0<1\]
+    so by the Ratio Test the series converges for all \(x\in\R\) and the
+    radius of convergence is \(R=\infty\).
+\end{solution}
+The \(n\)th degree \textbf{Taylor polynomial} \(T_n\) of \(f\) at \(a\) is
+\begin{align*}
+    T_n(x) &= \sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^k \\
+    &= f(a)+\frac{f'(a)}{1!}(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots
+    +\frac{f^{(n)}(a)}{n!}(x-a)^n
+\end{align*}
+In general, \(f(x)\) is the sum of its Taylor series if
+\[f(x)=\lim_{n\to\infty}T_n(x)\]
+Let
+\[R_n(x)=f(x)-T_n(x)\]
+so that
+\[f(x)=T_n(x)+R_n(x)\]
+then \(R_n(x)\) is the \textbf{remainder} of the Taylor series.
+If \(\displaystyle{\lim_{n\to\infty}R_n(x)=0}\), then
+\[\lim_{n\to\infty}T_n(x)=\lim_{n\to\infty}\Big[f(x)-R_n(x)\Big]=f(x)\]
+\begin{theorem}
+    If \(f(x)=T_n(x)+R_n(x)\) where \(T_n\) is the \(n\)th degree Taylor
+    polynomial of \(f\) at \(a\) and
+    \[\lim_{n\to\infty}R_n(x)=0\]
+    for \(|x-a|<R\), then \(f\) is equal to the sum of its Taylor series on
+    the interval \(|x-a|<R\).
+\end{theorem}
+\begin{theorem}[Taylor's Formula]
+    If \(f\) has \(n+1\) derivatives in an interval \(I\) that contains the
+    number \(a\), then for \(x\) in \(I\) there is a number \(z\) strictly
+    between \(x\) and \(a\) such that the remainder term in the Taylor series
+    is
+    \[R_n(x)=\frac{f^{(n+1)}(z)}{(n+1)!}(x-a)^{n+1}\]
+\end{theorem}
+This expression for \(R_n(x)\) is
+\textbf{Lagrange's form of the remainder term}.
+\[\lim_{n\to\infty}\frac{x^n}{n!}=0\] for every real number \(x\in\R\).
+\begin{problem}
+    Prove that \(e^x\) is equal to the sum of its Taylor series.
+\end{problem}
+\begin{solution}
+    If \(f(x)=e^x\), then \(f^{n+1}(x)=e^x\), so the remainder term in
+    Taylor's Formula is
+    \[R_n(x)=\frac{e^z}{(n+1)!}x^{n+1}\]
+    where \(z\) is a number strictly between \(0\) and \(x\).
+    Note that \(z\) depends on \(n\).
+    If \(x>0\), then \(0<z<x\), so \(e^z<e^x\).
+    Therefore
+    \[0<R_n(x)=\frac{e^z}{(n+1)!}x^{n+1}<e^x\frac{x^{n+1}}{(n+1)!}\to 0\]
+    so \(R_n(x)\to 0\) as \(n\to\infty\) by the Squeeze Theorem.
+    If \(x<0\), then \(x<z<0\), so \(e^z<e^0=1\) and
+    \[|R_n(x)|<\frac{|x|^{n+1}}{(n+1)!}\to 0\]
+    Again \(R_n(x)\to 0\).
+    Thus \(e^x\) is equal to the sum of its Taylor series.
+\end{solution}
+\[e=\sum_{n=0}^\infty\frac{1}{n!}=1+\frac{1}{1!}+\frac{1}{2!}+\frac{1}{3!}+\cdots\]
+
+\[\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots
+=\sum_{n=0}^\infty(-1)^n\frac{x^{2n+1}}{(2n+1)!},\quad R=\infty\]
+
+\[\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots
+=\sum_{n=0}^\infty(-1)^n\frac{x^{2n}}{(2n)!},\quad R=\infty\]
+
+If \(k\) is any real number and \(|x|<1\), then the \textbf{binomial series}
+is
+\[(1+x)^k=\sum_{n=0}^\infty\binom{k}{n}x^n=1+kx+\frac{k(k-1)}{2!}x^2
++\frac{k(k-1)(k-2)}{3!}x^3+\cdots\]
+where the \textbf{binomial coefficient} is
+\[\binom{k}{n}=\frac{k(k-1)(k-2)\cdots(k-n+1)}{n!}\]
+\begin{problem}
+    Evaluate \(\displaystyle{\int e^{-x^2}}\,dx\) as an infinite series.
+\end{problem}
+\begin{solution}
+    For all \(x\in\R\) we have
+    \[e^{-x^2}=\sum_{n=0}^\infty\frac{(-x^2)^n}{n!}
+    =\sum_{n=0}^\infty(-1)^n\frac{x^{2n}}{n!}
+    =1-\frac{x^2}{1!}+\frac{x^4}{2!}-\frac{x^6}{3!}+\cdots\]
+    Then we integrate term by term:
+    \begin{align*}
+        \int e^{-x^2}\,dx &= \int \left(1-\frac{x^2}{1!}+\frac{x^4}{2!}
+        -\frac{x^6}{3!}+\cdots+(-1)^n\frac{x^{2n}}{n!}+\cdots\right)\,dx \\
+        &= C+x-\frac{x^3}{3\cdot 1!}+\frac{x^5}{5\cdot 2!}
+        +\frac{x^7}{7\cdot 3!}+\cdots+(-1)^n\frac{x^{2n+1}}{(2n+1)n!}+\cdots
+    \end{align*}
+    This series converges for all \(x\in\R\).
+\end{solution}
+Power series can be added, subtracted, multiplied, and divided like
+polynomials.

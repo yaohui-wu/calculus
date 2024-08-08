@@ -2,6 +2,87 @@
 
 \subsubsection*{Alternating Series}
 
+An \textbf{alternating series} is a series whose terms are alternately
+positive and negative.
+
+If the terms of an alternating series decrease to 0 in absolute value, then
+the series converges.
+\begin{theorem}[Alternating Series Test]
+    If the alternating series
+    \[\sum_{n=1}^\infty (-1)^{n-1}b_n=b_1-b_2+b_3-b_4+b_5-b_6+\cdots,
+    \quad b_n>0\]
+    satisfies
+    \[b_{n+1}\leq b_n\]
+    for all \(n\) and
+    \[\lim_{n\to\infty}b_n=0\]
+    then the series is convergent.
+\end{theorem}
+\begin{theorem}[Alternating Series Estimation Theorem]
+    If \(\displaystyle{s=\sum_{n=1}^\infty}(-1)^{n-1}b_n\) is the sum of an
+    alternating series that satisfies
+    \[0\leq b_{n+1}\leq b_n\]
+    and
+    \[\lim_{n\to\infty}b_n=0\]
+    then
+    \[|R_n|=|s-s_n|\leq b_{n+1}\]
+\end{theorem}
+
 \subsubsection*{Absolute Convergence}
 
+\begin{definition}
+    A series \(\displaystyle{\sum_{n=1}^\infty}a_n\) is called
+    \textbf{absolutely convergent} if the series of absolute values
+    \(\displaystyle{\sum_{n=1}^\infty}|a_n|\) is convergent.
+\end{definition}
+\begin{definition}
+    A series \(\displaystyle{\sum_{n=1}^\infty}a_n\) is called
+    \textbf{conditionally convergent} if it is convergent but not absolutely
+    convergent.
+\end{definition}
+\begin{theorem}
+    If a series \(\displaystyle{\sum_{n=1}^\infty}a_n\) is absolutely
+    convergent, then it is convergent.
+\end{theorem}
+
 \subsubsection*{The Ratio Test}
+
+\begin{theorem}[Ratio Test]
+    \begin{enumerate}
+        \item If
+        \(\displaystyle{\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|}
+        =L<1\),
+        then the series \(\displaystyle{\sum_{n=1}^\infty}a_n\) is absolutely
+        convergent (and therefore convergent).
+        \item If
+        \(\displaystyle{\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|}
+        =L>1\)
+        or
+        \(\displaystyle{\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|}
+        =\infty\),
+        then the series \(\displaystyle{\sum_{n=1}^\infty}a_n\) is divergent.
+        \item If
+        \(\displaystyle{\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|}
+        =1\),
+        the Ratio Test is inconclusive; that is, no conclusion can be drawn
+        about the convergence or divergence of
+        \(\displaystyle{\sum_{n=1}^\infty}a_n\).
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Root Test]
+    \begin{enumerate}
+        \item If
+        \(\displaystyle{\lim_{n\to\infty}\sqrt[n]{|a_n|}}=L<1\),
+        then the series \(\displaystyle{\sum_{n=1}^\infty}a_n\) is absolutely
+        convergent (and therefore convergent).
+        \item If
+        \(\displaystyle{\lim_{n\to\infty}\sqrt[n]{|a_n|}}=L>1\)
+        or
+        \(\displaystyle{\lim_{n\to\infty}\sqrt[n]{|a_n|}}
+        =\infty\),
+        then the series \(\displaystyle{\sum_{n=1}^\infty}a_n\) is divergent.
+        \item If
+        \(\displaystyle{\lim_{n\to\infty}\sqrt[n]{|a_n|}}=1\),
+        the Root Test is inconclusive.
+    \end{enumerate}
+\end{theorem}

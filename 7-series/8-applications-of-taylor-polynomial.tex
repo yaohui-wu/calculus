@@ -1,0 +1,46 @@
+\subsection{Applications of Taylor Polynomial}
+
+\subsubsection*{Approximation Functions by Polynomials}
+
+The Taylor polynomial of \(f\) at \(a\) can be used as an approximation to
+\(f\):
+\[f(x)\approx T_n(x)\]
+The size of the error of the approximation is:
+\[|R_n(x)|=|f(x)-T_n(x)|\]
+
+\subsubsection*{Applications to Physics}
+
+Physicist uses a Taylor polynomial as an approximation to the function.
+\begin{problem}
+    In Einstein's theory of special relativity the mass of an object moving
+    with velocity \(v\) is
+    \[m=\frac{m_0}{\sqrt{1-\dfrac{v^2}{c^2}}}\]
+    where \(m_0\) is the mass of the object when at rest and \(c\) is the
+    speed of light.
+    The kinetic energy of the object is the difference between its total
+    energy and its energy at rest:
+    \[K=mc^2-m_0c^2\]
+    Show that when \(v\) is very small compared with \(c\), this
+    expression for \(K\) agrees with classical Newtonian physics:
+    \[K=\frac{1}{2}m_0v^2\]
+\end{problem}
+\begin{solution}
+    Using the expressions given for \(K\) and \(m\), we get
+    \begin{align*}
+        K &= mc^2-m_0c^2=\frac{m_0c^2}{\sqrt{1-\dfrac{v^2}{c^2}}}-m_0c^2 \\
+        &= m_0c^2\left[\left(1-\frac{v^2}{c^2}\right)^{-1/2}-1\right]
+    \end{align*}
+    With \(x=-\dfrac{v^2}{c^2}\), then we have the binomial series with
+    \(k=-\dfrac{1}{2}\).
+    Notice that \(|x|<1\) because \(v<c\).
+    Therefore we have
+    \[(1+x)^{-1/2}=1-\frac{1}{2}x+\frac{3}{8}x^2-\frac{5}{16}x^3+\cdots\]
+    and
+    \[K=m_0c^2\left(\frac{1}{2}\cdot\frac{v^2}{c^2}
+    +\frac{3}{8}\cdot\frac{v^2}{c^2}+\frac{5}{16}\cdot\frac{v^2}{c^2}\right)\]
+    If \(v\) is much smaller than \(c\), then all terms after the first are
+    very small when compared with the first term.
+    If we omit them, we get
+    \[K\approx m_0c^2\left(\frac{1}{2}\cdot\frac{v^2}{c^2}\right)
+    =\frac{1}{2}m_0v^2\]
+\end{solution}

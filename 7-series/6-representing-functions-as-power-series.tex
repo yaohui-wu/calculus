@@ -1,0 +1,34 @@
+\subsection{Representing Functions as Power Series}
+
+We start with the equation
+\[\frac{1}{1-x}=1+x+x^2+x^3+\cdots=\sum_{n=0}^\infty x^n,\quad|x|<1\]
+and find power series representations of similar functions.
+
+\subsubsection*{Differentiation and Integration of Power Series}
+
+We can differentiate and integrate a function represented by the sum of a
+power series term by term.
+This is called \textbf{term-by-term differentiation and integration}.
+\begin{theorem}
+    If the power series \(\displaystyle{\sum_{n=0}^\infty c_n(x-a)^n}\) has radius of convergence \(R>0\),
+    then the function \(f\) defined by
+    \[f(x)=c_0+c_1(x-a)+c_2(x-a)^2+\cdots=\sum_{n=0}^\infty c_n(x-a)^n\]
+    is differentiable (and therefore continuous) on the interval
+    \((a-R,a+R)\) and
+    \[f'(x)=c_1+2c_2(x-a)+3c_3(x-a)^2+\cdots
+    =\sum_{n=1}^\infty nc_n(x-a)^{n-1}\]
+    and
+    \[\int f(x)\,dx
+    =C+c_0(x-a)+c_1\frac{(x-a)^2}{2}+c_2\frac{(x-a)^3}{3}+\cdots
+    =C+\sum_{n=0}^\infty c_n\frac{(x-a)^{n+1}}{n+1}\]
+    The radii of convergence of these power series are both \(R\).
+\end{theorem}
+In Leibniz's notation:
+\[\frac{d}{dx}\left[\sum_{n=0}^\infty c_n(x-a)^n\right]
+=\sum_{n=0}^\infty\frac{d}{dx}\big[c_n(x-a)^n\big]\]
+\[\int\left[\sum_{n=0}^\infty c_n(x-a)^n\right]\,dx
+=\sum_{n=0}^\infty\int c_n(x-a)^n\,dx\]
+\[\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+=\sum_{n=0}^\infty(-1)^{n-1}\frac{x^n}{n},\quad|x|<1,\quad R=1\]
+\[\arctan x=x-\frac{x^3}{3}+\frac{x^5}{5}-\frac{x^7}{7}+\cdots
+=\sum_{n=0}^\infty(-1)^n\frac{x^{2n+1}}{2n+1},\quad R=1\]

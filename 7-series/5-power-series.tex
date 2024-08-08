@@ -1,17 +1,23 @@
 \subsection{Power Series}
 
-\subsubsection*{Power Series}
-A \textbf{power series} centered at \(a\) is a series of the form
+A \textbf{power series} is a series of the form
+\[\sum_{n=0}^\infty c_n x^n=c_0+c_1 x +c_2 x^2+c_3 x^3+\cdots\]
+
+A power series is a series in which each term is a power function.
+A \textbf{trigonometric series}
+\[\sum_{n=0}^\infty(a_n\cos nx+b_n\sin nx)\]
+is a series whose terms are trigonometric functions.
+
+In general, a power series centered at \(a\) is a series of the form
 \[\sum_{n=0}^{\infty}c_n(x-a)^n=a_0+c_1(x-a)+c_2(x-a)^2+\cdots\]
 where \(x\) is a variable and the coefficient \(c_n\) is a constant.
 The sum of the series is a function
 \[f(x)=c_0+c_1x+c_2x^2+\cdots+c_nx^n+\cdots\]
 whose domain is the set of all \(x\) for which the series converges.
-
-\subsubsection*{Interval of Convergence}
 \begin{theorem}
-    For a given power series \(\sum_{n=0}^\infty c_n(x-a)^n\) there are only
-    three possibilities:
+    For a given power series
+    \(\displaystyle{\sum_{n=0}^\infty c_n(x-a)^n}\) there are only three
+    possibilities:
     \begin{enumerate}
         \item The series converges only when \(x=a\).
         \item The series converges for all \(x\in\R\).
@@ -19,36 +25,8 @@ whose domain is the set of all \(x\) for which the series converges.
         if \(|x-a|<R\) and diverges if \(|x-a|>R\).
     \end{enumerate}
 \end{theorem}
-The number \(R\) in cases 3 is the radius of convergence of the power series.
+The number \(R\) in cases 3 is the \textbf{radius of convergence} of the power
+series.
 The radius of convergence is \(R=0\) in case 1 and \(R=\infty\) in case 2.
-The interval of convergence of a power series is the interval that consists of
-all values of \(x\) for which the series converges.
-
-\subsubsection*{Representations of Functions as Power Series}
-We start with the geometric series
-\[\frac{1}{1-x}=1+x+x^2+x^3+\cdots=\sum_{n=0}^\infty x^n,\quad|x|<1\]
-
-\[\arctan x=x-\frac{x^3}{3}+\frac{x^5}{5}-\frac{x^7}{7}+\cdots
-=\sum_{n=0}^\infty(-1)^n\frac{x^{2n+1}}{2n+1}\]
-
-\[\ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
-=\sum_{n=0}^\infty(-1)^{n-1}\frac{x^n}{n}\]
-
-\subsubsection*{Differentiation and Integration of Power Series}
-We can differentiate and integrate a power series term by term.
-\begin{theorem}
-    If the power series \(\sum c_n(x-a)^n\) has radius of convergence \(R>0\),
-    then the function \(f\) defined by
-    \[f(x)=c_0+c_1(x-a)+c_2(x-a)^2+\cdots=\sum_{n=0}^\infty c_n(x-a)^n\]
-    is differentiable and continuous on the interval \((a-R,a+R)\).
-    Then
-    \[f'(x)=c_1+2c_2(x-a)+3c_3(x-a)^2+\cdots
-    =\sum_{n=1}^\infty nc_n(x-a)^{n-1}\]
-    and
-    \[\int f(x)\,dx
-    =C+c_0(x-a)+c_1\frac{(x-a)^2}{2}+c_2\frac{(x-a)^3}{3}+\cdots
-    =C+\sum_{n=0}^\infty c_n\frac{(x-a)^{n+1}}{n+1}\]
-    The radii of convergence of the power series are both \(R\).
-\end{theorem}
-
-\subsubsection*{Functions Defined by Power Series}
+The \textbf{interval of convergence} of a power series is the interval that
+consists of all values of \(x\) for which the series converges.
