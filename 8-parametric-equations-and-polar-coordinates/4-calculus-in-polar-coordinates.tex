@@ -9,22 +9,37 @@ parameter and write its parametric equations as
     y &= r\sin\theta=f(\theta)\sin\theta
 \end{align*}
 Then, using the method for finding slopes of parametric curves and the Product
- Rule, we have
+Rule, we have
 \[\frac{dy}{dx}=\frac{dy/d\theta}{dx/d\theta}
 =\frac{\dfrac{dr}{d\theta}\sin\theta+r\cos\theta}
 {\dfrac{dr}{d\theta}\cos\theta-r\sin\theta}\]
 
 \subsubsection*{Areas}
 
-\subsubsection*{Arc Lengths}
+The area of the region bounded by the polar curve \(r=f(\theta)\) from
+\(\alpha\) and \(\beta\) where \(f\) is a positive continuous function and
+where \(0<\beta-\alpha\leq 2\pi\) is
+\[A=\int_\alpha^\beta\frac{1}{2}\big[f(\theta)\big]^2\,d\theta
+=\int_\alpha^\beta\frac{1}{2}r^2\,d\theta\]
 
-Let \(\theta\) be a parameter, then the parametric equations for a polar curve
-\(r=f(\theta)\) are
+The area bounded by curves with polar equations \(r=f(\theta),r=g(\theta)\)
+from \(\alpha\) and \(\beta\) where \(f(\theta)\geq g(\theta\geq 0)\) and
+\(0<\beta-\alpha\leq 2\pi\) is
+\[A=\int_\alpha^\beta\frac{1}{2}\big[f(\theta)\big]^2\,d\theta
+-\int_\alpha^\beta\frac{1}{2}\big[g(\theta)\big]^2\,d\theta
+=\frac{1}{2}\int_\alpha^\beta\left(\big[f(\theta)\big]^2
+-\big[g(\theta)\big]^2\right)\,d\theta\]
+
+\subsubsection*{Arc Length}
+
+To find the length of a polar curve \(r=f(\theta),\alpha\leq\theta\leq\beta\),
+we regard \(\theta\) as a parameterand write the parametric equations of the
+curve as
 \begin{align*}
-    x &= r\cos\theta=f(\theta)\cos\theta & y &= r\sin\theta=f(\theta)\sin\theta
+    x &= r\cos\theta=f(\theta)\cos\theta
+    & y &= r\sin\theta=f(\theta)\sin\theta
 \end{align*}
-To find the length of the polar curve \(r=f(\theta),a\leq\theta\leq b\),
-we differentiate with respect to \(\theta\) (using the product rule):
+Using the Product Rule and differentiating with respect to \(\theta\), we get
 \begin{align*}
     \frac{dx}{d\theta} &= \frac{dr}{d\theta}\cos\theta-r\sin\theta
     & \frac{dy}{d\theta} &= \frac{dr}{d\theta}\sin\theta+r\cos\theta

@@ -2,4 +2,59 @@
 
 \subsubsection*{Conics in Cartesian Coordinates}
 
+A \textbf{parabola} is the set of points in a plane that are equidistant from
+a fixed point \(F\) (called the \textbf{focus}) and a fixed line (called the
+\textbf{directrix}).
+Notice that the point halfway between the focus and the
+directrix lies on the parabola; it is called the \textbf{vertex}.
+The line through the focus perpendicular to the directrix is called the
+\textbf{axis} of the parabola.
+
+The equation of the parabola opening upward with vertex \((h,k)\), focus
+\((h,k+p)\), and directrix \(y=k-p\) is
+\[(x-h)^2=4p(y-k)\]
+
+An \textbf{ellipse} is the set of points in a plane the sum of whose distances from two fixed
+points \(F_1\) and \(F_2\) is a constant.
+These two fixed points are called the \textbf{foci} (plural of focus).
+
+The equation of the ellipse with center \((h,k)\), horizontal major axis, foci
+\((h\pm c,k)\) where \(c^2=a^2-b^2\) and vertices \((\pm a,k)\) is
+\[\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1\]
+
+A \textbf{hyperbola} is the set of all points in a plane the difference of whose distances
+from two fixed points \(F_1\) and \(F_2\) (the foci) is a constant.
+
+The equation of the hyperbola with center \((h,k)\), horizontal major axis, foci
+\((h\pm c,k)\) where \(c^2=a^2+b^2\) is
+\[\frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1\]
+The equations of the asymptotes are given by
+\[y=k\pm \frac{b}{a}(x-h)\]
+
 \subsubsection*{Conics in Polar Coordinates}
+
+\begin{theorem}
+    Let \(F\) be a fixed point (called the \textbf{focus}) and \(l\) be a
+    fixed line (called the \textbf{directrix}) in a plane.
+    Let \(e\) be a fixed a fixed positive number (called the
+    \textbf{eccentricity}).
+    The set of all points \(P\) in the plane such that
+    \[\frac{|PF|}{|Pl|}=e\]
+    (that is, the ratio of the distance from \(F\) to the distance from \(l\)
+    is the constant \(e\)) is a conic section.
+    The conic is
+    \begin{enumerate}
+        \item An ellipse if \(e<1\).
+        \item A parabola if \(e=1\).
+        \item A hyperbola if \(e>1\).
+    \end{enumerate}
+\end{theorem}
+\begin{theorem}
+    A polar equation of the form
+    \[r=\frac{ed}{1\pm e\cos\theta}\]
+    or
+    \[r=\frac{ed}{1\pm e\sin\theta}\]
+    represents a conic section with eccentricity \(e\).
+    The conic is an ellipse if \(e<1\), a parabola if \(e=1\), or a hyperbola
+    if \(e>1\).
+\end{theorem}
